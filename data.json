@@ -1,11 +1,12 @@
 {
 "_help": [
 "How to add a course: Find the target department and year array ('1st', '2nd', '3rd', '4th', or 'masters') below and add one object inside [ ]:",
-"{ \"code\": \"PHY-101\", \"title\": \"Mechanics and Properties of Matter\" }",
+"{ \"code\": \"PHY-101\", \"title\": \"Mechanics and Properties of Matter\", \"file\": \"papers/mechanics-and-properties-of-matter-phy-101.html\" }",
 "Separate multiple courses with a comma (,). Do not put a trailing comma after the last course.",
-"Paper file naming rule: papers/{department_id}_{year_id}_{course_slug}.html (example: papers/physics_1st_pha104.html).",
-"course_slug is the course code in lowercase with all spaces, hyphens (-), underscores (_), dots (.), and slashes (/) removed.",
-"To use a different file name, add \"file\": \"papers/file-name.html\" inside the course object."
+"File name rule: papers/{title}-{code}.html. Both title and code are lowercase, every space or symbol becomes a hyphen (-). Example: History of the Emergence of Independent Bangladesh + 211501 = papers/history-of-the-emergence-of-independent-bangladesh-211501.html",
+"A course with no title uses only the code: papers/311101.html",
+"Courses with the same title and code in different departments share the same file, so upload that file only once.",
+"The file name in this list and the uploaded file in the papers folder must match exactly."
 ],
 "site": {
 "name": "DCU QB",
@@ -33,14 +34,17 @@
 "en": "Bangla",
 "courses": {
 "1st": [
-{ "code": "1002", "title": "History of Bengali Literature (Ancient and Medieval Period, 650-1800 AD)" },
-{ "code": "1003", "title": "Phonetics and Bengali Grammar" },
-{ "code": "1004", "title": "Medieval Bengali Poetry" },
-{ "code": "1005", "title": "Bengali Novel-1" },
-{ "code": "1006", "title": "Poetics - Form, Content, Metre and Rhetoric" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "1002", "title": "History of Bengali Literature (Ancient and Medieval Period, 650-1800 AD)", "file": "papers/history-of-bengali-literature-ancient-and-medieval-period-650-1800-ad-1002.html" },
+{ "code": "1003", "title": "Phonetics and Bengali Grammar", "file": "papers/phonetics-and-bengali-grammar-1003.html" },
+{ "code": "1004", "title": "Medieval Bengali Poetry", "file": "papers/medieval-bengali-poetry-1004.html" },
+{ "code": "1005", "title": "Bengali Novel-1", "file": "papers/bengali-novel-1-1005.html" },
+{ "code": "1006", "title": "Poetics - Form, Content, Metre and Rhetoric", "file": "papers/poetics-form-content-metre-and-rhetoric-1006.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
-"2nd": [], "3rd": [], "4th": [], "masters": []
+"2nd": [],
+"3rd": [],
+"4th": [],
+"masters": []
 }
 },
 {
@@ -49,40 +53,40 @@
 "en": "English",
 "courses": {
 "1st": [
-{ "code": "ENH 101", "title": "Fundamental English Language Skills" },
-{ "code": "ENH 102", "title": "History of English Literature" },
-{ "code": "ENH 103", "title": "Introduction to Poetry" },
-{ "code": "ENH 104", "title": "Introduction to Prose: Fiction and Non-Fiction" },
-{ "code": "211909", "title": "Introduction to Political Theory" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "ENH 101", "title": "Fundamental English Language Skills", "file": "papers/fundamental-english-language-skills-enh-101.html" },
+{ "code": "ENH 102", "title": "History of English Literature", "file": "papers/history-of-english-literature-enh-102.html" },
+{ "code": "ENH 103", "title": "Introduction to Poetry", "file": "papers/introduction-to-poetry-enh-103.html" },
+{ "code": "ENH 104", "title": "Introduction to Prose: Fiction and Non-Fiction", "file": "papers/introduction-to-prose-fiction-and-non-fiction-enh-104.html" },
+{ "code": "211909", "title": "Introduction to Political Theory", "file": "papers/introduction-to-political-theory-211909.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "ENH 201", "title": "Introduction to Drama" },
-{ "code": "ENH 202", "title": "Romantic Poetry" },
-{ "code": "ENH 203", "title": "17th and 18th Century Prose" },
-{ "code": "ENH 204", "title": "Advanced Reading and Writing" },
-{ "code": "222115", "title": "Bangladesh Society and Culture" },
-{ "code": "221909", "title": "Political Organization and The Political System of UK and USA" }
+{ "code": "ENH 201", "title": "Introduction to Drama", "file": "papers/introduction-to-drama-enh-201.html" },
+{ "code": "ENH 202", "title": "Romantic Poetry", "file": "papers/romantic-poetry-enh-202.html" },
+{ "code": "ENH 203", "title": "17th and 18th Century Prose", "file": "papers/17th-and-18th-century-prose-enh-203.html" },
+{ "code": "ENH 204", "title": "Advanced Reading and Writing", "file": "papers/advanced-reading-and-writing-enh-204.html" },
+{ "code": "222115", "title": "Bangladesh Society and Culture", "file": "papers/bangladesh-society-and-culture-222115.html" },
+{ "code": "221909", "title": "Political Organization and The Political System of UK and USA", "file": "papers/political-organization-and-political-system-of-uk-and-usa-221909.html" }
 ],
 "3rd": [
-{ "code": "ENH 301", "title": "Elizabethan and Jacobean Drama" },
-{ "code": "ENH 302", "title": "16th and 17th Century Poetry" },
-{ "code": "ENH 303", "title": "Restoration and Eighteenth Century Fiction" }
+{ "code": "ENH 301", "title": "Elizabethan and Jacobean Drama", "file": "papers/elizabethan-and-jacobean-drama-enh-301.html" },
+{ "code": "ENH 302", "title": "16th and 17th Century Poetry", "file": "papers/16th-and-17th-century-poetry-enh-302.html" },
+{ "code": "ENH 303", "title": "Restoration and Eighteenth Century Fiction", "file": "papers/restoration-and-eighteenth-century-fiction-enh-303.html" }
 ],
 "4th": [
-{ "code": "ENH 401", "title": "Nineteenth Century Novel" },
-{ "code": "ENH 402", "title": "Twentieth Century Poetry" },
-{ "code": "ENH 403", "title": "Modern Drama" },
-{ "code": "ENH 404", "title": "Twentieth Century Novel" },
-{ "code": "ENH 405", "title": "American Poetry" },
-{ "code": "ENH 406", "title": "American Fiction and Drama" },
-{ "code": "ENH 407", "title": "Literary Criticism" },
-{ "code": "ENH 408", "title": "Continental Literature" },
-{ "code": "ENH 409", "title": "ELT: Approaches and Methods" },
-{ "code": "ENH 410", "title": "Viva-Voce" }
+{ "code": "ENH 401", "title": "Nineteenth Century Novel", "file": "papers/nineteenth-century-novel-enh-401.html" },
+{ "code": "ENH 402", "title": "Twentieth Century Poetry", "file": "papers/twentieth-century-poetry-enh-402.html" },
+{ "code": "ENH 403", "title": "Modern Drama", "file": "papers/modern-drama-enh-403.html" },
+{ "code": "ENH 404", "title": "Twentieth Century Novel", "file": "papers/twentieth-century-novel-enh-404.html" },
+{ "code": "ENH 405", "title": "American Poetry", "file": "papers/american-poetry-enh-405.html" },
+{ "code": "ENH 406", "title": "American Fiction and Drama", "file": "papers/american-fiction-and-drama-enh-406.html" },
+{ "code": "ENH 407", "title": "Literary Criticism", "file": "papers/literary-criticism-enh-407.html" },
+{ "code": "ENH 408", "title": "Continental Literature", "file": "papers/continental-literature-enh-408.html" },
+{ "code": "ENH 409", "title": "ELT: Approaches and Methods", "file": "papers/elt-approaches-and-methods-enh-409.html" },
+{ "code": "ENH 410", "title": "Viva-Voce", "file": "papers/viva-voce-enh-410.html" }
 ],
 "masters": [
-{ "code": "311101" }
+{ "code": "311101", "file": "papers/311101.html" }
 ]
 }
 },
@@ -92,16 +96,19 @@
 "en": "History",
 "courses": {
 "1st": [
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" },
-{ "code": "211909", "title": "Introduction to Political Theory" },
-{ "code": "211503", "title": "Introduction to History" },
-{ "code": "211505", "title": "History of Bengal (Earliest Times to 1204)" },
-{ "code": "211507", "title": "History of South Asia upto 1526" },
-{ "code": "211509", "title": "Political and Cultural History of Islam upto 1258" },
-{ "code": "212009", "title": "Introducing Sociology" },
-{ "code": "212111", "title": "Introduction to Social Work" }
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" },
+{ "code": "211909", "title": "Introduction to Political Theory", "file": "papers/introduction-to-political-theory-211909.html" },
+{ "code": "211503", "title": "Introduction to History", "file": "papers/introduction-to-history-211503.html" },
+{ "code": "211505", "title": "History of Bengal (Earliest Times to 1204)", "file": "papers/history-of-bengal-earliest-times-to-1204-211505.html" },
+{ "code": "211507", "title": "History of South Asia upto 1526", "file": "papers/history-of-south-asia-upto-1526-211507.html" },
+{ "code": "211509", "title": "Political and Cultural History of Islam upto 1258", "file": "papers/political-and-cultural-history-of-islam-upto-1258-211509.html" },
+{ "code": "212009", "title": "Introducing Sociology", "file": "papers/introducing-sociology-212009.html" },
+{ "code": "212111", "title": "Introduction to Social Work", "file": "papers/introduction-to-social-work-212111.html" }
 ],
-"2nd": [], "3rd": [], "4th": [], "masters": []
+"2nd": [],
+"3rd": [],
+"4th": [],
+"masters": []
 }
 },
 {
@@ -110,15 +117,18 @@
 "en": "Islamic History and Culture",
 "courses": {
 "1st": [
-{ "code": "601", "title": "Political History of Muslims [570-750, Prophet Muhammad (sm), Khulafa-i-Rashidun and the Umayyads]" },
-{ "code": "602", "title": "Political History of Muslims [750-1258, Abbasid and Regional Dynasties]" },
-{ "code": "603", "title": "Political History of Muslim Spain [710-1492]" },
-{ "code": "604", "title": "Political History of Ancient Bengal [Upto 1204]" },
-{ "code": "211909", "title": "Introduction to Political Theory" },
-{ "code": "212111", "title": "Introduction to Social Work" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "601", "title": "Political History of Muslims [570-750, Prophet Muhammad (sm), Khulafa-i-Rashidun and the Umayyads]", "file": "papers/political-history-of-muslims-570-750-prophet-muhammad-sm-khulafa-i-rashidun-and-the-umayyads-601.html" },
+{ "code": "602", "title": "Political History of Muslims [750-1258, Abbasid and Regional Dynasties]", "file": "papers/political-history-of-muslims-750-1258-abbasid-and-regional-dynasties-602.html" },
+{ "code": "603", "title": "Political History of Muslim Spain [710-1492]", "file": "papers/political-history-of-muslim-spain-710-1492-603.html" },
+{ "code": "604", "title": "Political History of Ancient Bengal [Upto 1204]", "file": "papers/political-history-of-ancient-bengal-upto-1204-604.html" },
+{ "code": "211909", "title": "Introduction to Political Theory", "file": "papers/introduction-to-political-theory-211909.html" },
+{ "code": "212111", "title": "Introduction to Social Work", "file": "papers/introduction-to-social-work-212111.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
-"2nd": [], "3rd": [], "4th": [], "masters": []
+"2nd": [],
+"3rd": [],
+"4th": [],
+"masters": []
 }
 },
 {
@@ -127,29 +137,30 @@
 "en": "Islamic Studies",
 "courses": {
 "1st": [
-{ "code": "211801", "title": "Quranic Studies" },
-{ "code": "211803", "title": "Introduction to Islam" },
-{ "code": "211805", "title": "Introduction to Islamic Dawah" },
-{ "code": "211807", "title": "Al-Kalam" },
-{ "code": "212009", "title": "Introducing Sociology" },
-{ "code": "211909", "title": "Introduction to Political Theory" },
-{ "code": "212111", "title": "Introduction to Social Work" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "211801", "title": "Quranic Studies", "file": "papers/quranic-studies-211801.html" },
+{ "code": "211803", "title": "Introduction to Islam", "file": "papers/introduction-to-islam-211803.html" },
+{ "code": "211805", "title": "Introduction to Islamic Dawah", "file": "papers/introduction-to-islamic-dawah-211805.html" },
+{ "code": "211807", "title": "Al-Kalam", "file": "papers/al-kalam-211807.html" },
+{ "code": "212009", "title": "Introducing Sociology", "file": "papers/introducing-sociology-212009.html" },
+{ "code": "211909", "title": "Introduction to Political Theory", "file": "papers/introduction-to-political-theory-211909.html" },
+{ "code": "212111", "title": "Introduction to Social Work", "file": "papers/introduction-to-social-work-212111.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "221109", "title": "English (Compulsory)" }
+{ "code": "221109", "title": "English (Compulsory)", "file": "papers/english-compulsory-221109.html" }
 ],
-"3rd": [], "4th": [],
+"3rd": [],
+"4th": [],
 "masters": [
-{ "code": "311801", "title": "Study of al Tafsir" },
-{ "code": "311803", "title": "Study of al-Hadith" },
-{ "code": "311805", "title": "Study of al-Hadith" },
-{ "code": "311807", "title": "Dawah in the Holy Quran and Sunnah" },
-{ "code": "311809", "title": "Evolution and Philosophy of Religion and Comparative Religion" },
-{ "code": "311811", "title": "Scientific Indications in the Holy Quran and Hadith" },
-{ "code": "311813", "title": "History of Islam (Umayyad and Abbasid Period)" },
-{ "code": "311814", "title": "Term Paper" },
-{ "code": "311816", "title": "Viva-Voce" }
+{ "code": "311801", "title": "Study of al Tafsir", "file": "papers/study-of-al-tafsir-311801.html" },
+{ "code": "311803", "title": "Study of al-Hadith", "file": "papers/study-of-al-hadith-311803.html" },
+{ "code": "311805", "title": "Study of al-Hadith", "file": "papers/study-of-al-hadith-311805.html" },
+{ "code": "311807", "title": "Dawah in the Holy Quran and Sunnah", "file": "papers/dawah-in-the-holy-quran-and-sunnah-311807.html" },
+{ "code": "311809", "title": "Evolution and Philosophy of Religion and Comparative Religion", "file": "papers/evolution-and-philosophy-of-religion-and-comparative-religion-311809.html" },
+{ "code": "311811", "title": "Scientific Indications in the Holy Quran and Hadith", "file": "papers/scientific-indications-in-the-holy-quran-and-hadith-311811.html" },
+{ "code": "311813", "title": "History of Islam (Umayyad and Abbasid Period)", "file": "papers/history-of-islam-umayyad-and-abbasid-period-311813.html" },
+{ "code": "311814", "title": "Term Paper", "file": "papers/term-paper-311814.html" },
+{ "code": "311816", "title": "Viva-Voce", "file": "papers/viva-voce-311816.html" }
 ]
 }
 },
@@ -159,14 +170,17 @@
 "en": "Philosophy",
 "courses": {
 "1st": [
-{ "code": "Phil-101", "title": "Introduction to Philosophy" },
-{ "code": "Phil-102", "title": "History of Western Philosophy, Ancient and Medieval" },
-{ "code": "Phil-103", "title": "General Ethics" },
-{ "code": "Phil-104", "title": "Psychology" },
-{ "code": "Phil-105", "title": "Sociology and Anthropology" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "Phil-101", "title": "Introduction to Philosophy", "file": "papers/introduction-to-philosophy-phil-101.html" },
+{ "code": "Phil-102", "title": "History of Western Philosophy, Ancient and Medieval", "file": "papers/history-of-western-philosophy-ancient-and-medieval-phil-102.html" },
+{ "code": "Phil-103", "title": "General Ethics", "file": "papers/general-ethics-phil-103.html" },
+{ "code": "Phil-104", "title": "Psychology", "file": "papers/psychology-phil-104.html" },
+{ "code": "Phil-105", "title": "Sociology and Anthropology", "file": "papers/sociology-and-anthropology-phil-105.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
-"2nd": [], "3rd": [], "4th": [], "masters": []
+"2nd": [],
+"3rd": [],
+"4th": [],
+"masters": []
 }
 },
 {
@@ -175,21 +189,22 @@
 "en": "Arabic",
 "courses": {
 "1st": [
-{ "code": "101", "title": "Recitation With Tajweed and Memorization Through Understanding" },
-{ "code": "102", "title": "Arabic Grammar (Sarf)-1" },
-{ "code": "103", "title": "Introduction to Arabic Language and Literature" },
-{ "code": "104", "title": "Communicative Arabic-I" },
-{ "code": "105", "title": "Communicative Arabic-II" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "101", "title": "Recitation With Tajweed and Memorization Through Understanding", "file": "papers/recitation-with-tajweed-and-memorization-through-understanding-101.html" },
+{ "code": "102", "title": "Arabic Grammar (Sarf)-1", "file": "papers/arabic-grammar-sarf-1-102.html" },
+{ "code": "103", "title": "Introduction to Arabic Language and Literature", "file": "papers/introduction-to-arabic-language-and-literature-103.html" },
+{ "code": "104", "title": "Communicative Arabic-I", "file": "papers/communicative-arabic-i-104.html" },
+{ "code": "105", "title": "Communicative Arabic-II", "file": "papers/communicative-arabic-ii-105.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [],
 "3rd": [
-{ "code": "306", "title": "History of Islam (570–1258 AD.)" },
-{ "code": "307", "title": "Economic System in Islam" },
-{ "code": "308", "title": "Muslim Philosophy" },
-{ "code": "309", "title": "Viva-Voce" }
+{ "code": "306", "title": "History of Islam (570–1258 AD.)", "file": "papers/history-of-islam-570-1258-ad-306.html" },
+{ "code": "307", "title": "Economic System in Islam", "file": "papers/economic-system-in-islam-307.html" },
+{ "code": "308", "title": "Muslim Philosophy", "file": "papers/muslim-philosophy-308.html" },
+{ "code": "309", "title": "Viva-Voce", "file": "papers/viva-voce-309.html" }
 ],
-"4th": [], "masters": []
+"4th": [],
+"masters": []
 }
 }
 ]
@@ -205,30 +220,31 @@
 "en": "Political Science",
 "courses": {
 "1st": [
-{ "code": "211909", "title": "Introduction to Political Theory" },
-{ "code": "PS-101", "title": "Ancient and Medieval Western Political Thought" },
-{ "code": "PS-102", "title": "Political Theory and Organizations" },
-{ "code": "PS-103", "title": "Governments and Politics, UK, USA and France" },
-{ "code": "PS-104", "title": "Principles of Sociology" },
-{ "code": "PS-105", "title": "Modern Western Political Thought" },
-{ "code": "PS-107", "title": "Socio-Political and Constitutional Development in British India (1757 to 1947)" },
-{ "code": "PS-108", "title": "Public Administration in Bangladesh" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "211909", "title": "Introduction to Political Theory", "file": "papers/introduction-to-political-theory-211909.html" },
+{ "code": "PS-101", "title": "Ancient and Medieval Western Political Thought", "file": "papers/ancient-and-medieval-western-political-thought-ps-101.html" },
+{ "code": "PS-102", "title": "Political Theory and Organizations", "file": "papers/political-theory-and-organizations-ps-102.html" },
+{ "code": "PS-103", "title": "Governments and Politics, UK, USA and France", "file": "papers/governments-and-politics-uk-usa-and-france-ps-103.html" },
+{ "code": "PS-104", "title": "Principles of Sociology", "file": "papers/principles-of-sociology-ps-104.html" },
+{ "code": "PS-105", "title": "Modern Western Political Thought", "file": "papers/modern-western-political-thought-ps-105.html" },
+{ "code": "PS-107", "title": "Socio-Political and Constitutional Development in British India (1757 to 1947)", "file": "papers/socio-political-and-constitutional-development-in-british-india-1757-to-1947-ps-107.html" },
+{ "code": "PS-108", "title": "Public Administration in Bangladesh", "file": "papers/public-administration-in-bangladesh-ps-108.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "221909", "title": "Political Organization and Political System of UK and USA" }
+{ "code": "221909", "title": "Political Organization and Political System of UK and USA", "file": "papers/political-organization-and-political-system-of-uk-and-usa-221909.html" }
 ],
-"3rd": [], "4th": [],
+"3rd": [],
+"4th": [],
 "masters": [
-{ "code": "311901", "title": "Recent Political Thought" },
-{ "code": "311902", "title": "Social Change and Political Development" },
-{ "code": "311903", "title": "Bangladesh Politics: Issues and Trends" },
-{ "code": "311904", "title": "Governance: Theories and Practice" },
-{ "code": "311905", "title": "Security Studies" },
-{ "code": "311906", "title": "Party Politics in Bangladesh" },
-{ "code": "311907", "title": "Social Science Research Methodology" },
-{ "code": "311908", "title": "Comprehensive" },
-{ "code": "311909", "title": "Viva-Voce" }
+{ "code": "311901", "title": "Recent Political Thought", "file": "papers/recent-political-thought-311901.html" },
+{ "code": "311902", "title": "Social Change and Political Development", "file": "papers/social-change-and-political-development-311902.html" },
+{ "code": "311903", "title": "Bangladesh Politics: Issues and Trends", "file": "papers/bangladesh-politics-issues-and-trends-311903.html" },
+{ "code": "311904", "title": "Governance: Theories and Practice", "file": "papers/governance-theories-and-practice-311904.html" },
+{ "code": "311905", "title": "Security Studies", "file": "papers/security-studies-311905.html" },
+{ "code": "311906", "title": "Party Politics in Bangladesh", "file": "papers/party-politics-in-bangladesh-311906.html" },
+{ "code": "311907", "title": "Social Science Research Methodology", "file": "papers/social-science-research-methodology-311907.html" },
+{ "code": "311908", "title": "Comprehensive", "file": "papers/comprehensive-311908.html" },
+{ "code": "311909", "title": "Viva-Voce", "file": "papers/viva-voce-311909.html" }
 ]
 }
 },
@@ -238,19 +254,21 @@
 "en": "Sociology",
 "courses": {
 "1st": [
-{ "code": "SOC 101", "title": "Introductory Sociology" },
-{ "code": "SOC 102", "title": "Social History" },
-{ "code": "SOC 103", "title": "Politics and Society" },
-{ "code": "212005", "title": "Politics and Society" },
-{ "code": "SOC 104", "title": "Social Problems and Issues" },
-{ "code": "SOC 105", "title": "The Emergence of Bangladesh" },
-{ "code": "SOC 107", "title": "Introduction to Political Theory" },
-{ "code": "211909", "title": "Introduction to Political Theory" }
+{ "code": "SOC 101", "title": "Introductory Sociology", "file": "papers/introductory-sociology-soc-101.html" },
+{ "code": "SOC 102", "title": "Social History", "file": "papers/social-history-soc-102.html" },
+{ "code": "SOC 103", "title": "Politics and Society", "file": "papers/politics-and-society-soc-103.html" },
+{ "code": "212005", "title": "Politics and Society", "file": "papers/politics-and-society-212005.html" },
+{ "code": "SOC 104", "title": "Social Problems and Issues", "file": "papers/social-problems-and-issues-soc-104.html" },
+{ "code": "SOC 105", "title": "The Emergence of Bangladesh", "file": "papers/the-emergence-of-bangladesh-soc-105.html" },
+{ "code": "SOC 107", "title": "Introduction to Political Theory", "file": "papers/introduction-to-political-theory-soc-107.html" },
+{ "code": "211909", "title": "Introduction to Political Theory", "file": "papers/introduction-to-political-theory-211909.html" }
 ],
-"2nd": [], "3rd": [], "4th": [],
+"2nd": [],
+"3rd": [],
+"4th": [],
 "masters": [
-{ "code": "200505", "title": "Population, Development and Politics" },
-{ "code": "200507", "title": "Social Gerontology" }
+{ "code": "200505", "title": "Population, Development and Politics", "file": "papers/population-development-and-politics-200505.html" },
+{ "code": "200507", "title": "Social Gerontology", "file": "papers/social-gerontology-200507.html" }
 ]
 }
 },
@@ -260,19 +278,21 @@
 "en": "Social Work",
 "courses": {
 "1st": [
-{ "code": "BSW-101", "title": "Introduction to Social Work" },
-{ "code": "BSW-102", "title": "History and Philosophy of Social Welfare" },
-{ "code": "BSW-103", "title": "Principles of Economics" },
-{ "code": "BSW-104", "title": "Psychology and Human Behaviour" },
-{ "code": "BSW-105", "title": "Social Problem Analysis and Social Welfare Services" },
-{ "code": "BSW-106", "title": "English Language" },
-{ "code": "BSW-107", "title": "Bangladesh, Society and Culture" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "BSW-101", "title": "Introduction to Social Work", "file": "papers/introduction-to-social-work-bsw-101.html" },
+{ "code": "BSW-102", "title": "History and Philosophy of Social Welfare", "file": "papers/history-and-philosophy-of-social-welfare-bsw-102.html" },
+{ "code": "BSW-103", "title": "Principles of Economics", "file": "papers/principles-of-economics-bsw-103.html" },
+{ "code": "BSW-104", "title": "Psychology and Human Behaviour", "file": "papers/psychology-and-human-behaviour-bsw-104.html" },
+{ "code": "BSW-105", "title": "Social Problem Analysis and Social Welfare Services", "file": "papers/social-problem-analysis-and-social-welfare-services-bsw-105.html" },
+{ "code": "BSW-106", "title": "English Language", "file": "papers/english-language-bsw-106.html" },
+{ "code": "BSW-107", "title": "Bangladesh, Society and Culture", "file": "papers/bangladesh-society-and-culture-bsw-107.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "222115", "title": "Bangladesh Society and Culture" }
+{ "code": "222115", "title": "Bangladesh Society and Culture", "file": "papers/bangladesh-society-and-culture-222115.html" }
 ],
-"3rd": [], "4th": [], "masters": []
+"3rd": [],
+"4th": [],
+"masters": []
 }
 },
 {
@@ -281,27 +301,28 @@
 "en": "Economics",
 "courses": {
 "1st": [
-{ "code": "212201", "title": "Microeconomics-I" },
-{ "code": "212203", "title": "Macroeconomics-I" },
-{ "code": "212205", "title": "Basic Mathematics" },
-{ "code": "212207", "title": "Basic Statistics" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" },
-{ "code": "212009", "title": "Introducing Sociology" },
-{ "code": "212111", "title": "Introduction to Social Work" }
+{ "code": "212201", "title": "Microeconomics-I", "file": "papers/microeconomics-i-212201.html" },
+{ "code": "212203", "title": "Macroeconomics-I", "file": "papers/macroeconomics-i-212203.html" },
+{ "code": "212205", "title": "Basic Mathematics", "file": "papers/basic-mathematics-212205.html" },
+{ "code": "212207", "title": "Basic Statistics", "file": "papers/basic-statistics-212207.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" },
+{ "code": "212009", "title": "Introducing Sociology", "file": "papers/introducing-sociology-212009.html" },
+{ "code": "212111", "title": "Introduction to Social Work", "file": "papers/introduction-to-social-work-212111.html" }
 ],
 "2nd": [
-{ "code": "222201", "title": "Intermediate Microeconomics" },
-{ "code": "222203", "title": "Mathematical Economics" },
-{ "code": "222205", "title": "Introduction to Business (In English/Bengali)" },
-{ "code": "221909", "title": "Political Organization and Political System of UK and USA" },
-{ "code": "222207", "title": "Computer and Information Technology" },
-{ "code": "222115", "title": "Bangladesh Society and Culture" },
-{ "code": "221109", "title": "English (Compulsory)" }
+{ "code": "222201", "title": "Intermediate Microeconomics", "file": "papers/intermediate-microeconomics-222201.html" },
+{ "code": "222203", "title": "Mathematical Economics", "file": "papers/mathematical-economics-222203.html" },
+{ "code": "222205", "title": "Introduction to Business (In English/Bengali)", "file": "papers/introduction-to-business-in-english-bengali-222205.html" },
+{ "code": "221909", "title": "Political Organization and Political System of UK and USA", "file": "papers/political-organization-and-political-system-of-uk-and-usa-221909.html" },
+{ "code": "222207", "title": "Computer and Information Technology", "file": "papers/computer-and-information-technology-222207.html" },
+{ "code": "222115", "title": "Bangladesh Society and Culture", "file": "papers/bangladesh-society-and-culture-222115.html" },
+{ "code": "221109", "title": "English (Compulsory)", "file": "papers/english-compulsory-221109.html" }
 ],
 "3rd": [
-{ "code": "232201", "title": "Intermediate Macroeconomics" }
+{ "code": "232201", "title": "Intermediate Macroeconomics", "file": "papers/intermediate-macroeconomics-232201.html" }
 ],
-"4th": [], "masters": []
+"4th": [],
+"masters": []
 }
 }
 ]
@@ -317,50 +338,50 @@
 "en": "Physics",
 "courses": {
 "1st": [
-{ "code": "PHA-101", "title": "Mechanics and Properties of Matter" },
-{ "code": "PHA-102", "title": "Thermal Physics" },
-{ "code": "PHA-103", "title": "Electricity and Magnetism" },
-{ "code": "PHA-104", "title": "Introduction to Computer and Programming" },
-{ "code": "CMG-7100", "title": "Fundamentals of Chemistry" },
-{ "code": "MAM-102", "title": "Calculus-I" },
-{ "code": "Stat NM-102", "title": "Introduction to Probability" },
-{ "code": "MAM-103", "title": "Analytic and Vector Geometry" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "PHA-101", "title": "Mechanics and Properties of Matter", "file": "papers/mechanics-and-properties-of-matter-pha-101.html" },
+{ "code": "PHA-102", "title": "Thermal Physics", "file": "papers/thermal-physics-pha-102.html" },
+{ "code": "PHA-103", "title": "Electricity and Magnetism", "file": "papers/electricity-and-magnetism-pha-103.html" },
+{ "code": "PHA-104", "title": "Introduction to Computer and Programming", "file": "papers/introduction-to-computer-and-programming-pha-104.html" },
+{ "code": "CMG-7100", "title": "Fundamentals of Chemistry", "file": "papers/fundamentals-of-chemistry-cmg-7100.html" },
+{ "code": "MAM-102", "title": "Calculus-I", "file": "papers/calculus-i-mam-102.html" },
+{ "code": "Stat NM-102", "title": "Introduction to Probability", "file": "papers/introduction-to-probability-stat-nm-102.html" },
+{ "code": "MAM-103", "title": "Analytic and Vector Geometry", "file": "papers/analytic-and-vector-geometry-mam-103.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "PHA 201", "title": "Optics" },
-{ "code": "PHA 202", "title": "Electronics-I" },
-{ "code": "PHA 203", "title": "Mathematical Physics" },
-{ "code": "PHA 204", "title": "Atomic and Molecular Physics" },
-{ "code": "PHA 205", "title": "Waves, Oscillations and Advanced Mechanics" },
-{ "code": "PLA 201", "title": "Practical Laboratory" },
-{ "code": "PVA 202", "title": "Viva-voce" },
-{ "code": "MAM 202 A", "title": "Calculus II" },
-{ "code": "MAM 203 A", "title": "Ordinary Differential Equations" },
-{ "code": "MAM 204 A", "title": "Numerical Analysis" },
-{ "code": "MAM 104", "title": "Linear Algebra" },
-{ "code": "Stat NM-202", "title": "Principles of Statistics" }
+{ "code": "PHA 201", "title": "Optics", "file": "papers/optics-pha-201.html" },
+{ "code": "PHA 202", "title": "Electronics-I", "file": "papers/electronics-i-pha-202.html" },
+{ "code": "PHA 203", "title": "Mathematical Physics", "file": "papers/mathematical-physics-pha-203.html" },
+{ "code": "PHA 204", "title": "Atomic and Molecular Physics", "file": "papers/atomic-and-molecular-physics-pha-204.html" },
+{ "code": "PHA 205", "title": "Waves, Oscillations and Advanced Mechanics", "file": "papers/waves-oscillations-and-advanced-mechanics-pha-205.html" },
+{ "code": "PLA 201", "title": "Practical Laboratory", "file": "papers/practical-laboratory-pla-201.html" },
+{ "code": "PVA 202", "title": "Viva-voce", "file": "papers/viva-voce-pva-202.html" },
+{ "code": "MAM 202 A", "title": "Calculus II", "file": "papers/calculus-ii-mam-202-a.html" },
+{ "code": "MAM 203 A", "title": "Ordinary Differential Equations", "file": "papers/ordinary-differential-equations-mam-203-a.html" },
+{ "code": "MAM 204 A", "title": "Numerical Analysis", "file": "papers/numerical-analysis-mam-204-a.html" },
+{ "code": "MAM 104", "title": "Linear Algebra", "file": "papers/linear-algebra-mam-104.html" },
+{ "code": "Stat NM-202", "title": "Principles of Statistics", "file": "papers/principles-of-statistics-stat-nm-202.html" }
 ],
 "3rd": [
-{ "code": "PHA 301", "title": "Classical Mechanics and Relativity" },
-{ "code": "PHA 302", "title": "Quantum Mechanics I" },
-{ "code": "PHA 303", "title": "Solid State Physics I" },
-{ "code": "PHA 304", "title": "Nuclear Physics" },
-{ "code": "PHA 305", "title": "Classical Electrodynamics" },
-{ "code": "PHA 306", "title": "Lasers and Photonics" },
-{ "code": "PHA 307", "title": "Computational Physics" },
-{ "code": "PHA 308", "title": "Introduction to Astrophysics" }
+{ "code": "PHA 301", "title": "Classical Mechanics and Relativity", "file": "papers/classical-mechanics-and-relativity-pha-301.html" },
+{ "code": "PHA 302", "title": "Quantum Mechanics I", "file": "papers/quantum-mechanics-i-pha-302.html" },
+{ "code": "PHA 303", "title": "Solid State Physics I", "file": "papers/solid-state-physics-i-pha-303.html" },
+{ "code": "PHA 304", "title": "Nuclear Physics", "file": "papers/nuclear-physics-pha-304.html" },
+{ "code": "PHA 305", "title": "Classical Electrodynamics", "file": "papers/classical-electrodynamics-pha-305.html" },
+{ "code": "PHA 306", "title": "Lasers and Photonics", "file": "papers/lasers-and-photonics-pha-306.html" },
+{ "code": "PHA 307", "title": "Computational Physics", "file": "papers/computational-physics-pha-307.html" },
+{ "code": "PHA 308", "title": "Introduction to Astrophysics", "file": "papers/introduction-to-astrophysics-pha-308.html" }
 ],
 "4th": [
-{ "code": "PHA 401", "title": "Statistical Mechanics" },
-{ "code": "PHA 402", "title": "Quantum Mechanics II" },
-{ "code": "PHA 403", "title": "Electronics II" },
-{ "code": "PHA 404", "title": "Methods of Experimental Physics" },
-{ "code": "PHA 405", "title": "Solid State Physics II" },
-{ "code": "PHA 406", "title": "Nuclear and Particle Physics" },
-{ "code": "PHA 407", "title": "Introduction to Material Science and Nanotechnology" },
-{ "code": "PLA 401", "title": "Practical Laboratory" },
-{ "code": "PVA 402", "title": "Viva-Voce Examination" }
+{ "code": "PHA 401", "title": "Statistical Mechanics", "file": "papers/statistical-mechanics-pha-401.html" },
+{ "code": "PHA 402", "title": "Quantum Mechanics II", "file": "papers/quantum-mechanics-ii-pha-402.html" },
+{ "code": "PHA 403", "title": "Electronics II", "file": "papers/electronics-ii-pha-403.html" },
+{ "code": "PHA 404", "title": "Methods of Experimental Physics", "file": "papers/methods-of-experimental-physics-pha-404.html" },
+{ "code": "PHA 405", "title": "Solid State Physics II", "file": "papers/solid-state-physics-ii-pha-405.html" },
+{ "code": "PHA 406", "title": "Nuclear and Particle Physics", "file": "papers/nuclear-and-particle-physics-pha-406.html" },
+{ "code": "PHA 407", "title": "Introduction to Material Science and Nanotechnology", "file": "papers/introduction-to-material-science-and-nanotechnology-pha-407.html" },
+{ "code": "PLA 401", "title": "Practical Laboratory", "file": "papers/practical-laboratory-pla-401.html" },
+{ "code": "PVA 402", "title": "Viva-Voce Examination", "file": "papers/viva-voce-examination-pva-402.html" }
 ],
 "masters": []
 }
@@ -371,39 +392,39 @@
 "en": "Chemistry",
 "courses": {
 "1st": [
-{ "code": "CHEM 7101", "title": "Physical Chemistry I" },
-{ "code": "CHEM 7121", "title": "Organic Chemistry I" },
-{ "code": "CHEM 7141", "title": "Principles of Inorganic Chemistry" },
-{ "code": "CMG-7100", "title": "Fundamentals of Chemistry" },
-{ "code": "CMGL-7101", "title": "General Chemistry Laboratory" },
-{ "code": "CHEM 7161", "title": "Fundamental Analytical Chemistry" },
-{ "code": "PM-111", "title": "Mechanics and Waves" },
-{ "code": "MAM-102", "title": "Calculus-I" },
-{ "code": "PM-122", "title": "Electricity and Magnetism" },
-{ "code": "MAM-103", "title": "Analytic and Vector Geometry" },
-{ "code": "MAM-104", "title": "Linear Algebra" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "CHEM 7101", "title": "Physical Chemistry I", "file": "papers/physical-chemistry-i-chem-7101.html" },
+{ "code": "CHEM 7121", "title": "Organic Chemistry I", "file": "papers/organic-chemistry-i-chem-7121.html" },
+{ "code": "CHEM 7141", "title": "Principles of Inorganic Chemistry", "file": "papers/principles-of-inorganic-chemistry-chem-7141.html" },
+{ "code": "CMG-7100", "title": "Fundamentals of Chemistry", "file": "papers/fundamentals-of-chemistry-cmg-7100.html" },
+{ "code": "CMGL-7101", "title": "General Chemistry Laboratory", "file": "papers/general-chemistry-laboratory-cmgl-7101.html" },
+{ "code": "CHEM 7161", "title": "Fundamental Analytical Chemistry", "file": "papers/fundamental-analytical-chemistry-chem-7161.html" },
+{ "code": "PM-111", "title": "Mechanics and Waves", "file": "papers/mechanics-and-waves-pm-111.html" },
+{ "code": "MAM-102", "title": "Calculus-I", "file": "papers/calculus-i-mam-102.html" },
+{ "code": "PM-122", "title": "Electricity and Magnetism", "file": "papers/electricity-and-magnetism-pm-122.html" },
+{ "code": "MAM-103", "title": "Analytic and Vector Geometry", "file": "papers/analytic-and-vector-geometry-mam-103.html" },
+{ "code": "MAM-104", "title": "Linear Algebra", "file": "papers/linear-algebra-mam-104.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "CH 7201", "title": "Chemical Thermodynamics" },
-{ "code": "CH 7202" },
-{ "code": "CH 7221", "title": "Organic Chemistry II" },
-{ "code": "PMA 7223", "title": "Electricity and Magnetism" },
-{ "code": "MAM 201", "title": "Calculus II" },
-{ "code": "MAM 203", "title": "Numerical Analysis" },
-{ "code": "CM 7201", "title": "Physical Chemistry / Selected Topics of Physical Chemistry" },
-{ "code": "CM 7222", "title": "Biologically Important Organic Compounds" },
-{ "code": "CM 7241", "title": "Chemistry of the Elements" }
+{ "code": "CH 7201", "title": "Chemical Thermodynamics", "file": "papers/chemical-thermodynamics-ch-7201.html" },
+{ "code": "CH 7202", "file": "papers/ch-7202.html" },
+{ "code": "CH 7221", "title": "Organic Chemistry II", "file": "papers/organic-chemistry-ii-ch-7221.html" },
+{ "code": "PMA 7223", "title": "Electricity and Magnetism", "file": "papers/electricity-and-magnetism-pma-7223.html" },
+{ "code": "MAM 201", "title": "Calculus II", "file": "papers/calculus-ii-mam-201.html" },
+{ "code": "MAM 203", "title": "Numerical Analysis", "file": "papers/numerical-analysis-mam-203.html" },
+{ "code": "CM 7201", "title": "Physical Chemistry / Selected Topics of Physical Chemistry", "file": "papers/physical-chemistry-selected-topics-of-physical-chemistry-cm-7201.html" },
+{ "code": "CM 7222", "title": "Biologically Important Organic Compounds", "file": "papers/biologically-important-organic-compounds-cm-7222.html" },
+{ "code": "CM 7241", "title": "Chemistry of the Elements", "file": "papers/chemistry-of-the-elements-cm-7241.html" }
 ],
 "3rd": [
-{ "code": "CH 7301", "title": "Chemical Kinetics and Photochemistry" },
-{ "code": "CH 7302", "title": "Surface Chemistry, Colloid Science and Phase Equilibrium" },
-{ "code": "CH 7321", "title": "Organic Reaction Mechanism I" }
+{ "code": "CH 7301", "title": "Chemical Kinetics and Photochemistry", "file": "papers/chemical-kinetics-and-photochemistry-ch-7301.html" },
+{ "code": "CH 7302", "title": "Surface Chemistry, Colloid Science and Phase Equilibrium", "file": "papers/surface-chemistry-colloid-science-and-phase-equilibrium-ch-7302.html" },
+{ "code": "CH 7321", "title": "Organic Reaction Mechanism I", "file": "papers/organic-reaction-mechanism-i-ch-7321.html" }
 ],
 "4th": [
-{ "code": "CH 7401", "title": "Physical Properties of Polymers" },
-{ "code": "CH 7402", "title": "Chemistry of Solids" },
-{ "code": "CH 7421" }
+{ "code": "CH 7401", "title": "Physical Properties of Polymers", "file": "papers/physical-properties-of-polymers-ch-7401.html" },
+{ "code": "CH 7402", "title": "Chemistry of Solids", "file": "papers/chemistry-of-solids-ch-7402.html" },
+{ "code": "CH 7421", "file": "papers/ch-7421.html" }
 ],
 "masters": []
 }
@@ -414,48 +435,48 @@
 "en": "Mathematics",
 "courses": {
 "1st": [
-{ "code": "MAT 101", "title": "Fundamentals of Mathematics" },
-{ "code": "MAT 102", "title": "Calculus I / Differential Calculus I" },
-{ "code": "MAT 103", "title": "Linear Algebra I / Analytic Geometry" },
-{ "code": "MAT 104", "title": "Analytic and Vector Geometry / Linear Algebra I" },
-{ "code": "MAT 105", "title": "Integral Calculus I" },
-{ "code": "MAT 150", "title": "Math Lab I" },
-{ "code": "COM 100", "title": "History of the Emergence of Independent Bangladesh" },
-{ "code": "CMG-7100", "title": "Fundamentals of Chemistry" },
-{ "code": "Stat NM-101", "title": "Introduction to Statistics" },
-{ "code": "ECO 101", "title": "Principles of Microeconomics" },
-{ "code": "ECO 102", "title": "Principles of Macroeconomics" },
-{ "code": "PM-111", "title": "Mechanics and Waves" },
-{ "code": "PM-112", "title": "Properties of Matter" },
-{ "code": "PM-122", "title": "Electricity and Magnetism" },
-{ "code": "Stat NM-102", "title": "Introduction to Probability" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "MAT 101", "title": "Fundamentals of Mathematics", "file": "papers/fundamentals-of-mathematics-mat-101.html" },
+{ "code": "MAT 102", "title": "Calculus I / Differential Calculus I", "file": "papers/calculus-i-differential-calculus-i-mat-102.html" },
+{ "code": "MAT 103", "title": "Linear Algebra I / Analytic Geometry", "file": "papers/linear-algebra-i-analytic-geometry-mat-103.html" },
+{ "code": "MAT 104", "title": "Analytic and Vector Geometry / Linear Algebra I", "file": "papers/analytic-and-vector-geometry-linear-algebra-i-mat-104.html" },
+{ "code": "MAT 105", "title": "Integral Calculus I", "file": "papers/integral-calculus-i-mat-105.html" },
+{ "code": "MAT 150", "title": "Math Lab I", "file": "papers/math-lab-i-mat-150.html" },
+{ "code": "COM 100", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-com-100.html" },
+{ "code": "CMG-7100", "title": "Fundamentals of Chemistry", "file": "papers/fundamentals-of-chemistry-cmg-7100.html" },
+{ "code": "Stat NM-101", "title": "Introduction to Statistics", "file": "papers/introduction-to-statistics-stat-nm-101.html" },
+{ "code": "ECO 101", "title": "Principles of Microeconomics", "file": "papers/principles-of-microeconomics-eco-101.html" },
+{ "code": "ECO 102", "title": "Principles of Macroeconomics", "file": "papers/principles-of-macroeconomics-eco-102.html" },
+{ "code": "PM-111", "title": "Mechanics and Waves", "file": "papers/mechanics-and-waves-pm-111.html" },
+{ "code": "PM-112", "title": "Properties of Matter", "file": "papers/properties-of-matter-pm-112.html" },
+{ "code": "PM-122", "title": "Electricity and Magnetism", "file": "papers/electricity-and-magnetism-pm-122.html" },
+{ "code": "Stat NM-102", "title": "Introduction to Probability", "file": "papers/introduction-to-probability-stat-nm-102.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "MAT 201", "title": "Calculus II" },
-{ "code": "MAT 202", "title": "Ordinary Differential Equations I" },
-{ "code": "MAT 203", "title": "Numerical Analysis I" },
-{ "code": "MAT 204", "title": "Programming Fundamentals (Fortran)" },
-{ "code": "MAT 250", "title": "Math Lab II (Fortran)" },
-{ "code": "MAT 299", "title": "Viva Voce" },
-{ "code": "PMA-211", "title": "Optics" }
+{ "code": "MAT 201", "title": "Calculus II", "file": "papers/calculus-ii-mat-201.html" },
+{ "code": "MAT 202", "title": "Ordinary Differential Equations I", "file": "papers/ordinary-differential-equations-i-mat-202.html" },
+{ "code": "MAT 203", "title": "Numerical Analysis I", "file": "papers/numerical-analysis-i-mat-203.html" },
+{ "code": "MAT 204", "title": "Programming Fundamentals (Fortran)", "file": "papers/programming-fundamentals-fortran-mat-204.html" },
+{ "code": "MAT 250", "title": "Math Lab II (Fortran)", "file": "papers/math-lab-ii-fortran-mat-250.html" },
+{ "code": "MAT 299", "title": "Viva Voce", "file": "papers/viva-voce-mat-299.html" },
+{ "code": "PMA-211", "title": "Optics", "file": "papers/optics-pma-211.html" }
 ],
 "3rd": [
-{ "code": "MAT 301", "title": "Real Analysis" },
-{ "code": "MAT 302", "title": "Complex Analysis" }
+{ "code": "MAT 301", "title": "Real Analysis", "file": "papers/real-analysis-mat-301.html" },
+{ "code": "MAT 302", "title": "Complex Analysis", "file": "papers/complex-analysis-mat-302.html" }
 ],
 "4th": [
-{ "code": "MAT 401", "title": "Theory of Numbers" },
-{ "code": "MAT 402", "title": "Hydrodynamics" },
-{ "code": "MAT 403", "title": "Partial Differential Equations" },
-{ "code": "MAT 404", "title": "Tensor Analysis" },
-{ "code": "MAT 405", "title": "Functional Analysis" },
-{ "code": "MAT 406", "title": "Discrete Mathematics" },
-{ "code": "MAT 408", "title": "Topology" },
-{ "code": "MAT 410", "title": "Astronomy" },
-{ "code": "MAT 411", "title": "Mathematical Modeling in Biology" },
-{ "code": "MAT 450", "title": "Math Lab IV (Mathematica)" },
-{ "code": "MAT 499", "title": "Viva-Voce" }
+{ "code": "MAT 401", "title": "Theory of Numbers", "file": "papers/theory-of-numbers-mat-401.html" },
+{ "code": "MAT 402", "title": "Hydrodynamics", "file": "papers/hydrodynamics-mat-402.html" },
+{ "code": "MAT 403", "title": "Partial Differential Equations", "file": "papers/partial-differential-equations-mat-403.html" },
+{ "code": "MAT 404", "title": "Tensor Analysis", "file": "papers/tensor-analysis-mat-404.html" },
+{ "code": "MAT 405", "title": "Functional Analysis", "file": "papers/functional-analysis-mat-405.html" },
+{ "code": "MAT 406", "title": "Discrete Mathematics", "file": "papers/discrete-mathematics-mat-406.html" },
+{ "code": "MAT 408", "title": "Topology", "file": "papers/topology-mat-408.html" },
+{ "code": "MAT 410", "title": "Astronomy", "file": "papers/astronomy-mat-410.html" },
+{ "code": "MAT 411", "title": "Mathematical Modeling in Biology", "file": "papers/mathematical-modeling-in-biology-mat-411.html" },
+{ "code": "MAT 450", "title": "Math Lab IV (Mathematica)", "file": "papers/math-lab-iv-mathematica-mat-450.html" },
+{ "code": "MAT 499", "title": "Viva-Voce", "file": "papers/viva-voce-mat-499.html" }
 ],
 "masters": []
 }
@@ -466,39 +487,39 @@
 "en": "Statistics",
 "courses": {
 "1st": [
-{ "code": "Stat H-101", "title": "Introduction to Statistics" },
-{ "code": "Stat H-102", "title": "Introduction to Probability and Probability Distribution" },
-{ "code": "Stat H-103", "title": "Linear Algebra" },
-{ "code": "Stat H-108", "title": "Lab II: Linear Algebra" },
-{ "code": "MAM-101", "title": "Fundamentals of Mathematics" },
-{ "code": "212209", "title": "Principles of Economics" },
-{ "code": "MAM-102", "title": "Calculus-I" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "Stat H-101", "title": "Introduction to Statistics", "file": "papers/introduction-to-statistics-stat-h-101.html" },
+{ "code": "Stat H-102", "title": "Introduction to Probability and Probability Distribution", "file": "papers/introduction-to-probability-and-probability-distribution-stat-h-102.html" },
+{ "code": "Stat H-103", "title": "Linear Algebra", "file": "papers/linear-algebra-stat-h-103.html" },
+{ "code": "Stat H-108", "title": "Lab II: Linear Algebra", "file": "papers/lab-ii-linear-algebra-stat-h-108.html" },
+{ "code": "MAM-101", "title": "Fundamentals of Mathematics", "file": "papers/fundamentals-of-mathematics-mam-101.html" },
+{ "code": "212209", "title": "Principles of Economics", "file": "papers/principles-of-economics-212209.html" },
+{ "code": "MAM-102", "title": "Calculus-I", "file": "papers/calculus-i-mam-102.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "Stat H-201", "title": "Theory of Estimation" },
-{ "code": "Stat H-202", "title": "Sampling Distribution and Order Statistics" },
-{ "code": "Stat H-204", "title": "Economic Statistics & Index Number" },
-{ "code": "Stat H-205", "title": "Mathematical Methods" }
+{ "code": "Stat H-201", "title": "Theory of Estimation", "file": "papers/theory-of-estimation-stat-h-201.html" },
+{ "code": "Stat H-202", "title": "Sampling Distribution and Order Statistics", "file": "papers/sampling-distribution-and-order-statistics-stat-h-202.html" },
+{ "code": "Stat H-204", "title": "Economic Statistics & Index Number", "file": "papers/economic-statistics-index-number-stat-h-204.html" },
+{ "code": "Stat H-205", "title": "Mathematical Methods", "file": "papers/mathematical-methods-stat-h-205.html" }
 ],
 "3rd": [
-{ "code": "Stat H-301", "title": "Test of Hypothesis" },
-{ "code": "Stat H-302", "title": "Sampling Techniques" },
-{ "code": "Stat H-303", "title": "Regression Analysis" },
-{ "code": "Stat H-304", "title": "Epidemiology" },
-{ "code": "Stat H-305", "title": "Industrial Statistics and Operations Research" },
-{ "code": "Stat H-306", "title": "Demography" },
-{ "code": "Stat H-307", "title": "Simulation" },
-{ "code": "Stat H-308", "title": "Lab-VI: Introduction to SPSS" },
-{ "code": "Stat H-309", "title": "Lab-VII: Regression Analysis and Test of Hypothesis (Using R/SPSS)" },
-{ "code": "Stat H-310", "title": "Lab-VIII: Demography and Industrial Statistics (Using R/SPSS)" },
-{ "code": "Stat H-311", "title": "Viva Voce" }
+{ "code": "Stat H-301", "title": "Test of Hypothesis", "file": "papers/test-of-hypothesis-stat-h-301.html" },
+{ "code": "Stat H-302", "title": "Sampling Techniques", "file": "papers/sampling-techniques-stat-h-302.html" },
+{ "code": "Stat H-303", "title": "Regression Analysis", "file": "papers/regression-analysis-stat-h-303.html" },
+{ "code": "Stat H-304", "title": "Epidemiology", "file": "papers/epidemiology-stat-h-304.html" },
+{ "code": "Stat H-305", "title": "Industrial Statistics and Operations Research", "file": "papers/industrial-statistics-and-operations-research-stat-h-305.html" },
+{ "code": "Stat H-306", "title": "Demography", "file": "papers/demography-stat-h-306.html" },
+{ "code": "Stat H-307", "title": "Simulation", "file": "papers/simulation-stat-h-307.html" },
+{ "code": "Stat H-308", "title": "Lab-VI: Introduction to SPSS", "file": "papers/lab-vi-introduction-to-spss-stat-h-308.html" },
+{ "code": "Stat H-309", "title": "Lab-VII: Regression Analysis and Test of Hypothesis (Using R/SPSS)", "file": "papers/lab-vii-regression-analysis-and-test-of-hypothesis-using-r-spss-stat-h-309.html" },
+{ "code": "Stat H-310", "title": "Lab-VIII: Demography and Industrial Statistics (Using R/SPSS)", "file": "papers/lab-viii-demography-and-industrial-statistics-using-r-spss-stat-h-310.html" },
+{ "code": "Stat H-311", "title": "Viva Voce", "file": "papers/viva-voce-stat-h-311.html" }
 ],
 "4th": [
-{ "code": "Stat H-401", "title": "Multivariate Analysis" },
-{ "code": "Stat H-402", "title": "Time Series Analysis" },
-{ "code": "Stat H-405", "title": "Biostatistics" },
-{ "code": "Stat H-406", "title": "Stochastic Process" }
+{ "code": "Stat H-401", "title": "Multivariate Analysis", "file": "papers/multivariate-analysis-stat-h-401.html" },
+{ "code": "Stat H-402", "title": "Time Series Analysis", "file": "papers/time-series-analysis-stat-h-402.html" },
+{ "code": "Stat H-405", "title": "Biostatistics", "file": "papers/biostatistics-stat-h-405.html" },
+{ "code": "Stat H-406", "title": "Stochastic Process", "file": "papers/stochastic-process-stat-h-406.html" }
 ],
 "masters": []
 }
@@ -509,39 +530,39 @@
 "en": "Geography and Environment",
 "courses": {
 "1st": [
-{ "code": "GETh 1001", "title": "Geographical Thoughts and Concepts" },
-{ "code": "GETh 1002", "title": "Introduction to Physical Geography" },
-{ "code": "GETh 1003", "title": "Introduction to Human Geography" },
-{ "code": "GETh 1004", "title": "Concept of Region and World Regional Pattern" },
-{ "code": "GETh 1005", "title": "Fundamentals of English Language" },
-{ "code": "GELb 1006", "title": "Fundamentals of Cartography" },
-{ "code": "212009", "title": "Introducing Sociology" },
-{ "code": "Stat NM-101", "title": "Introduction to Statistics" },
-{ "code": "211909", "title": "Introduction to Political Theory" },
-{ "code": "212209", "title": "Principles of Economics" },
-{ "code": "SWE-101", "title": "Introductory Soil-I" },
-{ "code": "ACZ-1001", "title": "Zoology-I" },
-{ "code": "BOT-1001", "title": "Introductory Botany" },
-{ "code": "SWE-102", "title": "Introductory Soil-II" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "GETh 1001", "title": "Geographical Thoughts and Concepts", "file": "papers/geographical-thoughts-and-concepts-geth-1001.html" },
+{ "code": "GETh 1002", "title": "Introduction to Physical Geography", "file": "papers/introduction-to-physical-geography-geth-1002.html" },
+{ "code": "GETh 1003", "title": "Introduction to Human Geography", "file": "papers/introduction-to-human-geography-geth-1003.html" },
+{ "code": "GETh 1004", "title": "Concept of Region and World Regional Pattern", "file": "papers/concept-of-region-and-world-regional-pattern-geth-1004.html" },
+{ "code": "GETh 1005", "title": "Fundamentals of English Language", "file": "papers/fundamentals-of-english-language-geth-1005.html" },
+{ "code": "GELb 1006", "title": "Fundamentals of Cartography", "file": "papers/fundamentals-of-cartography-gelb-1006.html" },
+{ "code": "212009", "title": "Introducing Sociology", "file": "papers/introducing-sociology-212009.html" },
+{ "code": "Stat NM-101", "title": "Introduction to Statistics", "file": "papers/introduction-to-statistics-stat-nm-101.html" },
+{ "code": "211909", "title": "Introduction to Political Theory", "file": "papers/introduction-to-political-theory-211909.html" },
+{ "code": "212209", "title": "Principles of Economics", "file": "papers/principles-of-economics-212209.html" },
+{ "code": "SWE-101", "title": "Introductory Soil-I", "file": "papers/introductory-soil-i-swe-101.html" },
+{ "code": "ACZ-1001", "title": "Zoology-I", "file": "papers/zoology-i-acz-1001.html" },
+{ "code": "BOT-1001", "title": "Introductory Botany", "file": "papers/introductory-botany-bot-1001.html" },
+{ "code": "SWE-102", "title": "Introductory Soil-II", "file": "papers/introductory-soil-ii-swe-102.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "GETh 2001", "title": "Environmental Chemistry" },
-{ "code": "GETh 2002", "title": "Geomorphology" },
-{ "code": "GETh 2003", "title": "Climatology" },
-{ "code": "GETh 2004", "title": "Economic Geography" },
-{ "code": "GETh 2005", "title": "Cultural Geography" },
-{ "code": "GETh 2006", "title": "Quantitative Techniques in Geography - I" },
-{ "code": "GELb 2007", "title": "Computer Cartography and Map Projection" }
+{ "code": "GETh 2001", "title": "Environmental Chemistry", "file": "papers/environmental-chemistry-geth-2001.html" },
+{ "code": "GETh 2002", "title": "Geomorphology", "file": "papers/geomorphology-geth-2002.html" },
+{ "code": "GETh 2003", "title": "Climatology", "file": "papers/climatology-geth-2003.html" },
+{ "code": "GETh 2004", "title": "Economic Geography", "file": "papers/economic-geography-geth-2004.html" },
+{ "code": "GETh 2005", "title": "Cultural Geography", "file": "papers/cultural-geography-geth-2005.html" },
+{ "code": "GETh 2006", "title": "Quantitative Techniques in Geography - I", "file": "papers/quantitative-techniques-in-geography-i-geth-2006.html" },
+{ "code": "GELb 2007", "title": "Computer Cartography and Map Projection", "file": "papers/computer-cartography-and-map-projection-gelb-2007.html" }
 ],
 "3rd": [
-{ "code": "GETh 3001", "title": "Oceanography" },
-{ "code": "GETh 3002", "title": "Geography of Soil" }
+{ "code": "GETh 3001", "title": "Oceanography", "file": "papers/oceanography-geth-3001.html" },
+{ "code": "GETh 3002", "title": "Geography of Soil", "file": "papers/geography-of-soil-geth-3002.html" }
 ],
 "4th": [
-{ "code": "GETh 4001", "title": "Hydrology and Fluvial Morphology" },
-{ "code": "GETh 4002", "title": "Disaster Management" },
-{ "code": "GETh 4003", "title": "Regional Geography and Environment of South Asia" }
+{ "code": "GETh 4001", "title": "Hydrology and Fluvial Morphology", "file": "papers/hydrology-and-fluvial-morphology-geth-4001.html" },
+{ "code": "GETh 4002", "title": "Disaster Management", "file": "papers/disaster-management-geth-4002.html" },
+{ "code": "GETh 4003", "title": "Regional Geography and Environment of South Asia", "file": "papers/regional-geography-and-environment-of-south-asia-geth-4003.html" }
 ],
 "masters": []
 }
@@ -559,53 +580,53 @@
 "en": "Botany",
 "courses": {
 "1st": [
-{ "code": "Bot-101", "title": "Microbiology" },
-{ "code": "Bot-102", "title": "Mycology" },
-{ "code": "Bot-103", "title": "Phycology" },
-{ "code": "Bot-104", "title": "Practical" },
-{ "code": "Bot-105", "title": "Viva-Voce" },
-{ "code": "ACZ-1001", "title": "Zoology-I" },
-{ "code": "ACZ-1002", "title": "Zoology-I (Practical)" },
-{ "code": "CMG-7100", "title": "Fundamentals of Chemistry" },
-{ "code": "CMGL-7101", "title": "General Chemistry Lab" },
-{ "code": "SWE 101", "title": "Introductory Soil-I" },
-{ "code": "SWE 102", "title": "Introductory Soil-II" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "Bot-101", "title": "Microbiology", "file": "papers/microbiology-bot-101.html" },
+{ "code": "Bot-102", "title": "Mycology", "file": "papers/mycology-bot-102.html" },
+{ "code": "Bot-103", "title": "Phycology", "file": "papers/phycology-bot-103.html" },
+{ "code": "Bot-104", "title": "Practical", "file": "papers/practical-bot-104.html" },
+{ "code": "Bot-105", "title": "Viva-Voce", "file": "papers/viva-voce-bot-105.html" },
+{ "code": "ACZ-1001", "title": "Zoology-I", "file": "papers/zoology-i-acz-1001.html" },
+{ "code": "ACZ-1002", "title": "Zoology-I (Practical)", "file": "papers/zoology-i-practical-acz-1002.html" },
+{ "code": "CMG-7100", "title": "Fundamentals of Chemistry", "file": "papers/fundamentals-of-chemistry-cmg-7100.html" },
+{ "code": "CMGL-7101", "title": "General Chemistry Lab", "file": "papers/general-chemistry-laboratory-cmgl-7101.html" },
+{ "code": "SWE 101", "title": "Introductory Soil-I", "file": "papers/introductory-soil-i-swe-101.html" },
+{ "code": "SWE 102", "title": "Introductory Soil-II", "file": "papers/introductory-soil-ii-swe-102.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "BOT 201", "title": "Higher Cryptogams" },
-{ "code": "BOT 202", "title": "Taxonomy of Angiosperms" },
-{ "code": "BOT 203", "title": "Plant Anatomy and Embryology" },
-{ "code": "BOT 204", "title": "Practical- II" },
-{ "code": "BOT 205", "title": "Viva-Voce" },
-{ "code": "CM 7201", "title": "Physical Chemistry" },
-{ "code": "CM 7222", "title": "Biologically Important Organic Compounds" },
-{ "code": "CM 7241", "title": "Chemistry of the Elements" },
-{ "code": "ACZ 2001", "title": "Zoology- II" },
-{ "code": "ACZ 2002", "title": "Zoology Practical- II" },
-{ "code": "221109", "title": "English (Compulsory)" }
+{ "code": "BOT 201", "title": "Higher Cryptogams", "file": "papers/higher-cryptogams-bot-201.html" },
+{ "code": "BOT 202", "title": "Taxonomy of Angiosperms", "file": "papers/taxonomy-of-angiosperms-bot-202.html" },
+{ "code": "BOT 203", "title": "Plant Anatomy and Embryology", "file": "papers/plant-anatomy-and-embryology-bot-203.html" },
+{ "code": "BOT 204", "title": "Practical- II", "file": "papers/practical-ii-bot-204.html" },
+{ "code": "BOT 205", "title": "Viva-Voce", "file": "papers/viva-voce-bot-205.html" },
+{ "code": "CM 7201", "title": "Physical Chemistry", "file": "papers/physical-chemistry-selected-topics-of-physical-chemistry-cm-7201.html" },
+{ "code": "CM 7222", "title": "Biologically Important Organic Compounds", "file": "papers/biologically-important-organic-compounds-cm-7222.html" },
+{ "code": "CM 7241", "title": "Chemistry of the Elements", "file": "papers/chemistry-of-the-elements-cm-7241.html" },
+{ "code": "ACZ 2001", "title": "Zoology- II", "file": "papers/zoology-ii-acz-2001.html" },
+{ "code": "ACZ 2002", "title": "Zoology Practical- II", "file": "papers/zoology-practical-ii-acz-2002.html" },
+{ "code": "221109", "title": "English (Compulsory)", "file": "papers/english-compulsory-221109.html" }
 ],
 "3rd": [
-{ "code": "BOT 301", "title": "Gymnosperm, Paleobotany and Palynology" },
-{ "code": "BOT 302", "title": "Plant Physiology and Plant Nutrition" },
-{ "code": "BOT 303", "title": "Plant Biochemistry" },
-{ "code": "BOT 304", "title": "Ecology and Environmental Science" },
-{ "code": "BOT 305", "title": "Plant Pathology" },
-{ "code": "BOT 306", "title": "Cytology and Cytogenetics" },
-{ "code": "BOT 307", "title": "Genetics" }
+{ "code": "BOT 301", "title": "Gymnosperm, Paleobotany and Palynology", "file": "papers/gymnosperm-paleobotany-and-palynology-bot-301.html" },
+{ "code": "BOT 302", "title": "Plant Physiology and Plant Nutrition", "file": "papers/plant-physiology-and-plant-nutrition-bot-302.html" },
+{ "code": "BOT 303", "title": "Plant Biochemistry", "file": "papers/plant-biochemistry-bot-303.html" },
+{ "code": "BOT 304", "title": "Ecology and Environmental Science", "file": "papers/ecology-and-environmental-science-bot-304.html" },
+{ "code": "BOT 305", "title": "Plant Pathology", "file": "papers/plant-pathology-bot-305.html" },
+{ "code": "BOT 306", "title": "Cytology and Cytogenetics", "file": "papers/cytology-and-cytogenetics-bot-306.html" },
+{ "code": "BOT 307", "title": "Genetics", "file": "papers/genetics-bot-307.html" }
 ],
 "4th": [
-{ "code": "Bot 401", "title": "Agronomy and Horticulture" },
-{ "code": "Bot 402", "title": "Economic Botany, Ethnobotany and Pharmacognosy" },
-{ "code": "Bot 403", "title": "Limnology and Aquaculture" },
-{ "code": "Bot 404", "title": "Biodiversity and Evolution" },
-{ "code": "Bot 405", "title": "Plant Breeding" },
-{ "code": "Bot 406", "title": "Molecular Biology and Bioinformatics" },
-{ "code": "Bot 407", "title": "Biostatistics and Research Methodology" },
-{ "code": "Bot 408", "title": "Biotechnology and Genetic Engineering" },
-{ "code": "Bot 409", "title": "Practical-V" },
-{ "code": "Bot 410", "title": "Practical-VI" },
-{ "code": "Bot 411", "title": "Viva-Voce" }
+{ "code": "Bot 401", "title": "Agronomy and Horticulture", "file": "papers/agronomy-and-horticulture-bot-401.html" },
+{ "code": "Bot 402", "title": "Economic Botany, Ethnobotany and Pharmacognosy", "file": "papers/economic-botany-ethnobotany-and-pharmacognosy-bot-402.html" },
+{ "code": "Bot 403", "title": "Limnology and Aquaculture", "file": "papers/limnology-and-aquaculture-bot-403.html" },
+{ "code": "Bot 404", "title": "Biodiversity and Evolution", "file": "papers/biodiversity-and-evolution-bot-404.html" },
+{ "code": "Bot 405", "title": "Plant Breeding", "file": "papers/plant-breeding-bot-405.html" },
+{ "code": "Bot 406", "title": "Molecular Biology and Bioinformatics", "file": "papers/molecular-biology-and-bioinformatics-bot-406.html" },
+{ "code": "Bot 407", "title": "Biostatistics and Research Methodology", "file": "papers/biostatistics-and-research-methodology-bot-407.html" },
+{ "code": "Bot 408", "title": "Biotechnology and Genetic Engineering", "file": "papers/biotechnology-and-genetic-engineering-bot-408.html" },
+{ "code": "Bot 409", "title": "Practical-V", "file": "papers/practical-v-bot-409.html" },
+{ "code": "Bot 410", "title": "Practical-VI", "file": "papers/practical-vi-bot-410.html" },
+{ "code": "Bot 411", "title": "Viva-Voce", "file": "papers/viva-voce-bot-411.html" }
 ],
 "masters": []
 }
@@ -616,31 +637,31 @@
 "en": "Zoology",
 "courses": {
 "1st": [
-{ "code": "ACZ 101", "title": "Introduction Zoology" },
-{ "code": "ACZ 102", "title": "Protozoa and Non-chordates" },
-{ "code": "ACZ 103", "title": "Zoology Practical-I" },
-{ "code": "ACZ 104", "title": "Viva-Voce" },
-{ "code": "CMG-7100", "title": "Fundamentals of Chemistry" },
-{ "code": "CMGL-7101", "title": "General Chemistry Laboratory" },
-{ "code": "BOT-1001", "title": "Introductory Botany" },
-{ "code": "BOT-1002", "title": "Botany-I (Practical)" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "ACZ 101", "title": "Introduction Zoology", "file": "papers/introduction-zoology-acz-101.html" },
+{ "code": "ACZ 102", "title": "Protozoa and Non-chordates", "file": "papers/protozoa-and-non-chordates-acz-102.html" },
+{ "code": "ACZ 103", "title": "Zoology Practical-I", "file": "papers/zoology-practical-i-acz-103.html" },
+{ "code": "ACZ 104", "title": "Viva-Voce", "file": "papers/viva-voce-acz-104.html" },
+{ "code": "CMG-7100", "title": "Fundamentals of Chemistry", "file": "papers/fundamentals-of-chemistry-cmg-7100.html" },
+{ "code": "CMGL-7101", "title": "General Chemistry Laboratory", "file": "papers/general-chemistry-laboratory-cmgl-7101.html" },
+{ "code": "BOT-1001", "title": "Introductory Botany", "file": "papers/introductory-botany-bot-1001.html" },
+{ "code": "BOT-1002", "title": "Botany-I (Practical)", "file": "papers/botany-i-practical-bot-1002.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "ACZ 202" }
+{ "code": "ACZ 202", "file": "papers/acz-202.html" }
 ],
 "3rd": [],
 "4th": [
-{ "code": "ACZ 401", "title": "Applied and Economic Zoology" },
-{ "code": "ACZ 402", "title": "Microbiology and Radiant Biology" },
-{ "code": "ACZ 403", "title": "Parasitology" },
-{ "code": "ACZ 404", "title": "Entomology" },
-{ "code": "ACZ 405", "title": "Fishery Science and Limnology" },
-{ "code": "ACZ 406", "title": "Wildlife Biology Management and Conservation" },
-{ "code": "ACZ 407", "title": "Biostatistics and Research Methodology" },
-{ "code": "ACZ 408", "title": "Genetic Engineering and Biotechnology" },
-{ "code": "ACZ 409", "title": "Zoology Practical" },
-{ "code": "ACZ 410", "title": "Viva-voce" }
+{ "code": "ACZ 401", "title": "Applied and Economic Zoology", "file": "papers/applied-and-economic-zoology-acz-401.html" },
+{ "code": "ACZ 402", "title": "Microbiology and Radiant Biology", "file": "papers/microbiology-and-radiant-biology-acz-402.html" },
+{ "code": "ACZ 403", "title": "Parasitology", "file": "papers/parasitology-acz-403.html" },
+{ "code": "ACZ 404", "title": "Entomology", "file": "papers/entomology-acz-404.html" },
+{ "code": "ACZ 405", "title": "Fishery Science and Limnology", "file": "papers/fishery-science-and-limnology-acz-405.html" },
+{ "code": "ACZ 406", "title": "Wildlife Biology Management and Conservation", "file": "papers/wildlife-biology-management-and-conservation-acz-406.html" },
+{ "code": "ACZ 407", "title": "Biostatistics and Research Methodology", "file": "papers/biostatistics-and-research-methodology-acz-407.html" },
+{ "code": "ACZ 408", "title": "Genetic Engineering and Biotechnology", "file": "papers/genetic-engineering-and-biotechnology-acz-408.html" },
+{ "code": "ACZ 409", "title": "Zoology Practical", "file": "papers/zoology-practical-acz-409.html" },
+{ "code": "ACZ 410", "title": "Viva-voce", "file": "papers/viva-voce-acz-410.html" }
 ],
 "masters": []
 }
@@ -651,13 +672,16 @@
 "en": "Soil Science",
 "courses": {
 "1st": [
-{ "code": "213301", "title": "Introductory Soil-I" },
-{ "code": "213303", "title": "Introductory Soil-II" },
-{ "code": "CMG-7100", "title": "Fundamentals of Chemistry" },
-{ "code": "BOT-1001", "title": "Introductory Botany" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "213301", "title": "Introductory Soil-I", "file": "papers/introductory-soil-i-213301.html" },
+{ "code": "213303", "title": "Introductory Soil-II", "file": "papers/introductory-soil-ii-213303.html" },
+{ "code": "CMG-7100", "title": "Fundamentals of Chemistry", "file": "papers/fundamentals-of-chemistry-cmg-7100.html" },
+{ "code": "BOT-1001", "title": "Introductory Botany", "file": "papers/introductory-botany-bot-1001.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
-"2nd": [], "3rd": [], "4th": [], "masters": []
+"2nd": [],
+"3rd": [],
+"4th": [],
+"masters": []
 }
 },
 {
@@ -666,28 +690,29 @@
 "en": "Psychology",
 "courses": {
 "1st": [
-{ "code": "PSY 101", "title": "Introduction to Psychology" },
-{ "code": "PSY 102", "title": "Statistics in Psychology I" },
-{ "code": "PSY 103", "title": "Experimental Psychology" },
-{ "code": "PSY 105", "title": "Introduction to Sociology" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "PSY 101", "title": "Introduction to Psychology", "file": "papers/introduction-to-psychology-psy-101.html" },
+{ "code": "PSY 102", "title": "Statistics in Psychology I", "file": "papers/statistics-in-psychology-i-psy-102.html" },
+{ "code": "PSY 103", "title": "Experimental Psychology", "file": "papers/experimental-psychology-psy-103.html" },
+{ "code": "PSY 105", "title": "Introduction to Sociology", "file": "papers/introduction-to-sociology-psy-105.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "PSY 201", "title": "Developmental Psychology I" },
-{ "code": "PSY 202", "title": "Statistics in Psychology II" }
+{ "code": "PSY 201", "title": "Developmental Psychology I", "file": "papers/developmental-psychology-i-psy-201.html" },
+{ "code": "PSY 202", "title": "Statistics in Psychology II", "file": "papers/statistics-in-psychology-ii-psy-202.html" }
 ],
 "3rd": [
-{ "code": "PSY 301", "title": "Developmental Psychology II" },
-{ "code": "PSY 302", "title": "Health Psychology" },
-{ "code": "PSY 303", "title": "Abnormal Psychology" },
-{ "code": "PSY 304", "title": "Psychology of Perception" },
-{ "code": "PSY 305", "title": "Industrial Psychology" },
-{ "code": "PSY 306", "title": "Research Methodology" },
-{ "code": "PSY 307", "title": "Biopsychology" },
-{ "code": "PSY 308", "title": "Practical" },
-{ "code": "PSY 309", "title": "Viva Voce" }
+{ "code": "PSY 301", "title": "Developmental Psychology II", "file": "papers/developmental-psychology-ii-psy-301.html" },
+{ "code": "PSY 302", "title": "Health Psychology", "file": "papers/health-psychology-psy-302.html" },
+{ "code": "PSY 303", "title": "Abnormal Psychology", "file": "papers/abnormal-psychology-psy-303.html" },
+{ "code": "PSY 304", "title": "Psychology of Perception", "file": "papers/psychology-of-perception-psy-304.html" },
+{ "code": "PSY 305", "title": "Industrial Psychology", "file": "papers/industrial-psychology-psy-305.html" },
+{ "code": "PSY 306", "title": "Research Methodology", "file": "papers/research-methodology-psy-306.html" },
+{ "code": "PSY 307", "title": "Biopsychology", "file": "papers/biopsychology-psy-307.html" },
+{ "code": "PSY 308", "title": "Practical", "file": "papers/practical-psy-308.html" },
+{ "code": "PSY 309", "title": "Viva Voce", "file": "papers/viva-voce-psy-309.html" }
 ],
-"4th": [], "masters": []
+"4th": [],
+"masters": []
 }
 },
 {
@@ -696,14 +721,17 @@
 "en": "Home Economics",
 "courses": {
 "1st": [
-{ "code": "HEA 101", "title": "Philosophy of Home Management" },
-{ "code": "HEA 102", "title": "Maternal and Child Health" },
-{ "code": "HEA 103", "title": "Art and Design" },
-{ "code": "HEA 104", "title": "Introduction to Human Physiology" },
-{ "code": "HEA 105", "title": "Elementary Biochemistry" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "HEA 101", "title": "Philosophy of Home Management", "file": "papers/philosophy-of-home-management-hea-101.html" },
+{ "code": "HEA 102", "title": "Maternal and Child Health", "file": "papers/maternal-and-child-health-hea-102.html" },
+{ "code": "HEA 103", "title": "Art and Design", "file": "papers/art-and-design-hea-103.html" },
+{ "code": "HEA 104", "title": "Introduction to Human Physiology", "file": "papers/introduction-to-human-physiology-hea-104.html" },
+{ "code": "HEA 105", "title": "Elementary Biochemistry", "file": "papers/elementary-biochemistry-hea-105.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
-"2nd": [], "3rd": [], "4th": [], "masters": []
+"2nd": [],
+"3rd": [],
+"4th": [],
+"masters": []
 }
 }
 ]
@@ -719,61 +747,61 @@
 "en": "Accounting",
 "courses": {
 "1st": [
-{ "code": "Acc. 251001", "title": "Principles of Accounting (In English)" },
-{ "code": "Acc. 251002", "title": "Introduction to Business (In English)" },
-{ "code": "Acc. 251003", "title": "Principles of Management" },
-{ "code": "Acc. 251004", "title": "Principles of Marketing" },
-{ "code": "Acc. 251005", "title": "Mathematics for Business Decision" },
-{ "code": "Acc. 251006", "title": "Micro Economics" },
-{ "code": "Acc. 251007", "title": "History of the Emergence of Independent Bangladesh" },
-{ "code": "Act 1001", "title": "Principles of Accounting (In English)" },
-{ "code": "Act 1002", "title": "Introduction to Business" },
-{ "code": "Act 1003", "title": "Principles of Management" },
-{ "code": "Act 1004", "title": "Principles of Marketing" },
-{ "code": "212502", "title": "Mathematics for Business Decision" },
-{ "code": "Act 1005", "title": "Mathematics for Business Decision" },
-{ "code": "Act 1006", "title": "Micro Economics" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "Acc. 251001", "title": "Principles of Accounting (In English)", "file": "papers/principles-of-accounting-in-english-acc-251001.html" },
+{ "code": "Acc. 251002", "title": "Introduction to Business (In English)", "file": "papers/introduction-to-business-in-english-acc-251002.html" },
+{ "code": "Acc. 251003", "title": "Principles of Management", "file": "papers/principles-of-management-acc-251003.html" },
+{ "code": "Acc. 251004", "title": "Principles of Marketing", "file": "papers/principles-of-marketing-acc-251004.html" },
+{ "code": "Acc. 251005", "title": "Mathematics for Business Decision", "file": "papers/mathematics-for-business-decision-acc-251005.html" },
+{ "code": "Acc. 251006", "title": "Micro Economics", "file": "papers/micro-economics-acc-251006.html" },
+{ "code": "Acc. 251007", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-acc-251007.html" },
+{ "code": "Act 1001", "title": "Principles of Accounting (In English)", "file": "papers/principles-of-accounting-in-english-act-1001.html" },
+{ "code": "Act 1002", "title": "Introduction to Business", "file": "papers/introduction-to-business-act-1002.html" },
+{ "code": "Act 1003", "title": "Principles of Management", "file": "papers/principles-of-management-act-1003.html" },
+{ "code": "Act 1004", "title": "Principles of Marketing", "file": "papers/principles-of-marketing-act-1004.html" },
+{ "code": "212502", "title": "Mathematics for Business Decision", "file": "papers/mathematics-for-business-decision-212502.html" },
+{ "code": "Act 1005", "title": "Mathematics for Business Decision", "file": "papers/mathematics-for-business-decision-act-1005.html" },
+{ "code": "Act 1006", "title": "Micro Economics", "file": "papers/micro-economics-act-1006.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "Acc. 252001", "title": "Financial Accounting (In English)" },
-{ "code": "Acc. 252002", "title": "Business Communication and Report Writing (In English)" },
-{ "code": "Acc. 252003", "title": "Business Statistics" },
-{ "code": "Acc. 252004", "title": "Principles of Finance (In English)" },
-{ "code": "Acc. 252005", "title": "Taxation – Theory & Practice" },
-{ "code": "Acc. 252006", "title": "Macro Economics" },
-{ "code": "Acc. 252007", "title": "Computer Concepts and Applications" }
+{ "code": "Acc. 252001", "title": "Financial Accounting (In English)", "file": "papers/financial-accounting-in-english-acc-252001.html" },
+{ "code": "Acc. 252002", "title": "Business Communication and Report Writing (In English)", "file": "papers/business-communication-and-report-writing-in-english-acc-252002.html" },
+{ "code": "Acc. 252003", "title": "Business Statistics", "file": "papers/business-statistics-acc-252003.html" },
+{ "code": "Acc. 252004", "title": "Principles of Finance (In English)", "file": "papers/principles-of-finance-in-english-acc-252004.html" },
+{ "code": "Acc. 252005", "title": "Taxation – Theory & Practice", "file": "papers/taxation-theory-practice-acc-252005.html" },
+{ "code": "Acc. 252006", "title": "Macro Economics", "file": "papers/macro-economics-acc-252006.html" },
+{ "code": "Acc. 252007", "title": "Computer Concepts and Applications", "file": "papers/computer-concepts-and-applications-acc-252007.html" }
 ],
 "3rd": [
-{ "code": "Acc. 253001", "title": "Advanced Financial Accounting" },
-{ "code": "Acc. 253002", "title": "Audit & Assurance (In English)" },
-{ "code": "Acc. 253003", "title": "Cost Accounting" },
-{ "code": "Acc. 253004", "title": "Corporate Finance and Financial Management (In English)" },
-{ "code": "Acc. 253005", "title": "Theory and Practice of Banking and Bank Accounting" },
-{ "code": "Acc. 253006", "title": "Business & Commercial Laws" },
-{ "code": "Acc. 253007", "title": "Research Methodology" },
-{ "code": "Acc. 253008", "title": "Public Sector Accounting" }
+{ "code": "Acc. 253001", "title": "Advanced Financial Accounting", "file": "papers/advanced-financial-accounting-acc-253001.html" },
+{ "code": "Acc. 253002", "title": "Audit & Assurance (In English)", "file": "papers/audit-assurance-in-english-acc-253002.html" },
+{ "code": "Acc. 253003", "title": "Cost Accounting", "file": "papers/cost-accounting-acc-253003.html" },
+{ "code": "Acc. 253004", "title": "Corporate Finance and Financial Management (In English)", "file": "papers/corporate-finance-and-financial-management-in-english-acc-253004.html" },
+{ "code": "Acc. 253005", "title": "Theory and Practice of Banking and Bank Accounting", "file": "papers/theory-and-practice-of-banking-and-bank-accounting-acc-253005.html" },
+{ "code": "Acc. 253006", "title": "Business & Commercial Laws", "file": "papers/business-commercial-laws-acc-253006.html" },
+{ "code": "Acc. 253007", "title": "Research Methodology", "file": "papers/research-methodology-acc-253007.html" },
+{ "code": "Acc. 253008", "title": "Public Sector Accounting", "file": "papers/public-sector-accounting-acc-253008.html" }
 ],
 "4th": [
-{ "code": "Acc. 254001", "title": "Accounting Theory (In English)" },
-{ "code": "Acc. 254002", "title": "Accounting Information Systems (In English)" },
-{ "code": "Acc. 254003", "title": "Management Accounting (In English)" },
-{ "code": "Acc. 254004", "title": "Organizational Behaviour" },
-{ "code": "Acc. 254005", "title": "Working Capital Management" },
-{ "code": "Acc. 254006", "title": "Security Analysis & Portfolio Management" },
-{ "code": "Acc. 254007", "title": "Theory and Practice of Insurance and Insurance Accounting" },
-{ "code": "Acc. 254008", "title": "Financial Statement Analysis" },
-{ "code": "Acc. 254009d", "title": "Viva-Voce" }
+{ "code": "Acc. 254001", "title": "Accounting Theory (In English)", "file": "papers/accounting-theory-in-english-acc-254001.html" },
+{ "code": "Acc. 254002", "title": "Accounting Information Systems (In English)", "file": "papers/accounting-information-systems-in-english-acc-254002.html" },
+{ "code": "Acc. 254003", "title": "Management Accounting (In English)", "file": "papers/management-accounting-in-english-acc-254003.html" },
+{ "code": "Acc. 254004", "title": "Organizational Behaviour", "file": "papers/organizational-behaviour-acc-254004.html" },
+{ "code": "Acc. 254005", "title": "Working Capital Management", "file": "papers/working-capital-management-acc-254005.html" },
+{ "code": "Acc. 254006", "title": "Security Analysis & Portfolio Management", "file": "papers/security-analysis-portfolio-management-acc-254006.html" },
+{ "code": "Acc. 254007", "title": "Theory and Practice of Insurance and Insurance Accounting", "file": "papers/theory-and-practice-of-insurance-and-insurance-accounting-acc-254007.html" },
+{ "code": "Acc. 254008", "title": "Financial Statement Analysis", "file": "papers/financial-statement-analysis-acc-254008.html" },
+{ "code": "Acc. 254009d", "title": "Viva-Voce", "file": "papers/viva-voce-acc-254009d.html" }
 ],
 "masters": [
-{ "code": "312501", "title": "Applied Accounting Theory" },
-{ "code": "312503", "title": "Advanced Cost Accounting" },
-{ "code": "312505", "title": "Strategic Management Accounting" },
-{ "code": "312507", "title": "Strategic Management" },
-{ "code": "312509", "title": "Corporate Governance" },
-{ "code": "312511", "title": "Corporate Financial Reporting" },
-{ "code": "312513", "title": "Corporate Tax Planning" },
-{ "code": "312514", "title": "Term Paper" }
+{ "code": "312501", "title": "Applied Accounting Theory", "file": "papers/applied-accounting-theory-312501.html" },
+{ "code": "312503", "title": "Advanced Cost Accounting", "file": "papers/advanced-cost-accounting-312503.html" },
+{ "code": "312505", "title": "Strategic Management Accounting", "file": "papers/strategic-management-accounting-312505.html" },
+{ "code": "312507", "title": "Strategic Management", "file": "papers/strategic-management-312507.html" },
+{ "code": "312509", "title": "Corporate Governance", "file": "papers/corporate-governance-312509.html" },
+{ "code": "312511", "title": "Corporate Financial Reporting", "file": "papers/corporate-financial-reporting-312511.html" },
+{ "code": "312513", "title": "Corporate Tax Planning", "file": "papers/corporate-tax-planning-312513.html" },
+{ "code": "312514", "title": "Term Paper", "file": "papers/term-paper-312514.html" }
 ]
 }
 },
@@ -783,25 +811,27 @@
 "en": "Management",
 "courses": {
 "1st": [
-{ "code": "MGT-1001", "title": "Introduction to Business" },
-{ "code": "MGT-1002", "title": "Principles of Management" },
-{ "code": "MGT-1003", "title": "Principles of Accounting" },
-{ "code": "MGT-1004", "title": "Principles of Marketing" },
-{ "code": "MGT-1005", "title": "Micro-Economics" },
-{ "code": "MGT-1006", "title": "Principles of Finance" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "MGT-1001", "title": "Introduction to Business", "file": "papers/introduction-to-business-mgt-1001.html" },
+{ "code": "MGT-1002", "title": "Principles of Management", "file": "papers/principles-of-management-mgt-1002.html" },
+{ "code": "MGT-1003", "title": "Principles of Accounting", "file": "papers/principles-of-accounting-mgt-1003.html" },
+{ "code": "MGT-1004", "title": "Principles of Marketing", "file": "papers/principles-of-marketing-mgt-1004.html" },
+{ "code": "MGT-1005", "title": "Micro-Economics", "file": "papers/micro-economics-mgt-1005.html" },
+{ "code": "MGT-1006", "title": "Principles of Finance", "file": "papers/principles-of-finance-mgt-1006.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
-"2nd": [], "3rd": [], "4th": [],
+"2nd": [],
+"3rd": [],
+"4th": [],
 "masters": [
-{ "code": "312601", "title": "Management Thought" },
-{ "code": "312603", "title": "International Business" },
-{ "code": "312605", "title": "Business Research" },
-{ "code": "312607", "title": "Strategic Management" },
-{ "code": "312609", "title": "Management Information System" },
-{ "code": "312611", "title": "Training and Development" },
-{ "code": "312613", "title": "Compensation Management" },
-{ "code": "312614", "title": "Term Paper" },
-{ "code": "312616", "title": "Viva-Voce" }
+{ "code": "312601", "title": "Management Thought", "file": "papers/management-thought-312601.html" },
+{ "code": "312603", "title": "International Business", "file": "papers/international-business-312603.html" },
+{ "code": "312605", "title": "Business Research", "file": "papers/business-research-312605.html" },
+{ "code": "312607", "title": "Strategic Management", "file": "papers/strategic-management-312607.html" },
+{ "code": "312609", "title": "Management Information System", "file": "papers/management-information-system-312609.html" },
+{ "code": "312611", "title": "Training and Development", "file": "papers/training-and-development-312611.html" },
+{ "code": "312613", "title": "Compensation Management", "file": "papers/compensation-management-312613.html" },
+{ "code": "312614", "title": "Term Paper", "file": "papers/term-paper-312614.html" },
+{ "code": "312616", "title": "Viva-Voce", "file": "papers/viva-voce-312616.html" }
 ]
 }
 },
@@ -811,24 +841,24 @@
 "en": "Marketing",
 "courses": {
 "1st": [
-{ "code": "MKT-1001", "title": "Introduction to Business" },
-{ "code": "MKT-1002", "title": "Principles of Marketing - I" },
-{ "code": "MKT-1003", "title": "Financial Accounting" },
-{ "code": "MKT-1004", "title": "Principles of Management" },
-{ "code": "MKT-1005", "title": "Micro-Economics" },
-{ "code": "MKT-1006", "title": "Introduction to Computer" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "MKT-1001", "title": "Introduction to Business", "file": "papers/introduction-to-business-mkt-1001.html" },
+{ "code": "MKT-1002", "title": "Principles of Marketing - I", "file": "papers/principles-of-marketing-i-mkt-1002.html" },
+{ "code": "MKT-1003", "title": "Financial Accounting", "file": "papers/financial-accounting-mkt-1003.html" },
+{ "code": "MKT-1004", "title": "Principles of Management", "file": "papers/principles-of-management-mkt-1004.html" },
+{ "code": "MKT-1005", "title": "Micro-Economics", "file": "papers/micro-economics-mkt-1005.html" },
+{ "code": "MKT-1006", "title": "Introduction to Computer", "file": "papers/introduction-to-computer-mkt-1006.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "Mkt-2001", "title": "Business Communication (In English)" }
+{ "code": "Mkt-2001", "title": "Business Communication (In English)", "file": "papers/business-communication-in-english-mkt-2001.html" }
 ],
 "3rd": [
-{ "code": "Mkt-3001", "title": "Business Statistics" },
-{ "code": "Mkt-3002", "title": "Entrepreneurship Development" }
+{ "code": "Mkt-3001", "title": "Business Statistics", "file": "papers/business-statistics-mkt-3001.html" },
+{ "code": "Mkt-3002", "title": "Entrepreneurship Development", "file": "papers/entrepreneurship-development-mkt-3002.html" }
 ],
 "4th": [
-{ "code": "Mkt-4001", "title": "Marketing Management" },
-{ "code": "Mkt-4002", "title": "Services Marketing" }
+{ "code": "Mkt-4001", "title": "Marketing Management", "file": "papers/marketing-management-mkt-4001.html" },
+{ "code": "Mkt-4002", "title": "Services Marketing", "file": "papers/services-marketing-mkt-4002.html" }
 ],
 "masters": []
 }
@@ -839,43 +869,43 @@
 "en": "Finance and Banking",
 "courses": {
 "1st": [
-{ "code": "Fin-1001", "title": "Business Communication & Report Writing" },
-{ "code": "Fin-1002", "title": "Principles of Finance" },
-{ "code": "212403", "title": "Principles of Finance" },
-{ "code": "Fin-1003", "title": "Principles of Accounting" },
-{ "code": "Fin-1004", "title": "Business Mathematics" },
-{ "code": "Fin-1005", "title": "Micro Economics" },
-{ "code": "212409", "title": "Micro Economics" },
-{ "code": "Fin-1006", "title": "Computer & Information Technology" },
-{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh" }
+{ "code": "Fin-1001", "title": "Business Communication & Report Writing", "file": "papers/business-communication-report-writing-fin-1001.html" },
+{ "code": "Fin-1002", "title": "Principles of Finance", "file": "papers/principles-of-finance-fin-1002.html" },
+{ "code": "212403", "title": "Principles of Finance", "file": "papers/principles-of-finance-212403.html" },
+{ "code": "Fin-1003", "title": "Principles of Accounting", "file": "papers/principles-of-accounting-fin-1003.html" },
+{ "code": "Fin-1004", "title": "Business Mathematics", "file": "papers/business-mathematics-fin-1004.html" },
+{ "code": "Fin-1005", "title": "Micro Economics", "file": "papers/micro-economics-fin-1005.html" },
+{ "code": "212409", "title": "Micro Economics", "file": "papers/micro-economics-212409.html" },
+{ "code": "Fin-1006", "title": "Computer & Information Technology", "file": "papers/computer-information-technology-fin-1006.html" },
+{ "code": "211501", "title": "History of the Emergence of Independent Bangladesh", "file": "papers/history-of-the-emergence-of-independent-bangladesh-211501.html" }
 ],
 "2nd": [
-{ "code": "Fin-2001", "title": "Business Statistics" },
-{ "code": "Fin-2002", "title": "Macro Economics" },
-{ "code": "Fin-2003", "title": "Principles of Marketing" },
-{ "code": "Fin-2004", "title": "Principles of Management" },
-{ "code": "Fin-2005", "title": "Managerial Accounting" },
-{ "code": "Fin-2006", "title": "Financial Management" }
+{ "code": "Fin-2001", "title": "Business Statistics", "file": "papers/business-statistics-fin-2001.html" },
+{ "code": "Fin-2002", "title": "Macro Economics", "file": "papers/macro-economics-fin-2002.html" },
+{ "code": "Fin-2003", "title": "Principles of Marketing", "file": "papers/principles-of-marketing-fin-2003.html" },
+{ "code": "Fin-2004", "title": "Principles of Management", "file": "papers/principles-of-management-fin-2004.html" },
+{ "code": "Fin-2005", "title": "Managerial Accounting", "file": "papers/managerial-accounting-fin-2005.html" },
+{ "code": "Fin-2006", "title": "Financial Management", "file": "papers/financial-management-fin-2006.html" }
 ],
 "3rd": [
-{ "code": "Fin-3001", "title": "International Trade & Finance" },
-{ "code": "Fin-3002", "title": "Organizational Behavior" },
-{ "code": "Fin-3003", "title": "Law and Practice of Banking" },
-{ "code": "Fin-3004", "title": "Financial Markets and Institutions" },
-{ "code": "Fin-3005", "title": "Insurance & Risk Management" },
-{ "code": "Fin-3006", "title": "Human Resource Management" },
-{ "code": "Fin-3007", "title": "Business Taxation" },
-{ "code": "Fin-3008", "title": "Auditing & Assurance" }
+{ "code": "Fin-3001", "title": "International Trade & Finance", "file": "papers/international-trade-finance-fin-3001.html" },
+{ "code": "Fin-3002", "title": "Organizational Behavior", "file": "papers/organizational-behavior-fin-3002.html" },
+{ "code": "Fin-3003", "title": "Law and Practice of Banking", "file": "papers/law-and-practice-of-banking-fin-3003.html" },
+{ "code": "Fin-3004", "title": "Financial Markets and Institutions", "file": "papers/financial-markets-and-institutions-fin-3004.html" },
+{ "code": "Fin-3005", "title": "Insurance & Risk Management", "file": "papers/insurance-risk-management-fin-3005.html" },
+{ "code": "Fin-3006", "title": "Human Resource Management", "file": "papers/human-resource-management-fin-3006.html" },
+{ "code": "Fin-3007", "title": "Business Taxation", "file": "papers/business-taxation-fin-3007.html" },
+{ "code": "Fin-3008", "title": "Auditing & Assurance", "file": "papers/auditing-assurance-fin-3008.html" }
 ],
 "4th": [
-{ "code": "Fin-4001", "title": "Government Finance" },
-{ "code": "Fin-4002", "title": "Commercial Bank Management" },
-{ "code": "Fin-4003", "title": "E-Commerce & E-Banking" },
-{ "code": "Fin-4004", "title": "Financial Statement Analysis and Valuation" },
-{ "code": "Fin-4005", "title": "Corporate Finance" },
-{ "code": "Fin-4006", "title": "Investment Analysis & Portfolio Management" },
-{ "code": "Fin-4007", "title": "Working Capital Management" },
-{ "code": "Fin-4008", "title": "Strategic Management" }
+{ "code": "Fin-4001", "title": "Government Finance", "file": "papers/government-finance-fin-4001.html" },
+{ "code": "Fin-4002", "title": "Commercial Bank Management", "file": "papers/commercial-bank-management-fin-4002.html" },
+{ "code": "Fin-4003", "title": "E-Commerce & E-Banking", "file": "papers/e-commerce-e-banking-fin-4003.html" },
+{ "code": "Fin-4004", "title": "Financial Statement Analysis and Valuation", "file": "papers/financial-statement-analysis-and-valuation-fin-4004.html" },
+{ "code": "Fin-4005", "title": "Corporate Finance", "file": "papers/corporate-finance-fin-4005.html" },
+{ "code": "Fin-4006", "title": "Investment Analysis & Portfolio Management", "file": "papers/investment-analysis-portfolio-management-fin-4006.html" },
+{ "code": "Fin-4007", "title": "Working Capital Management", "file": "papers/working-capital-management-fin-4007.html" },
+{ "code": "Fin-4008", "title": "Strategic Management", "file": "papers/strategic-management-fin-4008.html" }
 ],
 "masters": []
 }
@@ -892,9 +922,15 @@
 "bn": "আইন",
 "en": "Law",
 "status": "not_started",
-"courses": { "1st": [], "2nd": [], "3rd": [], "4th": [], "masters": [] }
+"courses": {
+"1st": [],
+"2nd": [],
+"3rd": [],
+"4th": [],
+"masters": []
+}
 }
 ]
 }
 ]
-  }
+}
