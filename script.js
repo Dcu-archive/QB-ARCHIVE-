@@ -9,7 +9,7 @@
 
   let siteData = null;
   let renderToken = 0;
-  const pdfCache = new Map();
+  const paperCache = new Map();
 
   function pluralize(count, singular, plural) {
     return count + ' ' + (count === 1 ? singular : plural);
@@ -195,7 +195,7 @@
     return svg;
   }
 
-  // ===== NEW: menu (right side of header) =====
+  // ===== Menu (right side of header) =====
   function setMenu(panel, btn, open) {
     panel.hidden = !open;
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -365,27 +365,30 @@
     return total;
   }
 
-  function getPdfUrl(dept, year, course) {
-    if (course && typeof course.pdf === 'string' && course.pdf.trim() !== '') {
-      return course.pdf.trim();
+  // ===== V3: question papers are single-file .html pages in papers/ =====
+  // Default path: papers/{departmentId}_{yearId}_{courseSlug}.html
+  // Override: add "file": "papers/anything.html" to a course in data.json
+  function getPaperUrl(dept, year, course) {
+    if (course && typeof course.file === 'string' && course.file.trim() !== '') {
+      return course.file.trim();
     }
-    return 'pdfs/' + dept.id + '_' + year.id + '_' + slug(course.code) + '.pdf';
+    return 'papers/' + dept.id + '_' + year.id + '_' + slug(course.code) + '.html';
   }
 
-  function checkPdf(url) {
+  function checkPaper(url) {
     if (/^https?:\/\//i.test(url)) {
       return Promise.resolve(true);
     }
-    if (pdfCache.has(url)) {
-      return pdfCache.get(url);
+    if (paperCache.has(url)) {
+      return paperCache.get(url);
     }
     const promise = fetch(url, { method: 'HEAD', cache: 'no-cache' })
       .then((res) => {
         const ct = (res.headers.get('content-type') || '').toLowerCase();
-        return res.status === 200 && ct.includes('pdf');
+        return res.status === 200 && ct.includes('html');
       })
       .catch(() => false);
-    pdfCache.set(url, promise);
+    paperCache.set(url, promise);
     return promise;
   }
 
@@ -665,7 +668,7 @@
       clearBtn
     ]);
 
-    headerEl.appendChild(searchBox); // CHANGED: search now lives in the header
+    headerEl.appendChild(searchBox);
     appEl.appendChild(liveStatus);
     appEl.appendChild(searchResultsContainer);
     appEl.appendChild(facultyContainer);
@@ -839,14 +842,14 @@
 
       ul.appendChild(el('li', { className: 'toc-item' }, [link]));
 
-      const pdfUrl = getPdfUrl(dept, year, course);
-      checkPdf(pdfUrl).then((exists) => {
+      const paperUrl = getPaperUrl(dept, year, course);
+      checkPaper(paperUrl).then((exists) => {
         if (token !== renderToken) return;
         clearNode(badgeSlot);
         badgeSlot.appendChild(
           el('span', {
-            className: exists ? 'badge badge-pdf' : 'badge badge-soon',
-            textContent: exists ? 'PDF' : 'Soon'
+            className: exists ? 'badge badge-paper' : 'badge badge-soon',
+            textContent: exists ? 'Paper' : 'Soon'
           })
         );
       });
@@ -892,46 +895,34 @@
     sheetNodes.push(metaList);
 
     const actionsBox = el('div', { className: 'paper-actions' }, [
-      el('p', { className: 'status-checking', textContent: 'Checking for question paper…' })
+      el('p', { className: 'status-checking', textContent: 'Checking for questions…' })
     ]);
     sheetNodes.push(actionsBox);
 
     appEl.appendChild(el('article', { className: 'paper-sheet' }, sheetNodes));
 
-    const pdfUrl = getPdfUrl(dept, year, course);
-    const allowDownload = Boolean(siteData.site && siteData.site.allowDownload === true);
+    const paperUrl = getPaperUrl(dept, year, course);
 
-    checkPdf(pdfUrl).then((exists) => {
+    checkPaper(paperUrl).then((exists) => {
       if (token !== renderToken) return;
       clearNode(actionsBox);
 
       if (exists) {
-        const buttons = [
-          el('a', {
-            href: pdfUrl,
-            target: '_blank',
-            rel: 'noopener',
-            className: 'btn btn-primary',
-            textContent: 'View Question Paper'
-          })
-        ];
-
-        if (allowDownload) {
-          buttons.push(
+        actionsBox.appendChild(
+          el('div', { className: 'action-row' }, [
             el('a', {
-              href: pdfUrl,
-              download: '',
-              className: 'btn btn-secondary',
-              textContent: 'Download'
+              href: paperUrl,
+              target: '_blank',
+              rel: 'noopener',
+              className: 'btn btn-primary',
+              textContent: 'View Questions'
             })
-          );
-        }
-
-        actionsBox.appendChild(el('div', { className: 'action-row' }, buttons));
-        actionsBox.appendChild(el('p', { className: 'action-note', textContent: 'PDF opens in a new tab.' }));
+          ])
+        );
+        actionsBox.appendChild(el('p', { className: 'action-note', textContent: 'Opens in a new tab.' }));
       } else {
         actionsBox.appendChild(el('div', { className: 'stamp-soon', textContent: 'Coming Soon' }));
-        actionsBox.appendChild(el('p', { className: 'action-note', textContent: 'The question paper for this course has not been uploaded yet.' }));
+        actionsBox.appendChild(el('p', { className: 'action-note', textContent: 'The questions for this course have not been uploaded yet.' }));
       }
     });
   }
