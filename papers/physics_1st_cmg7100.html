@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CMG 7100 — Fundamental of Chemistry (2018–2024) | DCU QB Archive</title>
+<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)" />
+<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+<link href="[https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap)" rel="stylesheet" />
+<script>
+window.MathJax = {
+tex: {
+inlineMath: [['', ''], ['\(', '\)']],
+displayMath: [['
+'], ['\[', '\]']],
+processEscapes: true
+},
+options: {
+skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+}
+};
+</script>
+<script id="MathJax-script" async src="[https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js](https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js)"></script>
+<style>
+:root {
+--bg-primary: #0b0f19;
+--bg-card: #131a2a;
+--bg-elevated: #192236;
+--border-color: #1e293b;
+--border-strong: #334155;
+--text-primary: #e2e8f0;
+--text-muted: #94a3b8;
+--accent: #f59e0b;
+--accent-alt: #eab308;
+--accent-soft: rgba(245, 158, 11, 0.14);
+--badge-bg: rgba(245, 158, 11, 0.16);
+--header-bg: rgba(11, 15, 25, 0.92);
+--shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+[data-theme="light"] {
+--bg-primary: #f8fafc;
+--bg-card: #ffffff;
+--bg-elevated: #f1f5f9;
+--border-color: #e2e8f0;
+--border-strong: #cbd5e1;
+--text-primary: #0f172a;
+--text-muted: #475569;
+--accent: #d97706;
+--accent-alt: #b45309;
+--accent-soft: rgba(217, 119, 6, 0.1);
+--badge-bg: rgba(217, 119, 6, 0.12);
+--header-bg: rgba(248, 250, 252, 0.94);
+--shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+*, *::before, *::after {
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+font-size: 16px;
+}
+body {
+margin: 0;
+padding: 0;
+background-color: var(--bg-primary);
+color: var(--text-primary);
+font-family: 'Hind Siliguri', 'Noto Sans Bengali', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 0.975rem;
+line-height: 1.75;
+overflow-x: hidden;
+transition: background-color 0.25s ease, color 0.25s ease;
+}
+/* Sticky Top Header */
+.top-header {
+position: sticky;
+top: 0;
+z-index: 100;
+background: var(--header-bg);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border-color);
+padding: 0.65rem 1rem;
+}
+.header-inner {
+max-width: 1040px;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+gap: 0.65rem;
+}
+.header-left {
+display: flex;
+align-items: center;
+gap: 0.65rem;
+min-width: 0;
+flex: 1 1 auto;
+}
+.back-btn {
+display: inline-flex;
+align-items: center;
+gap: 0.35rem;
+padding: 0.4rem 0.75rem;
+border-radius: 8px;
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+color: var(--text-primary);
+text-decoration: none;
+font-family: 'Inter', sans-serif;
+font-size: 0.82rem;
+font-weight: 500;
+white-space: nowrap;
+transition: border-color 0.2s, color 0.2s;
+}
+.back-btn:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+.course-identity {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+min-width: 0;
+flex-wrap: wrap;
+}
+.code-badge {
+font-family: 'Fira Code', monospace;
+font-size: 0.78rem;
+font-weight: 700;
+color: var(--accent);
+background: var(--badge-bg);
+border: 1px solid rgba(245, 158, 11, 0.35);
+padding: 0.2rem 0.55rem;
+border-radius: 6px;
+letter-spacing: 0.03em;
+white-space: nowrap;
+}
+.header-title {
+font-family: 'Inter', sans-serif;
+font-size: 0.95rem;
+font-weight: 700;
+color: var(--text-primary);
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.header-actions {
+display: flex;
+align-items: center;
+gap: 0.45rem;
+}
+.icon-btn {
+display: inline-flex;
+align-items: center;
+gap: 0.35rem;
+padding: 0.4rem 0.7rem;
+border-radius: 8px;
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+color: var(--text-primary);
+font-family: 'Inter', sans-serif;
+font-size: 0.8rem;
+font-weight: 500;
+cursor: pointer;
+white-space: nowrap;
+transition: all 0.2s ease;
+}
+.icon-btn:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+/* Main Container */
+.container {
+max-width: 1040px;
+margin: 0 auto;
+padding: 1.25rem 1rem 4rem;
+}
+/* Hero Metadata Card */
+.hero-card {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-top: 3px solid var(--accent);
+border-radius: 14px;
+padding: 1.35rem 1.25rem;
+margin-bottom: 1.25rem;
+box-shadow: var(--shadow);
+}
+.uni-tag {
+font-family: 'Inter', sans-serif;
+font-size: 0.8rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+color: var(--accent);
+margin-bottom: 0.25rem;
+}
+.hero-card h1 {
+margin: 0 0 0.4rem;
+font-family: 'Inter', 'Hind Siliguri', sans-serif;
+font-size: clamp(1.25rem, 3.5vw, 1.65rem);
+font-weight: 700;
+line-height: 1.35;
+color: var(--text-primary);
+}
+.hero-meta-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem 1rem;
+margin-top: 0.75rem;
+padding-top: 0.75rem;
+border-top: 1px solid var(--border-color);
+font-size: 0.88rem;
+color: var(--text-muted);
+}
+.hero-meta-item strong {
+color: var(--text-primary);
+font-weight: 600;
+}
+.mono {
+font-family: 'Fira Code', monospace;
+}
+/* Controls Bar */
+.controls-panel {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 12px;
+padding: 0.9rem;
+margin-bottom: 1.25rem;
+display: flex;
+flex-direction: column;
+gap: 0.75rem;
+}
+.search-row {
+display: flex;
+flex-wrap: wrap;
+gap: 0.55rem;
+align-items: center;
+}
+.search-box {
+position: relative;
+flex: 1 1 240px;
+}
+.search-input {
+width: 100%;
+padding: 0.58rem 2.2rem 0.58rem 0.9rem;
+border-radius: 8px;
+border: 1px solid var(--border-strong);
+background: var(--bg-primary);
+color: var(--text-primary);
+font-family: 'Hind Siliguri', 'Inter', sans-serif;
+font-size: 0.92rem;
+outline: none;
+transition: border-color 0.2s;
+}
+.search-input:focus {
+border-color: var(--accent);
+}
+.clear-search {
+position: absolute;
+right: 0.55rem;
+top: 50%;
+transform: translateY(-50%);
+background: none;
+border: none;
+color: var(--text-muted);
+font-size: 1rem;
+cursor: pointer;
+display: none;
+padding: 0.15rem 0.35rem;
+}
+.clear-search.visible {
+display: block;
+}
+.match-status {
+font-family: 'Fira Code', monospace;
+font-size: 0.78rem;
+color: var(--text-muted);
+padding: 0.35rem 0.65rem;
+background: var(--bg-elevated);
+border-radius: 6px;
+white-space: nowrap;
+}
+.filter-row {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+gap: 0.6rem;
+}
+.filter-pills {
+display: flex;
+flex-wrap: wrap;
+gap: 0.4rem;
+}
+.pill-btn {
+font-family: 'Fira Code', monospace;
+font-size: 0.8rem;
+font-weight: 600;
+padding: 0.34rem 0.75rem;
+border-radius: 999px;
+border: 1px solid var(--border-strong);
+background: var(--bg-primary);
+color: var(--text-muted);
+cursor: pointer;
+transition: all 0.2s ease;
+}
+.pill-btn:hover {
+border-color: var(--accent);
+color: var(--text-primary);
+}
+.pill-btn.active {
+background: var(--accent);
+border-color: var(--accent);
+color: #0b0f19;
+}
+/* Year Sections */
+.year-section {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 14px;
+margin-bottom: 1.5rem;
+overflow: hidden;
+box-shadow: var(--shadow);
+}
+.year-section.hidden-by-filter,
+.year-section.hidden-by-search {
+display: none;
+}
+.year-header {
+width: 100%;
+background: var(--bg-elevated);
+border: none;
+border-bottom: 1px solid var(--border-color);
+padding: 0.95rem 1.15rem;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+gap: 0.6rem;
+cursor: pointer;
+text-align: left;
+color: var(--text-primary);
+transition: background-color 0.2s;
+}
+.year-header:hover {
+background: var(--accent-soft);
+}
+.year-title-group {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 0.55rem;
+}
+.year-badge {
+font-family: 'Fira Code', monospace;
+font-size: 0.85rem;
+font-weight: 700;
+background: var(--accent);
+color: #0b0f19;
+padding: 0.2rem 0.65rem;
+border-radius: 6px;
+}
+.year-heading-text {
+font-size: 1.05rem;
+font-weight: 700;
+color: var(--text-primary);
+}
+.year-meta-pills {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-family: 'Fira Code', 'Hind Siliguri', sans-serif;
+font-size: 0.8rem;
+color: var(--text-muted);
+}
+.meta-chip {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+padding: 0.18rem 0.55rem;
+border-radius: 6px;
+}
+.chevron {
+font-family: 'Fira Code', monospace;
+font-size: 0.9rem;
+color: var(--accent);
+transition: transform 0.25s ease;
+}
+.year-section.collapsed .chevron {
+transform: rotate(-90deg);
+}
+.year-section.collapsed .year-body {
+display: none;
+}
+.year-body {
+padding: 1.1rem;
+}
+.paper-header-box {
+text-align: center;
+padding-bottom: 0.85rem;
+margin-bottom: 1rem;
+border-bottom: 1px dashed var(--border-strong);
+}
+.paper-header-box .p-uni {
+font-family: 'Inter', sans-serif;
+font-weight: 700;
+font-size: 1.02rem;
+color: var(--accent);
+}
+.paper-header-box .p-dept {
+font-family: 'Inter', sans-serif;
+font-size: 0.88rem;
+color: var(--text-muted);
+}
+.paper-header-box .p-course {
+font-size: 0.92rem;
+font-weight: 600;
+margin-top: 0.2rem;
+}
+.rubric-box {
+background: var(--accent-soft);
+border-left: 3px solid var(--accent);
+padding: 0.6rem 0.85rem;
+border-radius: 0 8px 8px 0;
+font-size: 0.9rem;
+margin-bottom: 1.1rem;
+color: var(--text-primary);
+}
+.part-divider {
+text-align: center;
+font-weight: 700;
+font-size: 1rem;
+color: var(--accent);
+margin: 0.75rem 0 1rem;
+letter-spacing: 0.04em;
+}
+/* Question Cards */
+.question-card {
+background: var(--bg-primary);
+border: 1px solid var(--border-color);
+border-radius: 10px;
+padding: 0.95rem 1rem;
+margin-bottom: 0.95rem;
+transition: border-color 0.2s;
+}
+.question-card:hover {
+border-color: var(--border-strong);
+}
+.question-card.hidden-by-search {
+display: none;
+}
+.q-header {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 0.75rem;
+margin-bottom: 0.65rem;
+padding-bottom: 0.45rem;
+border-bottom: 1px solid var(--border-color);
+}
+.q-title {
+font-weight: 700;
+font-size: 1rem;
+color: var(--accent);
+}
+.marks-badge {
+font-family: 'Fira Code', 'Hind Siliguri', sans-serif;
+font-size: 0.78rem;
+font-weight: 600;
+color: var(--accent);
+background: var(--badge-bg);
+padding: 0.15rem 0.5rem;
+border-radius: 5px;
+white-space: nowrap;
+flex-shrink: 0;
+}
+.sub-list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+gap: 0.65rem;
+}
+.sub-item {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 0.75rem;
+padding: 0.35rem 0.45rem;
+border-radius: 6px;
+}
+.sub-item:hover {
+background: rgba(148, 163, 184, 0.05);
+}
+.sub-item.hidden-by-search {
+display: none;
+}
+.sub-content {
+flex: 1 1 auto;
+min-width: 0;
+overflow-wrap: break-word;
+}
+.sub-label {
+font-weight: 700;
+color: var(--accent-alt);
+margin-right: 0.35rem;
+}
+.en-text {
+color: var(--text-muted);
+font-family: 'Inter', sans-serif;
+font-size: 0.91rem;
+}
+.nested-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 0.45rem 1rem;
+margin-top: 0.45rem;
+padding-left: 0.5rem;
+}
+.nested-item {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+padding: 0.4rem 0.65rem;
+border-radius: 6px;
+overflow-x: auto;
+}
+.chem-svg {
+display: inline-block;
+vertical-align: middle;
+max-width: 100%;
+height: auto;
+stroke: currentColor;
+fill: none;
+}
+.chem-svg text {
+fill: currentColor;
+stroke: none;
+font-family: 'Inter', sans-serif;
+font-size: 12px;
+}
+.table-wrap {
+width: 100%;
+overflow-x: auto;
+margin: 0.65rem 0;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+font-size: 0.88rem;
+}
+th, td {
+border: 1px solid var(--border-strong);
+padding: 0.45rem 0.65rem;
+text-align: left;
+}
+th {
+background: var(--bg-elevated);
+color: var(--accent);
+}
+/* MathJax overflow safety on mobile */
+mjx-container {
+max-width: 100%;
+overflow-x: auto;
+overflow-y: hidden;
+}
+.section-footer {
+margin-top: 1rem;
+padding-top: 0.65rem;
+border-top: 1px solid var(--border-color);
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 0.5rem;
+font-family: 'Fira Code', sans-serif;
+font-size: 0.75rem;
+color: var(--text-muted);
+}
+.no-results {
+text-align: center;
+padding: 2.5rem 1rem;
+background: var(--bg-card);
+border: 1px dashed var(--border-strong);
+border-radius: 12px;
+color: var(--text-muted);
+display: none;
+}
+.no-results.visible {
+display: block;
+}
+/* Floating Back-to-Top */
+.back-to-top {
+position: fixed;
+right: 1.15rem;
+bottom: 1.25rem;
+z-index: 90;
+width: 42px;
+height: 42px;
+border-radius: 50%;
+background: var(--accent);
+color: #0b0f19;
+border: none;
+font-family: 'Fira Code', monospace;
+font-size: 1.15rem;
+font-weight: 700;
+cursor: pointer;
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: all 0.25s ease;
+}
+.back-to-top.visible {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+.site-footer {
+text-align: center;
+padding: 1.5rem 1rem 2.5rem;
+font-size: 0.82rem;
+color: var(--text-muted);
+border-top: 1px solid var(--border-color);
+max-width: 1040px;
+margin: 0 auto;
+}
+@media (max-width: 480px) {
+.header-title {
+max-width: 165px;
+font-size: 0.86rem;
+}
+.year-body {
+padding: 0.8rem 0.75rem;
+}
+.question-card {
+padding: 0.8rem 0.75rem;
+}
+.sub-item {
+flex-direction: column;
+gap: 0.25rem;
+}
+}
+@media print {
+:root, [data-theme="dark"], [data-theme="light"] {
+--bg-primary: #ffffff !important;
+--bg-card: #ffffff !important;
+--bg-elevated: #f3f4f6 !important;
+--border-color: #d1d5db !important;
+--border-strong: #9ca3af !important;
+--text-primary: #000000 !important;
+--text-muted: #1f2937 !important;
+--accent: #000000 !important;
+--accent-alt: #000000 !important;
+--accent-soft: #f3f4f6 !important;
+--badge-bg: #f3f4f6 !important;
+--shadow: none !important;
+}
+body {
+background: #ffffff !important;
+color: #000000 !important;
+font-size: 11pt;
+line-height: 1.55;
+}
+.top-header, .controls-panel, .back-to-top, .chevron, .no-print {
+display: none !important;
+}
+.container {
+max-width: 100%;
+padding: 0;
+}
+.year-section {
+border: 1px solid #9ca3af !important;
+margin-bottom: 1.25rem;
+page-break-after: always;
+}
+.year-section:last-of-type {
+page-break-after: auto;
+}
+.year-section.collapsed .year-body {
+display: block !important;
+}
+.question-card {
+break-inside: avoid;
+page-break-inside: avoid;
+border: 1px solid #d1d5db !important;
+}
+.year-badge {
+background: #000000 !important;
+color: #ffffff !important;
+-webkit-print-color-adjust: exact;
+print-color-adjust: exact;
+}
+}
+</style>
+</head>
+<body>
+<!-- Sticky Top Header -->
+<header class="top-header">
+<div class="header-inner">
+<div class="header-left">
+<a href="../index.html" class="back-btn" title="Back to Archive">← Back to Archive</a>
+<div class="course-identity">
+<span class="code-badge">CMG 7100</span>
+<span class="header-title">Fundamental of Chemistry</span>
+</div>
+</div>
+<div class="header-actions">
+<button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle Light/Dark Theme">☀️ Light</button>
+<button type="button" class="icon-btn" onclick="window.print()" aria-label="Print or Save PDF">🖨️ Print / PDF</button>
+</div>
+</div>
+</header>
+<main class="container">
+<!-- Hero Metadata Card -->
+<section class="hero-card">
+<div class="uni-tag">Dhaka Central University • Department of Physics | BSc Honours</div>
+<h1>বিষয়: নন-মেজর রসায়ন | Fundamental of Chemistry</h1>
+<div class="hero-meta-grid">
+<div class="hero-meta-item">Course Code: <strong class="mono">CMG 7100</strong></div>
+<div class="hero-meta-item">Sessions Covered: <strong class="mono">2018 – 2024 (7 Years)</strong></div>
+<div class="hero-meta-item">Full Marks: <strong class="mono">৮০ (80)</strong></div>
+<div class="hero-meta-item">Archive: <strong>DCU QB Archive Team</strong></div>
+</div>
+</section>
+<!-- Search & Filter Controls -->
+<section class="controls-panel no-print" aria-label="Search and filter questions">
+<div class="search-row">
+<div class="search-box">
+<input type="text" id="searchInput" class="search-input" placeholder="প্রশ্ন খুঁজুন... (যেমন: Hess's law, pH, জারণ, বেনজিন, MOT, 2024)" autocomplete="off" />
+<button type="button" id="clearSearch" class="clear-search" aria-label="Clear search">✕</button>
+</div>
+<div class="match-status" id="matchStatus">All 7 Years Loaded</div>
+</div>
+<div class="filter-row">
+<div class="filter-pills" id="filterPills"></div>
+<button type="button" class="icon-btn" id="toggleAllBtn">Collapse All</button>
+</div>
+</section>
+<div id="noResults" class="no-results">
+কোনো মিল পাওয়া যায়নি। অন্য কোনো কীওয়ার্ড দিয়ে আবার চেষ্টা করুন। (No matching questions found.)
+</div>
+<!-- ==================== পরীক্ষা-২০১৮ ==================== -->
+<section class="year-section" data-year="2018">
+<button type="button" class="year-header" aria-expanded="true">
+<div class="year-title-group">
+<span class="year-badge">2018</span>
+<span class="year-heading-text">পরীক্ষা-২০১৮ (Exam 2018)</span>
+</div>
+<div class="year-meta-pills">
+<span class="meta-chip">সময়: ৪ ঘণ্টা</span>
+<span class="meta-chip">পূর্ণমান: ৮০</span>
+<span class="chevron">▼</span>
+</div>
+</button>
+<div class="year-body">
+<div class="paper-header-box">
+<div class="p-uni">Dhaka Central University</div>
+<div class="p-dept">Department of Physics | BSc Honours</div>
+<div class="p-course">বিষয়: নন-মেজর রসায়ন | কোর্সের শিরোনাম: Fundamental of Chemistry | কোর্স কোড: CMG 7100 | পরীক্ষা-২০১৮</div>
+</div>
+<div class="rubric-box">
+[দ্রষ্টব্য: একই বিভাগের বিভিন্ন প্রশ্নের উত্তর ধারাবাহিকভাবে লিখতে হবে। প্রয়োজনে চিহ্নিত চিত্র দিতে হবে।]<br />
+<strong>১নং প্রশ্নসহ যেকোনো ৫টি প্রশ্নের উত্তর দাও।</strong>
+</div>
+<!-- 2018 Q1 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">১। নিচের সবগুলো প্রশ্নের উত্তর দাও।</div>
+<span class="marks-badge">১ × ১৬ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> মোলার গ্যাস ধ্রুবক R-এর মান কত? <span class="en-text">[What is the value of molar gas constant, R?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> \text{HSO}_{4}^{-} এবং \text{HCO}_{3}^{-} ক্ষারের অনুবন্ধী অম্ল কী? <span class="en-text">[What are the conjugate acids of the bases \text{HSO}_{4}^{-} and \text{HCO}_{3}^{-}?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> {}^{40}\text{Ca}^{2+} আয়নে ইলেকট্রন, নিউট্রন ও প্রোটনের সংখ্যা গণনা কর। <span class="en-text">[Calculate the number of electrons, protons and neutrons of {}^{40}\text{Ca}^{2+} ion.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> \text{K}_{2}\text{Cr}_{2}\text{O}_{7}-এ \text{Cr}-এর জারণ সংখ্যা কত? <span class="en-text">[What is the oxidation number of \text{Cr} in \text{K}_{2}\text{Cr}_{2}\text{O}_{7}?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> \text{HNO}_{3} এবং \text{H}_{3}\text{PO}_{4} এর মধ্যে কোনটি বেশি শক্তিশালী অম্ল? <span class="en-text">[Which acid is stronger between \text{HNO}_{3} and \text{H}_{3}\text{PO}_{4}?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(চ)</span> বিক্রিয়ার হার কাকে বলে? <span class="en-text">[What is meant by reaction rate?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ছ)</span> আপেক্ষিক প্রমাণ বিচ্যুতি কী? <span class="en-text">[What is relative standard deviation?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(জ)</span> হেসের সূত্র বিবৃত কর। <span class="en-text">[State Hess's law.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঝ)</span> রিডক্স বিক্রিয়া কী? <span class="en-text">[What is redox reaction?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঞ)</span> \text{NH}_{4}\text{Cl}-এ কী কী বন্ধন রয়েছে? <span class="en-text">[What are the bonds present in \text{NH}_{4}\text{Cl}?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ট)</span> কলিগেটিভ ধর্ম বলতে কী বুঝ? <span class="en-text">[What are colligative properties?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঠ)</span> মুক্ত র‍্যাডিকেল কী? <span class="en-text">[What is free radical?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ড)</span> আধুনিক পর্যায় সারণির মূল ভিত্তি কী? <span class="en-text">[What is the basis of modern periodic table?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঢ)</span> ০.০৫০ মোলার ঘনমাত্রার ১০০.০ মিলিলিটার আয়তনের জলীয় দ্রবণ প্রস্তুত করতে কত গ্রাম সোডিয়াম হাইড্রোক্সাইড প্রয়োজন তা হিসাব কর। <span class="en-text">[Calculate the amount of \text{NaOH} required to prepare 100.0\text{ mL} of 0.050\text{ M} aqueous solution.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ণ)</span> অ্যালডিহাইড ও অ্যামাইডের কার্যকরী মূলকের গাঠনিক সংকেত লেখ। <span class="en-text">[Write down the structural formula of the functional groups for aldehydes and amides.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ত)</span> ০.০১ মোলার সোডিয়াম হাইড্রোক্সাইড দ্রবণের \text{pH} গণনা কর। <span class="en-text">[Calculate the \text{pH} of 0.01\text{ M} \text{NaOH}.]</span></div></li>
+</ul>
+</article>
+<!-- 2018 Q2 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">২। প্রশ্ন নং ২</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> কোনো একটি পরমাণুতে নিউক্লিয়াসের অস্তিত্ব কীভাবে প্রমাণ করবে? <span class="en-text">[How can you prove the presence of a nucleus in an atom?]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> উদাহরণসহ পলির বর্জন নীতি এবং হুন্ডের সূত্র বর্ণনা কর। <span class="en-text">[Describe Pauli's exclusion principle and Hund's rule.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> নিউক্লিয়ার ফিশন ও ফিউশন বিক্রিয়ার মধ্যে তুলনা কর। <span class="en-text">[Compare between nuclear fission and fusion reactions.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> অরবিট এবং অরবিটাল কী? <span class="en-text">[What are orbit and orbital?]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> ইলেকট্রনের দ্বৈত প্রকৃতি ব্যাখ্যা কর। <span class="en-text">[Explain the dual nature of electron.]</span></div><span class="marks-badge">২</span></li>
+</ul>
+</article>
+<!-- 2018 Q3 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৩। প্রশ্ন নং ৩</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> তড়িৎ, সমযোজী, সন্নিবেশ এবং হাইড্রোজেন বন্ধনের উপযুক্ত উদাহরণসহ সংজ্ঞা দাও। <span class="en-text">[Define ionic, covalent, co-ordination and hydrogen bonds with suitable examples.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> \text{NH}_{3} এবং \text{H}_{2}\text{O} এর বন্ধনকোণ 109.5^{\circ} এর পরিবর্তে যথাক্রমে 107^{\circ} এবং 104.5^{\circ} হয় কেন? <span class="en-text">[Why bond angles of \text{NH}_{3} and \text{H}_{2}\text{O} are 107^{\circ} and 104.5^{\circ}, respectively rather than 109.5^{\circ}?]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> বন্ধন ক্রম কী? অক্সিজেন অণু প্যারাম্যাগনেটিক হয় কেন, তা আণবিক অরবিটাল তত্ত্বের সাহায্যে ব্যাখ্যা কর। <span class="en-text">[What is bond order? Why oxygen molecule is paramagnetic? Explain with molecular orbital theory (MOT).]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> \text{K}_{2}\text{Cr}_{2}\text{O}_{7} + \text{H}_{2}\text{SO}_{4} + \text{KI} \rightarrow ? জারণ-বিজারণ বিক্রিয়াটি আয়ন-ইলেকট্রন পদ্ধতিতে পূর্ণ করে সমতাকরণ কর। <span class="en-text">[\text{K}_{2}\text{Cr}_{2}\text{O}_{7} + \text{H}_{2}\text{SO}_{4} + \text{KI} \rightarrow ? Complete and balance this redox reaction by ion-electron method.]</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2018 Q4 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৪। প্রশ্ন নং ৪</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">(ক)</span> নিম্নের যৌগগুলোর IUPAC পদ্ধতিতে নামকরণ কর। <span class="en-text">[Name the following compounds in IUPAC system:]</span>
+<div class="nested-grid">
+<div class="nested-item">(i) \text{CH}_{3}\text{COCl}</div>
+<div class="nested-item">(ii) \text{CH}_{3}\text{CH}=\text{CHCOCH}_{3}</div>
+<div class="nested-item">(iii) \text{H}_{2}\text{C}=\text{CHCH}_{2}\text{C}\equiv\text{CH}</div>
+<div class="nested-item">(iv) \text{HOOC}-\text{COOH}</div>
+<div class="nested-item">(v) \text{CH}_{3}\text{CH(OH)CH}_{2}\text{CHO}</div>
+</div>
+</div>
+<span class="marks-badge">১ × ৫ = ৫</span>
+</li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">(খ)</span> নিম্নলিখিত রাসায়নিক সমীকরণগুলো পূর্ণ কর: <span class="en-text">[Complete the following reactions.]</span>
+<div class="nested-grid">
+<div class="nested-item">(i) \text{CH}_{3}\text{CH}=\text{CH}_{2} \xrightarrow{\text{O}_{3}} ?</div>
+<div class="nested-item">(ii) \text{CH}_{3}\text{COCH}_{3} \xrightarrow{\text{LiAlH}_{4}} ?</div>
+<div class="nested-item">(iii) \text{CH}_{3}\text{COOH} + \text{C}_{2}\text{H}_{5}\text{OH} \xrightarrow{\text{H}^{+}} ?</div>
+<div class="nested-item">(iv) \text{CH}_{3}\text{CH}_{2}\text{CH}_{2}\text{CH}_{3} \xrightarrow[300^{\circ}\text{C}]{\text{AlCl}_{3},\ \text{HCl}} ?</div>
+<div class="nested-item">(v) \text{CH}_{3}\text{CONH}_{2} + \text{Br}_{2} + \text{KOH} \rightarrow ?</div>
+</div>
+</div>
+<span class="marks-badge">১ × ৫ = ৫</span>
+</li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> প্রাইমারি, সেকেন্ডারি ও টারসিয়ারি কার্বোক্যাটায়নসমূহের তুলনামূলক স্থিতিশীলতা আলোচনা কর। <span class="en-text">[Discuss the relative stabilities of primary, secondary and tertiary carbocations.]</span></div><span class="marks-badge">৬</span></li>
+</ul>
+</article>
+<!-- 2018 Q5 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৫। প্রশ্ন নং ৫</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> ফেনল এবং বেনজোয়িক অ্যাসিড থেকে কীভাবে বেনজিন তৈরি করা যাবে? <span class="en-text">[How can you prepare benzene from phenol and benzoic acid?]</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> অ্যালকিন থেকে (i) গ্লাইকল ও (ii) ফরমালডিহাইড তৈরির বিক্রিয়া লেখ। <span class="en-text">[Write down the reactions of preparation of (i) Glycol and (ii) Formaldehyde from alkene.]</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> পোলারায়ন কী? ফাজানের নিয়ম বর্ণনা কর। <span class="en-text">[What is polarization? Describe Fajan's rule.]</span></div><span class="marks-badge">৬</span></li>
+</ul>
+</article>
+<!-- 2018 Q6 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৬। প্রশ্ন নং ৬</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> আদর্শ গ্যাসের জন্য গতীয় সমীকরণ, PV = \frac{1}{3}mnc^{2} প্রতিপাদন কর। <span class="en-text">[Deduce the kinetic equation for an ideal gas, PV = 1/3\,mnc^{2}.]</span></div><span class="marks-badge">৬</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> 27^{\circ}\text{C} তাপমাত্রায় অক্সিজেন ও হাইড্রোজেন অণুর বর্গমূল গড় বর্গবেগ হিসাব কর। <span class="en-text">[Calculate the root mean square velocities of oxygen and hydrogen molecules at 27^{\circ}\text{C}.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> বাষ্পচাপের আপেক্ষিক অবনমন সম্পর্কিত রাউল্টের সূত্রটি ব্যাখ্যাসহ বর্ণনা কর। <span class="en-text">[State and explain Raoult's law of relative lowering of vapor pressure.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> অম্ল-ক্ষারের ব্রনস্টেড-লাউরি মতবাদটি লেখ। <span class="en-text">[Write down Bronsted-Lowry concept of acid-base.]</span></div><span class="marks-badge">৩</span></li>
+</ul>
+</article>
+<!-- 2018 Q7 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৭। প্রশ্ন নং ৭</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> ব্যাপন চাপ কী? বিপরীত ব্যাপন প্রক্রিয়ায় কীভাবে স্যালাইন পানি থেকে আয়ন দূরীকরণ করা যায়? <span class="en-text">[What is osmotic pressure? How can reverse osmosis be employed to remove ions from saline water?]</span></div><span class="marks-badge">১ + ৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> ভর ক্রিয়া সূত্রটি লেখ। K_{p} ও K_{c} এর মধ্যে সম্পর্ক স্থাপন কর। <span class="en-text">[State the law of mass action. Establish the relation between K_{p} and K_{c}.]</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> দ্রাব্যতা কাকে বলে? গ্যাসের দ্রাব্যতার ওপর তাপমাত্রার প্রভাব আলোচনা কর। <span class="en-text">[What is solubility? Discuss the effect of temperature on the solubility of gases.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> 100^{\circ}\text{C} তাপমাত্রায় ও মোট 1.5 বায়ুচাপে সাম্যাবস্থায় ফসফরাস পেন্টাক্লোরাইডের 35\% বিয়োজিত হলে, K_{p} এবং K_{c} এর মান হিসাব কর। <span class="en-text">[Calculate the values of K_{p} and K_{c} when 35\% \text{PCl}_{5} is dissociated at the temperature and the total pressure of 100^{\circ}\text{C} and 1.5\text{ atm}, respectively.]</span></div><span class="marks-badge">৩</span></li>
+</ul>
+</article>
+<!-- 2018 Q8 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৮। টীকা লিখ (যেকোনো চারটি): <span class="en-text">[Write short notes on (any four):]</span></div>
+<span class="marks-badge">৪ × ৪ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> শিল্পোৎপাদনে লা-শাতেলিয়ার নীতির প্রয়োগ। <span class="en-text">[Application of Le Chatelier's principle in industrial production.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> তাপহারী ও তাপোৎপাদী বিক্রিয়া। <span class="en-text">[Endothermic and exothermic reactions.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> তড়িৎ রাসায়নিক কোষ। <span class="en-text">[Electrochemical cells.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> কর্ণ সম্পর্ক। <span class="en-text">[Diagonal relationship.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> ফ্রিডেল-ক্রাফট বিক্রিয়া। <span class="en-text">[Friedel-Crafts reactions.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(চ)</span> হাকেল নীতি এবং অ্যারোমেটিসিটি। <span class="en-text">[Huckel rule and aromaticity.]</span></div></li>
+</ul>
+</article>
+<div class="section-footer">
+<span>Dhaka Central University Question Bank Archive</span>
+<span>Edited & Compiled by DCU QB Archive Team</span>
+</div>
+</div>
+</section>
+<!-- ==================== পরীক্ষা-২০১৯ ==================== -->
+<section class="year-section" data-year="2019">
+<button type="button" class="year-header" aria-expanded="true">
+<div class="year-title-group">
+<span class="year-badge">2019</span>
+<span class="year-heading-text">পরীক্ষা-২০১৯ (Exam 2019)</span>
+</div>
+<div class="year-meta-pills">
+<span class="meta-chip">সময়: ৪ ঘণ্টা</span>
+<span class="meta-chip">পূর্ণমান: ৮০</span>
+<span class="chevron">▼</span>
+</div>
+</button>
+<div class="year-body">
+<div class="paper-header-box">
+<div class="p-uni">Dhaka Central University</div>
+<div class="p-dept">Department of Physics | BSc Honours</div>
+<div class="p-course">বিষয়: নন-মেজর রসায়ন | কোর্সের শিরোনাম: Fundamental of Chemistry | কোর্স কোড: CMG 7100 | পরীক্ষা-২০১৯</div>
+</div>
+<div class="rubric-box">
+<strong>[দ্রষ্টব্য: ১নং প্রশ্নসহ যেকোনো ৫টি প্রশ্নের উত্তর দাও।]</strong>
+</div>
+<div class="part-divider">ক-বিভাগ</div>
+<!-- 2019 Q1 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">১। নিচের সবগুলো প্রশ্নের উত্তর দাও। <span class="en-text">[Answer all of the following questions.]</span></div>
+<span class="marks-badge">১ × ১৬ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> ইলেকট্রোফাইল কী? <span class="en-text">[What is electrophile?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> সংকরায়ণ কাকে বলে? <span class="en-text">[What is hybridization?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> \text{K}_{4}[\text{Fe(CN)}_{6}] যৌগে \text{Fe}-এর জারণমান কত? <span class="en-text">[What is the oxidation number of \text{Fe} in \text{K}_{4}[\text{Fe(CN)}_{6}] compound?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> কার্বনিয়াম আয়ন কী? <span class="en-text">[What is carbonium ion?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> লুইস অম্ল কী? <span class="en-text">[What is Lewis acid?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(চ)</span> \text{Fe}^{2+} এবং \text{Cr} এর ইলেকট্রন বিন্যাস লেখ। <span class="en-text">[Write down the electron configurations of \text{Fe}^{2+} and \text{Cr}.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ছ)</span> \text{Ni} মৌলটি পর্যায় সারণির কোন পর্যায় এবং কোন শ্রেণিতে অবস্থিত? <span class="en-text">[To which group and period of the periodic table, \text{Ni} element does belong?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(জ)</span> \text{HCHO} \xrightarrow{50\%\ \text{NaOH}} ? বিক্রিয়াটি সম্পন্ন কর। <span class="en-text">[Complete the reaction: \text{HCHO} \xrightarrow{50\%\ \text{NaOH}} ?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঝ)</span> মৃদু তড়িৎ বিশ্লেষ্য যৌগ কী? <span class="en-text">[What are weak electrolytes?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঞ)</span> 0.005\text{ M} \text{H}_{2}\text{SO}_{4} অ্যাসিড দ্রবণের \text{pH} নির্ণয় কর। <span class="en-text">[Calculate the \text{pH} of 0.005\text{ M} \text{H}_{2}\text{SO}_{4} solution.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ট)</span> লবণ সেতু কী? <span class="en-text">[What is salt bridge?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঠ)</span> কার্বনিয়াম আয়নের স্থিতিশীলতার ক্রম দেখাও। <span class="en-text">[Show the order of stability of carbonium ion.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ড)</span> ডিকার্বোক্সিলেশন বিক্রিয়া কী? <span class="en-text">[What is decarboxylation reaction?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঢ)</span> 10\% \text{Na}_{2}\text{CO}_{3} দ্রবণের মোলার ঘনমাত্রা কত? <span class="en-text">[What is the molar concentration of 10\% \text{Na}_{2}\text{CO}_{3} solution?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ণ)</span> অ্যানিলিন ক্ষারীয় কেন? <span class="en-text">[Why aniline is basic?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ত)</span> হাকেল সংখ্যা কী? <span class="en-text">[What is Huckel number?]</span></div></li>
+</ul>
+</article>
+<!-- 2019 Q2 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">২। প্রশ্ন নং ২</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> কোয়ান্টাম সংখ্যার সাহায্যে একটি পরমাণুর ৪র্থ শক্তিস্তরে সর্বোচ্চ সংখ্যক ইলেকট্রন হিসাব কর। <span class="en-text">[Calculate the maximum number of electrons reside in the 4^{\text{th}} shell of an atom with the help of quantum numbers.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> পর্যায় সারণিতে হাইড্রোজেনের অবস্থান স্থান সম্পর্কে আলোচনা কর। <span class="en-text">[Discuss about the position of hydrogen in the periodic table.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> ব্যাখ্যা কর, ফসফরাস \text{PCl}_{5} গঠন করলেও, নাইট্রোজেন \text{NCl}_{5} গঠন করে না। <span class="en-text">[Explain, phosphorous form \text{PCl}_{5}, but nitrogen does not form \text{NCl}_{5}.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> 'p' এবং 'd' অরবিটালের আকৃতি আঁক ও বৈশিষ্ট্য লেখ। <span class="en-text">[Draw the shape and write the characteristics of 'p' and 'd' orbitals.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> যদি একটি ইলেকট্রনের বেগজনিত অনিশ্চয়তা 5.7 \times 10^{5}\text{ m s}^{-1} হয়, তবে এর অবস্থানজনিত অনিশ্চয়তা কত? (প্লাঙ্কের ধ্রুবক, h = 6.6 \times 10^{-34}\text{ kg m}^{2}\text{ s}^{-1} এবং ইলেকট্রনের ভর = 9.1 \times 10^{-31}\text{ kg}) <span class="en-text">[If the uncertainty in the velocity of an electron is 5.7 \times 10^{5}\text{ m s}^{-1} what is the uncertainty in its position?]</span></div><span class="marks-badge">২</span></li>
+</ul>
+</article>
+<!-- 2019 Q3 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৩। প্রশ্ন নং ৩</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> আয়নীকরণ বিভব কী? পর্যায় সারণির একই গ্রুপে ও পর্যায়ে ইহা কীভাবে পরিবর্তিত হয়? <span class="en-text">[What is ionization potential? How does it vary in a group and in a period of the periodic table?]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> d-ব্লক মৌল ও অবস্থান্তর মৌলের মধ্যে পার্থক্য লেখ। <span class="en-text">[Write the difference between d-block element and transition element.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> \text{K}^{+} ও \text{Ca}^{2+} এর মধ্যে কোনটির আয়নিক ব্যাসার্ধ কম এবং কেন? <span class="en-text">[Which ions have smaller ionic radius either \text{K}^{+} or \text{Ca}^{2+} and why?]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> \text{KMnO}_{4} + \text{H}_{2}\text{C}_{2}\text{O}_{4} + \text{H}_{2}\text{SO}_{4} \rightarrow ? জারণ-বিজারণ বিক্রিয়াটি আয়ন-ইলেকট্রন পদ্ধতিতে পূর্ণ করে সমতা কর। <span class="en-text">[\text{KMnO}_{4} + \text{H}_{2}\text{C}_{2}\text{O}_{4} + \text{H}_{2}\text{SO}_{4} \rightarrow ? complete and balance this redox reaction ion-electron method.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> ব্যাখ্যা কর, \text{Be}_{2} অণুর অস্তিত্ব নেই। <span class="en-text">[Explain \text{Be}_{2} molecule does not exist.]</span></div><span class="marks-badge">২</span></li>
+</ul>
+</article>
+<!-- 2019 Q4 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৪। প্রশ্ন নং ৪</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> আণবিক অরবিটাল তত্ত্বের (MOT) সাহায্যে ব্যাখ্যা কর, \text{N}_{2} অণু অপেক্ষা \text{O}_{2} অণু কম স্থিতিশীল। <span class="en-text">[According to Molecular Orbital Theory (MOT) explain that \text{O}_{2} molecule is less stable than \text{N}_{2} molecule.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> সালফিউরিক অ্যাসিডের উপস্থিতিতে বেনজিনের নাইট্রেশন বিক্রিয়া কৌশল দেখাও। <span class="en-text">[Show the mechanism of nitration of benzene in presence of sulfuric acid.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> বেনজিনের ইলেকট্রোফিলিক প্রতিস্থাপন বিক্রিয়ায় -\text{NH}_{2} অর্থো- ও প্যারা-নির্দেশক গ্রুপ, কিন্তু -\text{NO}_{2} মেটা-নির্দেশক, ব্যাখ্যা কর। এদের বিক্রিয়ার সক্রিয়তা সম্পর্কে মন্তব্য কর। <span class="en-text">[Explain why -\text{NH}_{2} group is ortho- and para-directing, but -\text{NO}_{2} group is meta-directing towards electrophilic substitution of benzene ring. Comment on the reactivity.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">(ঘ)</span> নিম্নলিখিত রাসায়নিক সমীকরণগুলো পূর্ণ কর। <span class="en-text">[Complete the following reactions.]</span>
+<div class="nested-grid">
+<div class="nested-item">(i) \text{CH}_{3}-\text{CHO} + [\text{H}] \xrightarrow[\text{গাঢ় }\text{HCl}]{\text{Zn-Hg}} ?</div>
+<div class="nested-item">(ii) (\text{CH}_{3})_{3}\text{C}-\text{CHO} \xrightarrow{\text{গাঢ় ক্ষার দ্রবণ}} ?</div>
+<div class="nested-item">(iii) \text{C}_{6}\text{H}_{6} + \text{Cl}_{2} \xrightarrow{hv} ?</div>
+<div class="nested-item">(iv) \text{CH}_{3}-\text{COOH} \xrightarrow{\text{তাপ},\ \text{P}_{2}\text{O}_{5}} ?</div>
+<div class="nested-item">(v) \text{CH}_{3}-\text{CH}=\text{CH}_{2} \xrightarrow{\text{HCl}} ?</div>
+<div class="nested-item">(vi) \text{C}_{6}\text{H}_{5}-\text{Cl} \xrightarrow{\text{জলীয় }\text{NaOH}} ?</div>
+</div>
+</div>
+<span class="marks-badge">৫</span>
+</li>
+</ul>
+</article>
+<!-- 2019 Q5 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৫। প্রশ্ন নং ৫</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> প্রপিনের সাথে \text{HBr} বিক্রিয়া করলে প্রধান উৎপাদ কী হবে? তুমি এর সাথে পারঅক্সাইড যোগ করলে কী ঘটবে? <span class="en-text">[What is the major product when propene is treated with \text{HBr}? What will happen if you add peroxide to it?]</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> বেনজিন ডায়াজোনিয়াম ক্লোরাইড থেকে (i) বেনজয়িক অ্যাসিড; (ii) ফেনল ও (iii) বেনজিন তৈরির বিক্রিয়া লেখ। <span class="en-text">[Write down the reactions of preparation of (i) benzoic acid, (ii) phenol and (iii) benzene from diazonium chloride.]</span></div><span class="marks-badge">৬</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> জ্যামিতিক সমাণুতা কী? কোন কোন শর্তে একটি যৌগ জ্যামিতিক সমাণুতা প্রদর্শন করে উদাহরণসহ ব্যাখ্যা কর। <span class="en-text">[What is geometric isomerism? What conditions should be fulfilled by a compound to exhibit geometrical isomerism?]</span></div><span class="marks-badge">৫</span></li>
+</ul>
+</article>
+<!-- 2019 Q6 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৬। প্রশ্ন নং ৬</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> আদর্শ গ্যাসের স্বীকার্যসমূহ কী কী? আদর্শ আচরণ হতে বাস্তব গ্যাসের বিচ্যুতির প্রধান কারণসমূহ কী কী—ব্যাখ্যা কর। <span class="en-text">[What are the postulates of ideal gas law? Explain the main reason for the deviations of ideal behavior for real gas.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> তাপগতিবিদ্যার প্রথম সূত্রটি বর্ণনা কর এবং এর গাণিতিক ব্যাখ্যা দাও। <span class="en-text">[State the first law of thermodynamics and give its mathematical expression.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> অম্ল ও ক্ষারক সম্পর্কিত আরহেনিয়াস মতবাদ ব্যাখ্যা কর। এ মতবাদের ত্রুটিগুলো লেখ। <span class="en-text">[Discuss the Arrhenius theory of acids and bases. Write the limitations of this theory.]</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> 0.1\text{ M} ইথানয়িক অ্যাসিডের \text{pH} মান গণনা কর। দেওয়া আছে, K_{a} = 1.85 \times 10^{-5}। <span class="en-text">[Calculate the \text{pH} of 0.1\text{ M} ethanoic acid solution. Given that K_{a} = 1.85 \times 10^{-5}.]</span></div><span class="marks-badge">৩</span></li>
+</ul>
+</article>
+<!-- 2019 Q7 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৭। প্রশ্ন নং ৭</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> বিক্রিয়ার আণবিকত্ব ও ক্রমের মধ্যে পার্থক্য লেখ। <span class="en-text">[Write down the differences between molecularity and order of reaction.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> একটি প্রথম ক্রম বিক্রিয়ার জন্য বেগ ধ্রুবকের গাণিতিক সমীকরণ উপপাদন কর। <span class="en-text">[Deduce the mathematical equation for the rate constant of a first order reaction.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> নিম্নলিখিত বিক্রিয়ার ক্ষেত্রে তাপমাত্রা ও চাপের প্রভাব ব্যাখ্যা কর। <span class="en-text">[Write down the effects of temperature and pressure on the following reaction.]</span><br />
+</div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> 298\text{ K} তাপমাত্রায় সাম্যাবস্থায় \text{N}_{2}\text{O}_{4} বিয়োজন মিশ্রণে \text{N}_{2}\text{O}_{4} এর আংশিক চাপ 0.8\text{ atm} এবং বিক্রিয়াটির K_{p} = 0.08\text{ atm} হলে, বিক্রিয়াটির K_{c} ও \text{NO}_{2} এর আংশিক চাপ নির্ণয় কর। <span class="en-text">[At 298\text{ K} in an equilibrium dissociate mixture of \text{N}_{2}\text{O}_{4}, the partial pressure of \text{N}_{2}\text{O}_{4} is 0.8\text{ atm} and K_{p} of the reaction is 0.08\text{ atm}. Calculate K_{c} of the reaction and partial pressure of \text{NO}_{2}.]</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2019 Q8 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৮। নিম্নের যেকোনো চারটি টীকা লেখ। <span class="en-text">[Write short notes on any four of the following:]</span></div>
+<span class="marks-badge">৪ × ৪ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(i)</span> কলিগেটিভ ধর্ম। <span class="en-text">[Colligative properties]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ii)</span> বর্ন-হ্যাবার চক্র। <span class="en-text">[Born-Haber cycle]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(iii)</span> বাফার দ্রবণ। <span class="en-text">[Buffer solution]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(iv)</span> টি.এন.টি. <span class="en-text">[T.N.T.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(v)</span> অ্যালডল ঘনীভবন বিক্রিয়া। <span class="en-text">[Aldol condensation reaction]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(vi)</span> পিরিডিন একটি অ্যারোমেটিক যৌগ। <span class="en-text">[Pyridine is an aromatic compound]</span></div></li>
+</ul>
+</article>
+<div class="section-footer">
+<span>Dhaka Central University Question Bank Archive</span>
+<span>Edited & Compiled by DCU QB Archive Team</span>
+</div>
+</div>
+</section>
+<!-- ==================== পরীক্ষা-২০২০ ==================== -->
+<section class="year-section" data-year="2020">
+<button type="button" class="year-header" aria-expanded="true">
+<div class="year-title-group">
+<span class="year-badge">2020</span>
+<span class="year-heading-text">পরীক্ষা-২০২০ (Exam 2020)</span>
+</div>
+<div class="year-meta-pills">
+<span class="meta-chip">সময়: ২ ঘণ্টা</span>
+<span class="meta-chip">পূর্ণমান: ৮০</span>
+<span class="chevron">▼</span>
+</div>
+</button>
+<div class="year-body">
+<div class="paper-header-box">
+<div class="p-uni">Dhaka Central University</div>
+<div class="p-dept">Department of Physics | BSc Honours</div>
+<div class="p-course">বিষয়: নন-মেজর রসায়ন | কোর্সের শিরোনাম: Fundamental of Chemistry | কোর্স কোড: CMG 7100 | পরীক্ষা-২০২০</div>
+</div>
+<div class="rubric-box">
+<strong>[দ্রষ্টব্য: ১নং প্রশ্নসহ যেকোনো ৩টি প্রশ্নের উত্তর দাও। / Answer to Question No. 1 and any 2 questions from the rest.]</strong>
+</div>
+<!-- 2020 Q1 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">১। যেকোনো আটটি প্রশ্নের উত্তর দাও—</div>
+<span class="marks-badge">৮ × ২ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> \text{Fe} মৌলটি পর্যায় সারণির কোন পর্যায় এবং কোন শ্রেণিতে অবস্থিত? <span class="en-text">[To which group and period of the periodic table, \text{Fe} element does belong?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> IUPAC এর পূর্ণ অর্থ লেখ। <span class="en-text">[Write down the elaborated form of IUPAC.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> {}^{34}\text{S}^{2-} এবং {}^{40}\text{Ca}^{2+} আয়নে ইলেকট্রন, নিউট্রন এবং প্রোটনের সংখ্যা গণনা কর। <span class="en-text">[Calculate the number of electrons, protons and neutrons of {}^{34}\text{S}^{2-} and {}^{40}\text{Ca}^{2+} ions.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> লুইস অম্ল কী? <span class="en-text">[What is Lewis acid?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> কার্বন মৌলের ক্যাটিনেশন ধর্ম কী? <span class="en-text">[What is the catenation property of carbon?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(চ)</span> ছদ্ম এক আণবিক বিক্রিয়া কাকে বলে? <span class="en-text">[What is pseudo 1^{\text{st}} order reaction?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ছ)</span> 0.01\text{ M} \text{HCl} এসিড দ্রবণের \text{pH} নির্ণয় কর। <span class="en-text">[Calculate the \text{pH} of 0.01\text{ M} \text{HCl} solution.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(জ)</span> রেক্টিফাইড স্পিরিট কী? <span class="en-text">[What is rectified spirit?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঝ)</span> ফেনল অম্লীয় কেন? <span class="en-text">[Why phenol is acidic?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঞ)</span> মুক্ত-জোড় ইলেকট্রন কী? <span class="en-text">[What is lone-pair electron?]</span></div></li>
+</ul>
+</article>
+<!-- 2020 Q2 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">২। প্রশ্ন নং ২</div>
+<span class="marks-badge">মোট: ৩২</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> গ্যাসের গতিতত্ত্বের PV = \frac{1}{3}mnc^{2} সমীকরণটি প্রতিষ্ঠিত কর। <span class="en-text">[Establish the equation of the kinetic theory of gases, PV = 1/3\,mnc^{2}.]</span></div><span class="marks-badge">৮</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> প্রশমন এনথালপি কী? ব্যাখ্যা কর যে, সবল অ্যাসিড ও সবল ক্ষারের প্রশমন এনথালপির মান ধ্রুব। <span class="en-text">[What is enthalpy of neutralization? Explain that the enthalpies of neutralization for strong acid and strong base are constant.]</span></div><span class="marks-badge">৬</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> রাউল্টের সূত্রটি বিবৃত ও ব্যাখ্যা কর। <span class="en-text">[State and explain Rault's law.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> বাফার দ্রবণ কী? একটি অম্লীয় বাফার দ্রবণের ক্রিয়া কৌশল উদাহরণসহ ব্যাখ্যা কর। <span class="en-text">[What is buffer solution? Explain the mechanism of an acidic buffer with an example.]</span></div><span class="marks-badge">১০</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> 27^{\circ}\text{C} তাপমাত্রায় ৫ গ্রাম নাইট্রোজেন গ্যাসের গতিশক্তি নির্ণয় কর। <span class="en-text">[Calculate the kinetic energy of 5\text{ g} of nitrogen gas at 27^{\circ}\text{C}.]</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2020 Q3 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৩। প্রশ্ন নং ৩</div>
+<span class="marks-badge">মোট: ৩২</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> কোয়ান্টাম সংখ্যা কাকে বলে? 2s, 2d, 3f ও 4f অরবিটালগুলোর কোনগুলো বাস্তবে সম্ভব? <span class="en-text">[What are quantum numbers? Which orbitals are practically possible among 2s, 2d, 3f and 4f?]</span></div><span class="marks-badge">৮</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> হুন্ডের নিয়মটি উপযুক্ত উদাহরণসহ বর্ণনা কর। <span class="en-text">[Describe Hund's rule with suitable example.]</span></div><span class="marks-badge">৮</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> ইলেকট্রন আসক্তি বলতে কী বুঝ? ফ্লোরিনের ইলেকট্রন আসক্তি ক্লোরিনের চেয়ে কম হয় কেন, ব্যাখ্যা কর। <span class="en-text">[What is electron affinity? Explain why electron affinity of fluorine is lower than that of chlorine.]</span></div><span class="marks-badge">৮</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> \text{NH}_{3} এবং \text{NCl}_{3} অণু দুটির মধ্যে বন্ধন কোণের পরিমাণ সমান হয় না কেন—ব্যাখ্যা কর। <span class="en-text">[Why the bond angles between \text{NH}_{3} and \text{NCl}_{3} are not the same, explain.]</span></div><span class="marks-badge">৮</span></li>
+</ul>
+</article>
+<!-- 2020 Q4 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৪। প্রশ্ন নং ৪</div>
+<span class="marks-badge">মোট: ৩২</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> বেনজিনে ইলেকট্রন-আকর্ষী সংযোজন বিক্রিয়ার পরিবর্তে ইলেকট্রন আকর্ষী প্রতিস্থাপন বিক্রিয়া ঘটে কেন? <span class="en-text">[Why does benzene undergo electrophilic substitution reaction instead of electrophilic addition reaction?]</span></div><span class="marks-badge">৬</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> সিগমা এবং পাই বন্ধন বলতে কী বুঝ? এদের মধ্যে কোনটি বেশি শক্তিশালী এবং কেন? <span class="en-text">[What is mean by \sigma and \pi bonds? Which bond is stronger and why?]</span></div><span class="marks-badge">৬</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> কার্বোক্যাটায়ন ও কার্বানায়ন কী? প্রাইমারি, সেকেন্ডারি ও টারসিয়ারি কার্বোক্যাটায়নসমূহের তুলনামূলক স্থিতিশীলতা আলোচনা কর। <span class="en-text">[What are carbocation and carbanion? Discuss the stability of primary, secondary and tertiary carbocations.]</span></div><span class="marks-badge">১০</span></li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">(ঘ)</span> নিম্নের বিক্রিয়াগুলো পূর্ণ কর। <span class="en-text">[Complete the following reactions.]</span>
+<div class="nested-grid">
+<div class="nested-item">(i) \text{C}_{6}\text{H}_{5}-\text{CHO} + [\text{H}] \xrightarrow[\text{গাঢ় }\text{HCl}]{\text{Zn-Hg}} ?</div>
+<div class="nested-item">(ii) \text{CH}_{3}-\text{CH}=\text{CH}_{2} \xrightarrow{\text{ক্ষারীয় }\text{KMnO}_{4}} ?</div>
+<div class="nested-item">(iii) \text{CH}_{3}-\text{COOH} + \text{C}_{2}\text{H}_{5}\text{OH} \xrightarrow{\text{H}^{+}} ?</div>
+<div class="nested-item">
+(iv)
+<svg class="chem-svg" width="54" height="58" viewBox="0 0 54 58" aria-label="Benzoic acid">
+<polygon points="27,18 41,26 41,42 27,50 13,42 13,26" stroke-width="1.5"/>
+<circle cx="27" cy="34" r="8" stroke-width="1.2"/>
+<line x1="27" y1="18" x2="27" y2="11" stroke-width="1.5"/>
+<text x="12" y="10" font-size="10">COOH</text>
+</svg>
+\xrightarrow[\text{তাপ}]{\text{CaO}-\text{NaOH}} ?
+</div>
+<div class="nested-item">
+(v)
+<svg class="chem-svg" width="52" height="54" viewBox="0 0 52 54" aria-label="Chlorobenzene">
+<polygon points="24,14 38,22 38,38 24,46 10,38 10,22" stroke-width="1.5"/>
+<circle cx="24" cy="30" r="8" stroke-width="1.2"/>
+<line x1="38" y1="22" x2="43" y2="19" stroke-width="1.5"/>
+<text x="41" y="18" font-size="10">Cl</text>
+</svg>
++ \text{NaNH}_{2} \xrightarrow[\text{তাপ}]{\text{তরল }\text{NH}_{3}} ?
+</div>
+</div>
+</div>
+<span class="marks-badge">৫ × ২ = ১০</span>
+</li>
+</ul>
+</article>
+<!-- 2020 Q5 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৫। নিম্নের যেকোনো চারটি টীকা লেখ। <span class="en-text">[Write short notes on any four the following:]</span></div>
+<span class="marks-badge">৪ × ৮ = ৩২</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ক)</span> আউফবাউ নীতি। <span class="en-text">[Aufbau principle.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(খ)</span> হেসের সূত্র। <span class="en-text">[Hess's law.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(গ)</span> উইলিয়ামসন সংশ্লেষণ। <span class="en-text">[Williamson synthesis.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঘ)</span> ফ্রিডেল ক্রাফট বিক্রিয়া। <span class="en-text">[Friedel-Crafts reaction.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(ঙ)</span> আয়নীকরণ শক্তি। <span class="en-text">[Ionization energy.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(চ)</span> তেজস্ক্রিয়তা। <span class="en-text">[Radioactivity.]</span></div></li>
+</ul>
+</article>
+<div class="section-footer">
+<span>Dhaka Central University Question Bank Archive</span>
+<span>Edited & Compiled by DCU QB Archive Team</span>
+</div>
+</div>
+</section>
+<!-- ==================== পরীক্ষা-২০২১ ==================== -->
+<section class="year-section" data-year="2021">
+<button type="button" class="year-header" aria-expanded="true">
+<div class="year-title-group">
+<span class="year-badge">2021</span>
+<span class="year-heading-text">পরীক্ষা-২০২১ (Exam 2021)</span>
+</div>
+<div class="year-meta-pills">
+<span class="meta-chip">সময়: ৪ ঘণ্টা</span>
+<span class="meta-chip">পূর্ণমান: ৮০</span>
+<span class="chevron">▼</span>
+</div>
+</button>
+<div class="year-body">
+<div class="paper-header-box">
+<div class="p-uni">Dhaka Central University</div>
+<div class="p-dept">Department of Physics | BSc Honours</div>
+<div class="p-course">বিষয়: নন-মেজর রসায়ন | কোর্সের শিরোনাম: Fundamental of Chemistry | কোর্স কোড: CMG 7100 | পরীক্ষা-২০২১</div>
+</div>
+<div class="rubric-box">
+<strong>[দ্রষ্টব্য: ১নং প্রশ্নসহ বাকি প্রশ্নগুলো থেকে যে কোনো ৪টি প্রশ্নের উত্তর দাও।]</strong>
+</div>
+<!-- 2021 Q1 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">১। নিচের সবগুলো প্রশ্নের উত্তর দাও। <span class="en-text">(Answer all of the following questions):</span></div>
+<span class="marks-badge">১ × ১৬ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> আধুনিক পর্যায় সূত্র বিবৃত কর। <span class="en-text">(State the modern periodic law.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> সিগমা বন্ধন কী? <span class="en-text">(What is sigma bond?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> অ্যারোমেটিক যৌগের সংজ্ঞা দাও। <span class="en-text">(Define aromatic compound.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> ইলেকট্রোফাইল কী? <span class="en-text">(What is electrophile?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(e)</span> ক্ষারকের অম্লত্ব কী? <span class="en-text">(What is the acidity of a base?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(f)</span> পোলার সমযোজী বন্ধন কী? <span class="en-text">(What is polar covalent bond?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(g)</span> জলীয় দ্রবণে গ্রিগনার্ড বিকারক \text{CO}_{2} এর সাথে বিক্রিয়া করলে কী ঘটে? <span class="en-text">(What happens when Grignard reagent is treated with \text{CO}_{2} in aqueous medium?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(h)</span> নিচের বিক্রিয়াটির হারের সমীকরণ লেখ <span class="en-text">(Write down the rate expression of the following reaction):</span> 2\text{N}_{2}\text{O}_{5} \rightarrow 4\text{NO}_{2} + \text{O}_{2}</div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(i)</span> আলোক সমাণুতার জন্য শর্ত কী? <span class="en-text">(What is the condition for optical isomerism?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(j)</span> নির্দেশক কী? <span class="en-text">(What is an indicator?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(k)</span> 2^{\circ} কার্বোক্যাটায়ন অপেক্ষা 3^{\circ} কার্বোক্যাটায়ন বেশি স্থায়ী কেন? <span class="en-text">(Why 3^{\circ} Carbocation is more stable than 2^{\circ} carbocation?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(l)</span> অভিস্রবণিক চাপ বলতে কী বোঝায়? <span class="en-text">(What is meant by osmotic pressure?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(m)</span> বিক্রিয়ার হার বলতে কী বুঝ? <span class="en-text">(What is meant by reaction rate?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(n)</span> ত্রৈধবিন্দু কী? <span class="en-text">(What is triple point?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(o)</span> বন্ধন ক্রম কী? <span class="en-text">(What is bond order?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(p)</span> \text{K}_{2}\text{Cr}_{2}\text{O}_{7} এ কেন্দ্রীয় পরমাণুর জারণ সংখ্যা নির্ণয় কর। <span class="en-text">(Determine the oxidation number of central atom of \text{K}_{2}\text{Cr}_{2}\text{O}_{7}.)</span></div></li>
+</ul>
+</article>
+<!-- 2021 Q2 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">২। প্রশ্ন নং ২</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> কোয়ান্টাম সংখ্যা বলতে কী বোঝ? চারটি কোয়ান্টাম সংখ্যার তাৎপর্য লেখ। <span class="en-text">(What is quantum number? Write down the significance of four quantum numbers.)</span></div><span class="marks-badge">১ + ৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> উদাহরণসহ ব্যাখ্যা কর: জারণ-বিজারণ বিক্রিয়া যুগপৎ সংঘটিত হয়। <span class="en-text">(Describe with example that oxidation-reduction reaction occurs simultaneously.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> হাইড্রোজেন বন্ধন কী? উদাহরণসহ ব্যাখ্যা কর। <span class="en-text">(What is hydrogen bonding? Explain with examples.)</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> ম্যাজিক সংখ্যা কী? যথাযথ কারণসহ নিচের জোড়াগুলো থেকে তেজস্ক্রিয় এবং স্থায়ী নিউক্লিয়াইডগুলো শনাক্ত কর। <span class="en-text">(What is magic number? Identify with proper reason, the radioactive and stable nuclides from the following pairs.)</span><br />(i) {}^{39}_{19}\text{K}, {}^{40}_{19}\text{K}    (ii) {}^{208}_{84}\text{Po}, {}^{209}_{83}\text{Bi}</div><span class="marks-badge">১ + ৩</span></li>
+</ul>
+</article>
+<!-- 2021 Q3 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৩। প্রশ্ন নং ৩</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> VSEPR তত্ত্ব অনুসারে \text{NH}_{4}^{+} এবং \text{XeF}_{4} যৌগের জ্যামিতিক আকৃতি ব্যাখ্যা কর। <span class="en-text">(On the basis of VSEPR model, explain molecular geometry of \text{NH}_{4}^{+} and \text{XeF}_{4}.)</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> বোরের মডেল অনুসারে হাইড্রোজেনের পারমাণবিক বর্ণালি ব্যাখ্যা কর। <span class="en-text">(Explain the atomic spectra of hydrogen with the help of Bohr's atomic model.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> আণবিক অরবিটাল তত্ত্বের মুখ্য মতবাদগুলো লেখ। আণবিক অরবিটাল (MO) চিত্রের মাধ্যমে \text{O}_{2} অণুর বন্ধনক্রম হিসাব কর এবং চৌম্বক ধর্ম ব্যাখ্যা কর। <span class="en-text">(Write down the basic assumptions of molecular orbital theory (MOT). Calculate the bond order of \text{O}_{2} molecule and predict its magnetic property from its MO diagram.)</span></div><span class="marks-badge">২ + ৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> পটাশিয়ামের সর্বশেষ ইলেকট্রনটি 3d তে প্রবেশ না করে 4s অরবিটালে প্রবেশ করে—আউফবাউ নীতির আলোকে ব্যাখ্যা কর। <span class="en-text">(Explain with the help of Aufbau rule, why the last electron of potassium goes to 4s orbital instead of 3d orbital?)</span></div><span class="marks-badge">৩</span></li>
+</ul>
+</article>
+<!-- 2021 Q4 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৪। প্রশ্ন নং ৪</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> \text{rms} বেগ কী? 27^{\circ}\text{C} তাপমাত্রায় \text{N}_{2} গ্যাসের বর্গমূল গড় বর্গবেগ হিসাব কর। <span class="en-text">(What is rms velocity? Calculate the root mean square velocity of \text{N}_{2} gas at 27^{\circ}\text{C}.)</span></div><span class="marks-badge">১ + ৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> মুক্তশক্তির সংজ্ঞা দাও। গিবস মুক্তশক্তির (\Delta G) তাৎপর্য লেখ। <span class="en-text">(Define Free energy. Write down the significances Gibbs free energy (\Delta G).)</span></div><span class="marks-badge">১ + ৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> তাপগতিবিদ্যার প্রথম সূত্র লেখ ও গাণিতিক ব্যাখ্যা দাও। <span class="en-text">(State the first law of thermodynamic and give a mathematical explanation.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> কলিগেটিভ ধর্ম বলতে কী বুঝ? <span class="en-text">(What do you mean by colligative properties?)</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2021 Q5 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৫। প্রশ্ন নং ৫</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> a\text{A} + b\text{B} \rightleftharpoons l\text{L} + m\text{M} বিক্রিয়াটির K_{p} এবং K_{c} এর মধ্যে সম্পর্ক স্থাপন কর। <span class="en-text">(Establish the relationship between K_{p} and K_{c} of a\text{A} + b\text{B} \rightleftharpoons l\text{L} + m\text{M}.)</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> লবণ সেতু কী? উদাহরণসহ বিবৃত কর। <span class="en-text">(What is salt bridge? State with example.)</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> একটি প্রথম ক্রম বিক্রিয়ার অর্ধায়ু ২০ মিনিট হলে, (i) বিক্রিয়ার হার ধ্রুবক গণনা কর ও (ii) বিক্রিয়াটির ৭৫% সম্পন্ন হতে কত সময় লাগবে? <span class="en-text">(Half-life of a first order reaction is 20\text{ minutes}. (i) Calculate the rate constant of this reaction. (ii) Calculate the time required to complete 75\% of the reaction.)</span></div><span class="marks-badge">১ + ৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> প্রমাণ হাইড্রোজেন গ্যাস ইলেক্ট্রোড ব্যবহার করে \text{pH} এবং \text{emf} এর মধ্যে সম্পর্ক প্রতিপাদন কর। <span class="en-text">(Derive a relationship between \text{pH} and \text{emf} of a cell using standard hydrogen gas electrode.)</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2021 Q6 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৬। প্রশ্ন নং ৬</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> \text{C}=\text{C} ইলেক্ট্রোফিলিক যুত বিক্রিয়া দেয়, কিন্তু \text{C}=\text{O} নিউক্লিওফিলিক যুত বিক্রিয়া দেয় কেন? <span class="en-text">(Why does \text{C}=\text{C} bond undergo electrophilic addition reaction, whereas \text{C}=\text{O} bond undergo nucleophilic addition?)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> বেনজিন থেকে টলুইন এবং টলুইন থেকে বেনজিন কীভাবে তৈরি করবে? <span class="en-text">(How do you prepare benzene from toluene and toluene from benzene?)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> নিম্নলিখিত সমগোত্রীয় শ্রেণির কার্যকরী মূলকের নাম ও গাঠনিক সংকেত লেখ। <span class="en-text">(Write the general chemical formula of the following homologous series.)</span><br />(i) Alcohol (অ্যালকোহল), (ii) Ketone (কিটোন), (iii) Ester (এস্টার) and (iv) Amines (অ্যামিন)</div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> নিম্নলিখিত সমগোত্রীয় শ্রেণির কার্যকরী মূলকের নাম ও গাঠনিক সংকেত লেখ। <span class="en-text">(What is the major product when propene is treated with \text{HBr}. What happen you add peroxide?—Explain.)</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2021 Q7 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৭। প্রশ্ন নং ৭</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> গ্রিগনার্ড বিকারক কী? গ্রিগনার্ড বিকারক দ্বারা কীভাবে 1^{\circ}, 2^{\circ} ও 3^{\circ} অ্যালকোহল প্রস্তুত করবে? <span class="en-text">(What is Grignard reagent? How can you synthesize primary (1^{\circ}), Secondary (2^{\circ}) and tertiary (3^{\circ}) alcohol by using Grignard reagent?)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> উদাহরণসহ সংক্ষেপে ব্যাখ্যা কর: (i) অ্যালডল ঘনীভবন বিক্রিয়া ও (ii) রাইমার-টাইমান বিক্রিয়া। <span class="en-text">(Briefly Explain with examples (i) Aldol condensation reaction (ii) Reimer-Tiemann reaction.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> জৈব যৌগের অসম্পৃক্ততা নির্ণয়ের দুটি পদ্ধতি বর্ণনা কর। <span class="en-text">(Discuss two methods for identification of the presence of unsaturation in Organic compounds.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">(d)</span> নিম্নলিখিত সমীকরণগুলো পূর্ণ কর <span class="en-text">(Complete the following reactions):</span>
+<div class="nested-grid">
+<div class="nested-item">(i) \text{CH}_{3}\text{CONH}_{2} + \text{Br}_{2} + \text{KOH} \rightarrow</div>
+<div class="nested-item">(ii) \text{CH}_{3}-\text{CH}=\text{CH}_{2} + \text{O}_{3} \rightarrow</div>
+<div class="nested-item">(iii) \text{CH}_{3}\text{COOH} + \text{CH}_{3}\text{CH}_{2}\text{OH} \xrightarrow{\text{H}^{+}}</div>
+<div class="nested-item">(iv) \text{C}_{6}\text{H}_{6} + \text{CH}_{3}\text{Cl} \xrightarrow{\text{AlCl}_{3}}</div>
+</div>
+</div>
+<span class="marks-badge">৪</span>
+</li>
+</ul>
+</article>
+<!-- 2021 Q8 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৮। নিচের যেকোনো চারটি সম্পর্কে টীকা লেখ <span class="en-text">(Write short notes on any four of the following):</span></div>
+<span class="marks-badge">৪ × ৪ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> তড়িৎ ঋণাত্মকতা <span class="en-text">(Electronegativity)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> ল্যা শ্যাতেলিয়ের নীতি <span class="en-text">(Le Chatelier's Principle)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> বিপরীত অভিস্রবণ <span class="en-text">(Reverse osmosis)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> ডিকার্বোক্সিলেশন বিক্রিয়া <span class="en-text">(Decarboxylation reaction)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(e)</span> ধাতব বন্ধন <span class="en-text">(Metallic bond)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(f)</span> ফেনলের অম্লতা <span class="en-text">(Acidity of Phenol)</span></div></li>
+</ul>
+</article>
+<div class="section-footer">
+<span>Dhaka Central University Question Bank Archive</span>
+<span>Edited & Compiled by DCU QB Archive Team</span>
+</div>
+</div>
+</section>
+<!-- ==================== পরীক্ষা-২০২২ ==================== -->
+<section class="year-section" data-year="2022">
+<button type="button" class="year-header" aria-expanded="true">
+<div class="year-title-group">
+<span class="year-badge">2022</span>
+<span class="year-heading-text">পরীক্ষা-২০২২ (Exam 2022)</span>
+</div>
+<div class="year-meta-pills">
+<span class="meta-chip">সময়: ৪ ঘণ্টা</span>
+<span class="meta-chip">পূর্ণমান: ৮০</span>
+<span class="chevron">▼</span>
+</div>
+</button>
+<div class="year-body">
+<div class="paper-header-box">
+<div class="p-uni">Dhaka Central University</div>
+<div class="p-dept">Department of Physics | BSc Honours</div>
+<div class="p-course">বিষয়: নন-মেজর রসায়ন | কোর্সের শিরোনাম: Fundamental of Chemistry | কোর্স কোড: CMG 7100 | পরীক্ষা-২০২২</div>
+</div>
+<div class="rubric-box">
+<strong>Answer to questions number one and any four from the remaining questions (১নং প্রশ্নসহ যেকোনো পাঁচটি প্রশ্নের উত্তর দাও।)</strong>
+</div>
+<!-- 2022 Q1 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">১। নিচের সবগুলো প্রশ্নের উত্তর দাও। <span class="en-text">(Answer all of the following questions.)</span></div>
+<span class="marks-badge">১ × ১৬ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> \text{HClO}_{4} এবং \text{ClO}_{3}^{-} এর প্রতিটিতে ক্লোরিন পরমাণুর জারণ সংখ্যা নির্ণয় কর। <span class="en-text">(Calculate the oxidation number of chlorine atom in \text{HClO}_{4} and \text{ClO}_{3}^{-}.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> আদর্শ এবং বাস্তব গ্যাসের জন্য বিভিন্ন চাপে চাপ, আয়তন আচরণ লেখচিত্রের সাহায্যে দেখাও। <span class="en-text">(Graphically show the behaviour of the pressure-volume product at various pressures for and ideal and real gas.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> \text{NaCl}-এর ল্যাটিস এনথেলপির -787\text{ kJ mol}^{-1} বলতে কী বুঝ? <span class="en-text">(What do you mean by the lattice enthalpy of \text{NaCl} -787\text{ kJ mol}^{-1}?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> শূন্যক্রম বিক্রিয়া কী? উদাহরণ দাও। <span class="en-text">(What is zero order reaction? Give and example.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(e)</span> ইলেকট্রোনেগেটিভিটির পরিমাণ বিবেচনা করে, \text{P}-\text{H}, \text{H}-\text{O} এবং \text{C}-\text{Cl} বন্ধনগুলো পোলারিটির ক্রমবর্ধমান অনুসারে সাজাও। <span class="en-text">(Arrange the bonds \text{P}-\text{H}, \text{H}-\text{O}, and \text{C}-\text{Cl} in ascending order of polarity by considering the electronegativity values.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(f)</span> ডেসিমোলার দ্রবণ কী? <span class="en-text">(What is decimolar solution?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(g)</span> ফেনল অ্যাসিডিক কেন? ইহার অনুরণন কাঠামো দেখাও। <span class="en-text">(Why phenol is acidic? Show its resonance structure.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(h)</span> নিম্নলিখিত যৌগগুলোকে তাদের ক্ষারত্বের আপেক্ষিক শক্তি অনুসারে সাজাও। <span class="en-text">(Arrange the following species according to their relative strength of basicity.)</span><br />\text{NH}_{3}, \text{CH}_{3}-\text{NH}_{2}, (\text{CH}_{3})_{2}-\text{NH}, (\text{CH}_{3})_{3}-\text{N}</div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(i)</span> আংশিক চাপ কী? <span class="en-text">(What is partial pressure?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(j)</span> ভরক্রিয়া সূত্রটি লেখ। <span class="en-text">(Write down the law of active mass.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(k)</span> অবস্থানান্তর ধাতু বলতে কী বুঝ? <span class="en-text">(What is mean by transition metal?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(l)</span> \text{K}_{3}[\text{Fe(CN)}_{6}]-এ কি কি বন্ধন বিদ্যমান? <span class="en-text">(What are the bonds present in \text{K}_{3}[\text{Fe(CN)}_{6}]?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(m)</span> প্রমাণ হাইড্রোজেন তড়িৎদ্বার কী? <span class="en-text">(What is standard hydrogen electrode?)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(n)</span> \text{Fe}^{3+} এবং \text{Cu}^{2+} এর ইলেকট্রনিক বিন্যাস লেখ। <span class="en-text">(Write down the electronic configuration of \text{Fe}^{3+} and \text{Cu}^{2+}.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(o)</span> অ্যাসিড অ্যানহাইড্রাইড এবং অ্যামাইড এর কার্যকরী মূলকের গাঠনিক সংকেত লেখ। <span class="en-text">(Write down the structural formula of the functional groups for acid anhydride and amide.)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(p)</span> 0.05\text{ M} \text{H}_{2}\text{SO}_{4} দ্রবণের \text{pH} গণনা কর। <span class="en-text">(Calculate the \text{pH} of 0.05\text{ M} \text{H}_{2}\text{SO}_{4} solution.)</span></div></li>
+</ul>
+</article>
+<!-- 2022 Q2 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">২। প্রশ্ন নং ২</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> পলির বর্জন নীতি কী? উদাহরণসহ ব্যাখ্যা কর। <span class="en-text">(What is Pauli exclusion principle? Explain with example.)</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> ইলেকট্রনের দ্বৈত নীতি ব্যাখ্যা কর। <span class="en-text">(Explain the dual nature of electron.)</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> শক্তির কোয়ান্টাইজেশন বলতে কী বুঝ? <span class="en-text">(What do you mean by the quantization of energy?)</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> প্লাঙ্কের শক্তির পরিমাণ নির্ধারণের ধারণাটি প্রয়োগ করে বোর হাইড্রোজেন পরমাণুতে ইলেকট্রনের শক্তির স্তর গণনা করেছেন E = -R_{H}/n^{2} হিসেবে। হাইড্রোজেন পরমাণুর ইলেকট্রন n=4 থেকে n=2 শক্তিস্তর পরিবর্তনের জন্য নির্গত আলোর তরঙ্গ দৈর্ঘ্য কত? <span class="en-text">(Bohr calculated the energy levels of the electron in the hydrogen atom as E = -R_{H}/n^{2} by applying Planck's concept of quantization of energy. What is the wavelength of light emitted, when the electron in a hydrogen atom undergoes a transition from energy level n=4 to n=2?)</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(e)</span> আলোক বৈদ্যুতিক প্রভাব এবং ইহার গুরুত্ব ব্যাখ্যা কর। <span class="en-text">(Explain the photoelectric effect and its significance.)</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(f)</span> কোয়ান্টাম সংখ্যার সাহায্যে একটি পরমাণুর ৪র্থ শক্তি স্তরে সর্বোচ্চ সংখ্যক ইলেকট্রন হিসাব কর। <span class="en-text">(Calculate the maximum number of electrons reside in the 4^{\text{th}} shell of an atom with the help of quantum numbers.)</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2022 Q3 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৩। প্রশ্ন নং ৩</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> আয়নীকরণ বিভব কী? পর্যায় সারণির একই পর্যায় এবং একই গ্রুপে ইহা কিভাবে পরিবর্তিত হয়? <span class="en-text">(What is ionization potential? How does it vary in a specific period and group of the periodic table?)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> \text{Na}^{+} এবং \text{Mg}^{2+} এর মধ্যে কোনটির আয়নিক ব্যাসার্ধ কম এবং কেন? <span class="en-text">(Which ion have smaller ionic radius either \text{Na}^{+} or \text{Mg}^{2+} and why?)</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> VSEPR মডেলের ধারণা থেকে নিম্নলিখিত অণুগুলোর জ্যামিতিক গঠন আঁক এবং বন্ধন কোণ দেখাও: (i) \text{XeF}_{2}, (ii) \text{SF}_{6} and (iii) \text{PCl}_{3} <span class="en-text">(Draw the geometry of the following species showing the bond angle in the geometry based on the VSEPR model: (i) \text{XeF}_{2}, (ii) \text{SF}_{6} and (iii) \text{PCl}_{3}.)</span></div><span class="marks-badge">৬</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> আণবিক অরবিটাল তত্ত্বের সাহায্যে ব্যাখ্যা কর, \text{N}_{2} অণু অপেক্ষা \text{O}_{2} অণু কম স্থিতিশীল। <span class="en-text">(According to the Molecular Orbital Theory (MOT), explain that \text{O}_{2} molecule is less stable than \text{N}_{2} molecule?)</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2022 Q4 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৪। প্রশ্ন নং ৪</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> কার্বনাইল কার্বনের অ্যাসিড এবং বেস ক্যাটালাইজড নিউক্লিও ফিলিক সংযোজন বিক্রিয়ার সাধারণ প্রক্রিয়া দেখাও। <span class="en-text">(Show the general mechanism of acid and base catalyzed nucleophilic addition reactions on carbonyl carbon.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> বেনজিনের ইলেকট্রোফিলিক প্রতিস্থাপন বিক্রিয়া বলতে কী বুঝায়? বেনজিনের নাইট্রেশন বিক্রিয়ার কৌশল ব্যাখ্যা কর। <span class="en-text">(What is meant by electrophilic substitution of benzene? Explain the mechanism of nitration of benzene.)</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> অ্যালডল ঘনীভবন বিক্রিয়া ব্যাখ্যা কর। <span class="en-text">(Explain Aldol condensation reaction.)</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> ব্রোমিনের সাথে ইথিন এবং বেনজিনের বিক্রিয়া আলোচনা কর। <span class="en-text">(Discuss the reactions of bromine with ethene and benzene.)</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2022 Q5 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৫। প্রশ্ন নং ৫</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">(a)</span> নিম্নলিখিত প্রতিটি যৌগের IUPAC নাম লেখ। (iii) যৌগটিতে অপ্রতিসম কার্বন নির্ণয় কর। (iv) যৌগটির দুটি জ্যামিতিক সমাণু লেখ। <span class="en-text">(Write the IUPAC name for each of the following compounds. Indicate chiral center in (iii). Draw two geometric isomers of (iv).)</span>
+<div class="nested-grid">
+<div class="nested-item">(i) (\text{CH}_{3})_{3}\text{C}-\text{CH}_{2}-\text{CH}_{3}</div>
+<div class="nested-item">(ii) \text{CH}_{3}-\text{CH}_{2}-\text{CH(CH}_{3})-\text{CH(CH}_{2}\text{CH}_{3})-\text{CH}_{3}</div>
+<div class="nested-item">(iii) \text{CH}_{3}-\text{CH}_{2}-\text{CH(CH}_{3})-\text{CH}-\text{CH}_{3}</div>
+<div class="nested-item">(iv) \text{CH}_{3}-\text{CH}_{2}-\text{CH}=\text{C(CH}_{3})-\text{CH(CH}_{3})_{2}</div>
+</div>
+</div>
+<span class="marks-badge">৫</span>
+</li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> ১-অ্যালকাইনসমূহে \alpha-হাইড্রোজেন অম্লীয় ধর্মী—ব্যাখ্যা কর। <span class="en-text">(\alpha-Hydrogen in 1-alkynes is acidic in nature—explain.)</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> বেনজিন বলয়ে ইলেকট্রন আকর্ষী প্রতিস্থাপনের ক্ষেত্রে -\text{NH}_{2} গ্রুপ অর্থো, প্যারা-নির্দেশক কিন্তু -\text{NO}_{2} গ্রুপ মেটা-নির্দেশক কেন? ব্যাখ্যা কর। <span class="en-text">(Explain why -\text{NH}_{2} group is ortho- and para-directing but -\text{NO}_{2} is meta-directing towards electrophilic substitution of benzene ring.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">(d)</span> নিম্নলিখিত বিক্রিয়াগুলো সম্পন্ন কর <span class="en-text">(Complete the following reactions):</span>
+<div class="nested-grid">
+<div class="nested-item">(i) \text{CH}_{3}-\text{CH}=\text{CH}_{2} + \text{HBr} \rightarrow ?</div>
+<div class="nested-item">(ii) \text{HCHO} + \text{HCHO} \rightarrow ?</div>
+<div class="nested-item">(iii) \text{CH}_{3}\text{CONH}_{2} + \text{Br}_{2} + \text{NaOH} \rightarrow ?</div>
+<div class="nested-item">(iv) \text{CH}_{2}=\text{CH}_{2} + \text{MnO}_{4}^{-} + \text{H}_{2}\text{O} \rightarrow ?</div>
+</div>
+</div>
+<span class="marks-badge">৪</span>
+</li>
+</ul>
+</article>
+<!-- 2022 Q6 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৬। প্রশ্ন নং ৬</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> আদর্শ গ্যাসের জন্য PV = 1/3\,mnc^{2} সমীকরণটি প্রতিপাদন কর। <span class="en-text">(Deduce the kinetic equation for an ideal gas equation PV = 1/3\,mnc^{2}.)</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> 25^{\circ}\text{C} তাপমাত্রায় অক্সিজেন এবং নাইট্রোজেন অণুর বর্গমূল গড় বেগ হিসাব কর। <span class="en-text">(Calculate the root mean square velocity of oxygen and nitrogen molecules at 25^{\circ}\text{C}.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> তাপগতিবিদ্যার প্রথম সূত্রটি বিবৃত কর এবং এর গাণিতিক ব্যাখ্যা দাও। <span class="en-text">(State the first law of thermodynamics and give its mathematical expression.)</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> আরহেনিয়াস সমীকরণটি লেখ এবং এর প্রতিটি পদ ব্যাখ্যা কর। আরহেনিয়াস সমীকরণ ব্যবহার করে কীভাবে সক্রিয়করণ শক্তি নির্ণয় করবে? <span class="en-text">(Write the Arrhenius equation and explain each term on it. How can you obtain activation energy by using the Arrhenius equation?)</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2022 Q7 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৭। প্রশ্ন নং ৭</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> বিক্রিয়ার ক্রম এবং আণবিকত্বের মধ্যে পার্থক্যসমূহ লেখ। <span class="en-text">(Write down the differences between order and molecularity of a reaction.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> একটি প্রথম ক্রম বিক্রিয়ার বেগ ধ্রুবকের গাণিতিক সমীকরণ উপপাদন কর। <span class="en-text">(Deduce the mathematical equation for the rate constant of a first order reaction.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> বাফার দ্রবণ কী? একটি ক্ষারীয় বাফার দ্রবণের ক্রিয়া কৌশল উদাহরণসহ ব্যাখ্যা কর। <span class="en-text">(What is buffer solution? Explain the mechanism of a basic buffer solution with example.)</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> 25^{\circ}\text{C} তাপমাত্রা 1.0\text{ atm} চাপে \text{PCl}_{5} 80\% বিয়োজিত হলে K_{p} এবং K_{c} এর মান হিসাব কর। <span class="en-text">(Calculate the values of K_{p} and K_{c} when 80\% \text{PCl}_{5} is dissociated at the temperature and the total pressure of 25^{\circ}\text{C} and 1.0\text{ atm}, respectively.)</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2022 Q8 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৮। নিচের যেকোনো ৪টির উপর টীকা লেখ <span class="en-text">(Write down short note on any four from the following):</span></div>
+<span class="marks-badge">৪ × ৪ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(a)</span> হাইড্রোজেন বন্ধন <span class="en-text">(Hydrogen bond)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(b)</span> কর্ণ সম্পর্ক <span class="en-text">(Diagonal relationship)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(c)</span> কলিগেটিভ বৈশিষ্ট্যসমূহ <span class="en-text">(Colligative properties)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(d)</span> ফ্রিডেল-ক্রেফট বিক্রিয়া <span class="en-text">(Friedel-Craft's reactions)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(e)</span> তড়িৎ রাসায়নিক কোষ <span class="en-text">(Electrochemical cell)</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">(f)</span> নার্নস বণ্টন নীতি <span class="en-text">(Nernst distribution law.)</span></div></li>
+</ul>
+</article>
+<div class="section-footer">
+<span>Dhaka Central University Question Bank Archive</span>
+<span>Edited & Compiled by DCU QB Archive Team</span>
+</div>
+</div>
+</section>
+<!-- ==================== পরীক্ষা-২০২৩ ==================== -->
+<section class="year-section" data-year="2023">
+<button type="button" class="year-header" aria-expanded="true">
+<div class="year-title-group">
+<span class="year-badge">2023</span>
+<span class="year-heading-text">পরীক্ষা-২০২৩ (Exam 2023)</span>
+</div>
+<div class="year-meta-pills">
+<span class="meta-chip">সময়: ৪ ঘণ্টা</span>
+<span class="meta-chip">পূর্ণমান: ৮০</span>
+<span class="chevron">▼</span>
+</div>
+</button>
+<div class="year-body">
+<div class="paper-header-box">
+<div class="p-uni">Dhaka Central University</div>
+<div class="p-dept">Department of Physics | BSc Honours</div>
+<div class="p-course">বিষয়: নন-মেজর রসায়ন | কোর্সের শিরোনাম: Fundamental of Chemistry | কোর্স কোড: CMG 7100 | পরীক্ষা-২০২৩</div>
+</div>
+<div class="rubric-box">
+<strong>Answer to questions number one and any four from the remaining questions (১নং প্রশ্নসহ যেকোনো পাঁচটি প্রশ্নের উত্তর দাও।)</strong>
+</div>
+<!-- 2023 Q1 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">১। নিচের সবগুলো প্রশ্নের সংক্ষিপ্ত উত্তর দাও : <span class="en-text">[Give short answers to all of the following questions.]</span></div>
+<span class="marks-badge">১ × ১৬ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> \text{Pb} পরমাণুর সর্বনিম্ন শক্তিস্তরের ইলেকট্রন বিন্যাস হচ্ছে [\text{Xe}]\,4f^{14}5d^{10}6s^{2}6p^{2}। এই পরমাণুটিতে কয়টি বিজোড় ইলেকট্রন আছে? <span class="en-text">[\text{Pb} atom has the ground state electron configuration of [\text{Xe}]\,4f^{14}5d^{10}6s^{2}6p^{2}. How many unpaired electrons are present in the atom?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> \text{Ar}, \text{Na}, \text{Cl}, এবং \text{Al}, মৌলগুলোকে তাদের ১ম আয়নীকরণ শক্তির ঊর্ধ্বক্রম অনুসারে সাজাও। <span class="en-text">[Arrange the elements: \text{Ar}, \text{Na}, \text{Cl}, and \text{Al}, in order of increasing 1^{\text{st}} ionization energy.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> পর্যায় সারণিতে \text{Al} মৌলটির পর্যায় ও শ্রেণি উল্লেখ কর। <span class="en-text">[Mention the group and period of \text{Al} element in the periodic table.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> d-ব্লক মৌল বলতে কী বুঝ? <span class="en-text">[What do you mean by d-block element?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> d_{yz} অরবিটালের আকৃতির চিত্র আঁকো। <span class="en-text">[Sketch the shape of d_{yz} orbital.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">চ.</span> \text{Na}_{2}\text{S}_{2}\text{O}_{3} যৌগে '\text{S}' এর জারণ সংখ্যা কত? <span class="en-text">[What is the oxidation number of '\text{S}' in \text{Na}_{2}\text{S}_{2}\text{O}_{3}?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ছ.</span> তরলের বাষ্পচাপ-এর সংজ্ঞা দাও। <span class="en-text">[Define vapor pressure of a liquid.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">জ.</span> নার্নস্টের বণ্টন সূত্রটি বিবৃত কর। <span class="en-text">[State the Nernst Distribution Law.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঝ.</span> 10\% \text{Na}_{2}\text{CO}_{3} দ্রবণের মোলারিটি কত? <span class="en-text">[What is the molarity of 10\% \text{Na}_{2}\text{CO}_{3} solution?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঞ.</span> এনট্রপি কী? <span class="en-text">[What is entropy?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ট.</span> কমন-আয়ন ইফেক্ট-এর সংজ্ঞা দাও। <span class="en-text">[Define common-ion effect.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঠ.</span> অ্যালকেনকে প্যারাফিন বলা হয় কেন? <span class="en-text">[Why alkane is called paraffin?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ড.</span> ১, ২-ডাইক্লোরোইথিন-এর জ্যামিতিক সমাণুগুলো কী কী? <span class="en-text">[What are the geometrical isomers of 1, 2-dichloroethene?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঢ.</span> ফরমালিন কী? <span class="en-text">[What is formalin?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ণ.</span> নিচের অণুগুলোতে কয়টি সিগমা ও পাই বন্ধন আছে? (i) \text{CH}_{2}\text{Cl}_{2}, (ii) \text{CH}_{2}\text{CHCl} <span class="en-text">[How many sigma and pi bonds are there in the following molecules? (i) \text{CH}_{2}\text{Cl}_{2}, (ii) \text{CH}_{2}\text{CHCl}]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ত.</span> অক্টেন সংখ্যা বলতে কী বুঝ? <span class="en-text">[What do you understand by octane number?]</span></div></li>
+</ul>
+</article>
+<!-- 2023 Q2 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">২। প্রশ্ন নং ২</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> হাইজেনবার্গের অনিশ্চয়তা নীতি অনুসারে \Delta x \cdot \Delta p \ge h/4\pi। এখানে \Delta x এবং \Delta p দ্বারা কী বুঝানো হয়? '\ge' চিহ্নটির তাৎপর্য কী? <span class="en-text">[According to Heisenberg uncertainty principle, \Delta x \cdot \Delta p \ge h/4\pi. What do stands for \Delta x and \Delta p? What is the significance of the sign '\ge' here?]</span></div><span class="marks-badge">২ + ২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> তড়িৎ ঋণাত্মকতা বলতে কী বুঝ? ফ্লোরিন পর্যায় সারণির সর্বাপেক্ষা তড়িৎ ঋণাত্মক মৌল—ব্যাখ্যা কর। <span class="en-text">[What is electronegativity? Fluorine is the highest electronegative element in the periodic table—explain.]</span></div><span class="marks-badge">১ + ৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> নিম্নলিখিত কোয়ান্টাম নম্বরের কোন সেটটি অনুমোদিত? তোমার উত্তরের স্বপক্ষে যুক্তি দাও। <span class="en-text">[Which of the following set of quantum numbers is permissible? Justify your answer.]</span><br />\text{Set } 1: n=2,\ l=2,\ m=-1,\ s=+\frac{1}{2}   |   \text{Set } 2: n=3,\ l=2,\ m=-1,\ s=-\frac{1}{2}</div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> \text{H} পরমাণুর n=4 থেকে n=2 শক্তিস্তরে ইলেকট্রন স্থানান্তরের ফলে নির্গত ফোটনের তরঙ্গদৈর্ঘ্য (ন্যানোমিটার) কত? \text{H} পরমাণুর বর্ণালির কোন সিরিজে এই স্থানান্তরটি রেখা দেখায়? <span class="en-text">[What is the wavelength of a photon (in nanometer) emitted during an electronic transition from n=4 to n=2 energy level of \text{H} atom? Which of the series of spectrum this transition shows a line in \text{H} atom? (Given, R_{H} = 2.18 \times 10^{-18}\text{ J})]</span></div><span class="marks-badge">৩ + ১</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> নিচের নিউক্লিয়ার বিক্রিয়াগুলো সমতা করে লেখ। <span class="en-text">[Write balanced nuclear equations for the following:]</span><br />(১) {}^{234}_{92}\text{U} এর আলফা ক্ষয় <span class="en-text">[Alpha decay of {}^{234}_{92}\text{U}]</span>    (২) {}^{12}_{7}\text{N}-থেকে পজিট্রন নিঃসরণ <span class="en-text">[Positron emission by {}^{12}_{7}\text{N}]</span></div><span class="marks-badge">২</span></li>
+</ul>
+</article>
+<!-- 2023 Q3 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৩। প্রশ্ন নং ৩</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> ইলেকট্রন আসক্তি ও তড়িৎঋণাত্মকতার মধ্যে পার্থক্য কর। <span class="en-text">[Distinguish between electron affinity and electronegativity.]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> \text{Na} পরমাণুর প্রথম আয়নীকরণ শক্তির তুলনায় দ্বিতীয় আয়নীকরণ শক্তি অনেক বেশি, কিন্তু \text{Mg}-এর ক্ষেত্রে তারা কাছাকাছি—ব্যাখ্যা কর। <span class="en-text">[Explain the fact that the second ionization energy of \text{Na} (4,560\text{ kJ mol}^{-1}) is much higher than its first ionization energy (495.9\text{ kJ mol}^{-1}), but those for \text{Mg} are comparable.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> বন্ধনক্রম সংজ্ঞায়িত কর। নিচের সংকেতগুলোর বন্ধনক্রম গণনা কর এবং আণবিক অরবিটাল তত্ত্ব অনুযায়ী তাদের স্থায়িত্ব ক্রমানুযায়ী সাজাও। <span class="en-text">[Define bond order. Calculate the bond order of the following species and arrange them according to their stability determined by the Molecular Orbital Theory:]</span><br />\text{H}_{2}, \text{He}_{2}^{+}, \text{He}_{2} and \text{H}_{2}^{+}</div><span class="marks-badge">২ + ৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> নিচের যৌগগুলোতে কী ধরনের বন্ধন বিদ্যমান, তা উল্লেখপূর্বক ব্যাখ্যা কর। (a) \text{NH}_{4}\text{Cl} and (b) \text{HCl} <span class="en-text">[Identify the types of bonds present in the following compounds with explanation:]</span></div><span class="marks-badge">২ + ২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> যোজনী ও জারণ সংখ্যার পার্থক্যগুলো লেখ। <span class="en-text">[Write down the differences between valency and oxidation number.]</span></div><span class="marks-badge">২</span></li>
+</ul>
+</article>
+<!-- 2023 Q4 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৪। প্রশ্ন নং ৪</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> (১) আদর্শ গ্যাস সমীকরণটি লেখ। <span class="en-text">[Write down the ideal gas equation.]</span><br />(২) বাস্তব গ্যাস কেন আদর্শ গ্যাসের আচরণ থেকে বিচ্যুতি দেখায়? van der Waals কীভাবে এই বিচ্যুতিকে সংশোধন করেন? <span class="en-text">[Why do real gases deviate from ideal behavior? How did van der Waals modify for this deviation?]</span><br />(৩) 40^{\circ}\text{C} তাপমাত্রায় 4.0 লিটার আয়তনের 6.5 মোল \text{Cl}_{2} গ্যাস কতটুকু চাপ দেয়? (For \text{Cl}_{2} gas, a = 6.49\text{ atm L}^{2}\text{ mol}^{-2}, b = 0.0562\text{ L mol}^{-1}). <span class="en-text">[Calculate the pressure exerted by 6.5 moles of \text{Cl}_{2} confined in a volume of 4.0\text{ L} at 40^{\circ}\text{C}.]</span></div><span class="marks-badge">১ + ৩ + ২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> মোলারিটি ও মোলালিটির সংজ্ঞা দাও। এদের মধ্যে কোনটি তাপমাত্রার উপর নির্ভরশীল এবং কেন? <span class="en-text">[Define molarity and molality. Which one of these depend on temperature and why?]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> তড়িৎ রাসায়নিক কোষ এবং তড়িৎ বিশ্লেষ্য কোষের মধ্যে পার্থক্য লেখ। <span class="en-text">[Write down the difference between electrochemical cell and electrolytic cell.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> গ্যালভানিক কোষে কেন লবণ সেতু ব্যবহার করা হয়? <span class="en-text">[Why is salt bridge used in a Galvanic cell?]</span></div><span class="marks-badge">২</span></li>
+</ul>
+</article>
+<!-- 2023 Q5 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৫। প্রশ্ন নং ৫</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> বিক্রিয়ার অর্ধায়ুর সংজ্ঞা দাও। দেখাও যে, প্রথমক্রম বিক্রিয়ার ক্ষেত্রে অর্ধায়ু বিক্রিয়কের প্রারম্ভিক ঘনমাত্রার উপর নির্ভর করে না। <span class="en-text">[Define half-life of a reaction. Show that, the half life of a first order reaction does not depend on the initial concentration of reactants.]</span></div><span class="marks-badge">১ + ২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> প্রথম ক্রম বিক্রিয়া কখনোই পুরোপুরি শেষ হয় না—ব্যাখ্যা কর। <span class="en-text">[A first order reaction never completes—explain.]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> একটি ১ম ক্রম বিক্রিয়ার যদি ৪০ মিনিটে বিক্রিয়কের ৬০% বিয়োজিত হয়, তাহলে তার অর্ধায়ু কত হবে? <span class="en-text">[What is the half-life of a compound if 60\% of a given sample of the compound decomposes in 40\text{ min} for a first order reaction?]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> এই বিক্রিয়াটির হার ধ্রুবকের সমীকরণ প্রতিপাদন কর, \text{A} + \text{B} \rightarrow \text{উৎপাদ}। <span class="en-text">[Derive the equation for rate constant of the reaction, \text{A} + \text{B} \rightarrow \text{Product}.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> একটি কমলালেবুর জুসে হাইড্রোজেন আয়নের ঘনমাত্রা 3.4 \times 10^{-4}\text{ M}। এই জুসের \text{pH} গণনা কর। জুসটি কি অম্লীয় নাকি ক্ষারীয়? <span class="en-text">[An orange juice has a \text{H}^{+} ion concentration of 3.4 \times 10^{-4}\text{ M}. Calculate the \text{pH} of this orange juice. Is the juice acidic or basic?]</span></div><span class="marks-badge">২ + ১</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">চ.</span> কোন কোন নিয়ামক রাসায়নিক সাম্যাবস্থাকে প্রভাবিত করে? সংক্ষেপে ব্যাখ্যা কর। <span class="en-text">[What are the factors that influence chemical equilibrium? Explain in brief.]</span></div><span class="marks-badge">৩</span></li>
+</ul>
+</article>
+<!-- 2023 Q6 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৬। প্রশ্ন নং ৬</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> নিচের অণুগুলোতে \text{C} পরমাণুর কী কী ধরনের সংকরিত অরবিটাল আছে? (i) \text{CH}_{3}-\text{CH}_{3} (ii) \text{H}_{3}\text{C}-\text{CH}=\text{CH}_{2} <span class="en-text">[Which hybrid orbitals of the \text{C} atoms are existing in the following molecules: (i) \text{CH}_{3}-\text{CH}_{3} (ii) \text{H}_{3}\text{C}-\text{CH}=\text{CH}_{2}]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> অ্যালকাইনের অরবিটাল চিত্র আঁকো। ১-অ্যালকাইন ক্ষারীয় মাধ্যমে কেন নিউক্লিওফাইল হিসাবে কাজ করে তা ব্যাখ্যা কর। <span class="en-text">[Draw the orbital picture of alkyne. Explain why 1-alkyne acts as a nucleophile in basic medium.]</span></div><span class="marks-badge">২ + ২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> ফেনল-এর অণুরণন গঠন দেখাও। ফেনল ইথানল-এর চাইতে বেশি অম্লীয় কেন? <span class="en-text">[Show the resonance structure of phenol. Why is phenol more acidic than ethanol?]</span></div><span class="marks-badge">২ + ২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> পিরিডিনের অ্যারোমেটিসিটি ব্যাখ্যা কর। <span class="en-text">[Explain the aromaticity of pyridine.]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">ঙ.</span> নিচের বিক্রিয়াগুলো সম্পূর্ণ কর: <span class="en-text">[Complete the following reactions :]</span>
+<div class="nested-grid">
+<div class="nested-item">(a) \text{C}_{6}\text{H}_{5}\text{CHO} + \text{NaBH}_{4} \rightarrow ?</div>
+<div class="nested-item">(b) \text{CH}_{3}-\text{CH}=\text{CH}_{2} + \text{HBr} \xrightarrow{\text{H}_{2}\text{O}_{2}} ?</div>
+<div class="nested-item">(c) \text{HC}\equiv\text{CH} \xrightarrow{\text{H}_{2}\text{O},\ \text{H}_{2}\text{SO}_{4}/\text{HgSO}_{4}} ?</div>
+<div class="nested-item">(d) \text{CH}_{3}\text{CONH}_{2} + \text{Br}_{2} + \text{NaOH} \rightarrow ?</div>
+</div>
+</div>
+<span class="marks-badge">৪</span>
+</li>
+</ul>
+</article>
+<!-- 2023 Q7 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৭। প্রশ্ন নং ৭</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> ১-বিউটানল ও ২-বিউটানল এর মধ্যে পার্থক্য করবে কীভাবে? <span class="en-text">[How can you distinguish between 1-butanol and 2-butanol?]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> অ্যালকিন থেকে (i) গ্লাইকল (ii) ফরমালডিহাইড কীভাবে তৈরি করবে? <span class="en-text">[How would you prepare (i) Glycol and (ii) Formaldehyde from alkene?]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">গ.</span> নিম্নের যৌগগুলোর IUPAC পদ্ধতিতে নামকরণ কর। <span class="en-text">[Name the following compounds in IUPAC system.]</span>
+<div class="nested-grid">
+<div class="nested-item">(i) (\text{CH}_{3})_{3}\text{C}-\text{CHO}</div>
+<div class="nested-item">(ii) \text{CH}_{3}-\text{CH(CH}_{3})-\text{CO}-\text{NH}_{2}</div>
+<div class="nested-item">(iii) \text{CH}_{2}=\text{CH}-\text{CH}=\text{CH}_{2}</div>
+<div class="nested-item">(iv) \text{CH}_{3}-\text{C}\equiv\text{C}-\text{CH(CH}_{3})-\text{CH}_{3}</div>
+</div>
+</div>
+<span class="marks-badge">৪</span>
+</li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> অ্যালকিন ইলেকট্রনাকর্ষী যুত বিক্রিয়া দেয়, কিন্তু বেনজিন ইলেকট্রনাকর্ষী প্রতিস্থাপন বিক্রিয়া দেয় কেন? <span class="en-text">[Why does benzene undergo electrophilic substitution reactions, while alkenes show electrophilic addition?]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> নিচের কার্যকরী মূলকগুলোকে বেনজিনের জন্য অর্থো/প্যারা, বা মেটা-নির্দেশক হিসেবে সাজাও: <span class="en-text">[Arrange the following functional groups as ortho/para, or meta-directing for benzene ring :]</span><br />-\text{OH}, -\text{CH}_{3}, -\text{OCH}_{3}, -\text{NH}_{2}, -\text{NO}_{2}, -\text{SO}_{3}\text{H}, -\text{Cl}, -\text{COOH}</div><span class="marks-badge">২</span></li>
+</ul>
+</article>
+<!-- 2023 Q8 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৮। নিচের যেকোনো (৪টি) সম্পর্কে টীকা লিখ: <span class="en-text">[Write short notes on any 4 (Four) of the following:]</span></div>
+<span class="marks-badge">৪ × ৪ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> আউফবাউ নীতি <span class="en-text">[The Aufbau principle]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> হেনরির সূত্র <span class="en-text">[Henry's law]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> নিউক্লিয়ার ফিশন ও ফিউশন <span class="en-text">[Nuclear fission and fusion]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> S_{N}1 ও S_{N}2 বিক্রিয়া <span class="en-text">[S_{N}1 and S_{N}2 reaction]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> অ্যালডল ঘনীভবন <span class="en-text">[Aldol condensation reaction]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">চ.</span> পলিমারকরণ বিক্রিয়া <span class="en-text">[Polymerization reaction]</span></div></li>
+</ul>
+</article>
+<div class="section-footer">
+<span>Dhaka Central University Question Bank Archive</span>
+<span>Edited & Compiled by DCU QB Archive Team</span>
+</div>
+</div>
+</section>
+<!-- ==================== পরীক্ষা-২০২৪ ==================== -->
+<section class="year-section" data-year="2024">
+<button type="button" class="year-header" aria-expanded="true">
+<div class="year-title-group">
+<span class="year-badge">2024</span>
+<span class="year-heading-text">পরীক্ষা-২০২৪ (Exam 2024)</span>
+</div>
+<div class="year-meta-pills">
+<span class="meta-chip">সময়: ৪ ঘণ্টা</span>
+<span class="meta-chip">পূর্ণমান: ৮০</span>
+<span class="chevron">▼</span>
+</div>
+</button>
+<div class="year-body">
+<div class="paper-header-box">
+<div class="p-uni">Dhaka Central University</div>
+<div class="p-dept">Department of Physics | BSc Honours</div>
+<div class="p-course">বিষয়: নন-মেজর রসায়ন | কোর্সের শিরোনাম: Fundamental of Chemistry | কোর্স কোড: CMG 7100 | পরীক্ষা-২০২৪</div>
+</div>
+<div class="rubric-box">
+<strong>১নং প্রশ্নসহ যেকোনো ৫টি প্রশ্নের উত্তর দাও। [Answer to Question No. 1 and any 4 questions from the rest.]</strong>
+</div>
+<!-- 2024 Q1 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">১। নিচের সবগুলো প্রশ্নের উত্তর দাও। <span class="en-text">[Answer the following questions.]</span></div>
+<span class="marks-badge">১৬ × ১ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> সংকরায়ন কী? <span class="en-text">[What is hybridization?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> নির্ভুলতা এবং যথার্থতা কী? <span class="en-text">[What are accuracy and precision?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> \text{NH}_{4}\text{OH}-এর মধ্যে কত ধরনের বন্ধন রয়েছে? <span class="en-text">[How many types of bonds are present in \text{NH}_{4}\text{OH}?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> পলির বর্জন নীতি বিবৃত কর। <span class="en-text">[State the Pauli's exclusion principle.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> \text{Sc} এবং \text{Zn}-কে অবস্থান্তর মৌল হিসাবে গণ্য করা হয় না কেন? <span class="en-text">[Why are \text{Sc} and \text{Zn} not considered as transition metals?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">চ.</span> VSEPR-এর পূর্ণাঙ্গরূপ লেখ। <span class="en-text">[Elaborate the term "VSEPR".]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ছ.</span> S_{N}1 বিক্রিয়ার সংজ্ঞা দাও। <span class="en-text">[Define S_{N}1 reaction.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">জ.</span> ইলেকট্রোফাইল বলতে কী বুঝায়? <span class="en-text">[What does it mean by electrophile?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঝ.</span> অ্যালডিহাইড ও অ্যামাইড কার্যকরী মূলকের গাঠনিক সংকেত লেখ। <span class="en-text">[Write the structural formulas of aldehyde and amide functional groups.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঞ.</span> ফেলিং দ্রবণ কী? <span class="en-text">[What is Fehling solution?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ট.</span> কার্বনিয়াম আয়নের স্থিতিশীলতার ক্রম দেখাও। <span class="en-text">[Show the order of stability of carbonium ions.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঠ.</span> ফ্রিডম সংখ্যা কী? <span class="en-text">[What is degree of freedom?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ড.</span> 0.01\text{ M} \text{HCl} দ্রবণের \text{pH} মান হিসাব কর। <span class="en-text">[Calculate the \text{pH} of 0.01\text{ M} \text{HCl} solution.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঢ.</span> তাপগতিবিদ্যার প্রথম সূত্রটি বিবৃত কর। <span class="en-text">[State the first law of thermodynamics.]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ণ.</span> তড়িৎ রাসায়নিক কোষ কী? <span class="en-text">[What is electrochemical cell?]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ত.</span> শূন্যক্রম বিক্রিয়া কী? <span class="en-text">[What is the zero-order reaction?]</span></div></li>
+</ul>
+</article>
+<!-- 2024 Q2 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">২। প্রশ্ন নং ২</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> বোরের পারমাণবিক গঠন তত্ত্ব আলোচনা কর। <span class="en-text">[Discuss Bohr's theory of atomic structure.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> কোয়ান্টাম সংখ্যার সাহায্যে একটি পরমাণুর 4^{\text{th}} শক্তিস্তরে সর্বোচ্চ সংখ্যক ইলেকট্রন হিসাব কর। <span class="en-text">[Calculate the maximum number of electrons reside in the 4^{\text{th}} shell of an atom with the help of quantum numbers.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> আলফা, বিটা ও গামা রশ্মির মধ্যে তুলনা কর। <span class="en-text">[Compare among alpha (\alpha), beta (\beta) and gamma (\gamma) rays.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> যদি একটি ইলেকট্রনের বেগজনিত অনিশ্চয়তা 5.7 \times 10^{5}\text{ m/s} হয়, তবে এর অবস্থানজনিত অনিশ্চয়তা কত? <span class="en-text">[If the uncertainty in the velocity of an electron is 5.7 \times 10^{5}\text{ m/s}, what is the uncertainty in its position?]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> \text{K}-এর 19^{\text{th}} ইলেকট্রন 3d-তে না গিয়ে 4s অরবিটালে অবস্থান করে কেন? <span class="en-text">[Why does the 19^{\text{th}} electron of \text{K} stay in the 4s orbital instead of the 3d orbital?]</span></div><span class="marks-badge">৩</span></li>
+</ul>
+</article>
+<!-- 2024 Q3 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৩। প্রশ্ন নং ৩</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> আয়নিকরণ বিভব কী? পর্যায় সারণির একই গ্রুপ ও পর্যায়ে তা কীভাবে পরিবর্তিত হয়? <span class="en-text">[What is ionization potential? How does it vary in a group and in a period of the periodic table?]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> \text{Be}_{2} অণুর অস্তিত্ব নেই, ব্যাখ্যা কর। <span class="en-text">[Explain \text{Be}_{2} molecule does not exist.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> ব্যাখ্যা কর, ফসফরাস \text{PCl}_{5} গঠন করলেও নাইট্রোজেন কেন \text{NCl}_{5} গঠন করে না। <span class="en-text">[Explain why phosphorus forms \text{PCl}_{5} but nitrogen does not form \text{NCl}_{5}.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> জারণ-বিজারণ বিক্রিয়াটি ইলেকট্রন-আয়ন পদ্ধতিতে পূর্ণ করে সমতা কর। <span class="en-text">[Complete and balance this redox reaction by ion-electron method.]</span> \text{KMnO}_{4} + \text{H}_{2}\text{C}_{2}\text{O}_{4} + \text{H}_{2}\text{SO}_{4} \rightarrow ?</div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> d-ব্লক মৌল ও অবস্থান্তর মৌলের মধ্যে পার্থক্যসমূহ লেখ। <span class="en-text">[Write the differences between d-block elements and transition elements.]</span></div><span class="marks-badge">৩</span></li>
+</ul>
+</article>
+<!-- 2024 Q4 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৪। প্রশ্ন নং ৪</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> আদর্শ গ্যাস সূত্রের স্বীকার্যসমূহ কী কী? আদর্শ আচরণ হতে বাস্তব গ্যাসের বিচ্যুতির প্রধান কারণসমূহ ব্যাখ্যা কর। <span class="en-text">[What are the postulates of the ideal gas law? Explain the main reasons for the deviations of real gases from ideal behavior.]</span></div><span class="marks-badge">২ + ২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> বর্গমূল গড় বর্গবেগ কী? 25^{\circ}\text{C} তাপমাত্রায় নাইট্রোজেন অণুর বর্গমূল গড় বর্গবেগ হিসাব কর। <span class="en-text">[What is root mean square velocity? Calculate the root mean square velocity of nitrogen molecule at 25^{\circ}\text{C}.]</span></div><span class="marks-badge">১ + ২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> তাপগতিবিদ্যার প্রথম সূত্রটি গাণিতিকরূপসহ ব্যাখ্যা কর। <span class="en-text">[Explain the 1^{\text{st}} law of thermodynamics with its mathematical expression.]</span></div><span class="marks-badge">২</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> হেসের তাপসমষ্টির সূত্রটি বিবৃত ও ব্যাখ্যা কর। <span class="en-text">[State and explain Hess's law of constant heat summation.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> তড়িৎ রাসায়নিক কোষ ও তড়িৎ বিশ্লেষ্য কোষের মধ্যে পার্থক্যসমূহ লেখ। <span class="en-text">[Write down the differences between electrochemical cell and electrolytic cell.]</span></div><span class="marks-badge">৪</span></li>
+</ul>
+</article>
+<!-- 2024 Q5 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৫। প্রশ্ন নং ৫</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> K_{p} এবং K_{c} এর মধ্যে সম্পর্ক স্থাপন কর। <span class="en-text">[Establish the relationship between K_{p} and K_{c}.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> বাফার দ্রবণ কী? অম্লীয় বাফার দ্রবণের উদাহরণসহ ক্রিয়াকৌশল ব্যাখ্যা কর। <span class="en-text">[What is buffer solution? Explain the mechanism of an acidic buffer solution with example.]</span></div><span class="marks-badge">১ + ৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> 100^{\circ}\text{C} তাপমাত্রায় ও 1.5 বায়ুচাপে \text{PCl}_{5} এর ৩৫% বিয়োজিত হলে, K_{p} এবং K_{c} হিসাব কর। <span class="en-text">[Calculate K_{p} and K_{c} at 100^{\circ}\text{C} temperature and 1.5\text{ atm} pressure, if 35\% \text{PCl}_{5} dissociates.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> একটি ১ম ক্রম বিক্রিয়ার অর্ধায়ুকাল 50 সেকেন্ড হলে, বিক্রিয়াটির 85\% সম্পন্ন হতে কত সময় লাগবে? <span class="en-text">[The half-life of a first order reaction is 50\text{s}. How much time will be required for the completion of 85\% of this reaction?]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> তাপমাত্রার সাথে সক্রিয়ণ শক্তি কীভাবে পরিবর্তিত হয় ব্যাখ্যা কর। <span class="en-text">[Explain how activation energy varies with temperature.]</span></div><span class="marks-badge">২</span></li>
+</ul>
+</article>
+<!-- 2024 Q6 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৬। প্রশ্ন নং ৬</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> গাঢ় \text{H}_{2}\text{SO}_{4} এর উপস্থিতিতে বেনজিনে নাইট্রেশন বিক্রিয়ার ক্রিয়াকৌশল দেখাও। <span class="en-text">[Show the mechanism of nitration of benzene occurred in presence of concentrated \text{H}_{2}\text{SO}_{4}.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> বেনজিনের ইলেকট্রোফিলিক প্রতিস্থাপন বিক্রিয়ায় -\text{OH} গ্রুপ অর্থো ও প্যারা নির্দেশক গ্রুপ হিসাবে কাজ করে, কিন্তু -\text{COOH} গ্রুপ মেটা নির্দেশক হিসাবে কাজ করে কেন, ব্যাখ্যা কর। <span class="en-text">[Explain why -\text{OH} group is ortho and para directing but -\text{COOH} is meta directing group towards electrophilic substitution in benzene ring.]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">গ.</span> হাকেলের নিয়ম অনুসারে কোনটি অ্যারোমেটিক ধর্ম প্রদর্শন করবে এবং কেন? <span class="en-text">[According to Huckel rule, which species show aromaticity and why?]</span>
+<div class="nested-grid">
+<div class="nested-item">
+(i)
+<svg class="chem-svg" width="44" height="44" viewBox="0 0 44 44" aria-label="Cyclobutadiene">
+<rect x="10" y="10" width="24" height="24" stroke-width="1.5"/>
+<line x1="14" y1="14" x2="14" y2="30" stroke-width="1.3"/>
+<line x1="30" y1="14" x2="30" y2="30" stroke-width="1.3"/>
+</svg>
+</div>
+<div class="nested-item">
+(ii)
+<svg class="chem-svg" width="46" height="48" viewBox="0 0 46 48" aria-label="Benzene">
+<polygon points="23,8 37,16 37,32 23,40 9,32 9,16" stroke-width="1.5"/>
+<circle cx="23" cy="24" r="8" stroke-width="1.2"/>
+</svg>
+</div>
+<div class="nested-item">
+(iii)
+<svg class="chem-svg" width="52" height="48" viewBox="0 0 52 48" aria-label="Cyclopentadienyl anion">
+<polygon points="23,9 38,20 32,37 14,37 8,20" stroke-width="1.5"/>
+<line x1="12" y1="22" x2="16" y2="33" stroke-width="1.3"/>
+<line x1="34" y1="22" x2="30" y2="33" stroke-width="1.3"/>
+<text x="20" y="7" font-size="11">⊖</text>
+</svg>
+</div>
+<div class="nested-item">
+(iv)
+<svg class="chem-svg" width="54" height="50" viewBox="0 0 54 50" aria-label="Tropylium cation">
+<polygon points="24,8 38,14 42,29 32,41 16,41 6,29 10,14" stroke-width="1.5"/>
+<line x1="12" y1="17" x2="9" y2="28" stroke-width="1.3"/>
+<line x1="36" y1="17" x2="39" y2="28" stroke-width="1.3"/>
+<line x1="17" y1="38" x2="31" y2="38" stroke-width="1.3"/>
+<text x="38" y="12" font-size="11">⊕</text>
+</svg>
+</div>
+</div>
+</div>
+<span class="marks-badge">২</span>
+</li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> ফেনল ও বেনজোয়িক অ্যাসিড থেকে তুমি কীভাবে বেনজিন তৈরি করবে? <span class="en-text">[How can you prepare benzene from phenol and benzoic acid?]</span></div><span class="marks-badge">৪</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> অ্যালকিন ইলেকট্রোফিলিক যুত বিক্রিয়া দেয়, অন্যথায় বেনজিন ইলেকট্রোফিলিক প্রতিস্থাপন বিক্রিয়া দেয় কেন? <span class="en-text">[Why does an alkene undergo electrophilic addition reaction, whereas benzene undergoes electrophilic substitution reaction?]</span></div><span class="marks-badge">৩</span></li>
+</ul>
+</article>
+<!-- 2024 Q7 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৭। প্রশ্ন নং ৭</div>
+<span class="marks-badge">মোট: ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> S_{N}1 এবং S_{N}2 বিক্রিয়ার কৌশল আলোচনা কর। <span class="en-text">[Discuss the mechanism of S_{N}1 and S_{N}2 reactions.]</span></div><span class="marks-badge">৫</span></li>
+<li class="sub-item">
+<div class="sub-content">
+<span class="sub-label">খ.</span> নিচের রাসায়নিক সমীকরণগুলো পূর্ণ কর: <span class="en-text">[Complete the following reactions :]</span>
+<div class="nested-grid">
+<div class="nested-item">(i) \text{CH}_{3}-\text{CH}=\text{CH}_{2} \xrightarrow{\text{ক্ষারীয় }\text{KMnO}_{4}} ?</div>
+<div class="nested-item">(ii) \text{CH}_{3}-\text{COOH} + \text{C}_{2}\text{H}_{5}\text{OH} \xrightarrow{\text{H}^{+}} ?</div>
+<div class="nested-item">(iii) \text{C}_{6}\text{H}_{6} + \text{CH}_{3}\text{Cl} \xrightarrow{\text{AlCl}_{3}} ?</div>
+<div class="nested-item">
+(iv)
+<svg class="chem-svg" width="54" height="58" viewBox="0 0 54 58" aria-label="Benzoic acid">
+<polygon points="27,18 41,26 41,42 27,50 13,42 13,26" stroke-width="1.5"/>
+<circle cx="27" cy="34" r="8" stroke-width="1.2"/>
+<line x1="27" y1="18" x2="27" y2="11" stroke-width="1.5"/>
+<text x="12" y="10" font-size="10">COOH</text>
+</svg>
+\xrightarrow[\text{তাপ}]{\text{CaO}+\text{NaOH}} ?
+</div>
+</div>
+</div>
+<span class="marks-badge">৪</span>
+</li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> গ্রিগনার্ড বিকারকের সাথে উপযুক্ত যৌগের বিক্রিয়া করে 1^{\circ}, 2^{\circ} এবং 3^{\circ} অ্যালকোহল প্রস্তুতির বিক্রিয়াগুলো লেখ। <span class="en-text">[Write down the reactions of Grignard reagent with appropriate starting materials to form 1^{\circ}, 2^{\circ} and 3^{\circ} alcohols.]</span></div><span class="marks-badge">৩</span></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> প্রোপিনের সাথে \text{HBr} বিক্রিয়া করলে প্রধান উৎপাদ কী হবে? তুমি যদি এর সাথে পারঅক্সাইড যোগ কর, তাহলে কী ঘটবে? <span class="en-text">[What is the major product when propene is treated with \text{HBr}? What will happen if you add peroxide to it?]</span></div><span class="marks-badge">২ + ২</span></li>
+</ul>
+</article>
+<!-- 2024 Q8 -->
+<article class="question-card">
+<div class="q-header">
+<div class="q-title">৮। নিম্নের যেকোনো চারটি টীকা লিখ। <span class="en-text">[Write short notes on any four of the following.]</span></div>
+<span class="marks-badge">৪ × ৪ = ১৬</span>
+</div>
+<ul class="sub-list">
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ক.</span> আফবাউ নীতি <span class="en-text">[Aufbau principle]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">খ.</span> হাইড্রোজেন পরমাণুর বর্ণালি <span class="en-text">[Atomic spectrum of hydrogen]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">গ.</span> কলিগেটিভ ধর্ম <span class="en-text">[Colligative properties]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঘ.</span> বর্ন-হেবার চক্র <span class="en-text">[Born-Haber cycle]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">ঙ.</span> ফ্রিডেল-ক্রাফট বিক্রিয়া <span class="en-text">[Friedel-Crafts reaction]</span></div></li>
+<li class="sub-item"><div class="sub-content"><span class="sub-label">চ.</span> আলোক সমাণুতা <span class="en-text">[Optical isomerism]</span></div></li>
+</ul>
+</article>
+<div class="section-footer">
+<span>Dhaka Central University Question Bank Archive</span>
+<span>Edited & Compiled by DCU QB Archive Team</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+Dhaka Central University Question Bank Archive • Course: <strong class="mono">CMG 7100</strong> (Fundamental of Chemistry) • Edited & Compiled by DCU QB Archive Team
+</footer>
+<button type="button" class="back-to-top no-print" id="backToTop" aria-label="Back to top">↑</button>
+<script>
+(function () {
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const searchInput = document.getElementById('searchInput');
+const clearSearch = document.getElementById('clearSearch');
+const matchStatus = document.getElementById('matchStatus');
+const filterPills = document.getElementById('filterPills');
+const toggleAllBtn = document.getElementById('toggleAllBtn');
+const backToTop = document.getElementById('backToTop');
+const noResults = document.getElementById('noResults');
+const yearSections = Array.from(document.querySelectorAll('.year-section'));
+let activeYear = 'All';
+let allCollapsed = false;
+// 1. Theme Toggle with Persistence
+const savedTheme = localStorage.getItem('dcu-qb-theme') || 'dark';
+applyTheme(savedTheme);
+function applyTheme(theme) {
+root.setAttribute('data-theme', theme);
+localStorage.setItem('dcu-qb-theme', theme);
+themeToggle.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
+}
+themeToggle.addEventListener('click', () => {
+const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+applyTheme(next);
+});
+// 2. Dynamic Filter Pills Generation
+const years = ['All', ...yearSections.map(sec => sec.dataset.year)];
+years.forEach(yr => {
+const btn = document.createElement('button');
+btn.type = 'button';
+btn.className = 'pill-btn' + (yr === 'All' ? ' active' : '');
+btn.textContent = yr;
+btn.dataset.filter = yr;
+btn.addEventListener('click', () => {
+activeYear = yr;
+document.querySelectorAll('.pill-btn').forEach(p => p.classList.remove('active'));
+btn.classList.add('active');
+filterAndSearch();
+});
+filterPills.appendChild(btn);
+});
+// 3. Individual Year Collapse/Expand
+yearSections.forEach(sec => {
+const header = sec.querySelector('.year-header');
+header.addEventListener('click', () => {
+const isCollapsed = sec.classList.toggle('collapsed');
+header.setAttribute('aria-expanded', String(!isCollapsed));
+});
+});
+// 4. Expand / Collapse All Toggle
+toggleAllBtn.addEventListener('click', () => {
+allCollapsed = !allCollapsed;
+yearSections.forEach(sec => {
+sec.classList.toggle('collapsed', allCollapsed);
+sec.querySelector('.year-header').setAttribute('aria-expanded', String(!allCollapsed));
+});
+toggleAllBtn.textContent = allCollapsed ? 'Expand All' : 'Collapse All';
+});
+// 5. Live Instant Search & Year Filter
+function filterAndSearch() {
+const query = searchInput.value.trim().toLowerCase();
+clearSearch.classList.toggle('visible', query.length > 0);
+let visibleSections = 0;
+let matchedItems = 0;
+yearSections.forEach(sec => {
+const yearMatch = activeYear === 'All' || sec.dataset.year === activeYear;
+sec.classList.toggle('hidden-by-filter', !yearMatch);
+if (!yearMatch) return;
+const cards = Array.from(sec.querySelectorAll('.question-card'));
+if (!query) {
+sec.classList.remove('hidden-by-search');
+cards.forEach(card => {
+card.classList.remove('hidden-by-search');
+card.querySelectorAll('.sub-item').forEach(item => item.classList.remove('hidden-by-search'));
+});
+visibleSections++;
+return;
+}
+let sectionHasMatch = false;
+const secHeaderMatch = sec.querySelector('.year-header').textContent.toLowerCase().includes(query);
+cards.forEach(card => {
+const qTitleMatch = card.querySelector('.q-title').textContent.toLowerCase().includes(query);
+const subItems = Array.from(card.querySelectorAll('.sub-item'));
+let cardHasSubMatch = false;
+subItems.forEach(item => {
+const itemMatch = secHeaderMatch || qTitleMatch || item.textContent.toLowerCase().includes(query);
+item.classList.toggle('hidden-by-search', !itemMatch);
+if (itemMatch) {
+cardHasSubMatch = true;
+matchedItems++;
+}
+});
+const cardVisible = secHeaderMatch || qTitleMatch || cardHasSubMatch;
+card.classList.toggle('hidden-by-search', !cardVisible);
+if (cardVisible) sectionHasMatch = true;
+});
+sec.classList.toggle('hidden-by-search', !sectionHasMatch);
+if (sectionHasMatch) {
+sec.classList.remove('collapsed');
+sec.querySelector('.year-header').setAttribute('aria-expanded', 'true');
+visibleSections++;
+}
+});
+if (!query) {
+matchStatus.textContent = activeYear === 'All'
+? 'All 7 Years Loaded'
+: Filtered: Exam ${activeYear};
+} else {
+matchStatus.textContent = ${matchedItems} match${matchedItems === 1 ? '' : 'es'} in ${visibleSections} year${visibleSections === 1 ? '' : 's'};
+}
+noResults.classList.toggle('visible', visibleSections === 0);
+}
+searchInput.addEventListener('input', filterAndSearch);
+clearSearch.addEventListener('click', () => {
+searchInput.value = '';
+filterAndSearch();
+searchInput.focus();
+});
+// 6. Floating Back-to-Top Button
+window.addEventListener('scroll', () => {
+backToTop.classList.toggle('visible', window.scrollY > 320);
+}, { passive: true });
+backToTop.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+})();
+</script>
+</body>
+</html>
