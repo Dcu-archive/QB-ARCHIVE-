@@ -195,6 +195,79 @@
     return svg;
   }
 
+  // ===== NEW: menu (right side of header) =====
+  function setMenu(panel, btn, open) {
+    panel.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  function createMenu() {
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const icon = document.createElementNS(svgNS, 'svg');
+    icon.setAttribute('viewBox', '0 0 24 24');
+    icon.setAttribute('fill', 'none');
+    icon.setAttribute('aria-hidden', 'true');
+    const lines = document.createElementNS(svgNS, 'path');
+    lines.setAttribute('d', 'M4 7h16M4 12h16M4 17h16');
+    lines.setAttribute('stroke', 'currentColor');
+    lines.setAttribute('stroke-width', '2');
+    lines.setAttribute('stroke-linecap', 'round');
+    icon.appendChild(lines);
+
+    const btn = el('button', {
+      type: 'button',
+      className: 'menu-btn',
+      'aria-label': 'Menu',
+      'aria-expanded': 'false',
+      'aria-controls': 'site-menu'
+    }, [icon]);
+
+    const list = el('ul', { className: 'menu-list' });
+    list.appendChild(el('li', null, [
+      el('a', { href: '#/', className: 'menu-link', textContent: 'Home' })
+    ]));
+    list.appendChild(el('li', { className: 'menu-label', textContent: 'Faculties' }));
+    const faculties = (siteData && siteData.faculties) || [];
+    for (const faculty of faculties) {
+      list.appendChild(el('li', null, [
+        el('a', { href: '#/' + faculty.id, className: 'menu-link', textContent: faculty.en })
+      ]));
+    }
+
+    const panel = el('nav', {
+      id: 'site-menu',
+      className: 'menu-panel',
+      'aria-label': 'Site menu',
+      hidden: true
+    }, [list]);
+
+    btn.addEventListener('click', () => {
+      setMenu(panel, btn, panel.hidden);
+    });
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a')) setMenu(panel, btn, false);
+    });
+
+    return el('div', { className: 'menu-wrap' }, [btn, panel]);
+  }
+
+  document.addEventListener('click', (e) => {
+    const panel = document.querySelector('.menu-panel:not([hidden])');
+    if (!panel || e.target.closest('.menu-wrap')) return;
+    const btn = document.querySelector('.menu-btn');
+    if (btn) setMenu(panel, btn, false);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const panel = document.querySelector('.menu-panel:not([hidden])');
+    const btn = document.querySelector('.menu-btn');
+    if (panel && btn) {
+      setMenu(panel, btn, false);
+      btn.focus();
+    }
+  });
+
   function renderHeader(isHome) {
     clearNode(headerEl);
     if (isHome) {
@@ -212,13 +285,20 @@
         }
       });
 
-      const hero = el('div', { className: 'hero' }, [
-        el('div', { className: 'hero-logo-wrap' }, [logoImg]),
-        el('h1', { className: 'page-title', textContent: site.heading || 'Past Exam Questions' }),
-        el('p', { className: 'page-sub', textContent: site.tagline || 'Unofficial Question Bank Archive of Dhaka Central University' }),
-        el('p', { className: 'hero-hint', textContent: site.hint || 'Select a faculty, then choose your department, year, and course.' })
+      const head = el('div', { className: 'head-home' }, [
+        el('div', { className: 'head-row' }, [
+          el('div', { className: 'head-brand' }, [
+            el('div', { className: 'head-logo-wrap' }, [logoImg]),
+            el('div', { className: 'head-text' }, [
+              el('h1', { className: 'head-title', textContent: site.heading || 'Past Exam Questions' }),
+              el('p', { className: 'head-tagline', textContent: site.tagline || 'Unofficial Question Bank Archive of Dhaka Central University' })
+            ])
+          ]),
+          createMenu()
+        ]),
+        el('p', { className: 'head-hint', textContent: site.hint || 'Select a faculty, then choose your department, year, and course.' })
       ]);
-      headerEl.appendChild(hero);
+      headerEl.appendChild(head);
     } else {
       const siteName = (siteData && siteData.site && siteData.site.name) || 'DCU QB';
       const iconImg = el('img', {
@@ -238,7 +318,8 @@
         el('a', { href: '#/', className: 'brand-link', 'aria-label': 'Home — ' + siteName }, [
           iconImg,
           el('span', { textContent: siteName })
-        ])
+        ]),
+        createMenu()
       ]);
       headerEl.appendChild(bar);
     }
@@ -584,7 +665,7 @@
       clearBtn
     ]);
 
-    appEl.appendChild(searchBox);
+    headerEl.appendChild(searchBox); // CHANGED: search now lives in the header
     appEl.appendChild(liveStatus);
     appEl.appendChild(searchResultsContainer);
     appEl.appendChild(facultyContainer);
