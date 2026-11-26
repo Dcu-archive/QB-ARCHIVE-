@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Calculus-I (MAM 102) | DCU QB</title>
+<meta name="description" content="Previous year questions of Calculus-I (MAM 102), 2018 to 2024. Unofficial question bank archive.">
+<meta name="theme-color" content="#16191c">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316191c'/%3E%3Cpath d='M32 10L10 20l22 10 22-10-22-10z' fill='none' stroke='%23f2f2f4' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='M18 24v8c0 3.5 6.3 6.5 14 6.5s14-3 14-6.5v-8' fill='none' stroke='%23f2f2f4' stroke-width='2.6' stroke-linecap='round'/%3E%3Cpath d='M32 19l14 6v10' fill='none' stroke='%23c9a85f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='38' r='2.5' fill='%23c9a85f'/%3E%3Cpath d='M14 27v21l18 8 18-8V27' fill='none' stroke='%23f2f2f4' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   HOW TO EDIT THIS FILE (phone)
+   - Each year is one <section class="exam" id="yYYYY"> block below.
+   - To change a year: edit only the questions inside its block.
+   - Subscript: H<sub>2</sub>O   Superscript: Fe<sup>3+</sup>
+   - Colours are in :root right below. Same colours as the main site.
+   ===================================================== */
+:root {
+  --bg: #16191c;
+  --surface: #1e2226;
+  --line: #343a41;
+  --text: #f2f2f4;
+  --muted: #a7adb5;
+  --soft: #cfd3d8;
+  --gold: #c9a85f;
+  --gold-hover: #e2c67e;
+  --on-gold: #16191c;
+  --flag: #e08a7d;
+
+  --font-ui: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-paper: "Noto Serif Bengali", "Kalpurush", "Siyam Rupali", Georgia, "Times New Roman", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html {
+  font-size: 16px;
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  line-height: 1.65;
+}
+
+button, input { font-family: inherit; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0.75rem; z-index: 100;
+  padding: 0.65rem 1rem; min-height: 48px; display: inline-flex; align-items: center;
+  background-color: var(--gold); color: var(--on-gold); font-weight: 600; font-size: 0.9rem; border-radius: 6px;
+}
+.skip-link:focus { left: 0.75rem; }
+
+/* ===== Shell ===== */
+.shell {
+  width: 100%;
+  max-width: 42rem;
+  min-height: 100vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+}
+@media (min-width: 43rem) { .shell { border-inline: 1px solid var(--line); } }
+
+main { flex: 1; padding: 0 1rem 2.5rem; outline: none; }
+@media (min-width: 30rem) { main { padding-inline: 1.5rem; } }
+
+/* ===== Header (same as home) ===== */
+.site-header { position: relative; border-bottom: 1px solid var(--line); }
+
+.head-row { display: flex; align-items: center; gap: 0.85rem; padding: 0.85rem 1rem 0.6rem; }
+.head-brand { display: flex; align-items: center; gap: 0.85rem; flex: 1; min-width: 0; }
+.head-logo-wrap { display: block; width: 76px; height: 76px; flex-shrink: 0; }
+.hero-logo, .hero-svg-fallback {
+  width: 100%; height: 100%; object-fit: cover;
+  border: 1px solid var(--line); border-radius: 12px; background-color: var(--surface);
+}
+.head-text { min-width: 0; }
+.head-title { margin: 0; font-weight: 700; font-size: 1.15rem; line-height: 1.3; color: var(--text); overflow-wrap: break-word; }
+.head-tagline { margin: 0.2rem 0 0; font-size: 0.78rem; line-height: 1.4; color: var(--muted); overflow-wrap: break-word; }
+.head-hint { margin: 0; padding: 0 1rem; font-size: 0.8rem; color: var(--muted); }
+
+.search-box { position: relative; margin: 0.65rem 1rem 1rem; }
+.search-input {
+  width: 100%; min-height: 52px; padding: 0.65rem 3rem 0.65rem 1rem; font-size: 0.92rem;
+  color: var(--text); background-color: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; appearance: none;
+}
+.search-input::placeholder { color: var(--muted); opacity: 1; }
+.search-input:focus { border-color: var(--gold); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-clear {
+  position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
+  width: 48px; height: 48px; border: 0; border-radius: 6px; background: transparent;
+  color: var(--muted); font-size: 1.25rem; line-height: 1; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.search-clear:hover, .search-clear:active { color: var(--gold-hover); }
+
+/* Menu */
+.menu-wrap { position: static; flex-shrink: 0; }
+.menu-btn {
+  width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center;
+  background-color: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  color: var(--text); cursor: pointer; transition: border-color 0.12s ease, color 0.12s ease;
+}
+.menu-btn:hover, .menu-btn[aria-expanded="true"] { border-color: var(--gold); color: var(--gold-hover); }
+.menu-btn svg { width: 22px; height: 22px; }
+.menu-panel {
+  position: absolute; left: 0; right: 0; top: 100%; z-index: 60; max-height: 70vh; overflow-y: auto;
+  background-color: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+.menu-list { list-style: none; margin: 0; padding: 0.35rem 0; }
+.menu-label { padding: 0.65rem 1.25rem 0.25rem; font-size: 0.76rem; font-weight: 600; color: var(--gold); }
+.menu-link {
+  display: flex; align-items: center; min-height: 48px; padding: 0.6rem 1.25rem;
+  font-size: 0.92rem; font-weight: 500; color: var(--text);
+}
+.menu-link:hover, .menu-link:active { background-color: rgba(201, 168, 95, 0.09); color: var(--gold-hover); }
+@media (min-width: 43rem) {
+  .menu-panel { left: auto; right: 1rem; top: calc(100% + 0.25rem); width: 20rem; border: 1px solid var(--line); border-radius: 10px; }
+}
+
+/* ===== Course banner ===== */
+.course-banner { padding: 1.25rem 0 1rem; }
+.crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.45rem; font-size: 0.84rem; color: var(--muted); margin-bottom: 0.9rem; }
+.crumbs a { color: var(--gold); display: inline-flex; align-items: center; min-height: 40px; }
+.crumbs a:hover { color: var(--gold-hover); text-decoration: underline; text-underline-offset: 3px; }
+.crumbs .sep { color: var(--line); }
+
+.code-tag {
+  display: inline-block; padding: 0.16rem 0.5rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em;
+  color: var(--gold); background-color: var(--surface); border: 1px solid var(--line); border-radius: 5px; white-space: nowrap;
+}
+.page-title { margin: 0.6rem 0 0; font-weight: 700; font-size: 1.4rem; line-height: 1.35; overflow-wrap: break-word; }
+.page-sub { margin: 0.3rem 0 0; font-size: 0.9rem; color: var(--muted); }
+
+.tools { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 48px;
+  padding: 0.6rem 1.1rem; font-size: 0.86rem; font-weight: 600; border-radius: 8px; cursor: pointer;
+  background-color: transparent; color: var(--gold); border: 1px solid var(--gold);
+  transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+.btn:hover, .btn:active { background-color: rgba(201, 168, 95, 0.1); color: var(--gold-hover); border-color: var(--gold-hover); }
+
+/* ===== Year bar (sticky) ===== */
+.year-bar {
+  position: sticky; top: 0; z-index: 40;
+  margin-inline: -1rem; padding: 0.55rem 1rem;
+  background-color: rgba(22, 25, 28, 0.96);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(6px);
+}
+@media (min-width: 30rem) { .year-bar { margin-inline: -1.5rem; padding-inline: 1.5rem; } }
+.year-scroll { display: flex; gap: 0.5rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.year-scroll::-webkit-scrollbar { display: none; }
+.year-chip {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; min-width: 64px; padding: 0.3rem 0.9rem;
+  font-size: 0.9rem; font-weight: 600; color: var(--text);
+  background-color: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+.year-chip:hover, .year-chip:active { border-color: var(--gold); color: var(--gold-hover); }
+.year-chip.is-active { background-color: var(--gold); border-color: var(--gold); color: var(--on-gold); }
+.year-chip.is-dim { opacity: 0.35; pointer-events: none; }
+
+.status { margin: 0.75rem 0 0; min-height: 1.4em; font-size: 0.82rem; color: var(--muted); }
+
+.no-match {
+  margin-top: 1rem; padding: 1.35rem 1rem; border: 1px dashed var(--line); border-radius: 10px;
+  text-align: center; font-size: 0.9rem; color: var(--muted);
+}
+
+/* ===== Exam paper (same layout as the PDF, site colours) ===== */
+.exam { margin-top: 1.5rem; scroll-margin-top: 5.25rem; font-family: var(--font-paper); }
+.exam + .exam { padding-top: 1.5rem; border-top: 1px dashed var(--line); }
+
+.compiled { margin: 0 0 0.5rem; text-align: right; font-style: italic; font-weight: 700; font-size: 0.78rem; color: var(--muted); }
+
+.paper-head {
+  padding: 1rem 0.9rem; text-align: center;
+  background-color: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+}
+.uni { margin: 0; font-weight: 700; font-size: 1.5rem; line-height: 1.3; color: var(--text); }
+.dept { margin: 0.2rem 0 0; font-weight: 600; font-size: 0.95rem; color: var(--soft); }
+.subject { margin: 0.55rem 0 0; font-weight: 600; font-size: 0.9rem; line-height: 1.7; color: var(--text); }
+.exam-name { margin: 0.4rem 0 0; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+.meta {
+  display: flex; justify-content: space-between; gap: 1rem; margin: 0.8rem 0 0; padding-top: 0.7rem;
+  border-top: 1px dashed var(--line); font-weight: 600; font-size: 0.88rem; color: var(--soft);
+}
+.instruction { margin: 0.7rem 0 0; padding-top: 0.7rem; border-top: 1px dashed var(--line); font-weight: 600; font-size: 0.82rem; line-height: 1.7; color: var(--soft); }
+
+.qgroup { margin-top: 1.15rem; }
+.qtitle {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.3rem 1rem;
+  margin: 0 0 0.6rem; font-weight: 600; font-size: 0.95rem; line-height: 1.75;
+}
+.qn { color: var(--gold); font-weight: 700; margin-right: 0.15rem; }
+.marks { font-weight: 700; font-size: 0.88rem; color: var(--gold); white-space: nowrap; }
+
+.parts { list-style: none; margin: 0; padding: 0; counter-reset: part; }
+.parts > li {
+  position: relative; padding-left: 2.6rem; margin-bottom: 0.45rem;
+  font-weight: 500; font-size: 0.94rem; line-height: 1.85; counter-increment: part; overflow-wrap: break-word;
+}
+.parts > li::before {
+  content: "(" counter(part, lower-alpha) ")";
+  position: absolute; left: 0; top: 0; font-weight: 700; color: var(--gold);
+}
+.en { color: var(--soft); font-weight: 400; }
+.chem-line { display: block; margin-top: 0.1rem; color: var(--text); }
+
+/* ===== Footer ===== */
+.paper-foot {
+  margin-top: 2rem; padding-top: 0.8rem; border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  font-size: 0.76rem; font-weight: 600; color: var(--muted);
+}
+.site-footer {
+  margin-top: auto; padding: 1.1rem 1rem 1.5rem; border-top: 1px solid var(--line);
+  text-align: center; font-size: 0.78rem; color: var(--muted);
+}
+.site-footer p { margin: 0; }
+
+/* Back to top */
+.to-top {
+  position: fixed; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 45;
+  width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center;
+  background-color: var(--surface); color: var(--gold); border: 1px solid var(--gold); border-radius: 50%;
+  cursor: pointer; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+.to-top:hover, .to-top:active { color: var(--gold-hover); border-color: var(--gold-hover); }
+.to-top svg { width: 20px; height: 20px; }
+
+/* ===== Desktop ===== */
+@media (min-width: 48rem) {
+  .shell { max-width: 56rem; }
+  main { padding-inline: 2.5rem; }
+  .head-row { gap: 1.25rem; padding: 1.5rem 2.5rem 0.75rem; }
+  .head-brand { gap: 1.5rem; }
+  .head-logo-wrap { width: 112px; height: 112px; }
+  .head-title { font-size: 1.75rem; }
+  .head-tagline { margin-top: 0.35rem; font-size: 0.92rem; }
+  .head-hint { padding: 0 2.5rem; font-size: 0.88rem; }
+  .search-box { margin: 1rem 2.5rem 1.5rem; }
+  .menu-panel { right: 2.5rem; }
+  .year-bar { margin-inline: -2.5rem; padding-inline: 2.5rem; }
+  .year-scroll { justify-content: center; }
+  .page-title { font-size: 1.75rem; }
+  .uni { font-size: 1.8rem; }
+  .paper-head { padding: 1.25rem 1.5rem; }
+  .parts > li { font-size: 1rem; }
+  .qtitle { font-size: 1rem; }
+}
+
+/* ===== Papers where each question stands alone (no a, b, c parts) ===== */
+.parts.qlist > li { padding-left: 0; margin-bottom: 1rem; }
+.parts.qlist > li::before { content: none; }
+.parts.qlist .qn { margin-right: 0.35rem; }
+.qlist .en { display: block; margin-top: 0.15rem; }
+.paper-head .uni.uni-sm { font-size: 1.1rem; line-height: 1.6; }
+@media (min-width: 48rem) { .paper-head .uni.uni-sm { font-size: 1.3rem; } }
+
+/* ===== Maths, reactions and structures ===== */
+.eq, .rxn { display: block; margin: 0.55rem 0; padding: 0.35rem 0.5rem; overflow-x: auto; text-align: center; color: var(--text); }
+.rxn { white-space: nowrap; font-family: "Cambria Math", "STIX Two Math", "Noto Serif", Georgia, serif; }
+.rxn .arr { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; margin: 0 0.5rem; line-height: 1.15; font-size: 0.78em; color: var(--soft); }
+.rxn .arr b { font-weight: 400; font-size: 1.9em; line-height: 0.8; color: var(--text); }
+math { font-family: "Cambria Math", "STIX Two Math", "Noto Serif", Georgia, serif; font-size: 1.05em; }
+math[display="block"] { display: block math; margin: 0.4rem 0; }
+math mrow.pw-brace { display: inline-flex; align-items: stretch; vertical-align: middle; }
+math mrow.pw-brace > mo { display: inline-flex; align-items: center; transform: scaleY(1.12); transform-origin: center; }
+math mrow.pw-brace > mtable { margin-left: 0.15em; }
+math mrow.pw-brace mtd { padding-top: 0.18em; padding-bottom: 0.18em; }
+.fig { display: block; margin: 0.6rem auto; text-align: center; color: var(--text); }
+.fig svg { display: inline-block; max-width: 100%; height: auto; }
+.fig figcaption { font-size: 0.8rem; color: var(--muted); }
+.fig .benzene { width: 6.5rem; height: auto; }
+.fig-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.25rem 0.5rem; }
+.print-mark { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* ===== Print / Save as PDF ===== */
+/* ===== Saved PDF: clean header & footer with team name and page number on every page ===== */
+@page {
+  size: A4;
+  margin: 18mm 14mm 20mm;
+  background: #fff;
+  @top-left {
+    content: "Calculus-I (MAM 102) · Past Exam Questions (2018–2024)";
+    font-family: Georgia, "Noto Serif Bengali", serif; font-weight: 600; font-size: 8.5pt; color: #333;
+    vertical-align: bottom; padding-bottom: 2.5mm; border-bottom: 0.6pt solid #999;
+  }
+  @top-right {
+    content: "DCU QB Archive";
+    font-family: Georgia, "Noto Serif Bengali", serif; font-weight: 700; font-size: 8.5pt; color: #333;
+    vertical-align: bottom; padding-bottom: 2.5mm; border-bottom: 0.6pt solid #999;
+  }
+  @bottom-left {
+    content: "Generated by DCU QB ARCHIVE TEAM";
+    font-family: Georgia, "Noto Serif Bengali", serif; font-weight: 700; font-size: 9pt; color: #000;
+    vertical-align: top; padding-top: 3mm; border-top: 0.6pt solid #999;
+  }
+  @bottom-center { content: ""; vertical-align: top; border-top: 0.6pt solid #999; }
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-family: Georgia, "Noto Serif Bengali", serif; font-weight: 700; font-size: 9pt; color: #000;
+    vertical-align: top; padding-top: 3mm; border-top: 0.6pt solid #999;
+  }
+}
+
+@media print {
+  html, body, .shell { background: #fff !important; color: #000 !important; border: 0 !important; max-width: 100% !important; }
+  .site-header, .year-bar, .tools, .crumbs, .status, .no-match, .to-top, .site-footer, .skip-link { display: none !important; }
+  .exam { page-break-before: always; break-before: page; font-family: Georgia, "Noto Serif Bengali", serif; margin-top: 0 !important; }
+  .exam:first-of-type { page-break-before: avoid; break-before: auto; }
+  #noMatch + .exam { page-break-before: avoid; break-before: auto; margin-top: 0; }
+  .course-banner { display: none !important; }
+  .exam + .exam { border-top: 0; padding-top: 0; }
+  .paper-head { background: #f1f1f1 !important; border: 1px solid #999 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .uni, .subject, .parts > li, .qtitle, .dept, .meta, .instruction, .en, .chem-line, .compiled { color: #000 !important; }
+  .qn, .marks, .exam-name, .parts > li::before { color: #000 !important; }
+  .parts > li, .qtitle, .paper-head { break-inside: avoid; page-break-inside: avoid; }
+  .course-banner .code-tag { border-color: #999; color: #000; background: #fff; }
+  .eq, .rxn, .fig, .rxn .arr, .rxn .arr b, math { color: #000 !important; }
+  .fig figcaption { color: #444 !important; }
+  .paper-foot { border-top: 1px solid #999 !important; color: #000 !important; }
+  .print-mark {
+    display: block; position: fixed; top: 50%; left: 50%; z-index: 9999; pointer-events: none;
+    transform: translate(-50%, -50%) rotate(-32deg); white-space: nowrap;
+    font-family: "Fira Code", ui-monospace, Menlo, Consolas, monospace; font-weight: 700;
+    font-size: 1.35rem; color: rgba(0, 0, 0, 0.11);
+  }
+}
+</style>
+</head>
+
+<body>
+<a class="skip-link" href="#papers">Skip to questions</a>
+
+<div class="print-mark" aria-hidden="true">https://dcu-archive.github.io/qb-archive/</div>
+
+<div class="shell">
+
+  <!-- ===== Header: same as the home page ===== -->
+  <header class="site-header" role="banner">
+    <div class="head-row">
+      <div class="head-brand">
+        <a class="head-logo-wrap" id="logoWrap" href="../index.html#/" aria-label="DCU QB home">
+          <img class="hero-logo" id="logoImg" src="../logo.png" alt="DCU QB, Unofficial Question Bank Archive" width="230" height="230">
+        </a>
+        <div class="head-text">
+          <p class="head-title">Past Exam Questions</p>
+          <p class="head-tagline">Unofficial Question Bank Archive of Dhaka Central University</p>
+        </div>
+      </div>
+
+      <div class="menu-wrap">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <nav class="menu-panel" id="site-menu" aria-label="Site menu" hidden>
+          <ul class="menu-list">
+            <li><a class="menu-link" href="../index.html#/">Home</a></li>
+            <li class="menu-label">Faculties</li>
+            <li><a class="menu-link" href="../index.html#/arts">Faculty of Arts</a></li>
+            <li><a class="menu-link" href="../index.html#/social-sciences">Faculty of Social Sciences</a></li>
+            <li><a class="menu-link" href="../index.html#/science">Faculty of Science</a></li>
+            <li><a class="menu-link" href="../index.html#/biological-sciences">Faculty of Biological Sciences</a></li>
+            <li><a class="menu-link" href="../index.html#/business-studies">Faculty of Business Studies</a></li>
+            <li><a class="menu-link" href="../index.html#/law">Faculty of Law</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <p class="head-hint">Search any word inside the questions of this course.</p>
+    <div class="search-box">
+      <label class="visually-hidden" for="qSearch">Search questions</label>
+      <input id="qSearch" class="search-input" type="search" placeholder="Search in these questions" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-clear" id="qClear" aria-label="Clear search" hidden>×</button>
+    </div>
+  </header>
+
+  <main id="papers" tabindex="-1">
+
+    <!-- ===== Course banner ===== -->
+    <section class="course-banner" aria-labelledby="courseTitle">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../index.html#/">Home</a><span class="sep" aria-hidden="true">/</span><span>Calculus-I</span>
+      </nav>
+      <span class="code-tag">MAM-102</span>
+      <h1 class="page-title" id="courseTitle">Calculus-I</h1>
+      <p class="page-sub">Mathematics (Non-Major) · Previous year questions, 2018 to 2024</p>
+      <div class="tools">
+        <button type="button" class="btn" id="printBtn">Save as PDF / Print</button>
+      </div>
+    </section>
+
+    <!-- ===== Year bar: tap a year, the page scrolls to it ===== -->
+    <nav class="year-bar" aria-label="Exam years">
+      <div class="year-scroll" id="yearScroll">
+                <a class="year-chip" href="#y2018" data-year="2018">2018</a>
+        <a class="year-chip" href="#y2019" data-year="2019">2019</a>
+        <a class="year-chip" href="#y2020" data-year="2020">2020</a>
+        <a class="year-chip" href="#y2021" data-year="2021">2021</a>
+        <a class="year-chip" href="#y2022" data-year="2022">2022</a>
+        <a class="year-chip" href="#y2023" data-year="2023">2023</a>
+        <a class="year-chip" href="#y2024" data-year="2024">2024</a>
+      </div>
+    </nav>
+
+    <p class="status" id="qStatus" aria-live="polite"></p>
+    <div class="no-match" id="noMatch" hidden>No question found. Try another word.</div>
+
+        <!-- ===== 2018 ===== -->
+    <section class="exam" id="y2018" data-year="2018" aria-labelledby="h2018">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">ঢাবি (অধি.) পরীক্ষা–২০১৮</p>
+        <p class="dept">বি.এসসি অনার্স ১ম বর্ষ ◆ বিষয় : নন-মেজর গণিত</p>
+        <p class="subject">কোর্স শিরোনাম : Calculus-I | কোর্স কোড : MAM = 102</p>
+        <h2 class="exam-name" id="h2018">পরীক্ষা–২০১৮</h2>
+        <p class="meta"><span>সময় : ২ ঘণ্টা ৩০ মিনিট</span><span>পূর্ণমান : ৭০</span></p>
+        <p class="instruction">[দ্রষ্টব্য : প্রশ্নসমূহের পূর্ণমান ডান পাশের কলামে বন্ধনীর মধ্যে দেওয়া আছে।] যেকোনো পাঁচটি প্রশ্নের উত্তর দাও—</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">১।</span></span><span class="marks">৭ + ৭ = ১৪</span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">(ক)</span> ফাংশনের লেখচিত্র অঙ্কন বলতে কী বুঝ? নিম্নলিখিতভাবে সংজ্ঞায়িত <i>f</i> ফাংশনটির লেখচিত্র অঙ্কন কর : <i>f</i>(<i>x</i>) = |<i>x</i> + 1| + |<i>x</i> + 2|। <span class="marks">[৭]</span>
+            <span class="en">[What is meant by drawing a graph of a function? Draw the graph of the function <i>f</i> which is defined as follows : <i>f</i>(<i>x</i>) = |<i>x</i> + 1| + |<i>x</i> + 2|]</span>
+          </li>
+          <li><span class="qn">(গ)</span> লিমিটের সংজ্ঞা দাও। (δ − ∈) সংজ্ঞার সাহায্যে প্রমাণ কর,
+            <span class="eq"><math display="block"><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>2</mn></mrow></munder><mo>(</mo><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>7</mn><mo>)</mo><mo>=</mo><mn>9</mn></math></span>
+            <span class="marks">[৭]</span>
+            <span class="en">[Define limit of a function. Use the (δ − ∈) definition to prove that <math><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>2</mn></mrow></munder><mo>(</mo><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>7</mn><mo>)</mo><mo>=</mo><mn>9</mn></math>.]</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">২।</span></span><span class="marks">৮ + ৬ = ১৪</span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">(ক)</span> অবিচ্ছিন্ন ফাংশনের সংজ্ঞা দাও।
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mn>3</mn><mo>+</mo><mn>3</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mn>0</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mi>x</mi><mo>≥</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr></mtable></mrow></math></span>
+            ফাংশনটির <i>x</i> = 0 এবং <math><mi>x</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math> বিন্দুতে অবিচ্ছিন্নতা যাচাই কর। <span class="marks">[৮]</span>
+            <span class="en">[What is continuous function? Investigate the continuity of the function at <i>x</i> = 0 and <math><mi>x</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math> where <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mn>3</mn><mo>+</mo><mn>3</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mn>0</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mi>x</mi><mo>≥</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr></mtable></mrow></math>]</span>
+          </li>
+          <li><span class="qn">(খ)</span> <math><mi>x</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math> বিন্দুতে
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mn>3</mn><mo>+</mo><mn>3</mn><mi>x</mi></mtd><mtd><mtext>যখন </mtext><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>যখন </mtext><mn>0</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>যখন </mtext><mi>x</mi><mo>≥</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr></mtable></mrow></math></span>
+            ফাংশনটির অবিচ্ছিন্নতা আলোচনা কর। <span class="marks">[৬]</span>
+            <span class="en">[Discuss the differentiability of the following function at <math><mi>x</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math> where <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mn>3</mn><mo>+</mo><mn>3</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mn>0</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mi>x</mi><mo>≥</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr></mtable></mrow></math>]</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৩।</span></span><span class="marks">৭ + ৭ = ১৪</span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">(ক)</span> লিবনীজের উপপাদ্যটি বর্ণনা ও প্রমাণ কর। <span class="marks">[৭]</span>
+            <span class="en">[State and prove Leibnitz's theorem.]</span>
+          </li>
+          <li><span class="qn">(খ)</span> <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math> এর মান নির্ণয় কর : (i) <i>x</i><sup><i>y</i></sup> + <i>y</i><sup><i>x</i></sup> = <i>a</i><sup><i>b</i></sup>; (ii) <i>y</i> = (sin <i>x</i>)<sup>tan <i>x</i></sup>। <span class="marks">[৭]</span>
+            <span class="en">[Find <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math> : (i) <i>x</i><sup><i>y</i></sup> + <i>y</i><sup><i>x</i></sup> = <i>a</i><sup><i>b</i></sup>; (ii) <i>y</i> = (sin <i>x</i>)<sup>tan <i>x</i></sup>]</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৪।</span></span><span class="marks">৭ + ৭ = ১৪</span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">(ক)</span> রোলের উপপাদ্যটি বর্ণনা কর। [−√2, √2] ব্যবধিতে <i>f</i>(<i>x</i>) = 2<i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> − 4<i>x</i> − 2 ফাংশনের জন্য রোলের উপপাদ্যের সত্যতা যাচাই কর। <span class="marks">[৭]</span></li>
+          <li><span class="qn">(খ)</span> ইনফ্লেকশন বিন্দু কী? <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 9<i>x</i><sup>2</sup> + 15<i>x</i> − 3 ফাংশনটির গরিষ্ঠ এবং লঘিষ্ঠ মান নির্ণয় কর। <span class="marks">[৭]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৫।</span></span><span class="marks">৭ + ৭ = ১৪</span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">(ক)</span> সমাকলন কর (যেকোনো দুটি) : [মূল বইয়ে প্রশ্নসমূহ মুদ্রিত নেই] <span class="marks">[৭]</span></li>
+          <li><span class="qn">(খ)</span> সমাকলনের মান নির্ণয় কর : [মূল বইয়ে প্রশ্নসমূহ মুদ্রিত নেই] <span class="marks">[৭]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৬।</span></span><span class="marks">৭ + ৭ = ১৪</span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">(ক)</span> ইন্টিগ্রাল ক্যালকুলাসের মৌলিক উপপাদ্যটি বর্ণনা ও প্রমাণ কর। <span class="marks">[৭]</span></li>
+          <li><span class="qn">(খ)</span> যদি <math><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>4</mn></mfrac></msubsup><msup><mi>tan</mi><mi>n</mi></msup><mi>θ</mi><mspace width="0.2em"/><mi>d</mi><mi>θ</mi></math> হয় তবে দেখাও যে, <i>n</i>(<i>I</i><sub><i>n</i>+1</sub> + <i>I</i><sub><i>n</i>−1</sub>) = 1 এবং ইহা হতে <math><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>4</mn></mfrac></msubsup><msup><mi>tan</mi><mn>6</mn></msup><mi>θ</mi><mspace width="0.2em"/><mi>d</mi><mi>θ</mi></math> এর মান নির্ণয় কর। <span class="marks">[৭]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৭।</span></span><span class="marks">৭ + ৭ = ১৪</span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">(ক)</span> <i>y</i><sup>2</sup> = 4<i>ax</i> এবং <i>x</i><sup>2</sup> = 4<i>ay</i> পরাবৃত্তের সাধারণ ক্ষেত্রের ক্ষেত্রফল নির্ণয় কর। <span class="marks">[৭]</span></li>
+          <li><span class="qn">(খ)</span> <math><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>9</mn></mfrac><mo>+</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>4</mn></mfrac><mo>=</mo><mn>1</mn></math> উপবৃত্তকে <i>x</i>-অক্ষের চতুর্দিকে আবর্তন করালে উৎপন্ন ঘনবস্তুর আয়তন নির্ণয় কর। <span class="marks">[৭]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৮।</span></span><span class="marks">৭ + ৭ = ১৪</span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">(ক)</span> <i>r</i> = <i>a</i>(1 + cos θ) কার্ডিয়ডের ক্ষেত্রফল নির্ণয় কর। <span class="marks">[৭]</span></li>
+          <li><span class="qn">(খ)</span> <math><msup><mrow><mo>(</mo><mfrac><mi>x</mi><mi>a</mi></mfrac><mo>)</mo></mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mi>y</mi><mi>b</mi></mfrac><mo>)</mo></mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></msup><mo>=</mo><mn>1</mn></math> হাইপোসাইক্লয়েডের পরিসীমার দৈর্ঘ্য নির্ণয় কর। <span class="marks">[৭]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2019 ===== -->
+    <section class="exam" id="y2019" data-year="2019" aria-labelledby="h2019">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">ঢাবি (অধি.) পরীক্ষা–২০১৯</p>
+        <p class="dept">বি.এসসি অনার্স ১ম বর্ষ ◆ বিষয় : নন-মেজর গণিত</p>
+        <p class="subject">কোর্স শিরোনাম : Calculus-I | কোর্স কোড : MAM = 102</p>
+        <h2 class="exam-name" id="h2019">পরীক্ষা–২০১৯</h2>
+        <p class="meta"><span>সময় : ৩ ঘণ্টা</span><span>পূর্ণমান : ৭০</span></p>
+        <p class="instruction">[N. B. Answer any FIVE questions of the following and taking at least TWO questions from each group. Numbers given in the right margin indicate the marks of the respective questions.]</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span>Group A : Differential Calculus</span></h3>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">1.</span></span><span class="marks">6 + 4 + 4 = 14</span></h3>
+        <ol class="parts">
+          <li>Define function. Sketch the graph of the following functions and for each of them find the domain and range : <span class="marks">[6]</span>
+            <span class="chem-line">(i) <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mn>9</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt></math> &nbsp;&nbsp; (ii) <i>g</i>(<i>x</i>) = 2 − |4 + <i>x</i>|</span>
+          </li>
+          <li>Using <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mi>x</mi><mo>−</mo><mn>2</mn></msqrt></math>, find <i>f</i><sup>−1</sup>(<i>x</i>) and draw <i>f</i>(<i>x</i>) and <i>f</i><sup>−1</sup>(<i>x</i>) in the same diagram. <span class="marks">[4]</span></li>
+          <li>Let <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> − 16 and <math><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mi>x</mi></msqrt></math>. Find formula for (<i>g</i> ∘ <i>f</i>) and state its domain. <span class="marks">[4]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">2.</span></span><span class="marks">4 + 5 + 5 = 14</span></h3>
+        <ol class="parts">
+          <li>Using (δ − ϵ) definition prove that
+            <span class="eq"><math display="block"><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>2</mn></mrow></munder><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>4</mn></math></span>
+            <span class="marks">[4]</span>
+          </li>
+          <li>Show that the function <i>y</i> = |<i>x</i>| is continuous everywhere. Is the function differentiable at <i>x</i> = 0? Justify your answer. <span class="marks">[5]</span></li>
+          <li>Verify the Intermediate Value Theorem (IVT) for the function <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> − <i>x</i> on the interval [1, 3]. <span class="marks">[5]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">3.</span></span><span class="marks">4 + 4 + 6 = 14</span></h3>
+        <ol class="parts">
+          <li>Using definition find the differential coefficient of ln(cos <i>x</i>). <span class="marks">[4]</span></li>
+          <li>(i) Find <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math> if <i>x</i><sup><i>y</i></sup> + <i>y</i><sup><i>x</i></sup> = <i>a</i><sup><i>b</i></sup>.<br>
+            (ii) Differentiate <math><msup><mi>tan</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mfrac><mrow><msqrt><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt><mo>−</mo><mn>1</mn></mrow><mi>x</mi></mfrac><mo>)</mo></mrow></math> with respect to tan<sup>−1</sup> <i>x</i>. <span class="marks">[4]</span>
+          </li>
+          <li>State and prove Leibnitz's theorem. <span class="marks">[6]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">4.</span></span><span class="marks">5 + 4 + 5 = 14</span></h3>
+        <ol class="parts">
+          <li>State and prove Mean Value Theorem. <span class="marks">[5]</span></li>
+          <li>State Rolle's theorem and verify the theorem for the function <i>f</i>(<i>x</i>) = (<i>x</i> − 1)(<i>x</i> − 2)(<i>x</i> − 3) in the interval (1, 3). <span class="marks">[4]</span></li>
+          <li>Find the maximum and minimum values of the function <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 18<i>x</i><sup>2</sup> + 96<i>x</i> in the interval (0, 9). <span class="marks">[5]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span>Group B : Integral Calculus</span></h3>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">5.</span></span><span class="marks">6 + 6 + 2 = 14</span></h3>
+        <ol class="parts">
+          <li>Evaluate the following indefinite integrals (any two) : <span class="marks">[6]</span>
+            <span class="chem-line">(i) <math><mo>∫</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><msqrt><mn>4</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt></mrow></mfrac></math> &nbsp;&nbsp; (ii) <math><mo>∫</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn></mrow></mfrac></math> &nbsp;&nbsp; (iii) <math><mo>∫</mo><msup><mi>sin</mi><mn>4</mn></msup><mi>x</mi><msup><mi>cos</mi><mn>5</mn></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math></span>
+          </li>
+          <li>Evaluate the following definite integrals (any two) : <span class="marks">[6]</span>
+            <span class="chem-line">(i) <math><msubsup><mo>∫</mo><mrow><mo>−</mo><mo>∞</mo></mrow><mo>∞</mo></msubsup><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>4</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></math> &nbsp;&nbsp; (ii) <math><msubsup><mo>∫</mo><mn>1</mn><mi>e</mi></msubsup><msup><mi>x</mi><mn>2</mn></msup><mi>ln</mi><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> &nbsp;&nbsp; (iii) <math><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>4</mn></mfrac></msubsup><mi>tan</mi><mi>x</mi><msup><mi>sec</mi><mn>4</mn></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math></span>
+          </li>
+          <li>If <math><msubsup><mo>∫</mo><mrow><mo>−</mo><mn>5</mn></mrow><mn>6</mn></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.2em"/><mi>d</mi><mi>x</mi><mo>=</mo><mn>7</mn></math> and <math><msubsup><mo>∫</mo><mn>6</mn><mrow><mo>−</mo><mn>3</mn></mrow></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.2em"/><mi>d</mi><mi>x</mi><mo>=</mo><mn>6</mn></math>, then what is the value of <math><mn>3</mn><msubsup><mo>∫</mo><mrow><mo>−</mo><mn>3</mn></mrow><mrow><mo>−</mo><mn>5</mn></mrow></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>? <span class="marks">[2]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">6.</span></span><span class="marks">6 + 3 + 5 = 14</span></h3>
+        <ol class="parts">
+          <li>Sketch the region whose signed area is represented by the definite integral
+            <span class="eq"><math display="block"><msubsup><mo>∫</mo><mrow><mo>−</mo><mn>2</mn></mrow><mn>8</mn></msubsup><mo>(</mo><mo>|</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>|</mo><mo>−</mo><mn>2</mn><mo>)</mo><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math></span>
+            and evaluate the integral using an appropriate formula from geometry. <span class="marks">[6]</span>
+          </li>
+          <li>Evaluate the following indefinite integrals (any two) :
+            <span class="eq"><math display="block"><munder><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mo>∞</mo></mrow></munder><mrow><mo>[</mo><mfrac><msup><mn>1</mn><mn>2</mn></msup><mrow><msup><mn>1</mn><mn>3</mn></msup><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mn>2</mn><mn>2</mn></msup><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mfrac><mo>+</mo><mo>⋯</mo><mo>+</mo><mfrac><msup><mi>n</mi><mn>2</mn></msup><mrow><msup><mi>n</mi><mn>3</mn></msup><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mfrac><mo>]</mo></mrow></math></span>
+            <span class="marks">[3]</span>
+          </li>
+          <li>Find the reduction formula for <math><mo>∫</mo><msup><mi>sin</mi><mi>n</mi></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> and hence evaluate <math><mo>∫</mo><msup><mi>sin</mi><mn>4</mn></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>. <span class="marks">[5]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">7.</span></span><span class="marks">6 + 3 + 5 = 14</span></h3>
+        <ol class="parts">
+          <li>Show that <math><mi>β</mi><mo>(</mo><mi>n</mi><mo>,</mo><mn>1</mn><mo>−</mo><mi>n</mi><mo>)</mo><mo>=</mo><mi>Γ</mi><mo>(</mo><mi>n</mi><mo>)</mo><mi>Γ</mi><mo>(</mo><mn>1</mn><mo>−</mo><mi>n</mi><mo>)</mo><mo>=</mo><mfrac><mi>π</mi><mrow><mi>sin</mi><mi>n</mi><mi>π</mi></mrow></mfrac></math>, where 0 &lt; <i>n</i> &lt; 1. <span class="marks">[6]</span></li>
+          <li>Show that <math><mi>Γ</mi><mrow><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mo>=</mo><msqrt><mi>π</mi></msqrt></math>. <span class="marks">[3]</span></li>
+          <li>Test the convergence of the integral <math><msubsup><mo>∫</mo><mn>0</mn><mo>∞</mo></msubsup><mfrac><mrow><mi>cos</mi><mi>x</mi></mrow><msqrt><mi>x</mi></msqrt></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>. <span class="marks">[5]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">8.</span></span><span class="marks">4 + 5 + 5 = 14</span></h3>
+        <ol class="parts">
+          <li>Find the length of the arc of the parabola <i>y</i><sup>2</sup> = 4<i>ax</i> extending from the vertex to one extremity of latus rectum. <span class="marks">[4]</span></li>
+          <li>Find the area of loop of the curve <i>r</i> = <i>a</i> cos 3θ and hence find its total area. <span class="marks">[5]</span></li>
+          <li>Find the volume of the solid generated by revolving the ellipse <math><mfrac><msup><mi>x</mi><mn>2</mn></msup><msup><mi>a</mi><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><msup><mi>b</mi><mn>2</mn></msup></mfrac><mo>=</mo><mn>1</mn></math> about the <i>x</i>-axis. <span class="marks">[5]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2020 ===== -->
+    <section class="exam" id="y2020" data-year="2020" aria-labelledby="h2020">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">ঢা. বি. অধি. পরীক্ষা–২০২০</p>
+        <p class="dept">বিএসসি অনার্স ১ম বর্ষ ◆ বিষয় : গণিত</p>
+        <p class="subject">কোর্স শিরোনাম : NM - Calculus-I | কোর্স কোড : MAM-102</p>
+        <h2 class="exam-name" id="h2020">পরীক্ষা–২০২০</h2>
+        <p class="meta"><span>সময় : ১ ঘণ্টা ৩০ মিনিট</span><span>পূর্ণমান : ৭০</span></p>
+        <p class="instruction">N.B. Answer any Four questions of the following. Figures given in the right margin indicate the marks of the respective questions.</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">1.</span></span><span class="marks">9 + 8.5 = 17.5</span></h3>
+        <ol class="parts">
+          <li>Define domain and range of a function <i>f</i>. Sketch and determine the domain and range of the following functions (any two) : <span class="marks">[9]</span>
+            <span class="chem-line">(i) <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mn>9</mn><mo>−</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></msqrt></math> &nbsp;&nbsp; (ii) <i>g</i>(<i>x</i>) = |sin <i>x</i>| &nbsp;&nbsp; (iii) <math><mi>h</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac></math></span>
+          </li>
+          <li>What do you mean by odd function and even function? Examine whether the following are odd functions or even functions : <span class="marks">[8.5]</span>
+            <span class="chem-line">(i) <math><mi>F</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>12</mn><mi>cos</mi><mi>x</mi><mo>+</mo><mn>8</mn><mi>sin</mi><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mfrac><mn>7</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac><mo>+</mo><mn>9</mn><msup><mi>x</mi><mn>4</mn></msup></math></span>
+            <span class="chem-line">(ii) <i>G</i>(<i>x</i>) = <i>x</i><sup>3</sup> sin<sup>2</sup> <i>x</i> − <i>x</i><sup>5</sup></span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">2.</span></span><span class="marks">17.5</span></h3>
+        <ol class="parts">
+          <li>Give the concept of limit with graph. Using (δ, ε) definition of the limit show that,
+            <span class="eq"><math display="block"><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>1</mn></mrow></munder><mfrac><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>3</mn></math></span>
+          </li>
+          <li>State basic limit theorem. If
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>,</mo></mtd><mtd><mi>x</mi><mo>≤</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>5</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo>,</mo></mtd><mtd><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>,</mo></mtd><mtd><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>,</mo></mtd><mtd><mi>x</mi><mo>≥</mo><mn>2</mn></mtd></mtr></mtable></mrow></math></span>
+            Test the continuity of the function <i>f</i>(<i>x</i>) at <i>x</i> = 0, 1, 2.
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">3.</span></span><span class="marks">9.5 + 8 = 17.5</span></h3>
+        <ol class="parts">
+          <li>State Leibnitz's theorem. If <math><mi>x</mi><mo>=</mo><mi>sin</mi><mrow><mo>(</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><mi>ln</mi><mi>y</mi><mo>)</mo></mrow></math>, then show that (1 − <i>x</i><sup>2</sup>)<i>y</i><sub><i>n</i>+2</sub> − (2<i>n</i> + 1)<i>xy</i><sub><i>n</i>+1</sub> − (<i>n</i><sup>2</sup> + <i>m</i><sup>2</sup>)<i>y</i><sub><i>n</i></sub> = 0. <span class="marks">[9.5]</span></li>
+          <li>Define critical points. If <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> − 5<i>x</i> − 5, then find the intervals on which <i>f</i>(<i>x</i>) is increasing, decreasing, concave up and concave down. Sketch <i>f</i>(<i>x</i>). <span class="marks">[8]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">4.</span></span><span class="marks">9.5 + 9.5 = 19</span></h3>
+        <ol class="parts">
+          <li>Find the following integrals (any two) : <span class="marks">[9.5]</span>
+            <span class="chem-line">(i) <math><mo>∫</mo><mfrac><mrow><mo>(</mo><mn>7</mn><mi>x</mi><mo>−</mo><mn>9</mn><mo>)</mo></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>35</mn></mrow></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> &nbsp;&nbsp; (ii) <math><mo>∫</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mrow><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> &nbsp;&nbsp; (iii) <math><mo>∫</mo><mfrac><mrow><mo>−</mo><mn>16</mn><mi>sin</mi><mi>x</mi><mo>+</mo><mn>11</mn><mi>cos</mi><mi>x</mi></mrow><mrow><mn>5</mn><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn><mi>cos</mi><mi>x</mi></mrow></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math></span>
+          </li>
+          <li>Evaluate the following integrals (any two) : <span class="marks">[9.5]</span>
+            <span class="chem-line">(i) <math><msubsup><mo>∫</mo><mn>0</mn><mn>2</mn></msubsup><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>4</mn><mo>+</mo><mn>3</mn><mi>sin</mi><mi>x</mi></mrow></mfrac></math> &nbsp;&nbsp; (ii) <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><msup><mrow><mo>(</mo><msup><mi>sin</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> &nbsp;&nbsp; (iii) <math><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>2</mn></mfrac></msubsup><mfrac><msqrt><mi>sin</mi><mi>x</mi></msqrt><mrow><msqrt><mi>sin</mi><mi>x</mi></msqrt><mo>+</mo><msqrt><mi>cos</mi><mi>x</mi></msqrt></mrow></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math></span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">5.</span></span><span class="marks">8 + 9.5 = 17.5</span></h3>
+        <ol class="parts">
+          <li>State and prove fundamental theorem of integral calculus. <span class="marks">[8]</span></li>
+          <li>If <math><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>4</mn></mfrac></msubsup><msup><mi>tan</mi><mi>n</mi></msup><mi>θ</mi><mspace width="0.2em"/><mi>d</mi><mi>θ</mi></math> then that, <i>n</i>(<i>I</i><sub><i>n</i>+1</sub> + <i>I</i><sub><i>n</i>−1</sub>) = 1 and from this evaluate <math><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>4</mn></mfrac></msubsup><msup><mi>tan</mi><mn>6</mn></msup><mi>θ</mi><mspace width="0.2em"/><mi>d</mi><mi>θ</mi></math>. <span class="marks">[9.5]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">6.</span></span><span class="marks">8 + 9.5 = 17.5</span></h3>
+        <ol class="parts">
+          <li>Find the perimeter of the cardioid <i>r</i> = 2(1 − cos θ). <span class="marks">[8]</span></li>
+          <li>Find the volume of the solid formed by the revolution of the ellipse <math><mfrac><msup><mi>x</mi><mn>2</mn></msup><msup><mi>a</mi><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><msup><mi>b</mi><mn>2</mn></msup></mfrac><mo>=</mo><mn>1</mn></math> about <i>x</i>-axis. <span class="marks">[9.5]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2021 ===== -->
+    <section class="exam" id="y2021" data-year="2021" aria-labelledby="h2021">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka (DU Affiliated Colleges)–2021</p>
+        <p class="subject">Course no : MAM 102</p>
+        <h2 class="exam-name" id="h2021">Examination–2021</h2>
+        <p class="meta"><span>Time : 1.5 Hours</span><span>Full Marks : 70</span></p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">1.</span></span></h3>
+        <ol class="parts">
+          <li>Define function. Find domain and range of the function <math><mi>y</mi><mo>=</mo><msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi></msqrt></math>.</li>
+          <li>What do you mean by existence of limit of function? Use the (δ − ϵ) definition to prove that
+            <span class="eq"><math display="block"><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>(</mo><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>7</mn><mo>)</mo><mo>=</mo><mn>9</mn></math></span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">2.</span></span></h3>
+        <ol class="parts">
+          <li>Let
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mn>2</mn></mfrac></mrow></msup></mtd><mtd><mtext>when </mtext><mo>−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><msup><mi>x</mi><mn>2</mn></msup></mtd><mtd><mtext>when </mtext><mn>0</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></mtd></mtr></mtable></mrow></math></span>
+            Does the <math><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> exist? Justify your answer.
+          </li>
+          <li>Find the differential coefficient of ln(cos <i>x</i>) by first principle.</li>
+          <li>Differentiate <math><msup><mi>tan</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt><mo>−</mo><mn>1</mn></mrow><mi>x</mi></mfrac></math> with respect to tan<sup>−1</sup> <i>x</i>.</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">3.</span></span></h3>
+        <ol class="parts">
+          <li>In which interval the function <i>y</i> = sin <i>x</i> is continuous? Investigate the continuity of the following function at <math><mi>x</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></math> :
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mn>3</mn><mo>+</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mn>0</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn><mo>−</mo><mn>2</mn><mi>x</mi></mtd><mtd><mtext>when </mtext><mi>x</mi><mo>≥</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mtd></mtr></mtable></mrow></math></span>
+          </li>
+          <li>Find <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math> : (i) <i>y</i> = (sin <i>x</i>)<sup>tan <i>x</i></sup> &nbsp;&nbsp; (ii) <math><mi>y</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mfrac><mrow><mi>cos</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></math></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">4.</span></span></h3>
+        <ol class="parts">
+          <li>State and prove First Mean Value theorem. Give geometric representation of it.</li>
+          <li>If <i>y</i> = <i>a</i> cos(ln <i>x</i>) + <i>b</i> sin(ln <i>x</i>), then show that <i>x</i><sup>2</sup><i>y</i><sub><i>n</i>+2</sub> + (2<i>n</i> + 1)<i>xy</i><sub><i>n</i>+1</sub> + (<i>n</i><sup>2</sup> + 1)<i>y</i><sub><i>n</i></sub> = 0.</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">5.</span></span></h3>
+        <ol class="parts">
+          <li>Find out the intervals where the function <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 6<i>x</i><sup>2</sup> + 9<i>x</i> + 5 are increasing and decreasing. Discuss the minimum value and maximum value of the function.</li>
+          <li>Verify Rolle's theorem for the function <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 5<i>x</i> − 6 in the interval (−6, 1).</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">6.</span></span></h3>
+        <ol class="parts">
+          <li>Integrate (any two) :
+            <span class="chem-line">(i) <math><mo>∫</mo><msup><mi>tan</mi><mn>3</mn></msup><mi>x</mi><msqrt><mi>sec</mi><mi>x</mi></msqrt><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> &nbsp;&nbsp; (ii) <math><mo>∫</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo><msqrt><mi>x</mi><mo>−</mo><mn>2</mn></msqrt></mrow></mfrac></math> &nbsp;&nbsp; (iii) <math><mo>∫</mo><mfrac><mrow><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></mrow><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>)</mo></mrow></mfrac></math></span>
+          </li>
+          <li>Evaluate :
+            <span class="chem-line">(i) <math><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>2</mn></mfrac></msubsup><mfrac><mrow><mi>d</mi><mi>θ</mi></mrow><mrow><mn>5</mn><mo>+</mo><mn>3</mn><mi>cos</mi><mi>θ</mi></mrow></mfrac></math> &nbsp;&nbsp; (ii) <math><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>2</mn></mfrac></msubsup><mi>ln</mi><mo>(</mo><mn>1</mn><mo>+</mo><mi>tan</mi><mi>θ</mi><mo>)</mo><mspace width="0.2em"/><mi>d</mi><mi>θ</mi></math> &nbsp;&nbsp; (iii) <math><msubsup><mo>∫</mo><mn>0</mn><mo>∞</mo></msubsup><mfrac><mrow><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>)</mo></mrow></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math></span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">7.</span></span></h3>
+        <ol class="parts">
+          <li>Find the area of the surface revolution of the astroid <i>x</i><sup>2/3</sup> + <i>y</i><sup>2/3</sup> = <i>a</i><sup>2/3</sup> about <i>x</i>-axis.</li>
+          <li>Find the area of a loop of <i>r</i> = <i>a</i> sin 2θ.</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">8.</span></span></h3>
+        <ol class="parts">
+          <li>If <math><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><msubsup><mo>∫</mo><mn>0</mn><mfrac><mi>π</mi><mn>2</mn></mfrac></msubsup><msup><mi>x</mi><mi>n</mi></msup><mi>sin</mi><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>, then show that <math><msub><mi>I</mi><mi>n</mi></msub><mo>+</mo><mi>n</mi><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><msub><mi>I</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub><mo>=</mo><mi>n</mi><msup><mrow><mo>(</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>)</mo></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup></math> and hence evaluate <i>I</i><sub>5</sub>.</li>
+          <li>Show that <math><mi>β</mi><mo>(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>Γ</mi><mo>(</mo><mi>m</mi><mo>)</mo><mi>Γ</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><mrow><mi>Γ</mi><mo>(</mo><mi>m</mi><mo>+</mo><mi>n</mi><mo>)</mo></mrow></mfrac></math>.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2022 ===== -->
+    <section class="exam" id="y2022" data-year="2022" aria-labelledby="h2022">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka (DU Affiliated Colleges)–2022</p>
+        <p class="subject">Course no : MAM 102</p>
+        <h2 class="exam-name" id="h2022">Examination–2022</h2>
+        <p class="meta"><span>Time : 1.5 Hours</span><span>Full Marks : 70</span></p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">1.</span></span></h3>
+        <ol class="parts">
+          <li>Define range. Find domain and range of the function <math><mi>y</mi><mo>=</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>16</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac></math>.</li>
+          <li>Use the (ε − δ) definition to prove that
+            <span class="eq"><math display="block"><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>2</mn></mrow></munder><mfrac><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>8</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>8</mn></math></span>
+            and find the value of δ where ε = 0.1.
+          </li>
+          <li>Using L'Hopital's rule to compute <math><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mrow><mi>sin</mi><mi>x</mi></mrow></msup></math>.</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">2.</span></span></h3>
+        <ol class="parts">
+          <li>Define continuity of a function at a point. Find the value of <i>k</i> for which the function is continuous at <i>x</i> = 2.
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>6</mn><mo>,</mo></mtd><mtd><mi>x</mi><mo>≤</mo><mo>−</mo><mn>2</mn></mtd></mtr><mtr><mtd><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mi>k</mi><mo>,</mo></mtd><mtd><mo>−</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo></mtd><mtd><mi>x</mi><mo>≥</mo><mn>2</mn></mtd></mtr></mtable></mrow></math></span>
+          </li>
+          <li>Define differentiability. Test the differentiability of the following function at <i>x</i> = 0.
+            <span class="eq"><math display="block"><mi>q</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi><mo>,</mo></mtd><mtd><mi>x</mi><mo>≤</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn><mo>+</mo><mi>x</mi><mo>,</mo></mtd><mtd><mi>x</mi><mo>&gt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></math></span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">3.</span></span></h3>
+        <ol class="parts">
+          <li>Find <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math> : (i) <i>y</i> = <i>x</i><sup>tan<sup>−1</sup> <i>x</i></sup> + (sin <i>x</i>)<sup>ln <i>x</i></sup> &nbsp;&nbsp; (ii) sin <i>y</i> = <i>x</i> sin(<i>a</i> + <i>y</i>)</li>
+          <li>If <i>y</i> = (sin <i>x</i>)<sup>(sin <i>x</i>)<sup>(sin <i>x</i>)⋯∞</sup></sup>, then prove that <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>y</mi><mn>2</mn></msup><mi>cot</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>−</mo><mi>y</mi><mi>ln</mi><mo>(</mo><mi>sin</mi><mi>x</mi><mo>)</mo></mrow></mfrac></math>.</li>
+          <li>Differentiate ln<sub>10</sub> <i>x</i> with respect to <i>x</i><sup>3</sup>.</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">4.</span></span></h3>
+        <ol class="parts">
+          <li>State and prove the necessary condition for existence of maximum or minimum.</li>
+          <li>If <math><mi>y</mi><mo>=</mo><mi>A</mi><msup><mrow><mo>(</mo><mi>x</mi><mo>+</mo><msqrt><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt><mo>)</mo></mrow><mi>m</mi></msup><mo>+</mo><mi>B</mi><msup><mrow><mo>(</mo><mi>x</mi><mo>+</mo><msqrt><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt><mo>)</mo></mrow><mrow><mo>−</mo><mi>m</mi></mrow></msup></math> then prove that (1 + <i>x</i><sup>2</sup>)<i>y</i><sub><i>n</i>+2</sub> + (2<i>n</i> + 1)<i>xy</i><sub><i>n</i>+1</sub> + (<i>n</i><sup>2</sup> − <i>m</i><sup>2</sup>)<i>y</i><sub><i>n</i></sub> = 0.</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">5.</span></span></h3>
+        <ol class="parts">
+          <li>Find the equation of tangent line and normal line to the curve <i>y</i><sup>2</sup> = 4 − <i>x</i><sup>2</sup> at <i>y</i> = 2. Sketch the curve and both the lines in the same diagram.</li>
+          <li>Find the intervals where the function <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 6<i>x</i><sup>2</sup> + 9<i>x</i> + 5 increases and decreases. Discuss the minimum and maximum value of the function.</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">6.</span></span></h3>
+        <ol class="parts">
+          <li>Using geometry calculate the area of the region bounded by <i>y</i> = −<i>x</i>, <i>y</i> = <i>x</i> − 6 and <i>y</i> = 0.</li>
+          <li>Approximate the area under the curve <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 2<i>x</i> + 5 using middle Riemann sum over the interval [0, 1.5] using 6 equal subintervals.</li>
+          <li>Evaluate :
+            <span class="chem-line">(i) <math><mo>∫</mo><mfrac><mn>1</mn><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo>)</mo><msup><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><mn>2</mn></msup></mrow></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> &nbsp;&nbsp; (ii) <math><msubsup><mo>∫</mo><mn>6</mn><mn>0</mn></msubsup><mo>(</mo><mn>2</mn><mo>+</mo><mn>5</mn><mi>x</mi><mo>)</mo><msup><mi>e</mi><mrow><mi>x</mi><mo>/</mo><mn>3</mn></mrow></msup><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> &nbsp;&nbsp; (iii) <math><mo>∫</mo><mfrac><msqrt><mn>1</mn><mo>+</mo><mi>ln</mi><mi>x</mi></msqrt><mi>x</mi></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math></span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">7.</span></span></h3>
+        <ol class="parts">
+          <li>Derive the reduction formula for <math><mo>∫</mo><msup><mi>sin</mi><mi>n</mi></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>. Hence calculate <math><mo>∫</mo><msup><mi>sin</mi><mn>6</mn></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>.</li>
+          <li>Find the area of the resulting surface when the arc <math><mi>y</mi><mo>=</mo><msqrt><mi>x</mi></msqrt></math> from (1, 1) to (4, 2) is rotated about the <i>x</i>-axis.</li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">8.</span></span></h3>
+        <ol class="parts">
+          <li>Find the common area intersected by cardioid <i>r</i> = <i>a</i>(1 + cos θ) and <i>r</i> = <i>a</i>(1 − cos θ).</li>
+          <li>Find the length of a loop of the curve 3<i>ay</i><sup>2</sup> = <i>x</i>(<i>x</i> − <i>a</i>)<sup>2</sup>.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2023 ===== -->
+    <section class="exam" id="y2023" data-year="2023" aria-labelledby="h2023">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">ঢাকা বিশ্ববিদ্যালয় (অধিভুক্ত-৭) কলেজ, পরীক্ষা–২০২৩</p>
+        <p class="dept">বিএসসি অনার্স ১ম বর্ষ ◆ বিষয় : গণিত</p>
+        <p class="subject">কোর্স শিরোনাম : Differential Calculus I ◆ কোর্স কোড : MAT 102</p>
+        <h2 class="exam-name" id="h2023">পরীক্ষা–২০২৩</h2>
+        <p class="meta"><span>সময় : ৩ ঘণ্টা</span><span>পূর্ণমান : ৭০</span></p>
+        <p class="instruction">N. B. : Answer any 5 (Five) questions of the following. Figures given in the right margin indicate the marks of the respective questions.</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">1.</span></span><span class="marks">7 + 7 = 14</span></h3>
+        <ol class="parts">
+          <li>Define function. Sketch the graph of the following functions. Also determine the domain and range for each function : (i) <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mn>9</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt></math> (ii) <i>g</i>(<i>x</i>) = |<i>x</i>| + |<i>x</i> − 1|. <span class="marks">[7]</span></li>
+          <li>Define inverse function. If <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mi>x</mi><mo>−</mo><mn>4</mn></msqrt></math>, find <i>f</i><sup>−1</sup>(<i>x</i>). Hence, draw <i>f</i> and <i>f</i><sup>−1</sup> in the same diagram. Also comment on their symmetry. <span class="marks">[7]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">2.</span></span><span class="marks">7 + 7 = 14</span></h3>
+        <ol class="parts">
+          <li>Define limit of a function. Use (ϵ − δ) definition to prove that
+            <span class="eq"><math display="block"><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>1</mn></mrow></munder><mfrac><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>3</mn></math></span>
+            <span class="marks">[7]</span>
+          </li>
+          <li>Show that <math><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mn>1</mn><mi>x</mi></mfrac><mi>sin</mi><mrow><mo>(</mo><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>)</mo></mrow></math> does not exist. <span class="marks">[7]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">3.</span></span><span class="marks">6 + 8 = 14</span></h3>
+        <ol class="parts">
+          <li>Define the continuity of a function <i>f</i>(<i>x</i>) at a point <i>x</i> = <i>a</i>. If
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>,</mo></mtd><mtd><mi>x</mi><mo>≠</mo><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn><mo>,</mo></mtd><mtd><mi>x</mi><mo>=</mo><mn>2</mn></mtd></mtr></mtable></mrow></math></span>
+            show that the function <i>f</i>(<i>x</i>) is discontinuous at <i>x</i> = 2. <span class="marks">[6]</span>
+          </li>
+          <li>Discuss the differentiability of the function <i>f</i>(<i>x</i>) at <i>x</i> = 0 and <i>x</i> = 1, where
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>,</mo></mtd><mtd><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>x</mi><mo>,</mo></mtd><mtd><mn>0</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>1</mn></mtd></mtr><mtr><mtd><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>,</mo></mtd><mtd><mi>x</mi><mo>&gt;</mo><mn>1</mn></mtd></mtr></mtable></mrow></math></span>
+            <span class="marks">[8]</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">4.</span></span><span class="marks">7 + 7 = 14</span></h3>
+        <ol class="parts">
+          <li>Find the <i>n</i>th derivative of (i) <i>y</i> = sin(<i>ax</i> + <i>b</i>) and (ii) <i>y</i> = <i>e</i><sup><i>ax</i></sup> sin(<i>ax</i> + <i>b</i>). <span class="marks">[7]</span></li>
+          <li>If <i>y</i> = <i>e</i><sup><i>m</i> sin<sup>−1</sup> <i>x</i></sup> then use Leibnitz's theorem to show that (1 − <i>x</i><sup>2</sup>)<i>y</i><sub><i>n</i>+2</sub> − (2<i>n</i> + 1)<i>xy</i><sub><i>n</i>+1</sub> − (<i>n</i><sup>2</sup> + <i>m</i><sup>2</sup>)<i>y</i><sub><i>n</i></sub> = 0. Also find <i>y</i><sub><i>n</i></sub>(0). <span class="marks">[7]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">5.</span></span><span class="marks">5 + 4 + 5 = 14</span></h3>
+        <ol class="parts">
+          <li>State Mean value theorem and Rolle's theorem with geometric interpretations. <span class="marks">[5]</span></li>
+          <li>Verify that the function <i>f</i>(<i>x</i>) = 2<i>x</i><sup>2</sup> − 8<i>x</i> + 6 defined over the interval [1, 3] satisfies the conditions of Rolle's theorem. Find all points <i>c</i> guaranteed by Rolle's theorem. <span class="marks">[4]</span></li>
+          <li>Verify the hypothesis of the Mean Value Theorem (MVT) for the function <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mi>x</mi></msqrt></math> over the interval [0, 9]. Find all points <i>c</i> ∈ (0, 9) guaranteed by MVT. <span class="marks">[5]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">6.</span></span><span class="marks">10 + 4 = 14</span></h3>
+        <ol class="parts">
+          <li>Let <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 3<i>x</i><sup>2</sup> + 1. Find the intervals at which <i>f</i>(<i>x</i>) is increasing, decreasing, concave up and concave down. Also evaluate the relative extrema and inflection point (if any). Hence draw the graph of <i>f</i>(<i>x</i>). <span class="marks">[10]</span></li>
+          <li>Decide graphically whether following functions have an absolute maximum or an absolute minimum on (−∞, ∞) : (i) <i>y</i> = <i>e</i><sup><i>x</i></sup>, (ii) <i>y</i> = sin <i>x</i>, (iii) <i>y</i> = −<i>x</i><sup>2</sup>, (iv) <i>y</i> = <i>x</i><sup>3</sup>. <span class="marks">[4]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">7.</span></span><span class="marks">7 + 7 = 14</span></h3>
+        <ol class="parts">
+          <li>An open-top box is to be made by cutting small congruent squares from the corners of a 12-in.-by-12-in. sheet of tin and bending up the sides. How large should the squares cut from the corners be to make the box hold as much as possible? <span class="marks">[7]</span></li>
+          <li>Find the absolute extrema of <i>f</i>(<i>x</i>) = 6<i>x</i><sup>4/3</sup> − 3<i>x</i><sup>1/3</sup> on the interval [−1, 1]. <span class="marks">[7]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">8.</span></span><span class="marks">10 + 4 = 14</span></h3>
+        <ol class="parts">
+          <li>State and prove Taylor's theorem with Lagrange's form of remainder. <span class="marks">[10]</span></li>
+          <li>Use L'Hopital's rule to evaluate : (i) <math><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow></munder><mo>(</mo><mn>1</mn><mo>−</mo><mi>tan</mi><mi>x</mi><mo>)</mo><mi>sec</mi><mn>2</mn><mi>x</mi></math>. &nbsp;&nbsp; (ii) <math><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mo>∞</mo></mrow></munder><msup><mi>x</mi><mfrac><mn>1</mn><mi>x</mi></mfrac></msup></math> <span class="marks">[4]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2024 ===== -->
+    <section class="exam" id="y2024" data-year="2024" aria-labelledby="h2024">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka (Affiliated Colleges)</p>
+        <p class="dept">First Year B.S. Honors Final (Minor) Examination–2024</p>
+        <p class="subject">Subject : Mathematics | Course Name : Calculus 1 (Non-Major) | Course Code : MAM-102 (Credits : 2)</p>
+        <h2 class="exam-name" id="h2024">Examination–2024</h2>
+        <p class="meta"><span>Time : 2 Hours 30 Minutes</span><span>Marks : 70</span></p>
+        <p class="instruction">[Answer any 05 (Five) questions out of 08 (Eight). Mark of each question is given right side of that question.]</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">1.</span></span><span class="marks">4 + 6 + 4 = 14</span></h3>
+        <ol class="parts">
+          <li>Define function. Draw the graph of the function :
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>when </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>−</mo><mi>x</mi></mtd><mtd><mtext>when </mtext><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></math></span>
+            Find the domain and range of the above function. <span class="marks">[4]</span>
+          </li>
+          <li>Sketch the graph of the following functions. <span class="marks">[6]</span>
+            <span class="chem-line">(i) <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mo>|</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo>|</mo></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac></math>, &nbsp;&nbsp; (ii) <math><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><mi>x</mi></msqrt></math>, &nbsp;&nbsp; (iii) <i>h</i>(<i>x</i>) = |<i>x</i> − 3| − |<i>x</i> + 2|</span>
+          </li>
+          <li>Find the inverse of the function <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn></msqrt></math> <span class="marks">[4]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">2.</span></span><span class="marks">5 + 5 + 4 = 14</span></h3>
+        <ol class="parts">
+          <li>Discuss the continuity of and differentiability at <i>x</i> = 0 and <math><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></math> of the function
+            <span class="eq"><math display="block"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mrow class="pw-brace"><mo stretchy="true" symmetric="true" fence="true" lspace="0em" rspace="0.22em">{</mo><mtable columnalign="left left"><mtr><mtd><mn>1</mn><mo>,</mo></mtd><mtd><mtext>when </mtext><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi><mo>,</mo></mtd><mtd><mtext>when </mtext><mn>0</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mtd></mtr><mtr><mtd><mn>2</mn><mo>+</mo><msup><mrow><mo>[</mo><mi>x</mi><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>]</mo></mrow><mn>2</mn></msup></mtd><mtd><mtext>when </mtext><mi>x</mi><mo>≥</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mtd></mtr></mtable></mrow></math></span>
+            <span class="marks">[5]</span>
+          </li>
+          <li>If <math><msup><mi>cos</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mfrac><mi>y</mi><mi>b</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mi>ln</mi><msup><mrow><mo>(</mo><mfrac><mi>x</mi><mi>n</mi></mfrac><mo>)</mo></mrow><mi>n</mi></msup></math> then prove that <i>x</i><sup>2</sup><i>y</i><sub><i>n</i>+2</sub> + (2<i>n</i> + 1)<i>xy</i><sub><i>n</i>+1</sub> + 2<i>n</i><sup>2</sup><i>y</i><sub><i>n</i></sub> = 0 <span class="marks">[5]</span></li>
+          <li>Verify the Mean Value theorem for the function <i>f</i>(<i>x</i>) = (<i>x</i> − 1)(<i>x</i> − 2)(<i>x</i> − 3) in the interval (0, 4). <span class="marks">[4]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">3.</span></span><span class="marks">5 + 5 + 4 = 14</span></h3>
+        <ol class="parts">
+          <li>If the normal line of the curve <i>x</i><sup>2/3</sup> + <i>y</i><sup>2/3</sup> = <i>a</i><sup>2/3</sup> at any point makes angle φ with <i>x</i>-axis then show that <i>y</i> cos φ − <i>x</i> sin φ = <i>a</i> cos 2φ. <span class="marks">[5]</span></li>
+          <li>If <i>y</i> = sin <i>nx</i> + cos <i>nx</i> then show that <i>y</i><sub><i>r</i></sub> = <i>n</i><sup><i>r</i></sup> [1 + (−1)<sup><i>r</i></sup> sin 2<i>nx</i>]<sup>1/2</sup>. <span class="marks">[5]</span></li>
+          <li>Find <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math> : (any two) <span class="marks">[4]</span>
+            <span class="chem-line">(i) <math><mi>y</mi><mo>=</mo><mi>sin</mi><mrow><mo>(</mo><mn>2</mn><msup><mi>tan</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msqrt><mfrac><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow></mfrac></msqrt><mo>)</mo></mrow></math> &nbsp;&nbsp; (ii) <math><mi>y</mi><mo>=</mo><msup><mi>sin</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mo>−</mo><mn>2</mn><mi>x</mi><msqrt><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt><mo>)</mo></mrow></math> &nbsp;&nbsp; (iii) <i>x</i><sup><i>y</i></sup> = <i>y</i><sup><i>x</i></sup>.</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">4.</span></span><span class="marks">5 + 5 + 4 = 14</span></h3>
+        <ol class="parts">
+          <li>Find the pedal equation of the astroid <i>x</i><sup>2/3</sup> + <i>y</i><sup>2/3</sup> = <i>a</i><sup>2/3</sup>. <span class="marks">[5]</span></li>
+          <li>Find out the intervals where the function <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 6<i>x</i><sup>2</sup> + 9<i>x</i> + 5 is increasing and decreasing. Discuss the maximum and minimum value of the function. <span class="marks">[5]</span></li>
+          <li>State and prove Mean Value theorem. <span class="marks">[4]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">5.</span></span><span class="marks">7 + 7 = 14</span></h3>
+        <ol class="parts">
+          <li>Evaluate (any two) : <span class="marks">[7]</span>
+            <span class="chem-line">(i) <math><mo>∫</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> &nbsp;&nbsp; (ii) <math><mo>∫</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>sin</mi><mi>x</mi></mrow></mfrac></math> &nbsp;&nbsp; (iii) <math><mo>∫</mo><msqrt><mfrac><mi>x</mi><mrow><mi>a</mi><mo>−</mo><mi>x</mi></mrow></mfrac></msqrt><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>.</span>
+          </li>
+          <li>Evaluate (i) <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mfrac><mrow><msup><mi>x</mi><mn>3</mn></msup><msup><mi>sin</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></mrow><msqrt><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt></mfrac></math> &nbsp;&nbsp; (ii) <math><msubsup><mo>∫</mo><mn>0</mn><msqrt><mn>5</mn></msqrt></msubsup><msup><mi>x</mi><mn>2</mn></msup><msqrt><mn>5</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></msqrt><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math> <span class="marks">[7]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">6.</span></span><span class="marks">8 + 6 = 14</span></h3>
+        <ol class="parts">
+          <li>Express <math><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>d</mi><mi>x</mi></math> as the limit of a sum. Evaluate the following using definite integral as the sum of a limit
+            <span class="eq"><math display="block"><munder><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mo>∞</mo></mrow></munder><mrow><mo>[</mo><mfrac><msup><mn>1</mn><mn>2</mn></msup><mrow><msup><mn>1</mn><mn>3</mn></msup><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mn>2</mn><mn>2</mn></msup><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mn>3</mn><mn>2</mn></msup><mrow><msup><mn>3</mn><mn>3</mn></msup><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mfrac><mo>+</mo><mo>⋯</mo><mo>+</mo><mfrac><msup><mi>n</mi><mn>2</mn></msup><mrow><msup><mi>n</mi><mn>3</mn></msup><mo>+</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mfrac><mo>]</mo></mrow></math></span>
+            <span class="marks">[8]</span>
+          </li>
+          <li>Integrate <math><mo>∫</mo><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mi>cos</mi><mn>5</mn><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>. <span class="marks">[6]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">7.</span></span><span class="marks">7 + 7 = 14</span></h3>
+        <ol class="parts">
+          <li>Derive the reduction formula for <math><mo>∫</mo><msup><mi>tan</mi><mi>n</mi></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>. Hence calculate <math><mo>∫</mo><msup><mi>tan</mi><mn>6</mn></msup><mi>x</mi><mspace width="0.2em"/><mi>d</mi><mi>x</mi></math>. <span class="marks">[7]</span></li>
+          <li>Define arc length. Find the arc length of <math><mi>x</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><msup><mrow><mo>(</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo>)</mo></mrow><mfrac><mn>3</mn><mn>2</mn></mfrac></msup></math> from <i>x</i> = 0 to <i>x</i> = 1. <span class="marks">[7]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">8.</span></span><span class="marks">6 + 8 = 14</span></h3>
+        <ol class="parts">
+          <li>Find the area bounded by the curve <i>a</i><sup>2</sup><i>y</i><sup>2</sup> = <i>x</i><sup>3</sup>(2<i>a</i> − <i>x</i>). <span class="marks">[6]</span></li>
+          <li>Find the perimeter of the cardioid <i>r</i> = 2(1 − cos θ). <span class="marks">[8]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="paper-foot">
+      <span>DCU QB · Question Bank Archive</span>
+      <span>Calculus-I · MAM 102</span>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>Not operated by Dhaka Central University. Made by students.</p>
+  </footer>
+</div>
+
+<button type="button" class="to-top" id="toTop" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 12.5L10 7l5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<noscript>
+  <p style="padding:1rem;text-align:center;color:#a7adb5">JavaScript must be enabled for the menu, year bar and search. The questions are still readable below.</p>
+</noscript>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Logo fallback (if ../logo.png is missing) ---------- */
+  var FALLBACK_LOGO = '<svg class="hero-svg-fallback" viewBox="0 0 240 240" role="img" aria-label="DCU QB, Unofficial Question Bank Archive">' +
+    '<rect width="240" height="240" rx="14" fill="#16191c"/>' +
+    '<path d="M120 34L74 54l46 20 46-20-46-20z" fill="none" stroke="#f2f2f4" stroke-width="3.5" stroke-linejoin="round"/>' +
+    '<path d="M93 62v15c0 6 12 12 27 12s27-6 27-12V62" fill="none" stroke="#f2f2f4" stroke-width="3.5" stroke-linecap="round"/>' +
+    '<path d="M120 53l32 13v16" fill="none" stroke="#c9a85f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<path d="M82 68v52l38 17 38-17V98" fill="none" stroke="#f2f2f4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<circle cx="152" cy="104" r="12" fill="none" stroke="#f2f2f4" stroke-width="3.5"/>' +
+    '<text x="120" y="172" text-anchor="middle" fill="#f2f2f4" font-size="26" font-weight="700" letter-spacing="2">DCU QB</text>' +
+    '<text x="120" y="193" text-anchor="middle" fill="#f2f2f4" font-size="9.5" font-weight="600" letter-spacing="1.4">QUESTION BANK ARCHIVE</text>' +
+    '<text x="120" y="210" text-anchor="middle" fill="#a7adb5" font-size="8.5" letter-spacing="2.5">UNOFFICIAL</text></svg>';
+
+  var logoWrap = document.getElementById('logoWrap');
+  var logoImg = document.getElementById('logoImg');
+  var logoDone = false;
+  function useFallbackLogo() {
+    if (logoDone) return;
+    logoDone = true;
+    logoWrap.innerHTML = FALLBACK_LOGO;
+  }
+  logoImg.addEventListener('error', useFallbackLogo);
+  if (logoImg.complete && logoImg.naturalWidth === 0) useFallbackLogo();
+
+  /* ---------- Menu ---------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var menuPanel = document.getElementById('site-menu');
+  function setMenu(open) {
+    menuPanel.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  menuBtn.addEventListener('click', function () { setMenu(menuPanel.hidden); });
+  document.addEventListener('click', function (e) {
+    if (menuPanel.hidden) return;
+    if (e.target.closest('.menu-wrap')) return;
+    setMenu(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menuPanel.hidden) { setMenu(false); menuBtn.focus(); }
+  });
+
+  /* ---------- Year bar: highlight the year you are reading ---------- */
+  var exams = Array.prototype.slice.call(document.querySelectorAll('.exam'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.year-chip'));
+  var yearScroll = document.getElementById('yearScroll');
+  var activeYear = null;
+
+  function setActive(year) {
+    if (year === activeYear) return;
+    activeYear = year;
+    chips.forEach(function (chip) {
+      var on = chip.getAttribute('data-year') === year;
+      chip.classList.toggle('is-active', on);
+      if (on) {
+        chip.setAttribute('aria-current', 'true');
+        var left = chip.offsetLeft - (yearScroll.clientWidth - chip.clientWidth) / 2;
+        yearScroll.scrollTo({ left: left, behavior: 'smooth' });
+      } else {
+        chip.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateActive() {
+    var current = null;
+    exams.forEach(function (ex) {
+      if (ex.hidden) return;
+      if (ex.getBoundingClientRect().top <= 130) current = ex;
+    });
+    if (!current) {
+      current = exams.filter(function (ex) { return !ex.hidden; })[0] || null;
+    }
+    if (current) setActive(current.getAttribute('data-year'));
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      setActive(chip.getAttribute('data-year'));
+    });
+  });
+
+  /* ---------- Back to top ---------- */
+  var toTop = document.getElementById('toTop');
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0 }); });
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () {
+      updateActive();
+      toTop.hidden = window.scrollY < 600;
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('hashchange', onScroll);
+  updateActive();
+
+  /* ---------- Print / Save as PDF ---------- */
+  document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
+
+  /* ---------- Search inside the questions ---------- */
+  var input = document.getElementById('qSearch');
+  var clearBtn = document.getElementById('qClear');
+  var statusEl = document.getElementById('qStatus');
+  var noMatch = document.getElementById('noMatch');
+
+  function norm(s) { return String(s).toLowerCase().replace(/\s+/g, ' ').trim(); }
+
+  function applyFilter() {
+    var q = norm(input.value);
+    var total = 0;
+    clearBtn.hidden = input.value.length === 0;
+
+    exams.forEach(function (exam) {
+      var groups = Array.prototype.slice.call(exam.querySelectorAll('.qgroup'));
+      var examHits = 0;
+
+      groups.forEach(function (group) {
+        var titleEl = group.querySelector('.qtitle');
+        var titleHit = q !== '' && titleEl && norm(titleEl.textContent).indexOf(q) !== -1;
+        var shown = 0;
+        Array.prototype.forEach.call(group.querySelectorAll('.parts > li'), function (li) {
+          var hit = q === '' || titleHit || norm(li.textContent).indexOf(q) !== -1;
+          li.hidden = !hit;
+          if (hit) shown += 1;
+        });
+        group.hidden = shown === 0;
+        examHits += shown;
+      });
+
+      exam.hidden = q !== '' && examHits === 0;
+      if (q !== '') total += examHits;
+
+      var chip = document.querySelector('.year-chip[data-year="' + exam.getAttribute('data-year') + '"]');
+      if (chip) chip.classList.toggle('is-dim', exam.hidden);
+    });
+
+    if (q === '') {
+      statusEl.textContent = '';
+      noMatch.hidden = true;
+    } else if (total === 0) {
+      statusEl.textContent = 'No question found.';
+      noMatch.hidden = false;
+    } else {
+      statusEl.textContent = total + (total === 1 ? ' question found.' : ' questions found.');
+      noMatch.hidden = true;
+    }
+    updateActive();
+  }
+
+  input.addEventListener('input', applyFilter);
+  clearBtn.addEventListener('click', function () {
+    input.value = '';
+    applyFilter();
+    input.focus();
+  });
+})();
+</script>
+</body>
+  </html>
