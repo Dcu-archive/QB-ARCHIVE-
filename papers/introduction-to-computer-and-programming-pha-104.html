@@ -1,1767 +1,1253 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PHA-104: Introduction to Computer and Programming (2018–2025) | DCU QB Archive</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <style>
-    :root {
-      --bg-primary: #0b0f19;
-      --bg-secondary: #111827;
-      --bg-card: #151d2e;
-      --bg-card-hover: #1a2438;
-      --border-color: #243047;
-      --text-primary: #f3f4f6;
-      --text-secondary: #9ca3af;
-      --text-muted: #6b7280;
-      --accent: #f59e0b;
-      --accent-soft: rgba(245, 158, 11, 0.14);
-      --accent-border: rgba(245, 158, 11, 0.35);
-      --code-bg: #080b13;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Introduction to Computer and Programming (PHA 104) | DCU QB</title>
+<meta name="description" content="Previous year questions of Introduction to Computer and Programming (PHA 104), 2018 to 2025. Unofficial question bank archive.">
+<meta name="theme-color" content="#16191c">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316191c'/%3E%3Cpath d='M32 10L10 20l22 10 22-10-22-10z' fill='none' stroke='%23f2f2f4' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='M18 24v8c0 3.5 6.3 6.5 14 6.5s14-3 14-6.5v-8' fill='none' stroke='%23f2f2f4' stroke-width='2.6' stroke-linecap='round'/%3E%3Cpath d='M32 19l14 6v10' fill='none' stroke='%23c9a85f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='38' r='2.5' fill='%23c9a85f'/%3E%3Cpath d='M14 27v21l18 8 18-8V27' fill='none' stroke='%23f2f2f4' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+/* =====================================================
+   HOW TO EDIT THIS FILE (phone)
+   - Each year is one <section class="exam" id="yYYYY"> block below.
+   - To change a year: edit only the questions inside its block.
+   - Subscript: H<sub>2</sub>O   Superscript: Fe<sup>3+</sup>
+   - Colours are in :root right below. Same colours as the main site.
+   ===================================================== */
+:root {
+  --bg: #16191c;
+  --surface: #1e2226;
+  --line: #343a41;
+  --text: #f2f2f4;
+  --muted: #a7adb5;
+  --soft: #cfd3d8;
+  --gold: #c9a85f;
+  --gold-hover: #e2c67e;
+  --on-gold: #16191c;
+  --flag: #e08a7d;
 
-    body {
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
-      font-family: 'Hind Siliguri', 'Inter', sans-serif;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
+  --font-ui: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-paper: "Noto Serif Bengali", "Kalpurush", "Siyam Rupali", Georgia, "Times New Roman", serif;
+}
 
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
+*, *::before, *::after { box-sizing: border-box; }
 
-    /* Header */
-    header {
-      background: linear-gradient(180deg, #101726 0%, #0b0f19 100%);
-      border-bottom: 1px solid var(--border-color);
-      padding: 28px 0 24px;
-    }
+[hidden] { display: none !important; }
 
-    .brand-bar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
+html {
+  font-size: 16px;
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
 
-    .brand-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--accent-soft);
-      border: 1px solid var(--accent-border);
-      color: var(--accent);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      padding: 4px 12px;
-      border-radius: 999px;
-      text-transform: uppercase;
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  line-height: 1.65;
+}
 
-    .motto {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-    }
+button, input { font-family: inherit; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
 
-    h1 {
-      font-family: 'Inter', 'Hind Siliguri', sans-serif;
-      font-size: clamp(1.45rem, 3vw, 2.05rem);
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 6px;
-    }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-    .subtitle {
-      color: var(--text-secondary);
-      font-size: 0.98rem;
-      margin-bottom: 16px;
-    }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
 
-    .meta-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+.skip-link {
+  position: absolute; left: -9999px; top: 0.75rem; z-index: 100;
+  padding: 0.65rem 1rem; min-height: 48px; display: inline-flex; align-items: center;
+  background-color: var(--gold); color: var(--on-gold); font-weight: 600; font-size: 0.9rem; border-radius: 6px;
+}
+.skip-link:focus { left: 0.75rem; }
 
-    .meta-pill {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      padding: 5px 12px;
-      border-radius: 8px;
-    }
+/* ===== Shell ===== */
+.shell {
+  width: 100%;
+  max-width: 42rem;
+  min-height: 100vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+}
+@media (min-width: 43rem) { .shell { border-inline: 1px solid var(--line); } }
 
-    .meta-pill strong {
-      color: var(--accent);
-      font-weight: 600;
-    }
+main { flex: 1; padding: 0 1rem 2.5rem; outline: none; }
+@media (min-width: 30rem) { main { padding-inline: 1.5rem; } }
 
-    /* Controls */
-    .controls-wrapper {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      background: rgba(11, 15, 25, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
-      padding: 14px 0;
-    }
+/* ===== Header (same as home) ===== */
+.site-header { position: relative; border-bottom: 1px solid var(--line); }
 
-    .controls-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+.head-row { display: flex; align-items: center; gap: 0.85rem; padding: 0.85rem 1rem 0.6rem; }
+.head-brand { display: flex; align-items: center; gap: 0.85rem; flex: 1; min-width: 0; }
+.head-logo-wrap { display: block; width: 76px; height: 76px; flex-shrink: 0; }
+.hero-logo, .hero-svg-fallback {
+  width: 100%; height: 100%; object-fit: cover;
+  border: 1px solid var(--line); border-radius: 12px; background-color: var(--surface);
+}
+.head-text { min-width: 0; }
+.head-title { margin: 0; font-weight: 700; font-size: 1.15rem; line-height: 1.3; color: var(--text); overflow-wrap: break-word; }
+.head-tagline { margin: 0.2rem 0 0; font-size: 0.78rem; line-height: 1.4; color: var(--muted); overflow-wrap: break-word; }
+.head-hint { margin: 0; padding: 0 1rem; font-size: 0.8rem; color: var(--muted); }
 
-    .search-box {
-      position: relative;
-      width: 100%;
-    }
+.search-box { position: relative; margin: 0.65rem 1rem 1rem; }
+.search-input {
+  width: 100%; min-height: 52px; padding: 0.65rem 3rem 0.65rem 1rem; font-size: 0.92rem;
+  color: var(--text); background-color: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; appearance: none;
+}
+.search-input::placeholder { color: var(--muted); opacity: 1; }
+.search-input:focus { border-color: var(--gold); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-clear {
+  position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
+  width: 48px; height: 48px; border: 0; border-radius: 6px; background: transparent;
+  color: var(--muted); font-size: 1.25rem; line-height: 1; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.search-clear:hover, .search-clear:active { color: var(--gold-hover); }
 
-    .search-box input {
-      width: 100%;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      color: var(--text-primary);
-      font-family: 'Hind Siliguri', 'Inter', sans-serif;
-      font-size: 0.96rem;
-      padding: 11px 16px 11px 42px;
-      border-radius: 10px;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
+/* Menu */
+.menu-wrap { position: static; flex-shrink: 0; }
+.menu-btn {
+  width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center;
+  background-color: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  color: var(--text); cursor: pointer; transition: border-color 0.12s ease, color 0.12s ease;
+}
+.menu-btn:hover, .menu-btn[aria-expanded="true"] { border-color: var(--gold); color: var(--gold-hover); }
+.menu-btn svg { width: 22px; height: 22px; }
+.menu-panel {
+  position: absolute; left: 0; right: 0; top: 100%; z-index: 60; max-height: 70vh; overflow-y: auto;
+  background-color: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+.menu-list { list-style: none; margin: 0; padding: 0.35rem 0; }
+.menu-label { padding: 0.65rem 1.25rem 0.25rem; font-size: 0.76rem; font-weight: 600; color: var(--gold); }
+.menu-link {
+  display: flex; align-items: center; min-height: 48px; padding: 0.6rem 1.25rem;
+  font-size: 0.92rem; font-weight: 500; color: var(--text);
+}
+.menu-link:hover, .menu-link:active { background-color: rgba(201, 168, 95, 0.09); color: var(--gold-hover); }
+@media (min-width: 43rem) {
+  .menu-panel { left: auto; right: 1rem; top: calc(100% + 0.25rem); width: 20rem; border: 1px solid var(--line); border-radius: 10px; }
+}
 
-    .search-box input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
-    }
+/* ===== Course banner ===== */
+.course-banner { padding: 1.25rem 0 1rem; }
+.crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.45rem; font-size: 0.84rem; color: var(--muted); margin-bottom: 0.9rem; }
+.crumbs a { color: var(--gold); display: inline-flex; align-items: center; min-height: 40px; }
+.crumbs a:hover { color: var(--gold-hover); text-decoration: underline; text-underline-offset: 3px; }
+.crumbs .sep { color: var(--line); }
 
-    .search-icon {
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      pointer-events: none;
-    }
+.code-tag {
+  display: inline-block; padding: 0.16rem 0.5rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em;
+  color: var(--gold); background-color: var(--surface); border: 1px solid var(--line); border-radius: 5px; white-space: nowrap;
+}
+.page-title { margin: 0.6rem 0 0; font-weight: 700; font-size: 1.4rem; line-height: 1.35; overflow-wrap: break-word; }
+.page-sub { margin: 0.3rem 0 0; font-size: 0.9rem; color: var(--muted); }
 
-    .filter-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
+.tools { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 48px;
+  padding: 0.6rem 1.1rem; font-size: 0.86rem; font-weight: 600; border-radius: 8px; cursor: pointer;
+  background-color: transparent; color: var(--gold); border: 1px solid var(--gold);
+  transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+.btn:hover, .btn:active { background-color: rgba(201, 168, 95, 0.1); color: var(--gold-hover); border-color: var(--gold-hover); }
 
-    .year-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
+/* ===== Year bar (sticky) ===== */
+.year-bar {
+  position: sticky; top: 0; z-index: 40;
+  margin-inline: -1rem; padding: 0.55rem 1rem;
+  background-color: rgba(22, 25, 28, 0.96);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(6px);
+}
+@media (min-width: 30rem) { .year-bar { margin-inline: -1.5rem; padding-inline: 1.5rem; } }
+.year-scroll { display: flex; gap: 0.5rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.year-scroll::-webkit-scrollbar { display: none; }
+.year-chip {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; min-width: 64px; padding: 0.3rem 0.9rem;
+  font-size: 0.9rem; font-weight: 600; color: var(--text);
+  background-color: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+.year-chip:hover, .year-chip:active { border-color: var(--gold); color: var(--gold-hover); }
+.year-chip.is-active { background-color: var(--gold); border-color: var(--gold); color: var(--on-gold); }
+.year-chip.is-dim { opacity: 0.35; pointer-events: none; }
 
-    .year-btn {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.84rem;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.18s ease;
-    }
+.status { margin: 0.75rem 0 0; min-height: 1.4em; font-size: 0.82rem; color: var(--muted); }
 
-    .year-btn:hover {
-      border-color: var(--accent-border);
-      color: var(--text-primary);
-    }
+.no-match {
+  margin-top: 1rem; padding: 1.35rem 1rem; border: 1px dashed var(--line); border-radius: 10px;
+  text-align: center; font-size: 0.9rem; color: var(--muted);
+}
 
-    .year-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #0b0f19;
-    }
+/* ===== Exam paper (same layout as the PDF, site colours) ===== */
+.exam { margin-top: 1.5rem; scroll-margin-top: 5.25rem; font-family: var(--font-paper); }
+.exam + .exam { padding-top: 1.5rem; border-top: 1px dashed var(--line); }
 
-    .result-stats {
-      font-family: 'Inter', 'Hind Siliguri', sans-serif;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
+.compiled { margin: 0 0 0.5rem; text-align: right; font-style: italic; font-weight: 700; font-size: 0.78rem; color: var(--muted); }
 
-    .result-stats span {
-      color: var(--accent);
-      font-weight: 600;
-    }
+.paper-head {
+  padding: 1rem 0.9rem; text-align: center;
+  background-color: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+}
+.uni { margin: 0; font-weight: 700; font-size: 1.5rem; line-height: 1.3; color: var(--text); }
+.dept { margin: 0.2rem 0 0; font-weight: 600; font-size: 0.95rem; color: var(--soft); }
+.subject { margin: 0.55rem 0 0; font-weight: 600; font-size: 0.9rem; line-height: 1.7; color: var(--text); }
+.exam-name { margin: 0.4rem 0 0; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+.meta {
+  display: flex; justify-content: space-between; gap: 1rem; margin: 0.8rem 0 0; padding-top: 0.7rem;
+  border-top: 1px dashed var(--line); font-weight: 600; font-size: 0.88rem; color: var(--soft);
+}
+.instruction { margin: 0.7rem 0 0; padding-top: 0.7rem; border-top: 1px dashed var(--line); font-weight: 600; font-size: 0.82rem; line-height: 1.7; color: var(--soft); }
 
-    /* Main Content */
-    main {
-      padding: 26px 0 60px;
-    }
+.qgroup { margin-top: 1.15rem; }
+.qtitle {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.3rem 1rem;
+  margin: 0 0 0.6rem; font-weight: 600; font-size: 0.95rem; line-height: 1.75;
+}
+.qn { color: var(--gold); font-weight: 700; margin-right: 0.15rem; }
+.marks { font-weight: 700; font-size: 0.88rem; color: var(--gold); white-space: nowrap; }
 
-    .year-section {
-      margin-bottom: 36px;
-    }
+.parts { list-style: none; margin: 0; padding: 0; counter-reset: part; }
+.parts > li {
+  position: relative; padding-left: 2.6rem; margin-bottom: 0.45rem;
+  font-weight: 500; font-size: 0.94rem; line-height: 1.85; counter-increment: part; overflow-wrap: break-word;
+}
+.parts > li::before {
+  content: "(" counter(part, lower-alpha) ")";
+  position: absolute; left: 0; top: 0; font-weight: 700; color: var(--gold);
+}
+.en { color: var(--soft); font-weight: 400; }
+.chem-line { display: block; margin-top: 0.1rem; color: var(--text); }
 
-    .year-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--accent);
-      padding: 14px 18px;
-      border-radius: 10px;
-      margin-bottom: 16px;
-    }
+/* ===== Footer ===== */
+.paper-foot {
+  margin-top: 2rem; padding-top: 0.8rem; border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  font-size: 0.76rem; font-weight: 600; color: var(--muted);
+}
+.site-footer {
+  margin-top: auto; padding: 1.1rem 1rem 1.5rem; border-top: 1px solid var(--line);
+  text-align: center; font-size: 0.78rem; color: var(--muted);
+}
+.site-footer p { margin: 0; }
 
-    .year-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #ffffff;
-    }
+/* Back to top */
+.to-top {
+  position: fixed; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 45;
+  width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center;
+  background-color: var(--surface); color: var(--gold); border: 1px solid var(--gold); border-radius: 50%;
+  cursor: pointer; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+.to-top:hover, .to-top:active { color: var(--gold-hover); border-color: var(--gold-hover); }
+.to-top svg { width: 20px; height: 20px; }
 
-    .year-title .tag-new {
-      display: inline-block;
-      background: var(--accent-soft);
-      border: 1px solid var(--accent-border);
-      color: var(--accent);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 6px;
-      margin-left: 8px;
-      vertical-align: middle;
-    }
+/* ===== Desktop ===== */
+@media (min-width: 48rem) {
+  .shell { max-width: 56rem; }
+  main { padding-inline: 2.5rem; }
+  .head-row { gap: 1.25rem; padding: 1.5rem 2.5rem 0.75rem; }
+  .head-brand { gap: 1.5rem; }
+  .head-logo-wrap { width: 112px; height: 112px; }
+  .head-title { font-size: 1.75rem; }
+  .head-tagline { margin-top: 0.35rem; font-size: 0.92rem; }
+  .head-hint { padding: 0 2.5rem; font-size: 0.88rem; }
+  .search-box { margin: 1rem 2.5rem 1.5rem; }
+  .menu-panel { right: 2.5rem; }
+  .year-bar { margin-inline: -2.5rem; padding-inline: 2.5rem; }
+  .year-scroll { justify-content: center; }
+  .page-title { font-size: 1.75rem; }
+  .uni { font-size: 1.8rem; }
+  .paper-head { padding: 1.25rem 1.5rem; }
+  .parts > li { font-size: 1rem; }
+  .qtitle { font-size: 1rem; }
+}
 
-    .year-meta {
-      font-family: 'Inter', 'Hind Siliguri', sans-serif;
-      font-size: 0.84rem;
-      color: var(--text-secondary);
-    }
+/* ===== Papers where each question stands alone (no a, b, c parts) ===== */
+.parts.qlist > li { padding-left: 0; margin-bottom: 1rem; }
+.parts.qlist > li::before { content: none; }
+.parts.qlist .qn { margin-right: 0.35rem; }
+.qlist .en { display: block; margin-top: 0.15rem; }
+.paper-head .uni.uni-sm { font-size: 1.1rem; line-height: 1.6; }
+@media (min-width: 48rem) { .paper-head .uni.uni-sm { font-size: 1.3rem; } }
 
-    .question-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin-bottom: 14px;
-      transition: border-color 0.2s, background-color 0.2s;
-    }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
 
-    .question-card:hover {
-      border-color: #334363;
-      background: var(--bg-card-hover);
-    }
-
-    .q-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(36, 48, 71, 0.7);
-    }
-
-    .q-number {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 0.03em;
-    }
-
-    .q-year-tag {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      background: var(--bg-primary);
-      padding: 2px 9px;
-      border-radius: 6px;
-      border: 1px solid var(--border-color);
-    }
-
-    .sub-q-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .sub-q-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      padding: 10px 12px;
-      background: rgba(11, 15, 25, 0.45);
-      border-radius: 8px;
-      border: 1px solid rgba(36, 48, 71, 0.45);
-    }
-
-    .sub-q-item.single-col {
-      grid-template-columns: 1fr;
-    }
-
-    .lang-bn {
-      color: var(--text-primary);
-      font-size: 0.98rem;
-    }
-
-    .lang-en {
-      color: #cbd5e1;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.92rem;
-      border-left: 1px solid var(--border-color);
-      padding-left: 16px;
-    }
-
-    .sub-label {
-      color: var(--accent);
-      font-weight: 700;
-      margin-right: 4px;
-    }
-
-    code {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.86em;
-      background: var(--code-bg);
-      color: #fbbf24;
-      padding: 2px 6px;
-      border-radius: 5px;
-      border: 1px solid #1f2937;
-    }
-
-    pre.code-block {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.84rem;
-      background: var(--code-bg);
-      color: #e5e7eb;
-      padding: 12px 14px;
-      border-radius: 8px;
-      border: 1px solid #1f2937;
-      overflow-x: auto;
-      margin-top: 8px;
-      line-height: 1.5;
-    }
-
-    .empty-state {
-      display: none;
-      text-align: center;
-      padding: 48px 20px;
-      background: var(--bg-card);
-      border: 1px dashed var(--border-color);
-      border-radius: 12px;
-      color: var(--text-secondary);
-    }
-
-    .empty-state h3 {
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding: 22px 0;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    footer strong {
-      color: var(--text-secondary);
-    }
-
-    @media (max-width: 768px) {
-      .sub-q-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-      .lang-en {
-        border-left: none;
-        border-top: 1px dashed var(--border-color);
-        padding-left: 0;
-        padding-top: 8px;
-      }
-    }
-  </style>
+/* ===== Print / Save as PDF ===== */
+@media print {
+  html, body, .shell { background: #fff !important; color: #000 !important; border: 0 !important; }
+  .site-header, .year-bar, .tools, .crumbs, .status, .no-match, .to-top, .site-footer, .skip-link { display: none !important; }
+  .exam { page-break-before: always; font-family: Georgia, "Noto Serif Bengali", serif; }
+  .exam:first-of-type { page-break-before: avoid; }
+  .exam + .exam { border-top: 0; padding-top: 0; }
+  .paper-head { background: #f1f1f1 !important; border: 1px solid #999 !important; }
+  .uni, .subject, .parts > li, .qtitle, .dept, .meta, .instruction, .en, .chem-line, .compiled { color: #000 !important; }
+  .qn, .marks, .exam-name, .parts > li::before { color: #000 !important; }
+  .parts > li, .qtitle { break-inside: avoid; }
+  .course-banner .code-tag { border-color: #999; color: #000; background: #fff; }
+}
+</style>
 </head>
-<body>
 
-  <header>
-    <div class="container">
-      <div class="brand-bar">
-        <span class="brand-badge">DCU QB Archive • Physics Honours</span>
-        <span class="motto">Made by students, for students</span>
+<body>
+<a class="skip-link" href="#papers">Skip to questions</a>
+
+<div class="shell">
+
+  <!-- ===== Header: same as the home page ===== -->
+  <header class="site-header" role="banner">
+    <div class="head-row">
+      <div class="head-brand">
+        <a class="head-logo-wrap" id="logoWrap" href="../index.html#/" aria-label="DCU QB home">
+          <img class="hero-logo" id="logoImg" src="../logo.png" alt="DCU QB, Unofficial Question Bank Archive" width="230" height="230">
+        </a>
+        <div class="head-text">
+          <p class="head-title">Past Exam Questions</p>
+          <p class="head-tagline">Unofficial Question Bank Archive of Dhaka Central University</p>
+        </div>
       </div>
-      <h1>PHA-104: Introduction to Computer and Programming</h1>
-      <p class="subtitle">Dhaka Central University (DCU) &amp; Affiliated 7 Colleges — B.Sc. (Hons.) 1st Year Board Question Bank (2018–2025)</p>
-      <div class="meta-pills">
-        <span class="meta-pill">Course Code: <strong>PHA-104</strong></span>
-        <span class="meta-pill">Sessions: <strong>2018 – 2025 (8 Years)</strong></span>
-        <span class="meta-pill">Full Marks: <strong>80</strong></span>
-        <span class="meta-pill">Format: <strong>Bilingual (BN + EN)</strong></span>
+
+      <div class="menu-wrap">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <nav class="menu-panel" id="site-menu" aria-label="Site menu" hidden>
+          <ul class="menu-list">
+            <li><a class="menu-link" href="../index.html#/">Home</a></li>
+            <li class="menu-label">Faculties</li>
+            <li><a class="menu-link" href="../index.html#/arts">Faculty of Arts</a></li>
+            <li><a class="menu-link" href="../index.html#/social-sciences">Faculty of Social Sciences</a></li>
+            <li><a class="menu-link" href="../index.html#/science">Faculty of Science</a></li>
+            <li><a class="menu-link" href="../index.html#/biological-sciences">Faculty of Biological Sciences</a></li>
+            <li><a class="menu-link" href="../index.html#/business-studies">Faculty of Business Studies</a></li>
+            <li><a class="menu-link" href="../index.html#/law">Faculty of Law</a></li>
+          </ul>
+        </nav>
       </div>
+    </div>
+
+    <p class="head-hint">Search any word inside the questions of this course.</p>
+    <div class="search-box">
+      <label class="visually-hidden" for="qSearch">Search questions</label>
+      <input id="qSearch" class="search-input" type="search" placeholder="Search in these questions" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-clear" id="qClear" aria-label="Clear search" hidden>×</button>
     </div>
   </header>
 
-  <div class="controls-wrapper">
-    <div class="container">
-      <div class="controls-grid">
-        <div class="search-box">
-          <span class="search-icon">&#128269;</span>
-          <input type="text" id="searchInput" placeholder="টপিক বা কীওয়ার্ড দিয়ে সার্চ করুন (যেমন: Flip-Flop, Bubble Sort, Cache, Boolean, C++, Parity, 2025)..." />
-        </div>
-        <div class="filter-row">
-          <div class="year-pills" id="yearFilters">
-            <button class="year-btn active" data-year="all">All (2018–2025)</button>
-            <button class="year-btn" data-year="2025">2025</button>
-            <button class="year-btn" data-year="2024">2024</button>
-            <button class="year-btn" data-year="2023">2023</button>
-            <button class="year-btn" data-year="2022">2022</button>
-            <button class="year-btn" data-year="2021">2021</button>
-            <button class="year-btn" data-year="2020">2020</button>
-            <button class="year-btn" data-year="2019">2019</button>
-            <button class="year-btn" data-year="2018">2018</button>
-          </div>
-          <div class="result-stats" id="resultStats">মোট প্রদর্শিত প্রশ্ন: <span id="visibleCount">0</span> টি</div>
-        </div>
+  <main id="papers" tabindex="-1">
+
+    <!-- ===== Course banner ===== -->
+    <section class="course-banner" aria-labelledby="courseTitle">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../index.html#/">Home</a><span class="sep" aria-hidden="true">/</span><span>Introduction to Computer and Programming</span>
+      </nav>
+      <span class="code-tag">PHA-104</span>
+      <h1 class="page-title" id="courseTitle">Introduction to Computer and Programming</h1>
+      <p class="page-sub">Physics · Previous year questions, 2018 to 2025</p>
+      <div class="tools">
+        <button type="button" class="btn" id="printBtn">Save as PDF / Print</button>
       </div>
+    </section>
+
+    <!-- ===== Year bar: tap a year, the page scrolls to it ===== -->
+    <nav class="year-bar" aria-label="Exam years">
+      <div class="year-scroll" id="yearScroll">
+        <a class="year-chip" href="#y2018" data-year="2018">2018</a>
+        <a class="year-chip" href="#y2019" data-year="2019">2019</a>
+        <a class="year-chip" href="#y2020" data-year="2020">2020</a>
+        <a class="year-chip" href="#y2021" data-year="2021">2021</a>
+        <a class="year-chip" href="#y2022" data-year="2022">2022</a>
+        <a class="year-chip" href="#y2023" data-year="2023">2023</a>
+        <a class="year-chip" href="#y2024" data-year="2024">2024</a>
+        <a class="year-chip" href="#y2025" data-year="2025">2025</a>
+      </div>
+    </nav>
+
+    <p class="status" id="qStatus" aria-live="polite"></p>
+    <div class="no-match" id="noMatch" hidden>No question found. Try another word.</div>
+
+    <!-- ===== 2018 ===== -->
+    <section class="exam" id="y2018" data-year="2018" aria-labelledby="h2018">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka — First Year B.S (Hons.)- 2018 (7 Affiliated College)</p>
+        <p class="dept">Subject: Physics</p>
+        <p class="subject">Course Title: Introduction to Computer and Programming | Course Code: PHA-104</p>
+        <h2 class="exam-name" id="h2018">পরীক্ষা-২০১৮</h2>
+        <p class="meta"><span>Time: 3hr</span><span>Full marks: 80</span></p>
+        <p class="instruction">N.B: Attempt any five question</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 01</span></span></h3>
+        <ol class="parts">
+          <li>ALU কী? কি উটাের এর কায ণািল বণ না কর। <span class="en">[What is ALU? Explain its functionality in a computer.]</span></li>
+          <li>অপােরিটং িসে ম বলেত কী বঝায়? বত মােন চিলত পাচিট অপােরিটং িসে েমর নাম লখ। ইউিন অপােরিটং িসে েমর সিবধা ও অসিবধাসমহ লখ। <span class="en">[What is meant by an operating system? Name five operating systems that are used now-a-days. Write down the merits and demerits of UNIX operating system.]</span></li>
+          <li>ক াশ মেমাির কী? কি উটাের ক ােশ মেমাির ব বহােরর েয়াজনীয়তা কী? <span class="en">[What is cache memory? what is the purpose of using cache memory in a computer?]</span></li>
+          <li>অ াি েকশন সফটওয় ার সং ািয়ত কর। অ াি েকশন সফটওয় ার এবং িসে ম সফটওয় ােরর মেধ পাথ ক লখ। <span class="en">[Define application software. Write down the differences between application software and system software.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 02</span></span></h3>
+        <ol class="parts">
+          <li>একিট িডিজটাল িসে েমর ভল সনা করেণর সমতা প িত ব াখ া কর। <span class="en">[Explain the parity method of error detection in digital system.]</span></li>
+          <li>মেন কর একিট াহক য একিট রক য থেক িনেচর উপা েলা হণ করেলা : <span class="chem-line">0 1 0 0 1 0 0 0 1 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 1 0 0</span> াহক য এই উপাে কী ধরেনর ভল িনণ য় করেত পারেব? সমতা প িত কন একই সােথ দইটা ভল িনধ ারণ করেত পাের না? <span class="en">[Suppose that the receiver received the following data from the transmitter: 0 1 0 0 1 0 0 0 1 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 1 0 0 What errors recover determine in these received data? Why can't the parity methods detect a double error in transmitted can the data?]</span></li>
+          <li>িনেচর রািশমালােক বিলয়ান বীজগিণেতর মাধ েম সহজীকরণ কর: X = ð´ + ðµð¶ ðµ + ð´ ⋅ ðµ <span class="en">[Simplify the following expressions using Boolean algebra: X = ð´ + ðµð¶ ðµ + ð´ ⋅ ðµ ]</span></li>
+          <li>িনেচর রািশমালােক লিজক গেট বা বায়ন কর: ð = ð´ + ðµ + ð¶ + ð· ⋅ ðµ + ð¶ + ð´ ⋅ ðµ ⋅ ð¸ + ð· . <span class="en">[Implement the following expressions in logic gates: ð = ð´ + ðµ + ð¶ + ð· ⋅ ðµ + ð¶ + ð´ ⋅ ðµ ⋅ ð¸ + ð· .]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 03</span></span></h3>
+        <ol class="parts">
+          <li>লিজক গইট কী? ইহা কত কার ও কী কী? আেলাচনা কর। <span class="en">[What is a logic gate? How many types of logic gates are there and what are they? Discuss those.]</span></li>
+          <li>কি উটার িডজাইেন বাইনাির সংখ া প িত ব বহােরর কারণ কী? ব াখ া কর। <span class="en">[What are the reasons behind the use of binary numbers in computer design? Explain.]</span></li>
+          <li>িড-মরগ ােনর উপপাদ দইিট লখ। সত ক সারিণর মাধ েম উপপাদ দইিট মাণ কর। <span class="en">[State the two De-Morgan's theorems and prove them using truth tables.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 04</span></span></h3>
+        <ol class="parts">
+          <li>িতনিট ি প- প ব বহার কের ধমা 000 হেত 110 গণনা করা যায়, এমন একিট সমা রাল গণক িডজাইন কর। উপয ক িসগন াল ব বহার কের এই গণেকর কায ণািল ব াখ া কর। <span class="en">[Design a parallel counter with three flip-flops which can count from 000 to 110 only. Explain the operation of this counter with appropriate clock signal.]</span></li>
+          <li>একিট ৮ মেডর সমলয় আপ/ডাউন গণেকর িচ অ ন কর। গণকিটর কায ণািল বণ না কর যন এক অেধ ক সময় এিট আপ গণক িহেসেব কাজ কের এবং বািক এক অেধ ক সময় এিট ডাউন গণক িহেসেব কাজ কের। <span class="en">[Draw a mod-8 synchronous up/down counter. Explain the operation of the counter in which for half of the clock pulse the counter count up and for the other half of the pulse, the counter counts down.]</span></li>
+          <li>লিজক গইেটর মাধ েম একিট ফল অ াডার গঠন কর এবং ফল অ াডার িহেসেব এর কায ণািল ব াখ া কর। <span class="en">[Construct a full-adder circuit with logic gate and explain its operation as a full-adder circuit.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 05</span></span></h3>
+        <ol class="parts">
+          <li>উ েরর ভাষা এবং িন েরর ভাষার মেধ পাথ ক লখ। <span class="en">[Write down the differences between a high-level language and a low-level language.]</span></li>
+          <li>হডার ফাইল কী? #include এর কাজ কী? <span class="en">[What is a header file? What does #include do?]</span></li>
+          <li>নমে ইস কী? C++ এ নমে ইস ব বহােরর িবিভ প িতসমহ লখ। <span class="en">[What is a namespace? Discus the different ways to use namespace in C++?]</span></li>
+          <li>চলক কী? double চলক এবং float চলেকর মেধ পাথ ক কী? <span class="en">[What is a variable? What is the difference between a double type of variable and a float type of variables?]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 06</span></span></h3>
+        <ol class="parts">
+          <li>বক, চলক এবং কী ওয়াড স েক সংে েপ আেলাচনা কর। <span class="en">[Describe briefly about constants, variables and keywords.]</span></li>
+          <li>ফাংশন এবং ফাংশন ােটাটাইপ স েক সংে েপ আেলাচনা কর। <span class="en">[Describe briefly about function and function prototype.]</span></li>
+          <li>ফাংশন ব বহার কের একিট ধনা ক পণ সংখ ার ফ াে ািরয়াল িনণ য় করার একিট িস া াম লখ। <span class="en">[Write a C program to find the factorial of a positive integer.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 07</span></span></h3>
+        <ol class="parts">
+          <li>সং া লখ: অ ািরথেমিটক অপােরটর; ইউনাির অপােরটর; লিজক াল অপােরটর। <span class="en">[Define: Arithmetic operator; Unary operator; logical operator;]</span></li>
+          <li>িতনিট সংখ া থেক বড় সংখ ািট বর করার একিট অ ালগিরদম ও াচাট তির কর। <span class="en">[Write an algorithm and flowchart to find the largest of three numbers.]</span></li>
+          <li>একিট বে র ফল বর করার জন িস া াম তির কর। <span class="en">[Write a C program to find out the area of a circle.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 08</span></span></h3>
+        <ol class="parts">
+          <li>অ াের ব বহােরর সিবধা ও অসিবধা েলা লখ। <span class="en">[Write down the advantages and disadvantages of the use of an array.]</span></li>
+          <li>1 + 2 + 3 + 4 + .... + N এই ধারািটর যাগফল বর করার জন একিট অ ালগিরদম ও াচাট তির কর। <span class="en">[Write the algorithm and flowchart to find the sum of the following series: 1 + 2 + 3 + 4 + ... + N.]</span></li>
+          <li>একিট ি ঘাত সমীকরেণর বা ব মল িনণ য় করার জন িস া াম লখ। <span class="en">[Write a C program to find out the real roots of a quadratic equation.]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2019 ===== -->
+    <section class="exam" id="y2019" data-year="2019" aria-labelledby="h2019">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka — First Year B.S (Hons.)- 2019 (7 Affiliated College)</p>
+        <p class="dept">Subject: Physics</p>
+        <p class="subject">Course Title: Introduction to Computer and Programming | Course Code: PHA-104</p>
+        <h2 class="exam-name" id="h2019">পরীক্ষা-২০১৯</h2>
+        <p class="meta"><span>Time: 3hr</span><span>Full marks: 80</span></p>
+        <p class="instruction">N.B: Attempt any five question</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 01</span></span></h3>
+        <ol class="parts">
+          <li>অ ানালগ এবং িডিজটাল রািশর মেধ উদাহরণ সহ পাথ ক িলখ। অ ানালগ ইনপট এবং আউটপট ব বহােরর সময় িডিজটাল প িতর সিবধা পেত েয়াজনীয় ধাপ েলা িলখ। <span class="en">[Write the differences between analog and digital quantities with examples. Write the necessary steps to take advantage of digital techniques when dealing with analog inputs and outputs.]</span></li>
+          <li>একিট দশিমক সংখ ােক বাইনারীেত পা র করেত পনরাবি ক ভাগ প িতর জন একিট াচাট তরী কর। 275 ক বাইনারীেত পা র কর। <span class="en">[Design 275 a flowchart to convert a decimal number to binary number by repeated division method. Convert to binary.]</span></li>
+          <li>িনে র ASCII কাড তথ িট একিট কি উটােরর ধারাবািহক মেমারীেত সংরি ত আেছ: 01000001 01010011 01000011 01001001 01001001 তথ িট িক? [ASCII কােড A থেক Z হ ােডিসমাল 41 থেক 5A এবং a থেক z হ ােডিসমাল 61 থেক 7A ারা কাশ করা হয়] <span class="en">[(The following ASCII code message is stored in successive memory locations in a computer: 01000001 01010011 01000011 01001001 01001001 What is the message? [Remember in standard ASCII codes the A-to-Z characters range from 41 to 5A and a to z characters range from 61 to 7A in hexadecimal.]</span></li>
+          <li>সরাসির বাইনারী কািডং এবং বাইনারী কােডড ডিসমাল এর মেধ পাথ ক িক? Convert 851 to BCD. <span class="en">[What is the difference between straight binary coding and Binary Coded Decimal (BCD)? Convert 851 to BCD.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 02</span></span></h3>
+        <ol class="parts">
+          <li>একিট বাইনারী সংখ ার 2's কমি েম েপর বণ না দাও। ৪-িবট ব বহার কের িনে া ি য়া ণালী েলা 2's কমি েম প িতেত সমাধান কর। ফলাফল েলা িচ য বাইনারী সংখ া এবং দশিমক মােন কাশ কর (i) (-25) - (+26), (ii) (+17) + (-32) and (iii) (+122) + (+22) যিদ ি য়া ণালী পেরা স করেত কান সমস া পাওয়া যায় তেব তা িচি ত কর। িটিট িকভােব সমাধান করা যায়? <span class="en">[(a) Describe 2s complement form of a binary number. Perform the following in the 2s complement system by using 8-bits (including the sign bit). Express the results as signed binary numbers and as decimal values : (i) (-25) - (+26), (ii) (+17) + (-32) and (iii) (+122) + (+22). If there is any error then identify the type of the error. How can the error be corrected?]</span></li>
+          <li>িনে া দশিমক সংখ া েলােক BCD ত পা র কের যাগ কর: (i) 998+118 and (ii) 623+599 <span class="en">[Add the following decimal numbers after converting each to its BCD: (i) 998+118 and (ii) 623+599]</span></li>
+          <li>A, B, এবং C ইনপট স একিট লিজক বত নী গঠন কর যার আউটপট লিজক াল হাই হেব যখন তার সংখ াগির ইনপট হাই হয়। <span class="en">[Design a logic circuit with inputs A, B and C and whose output is high only when a majority of the inputs are high.]</span></li>
+          <li>িনে া িচে র আউটপটেক িড-মগ ােনর উপপাদ িল ব বহার কের সরলীকরণ কর। <span class="en">[Use DeMorgans theorems to simplify the expression for the output of the following figure.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 03</span></span></h3>
+        <ol class="parts">
+          <li>হাফ অ াডার িক? সত কসারণী এবং বত নীিচ সহ হাফ অ াডার ব াখ া কর। <span class="en">[What is Half-Adder? Discuss Half-Adder with truth table and circuit diagram.]</span></li>
+          <li>িনেচর রািশমালেক বিলয়ান বীজগিণেতর মাধ েম সহজীকরণ কর ð = ð´ + ð´ðµð¶ + ð´ðµC ð´C + ðµC) <span class="en">[Simplify the following expression using Boolean algebra ð = ð´ + ð´ðµð¶ + ð´ðµC ð´C + ðµC) ]</span></li>
+          <li>সিঠক বত নী এবং সত ক সারণীসহ XOR এবং X-NOR গইেটর বণ না দাও। <span class="en">[Describe X-OR and X-NOR gate with logic circuit and truth table.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 04</span></span></h3>
+        <ol class="parts">
+          <li>NAND এবং NOR গইটেক সাব জনীন গইট বলা হয় কন? ব াখ া কর। <span class="en">[Explain why, NAND and NOR gate are called universal gate.]</span></li>
+          <li>একিট JK ি প পেক িকভােব T ি প প এবং D ি প প এ পা িরত করা যায় বণ না কর। <span class="en">[Describe how to convert a JK flip-flop into T and D flip-flop.]</span></li>
+          <li>িসনে ানাস এবং অ ািসনে ানাস কাউ ােরর মেধ পাথ ক িলখ। <span class="en">[Distinguish between synchronous and asynchronous counter.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 05</span></span></h3>
+        <ol class="parts">
+          <li>একিট টেম ক বলেত িক বঝায়? িনে া া ােম ফললেপর টেম ক সহ এবং টেম ক ছাড়া আউটপট িক হেব? <span class="en">[What is meant by a statement block? Write the output of the following program for both with and without (given) a statement block after the for loop.]</span></li>
+          <li>একিট C++ া াম িলখ যা থম 20 িট িফেবানাি সংখ া তরী করেত পাের। <span class="en">[Write a C++ program to generate first 20 Fibonacci numbers.]</span></li>
+          <li>িরটান টাইপ ফাংশন ও ভেয়ড টাইপ ফাংশেনর মেধ পাথ ক িলখ। া ােম ফাংশন ব বহােরর সিবধা সমহ িক িক? একিট ফাংশন িড ােরশন কােডর কাথায় থাকেব? <span class="en">[Write the difference between return type function and void function. What are the advantages of using functions in C++ programs? Where can the declaration of a function be placed?]</span></li>
+          <li>C++ এ rand() এবং srand() এর ব বহার িল িলখ। 0 এবং 1 এর মেধ 20 িট random সংখ া তরীর জন একিট কাড িলখ। <span class="en">[Write the uses of rand() and srand() in C++. Write a C++ program to generate 20 random numbers between 0 and 1.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 06</span></span></h3>
+        <ol class="parts">
+          <li>এ ে শন ও টেম স েক সংে েপ আেলাচনা কর। অ াের ব বহােরর সিবধা ও অসিবধা েলা িলখ। <span class="en">[Discuss in short about expression and statement. Write down the advantages and disadvantages of the use of array.]</span></li>
+          <li>িস-ে া ািমং ভাষার বিশ এবং ব বহার আেলাচনা কর। <span class="en">[Discuss the characteristics and use of C-programming language.]</span></li>
+          <li>অ ািরথেমিটক অপােরটর িক? িবিভ কার অ ািরথেমিটক অপােরটেরর ব বহার িলখ। <span class="en">[What is arithmetic operator? Write down the use of different type of arithmetic operators.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 07</span></span></h3>
+        <ol class="parts">
+          <li>for, while, এবং do while লপ টেম এর গঠন ব াখ া কর। <span class="en">[Explain the structure of a for, while, and do..while loop.]</span></li>
+          <li>লাইে রী ফাংশন এবং ইউসার িডফাইনড ফাংশন ব াখ া কর। ফাংশেনর িবিভ অংশ িল িক িক? <span class="en">[Explain the library function and user defined function. What are the different parts of a function?]</span></li>
+          <li>িডফ আ েম ব বহােরর িনয়মাবলী উে খ কর। <span class="en">[Mention the user rules of a default argument.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 08</span></span></h3>
+        <ol class="parts">
+          <li>অ াের িক? C++ এ অ াের ব বহােরর সিবধা িক? C++ এ অ াের িড ােরশন িসনট া িলখ। <span class="en">[What is an array and what are advantages of using arrays in C++? Write the array declaration syntax in C++.]</span></li>
+          <li>একিট C++ া াম িলখ যা n পণ সংখ া পড়েব এবং িবপরীত েম ি করেব। <span class="en">[Write a C++ program that reads n integer numbers and then prints them in reverse order.]</span></li>
+          <li>বাবলসট অ ালগিরদম িক? একিট C++ ফাংশন (sort(int a[], int n) িলখ যা একিট অ ােরর n উপাদানেক বাবলসট করেত পাের। <span class="en">[What is bubble sort algorithm? Write a C++ function void sort(int a[], int n) that sorts the n elements of an array a[] by using the bubble sort algorithm.]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2020 ===== -->
+    <section class="exam" id="y2020" data-year="2020" aria-labelledby="h2020">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka — First Year B.S (Hons.)- 2020 (7 Affiliated College)</p>
+        <p class="dept">Subject: Physics</p>
+        <p class="subject">Course Title: Introduction to Computer and Programming | Course Code: PHA-104</p>
+        <h2 class="exam-name" id="h2020">পরীক্ষা-২০২০</h2>
+        <p class="meta"><span>Time: 3hr</span><span>Full marks: 80</span></p>
+        <p class="instruction">N.B: Attempt any four question</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 01</span></span></h3>
+        <ol class="parts">
+          <li>ALU কী? ইহার কায ণািল বণ না কর। <span class="en">[What is ALU? Explain the working principle of a ALU.]</span></li>
+          <li>ক াশ মমির কী? কি উটাের ক াশ মমির ব বহােরর েয়াজনীয়তা কী? <span class="en">[What is chache memory? What is the purpose of using chache memory in a computer?]</span></li>
+          <li>এি েকশন স ওয় ার ও িসে ম স ওয় ােরর মেধ পাথ ক লখ। <span class="en">[What is the difference between application software and system software.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 02</span></span></h3>
+        <ol class="parts">
+          <li>২ এর পিরপরক প িতেত (10101) থেক (1101) িবেয়াগ কর। <span class="en">[Subtract (10101) from (1101) using 2's complement method.]</span></li>
+          <li>লিজক গইট সমহ ব বহার কের একিট ফল অ াডার গঠন কর এবং এর কায ণািল ব াখ া কর। <span class="en">[Construct a full-adder circuit using logic gates and explain its working principles.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 03</span></span></h3>
+        <ol class="parts">
+          <li>SR ি প েপর সীমাব তা কী? কীভােব একিট অিত ম করা যায়? <span class="en">[What is the drawback of SR flipflop? How to overcome it?]</span></li>
+          <li>িতনিট ি প প ব বহার কের ০০০ হেত ১১০ পয গণনা করা যায় এমন একিট গণক িডজাইন কর। উপয ক িসগন ােলর মাধ েম এই গণেকর কায ণািল ব াখ া কর। <span class="en">[Design a parallel counter which can count only from 000 to 110 by using three filp-flop. Explain the operation of this flip-flop by using appropriate clock signal.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 04</span></span></h3>
+        <ol class="parts">
+          <li>NAND এবং NOR গইটেক সাব জনীন গইট বলা হয় কন? ব াখ া কর। <span class="en">[Explain why NAND and NOR gates are called universal gate?]</span></li>
+          <li>F = ð´.ð¶ .(ðµð¶). ð¹.(ð·ð¸) সমীকরণিটেক ধমা NOR গেটর মাধ েম বা বায়ন কর। <span class="en">[Implement the expression F = ð´.ð¶ .(ðµð¶). ð¹.(ð·ð¸) by using NOR gate only.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 05</span></span></h3>
+        <ol class="parts">
+          <li>িতনিট সংখ া থেক বড় সংখ ািট বর করার একিট অ ালগিরদম ও াচাট তির কর। <span class="en">[Write an algorithm and construct a flow-chart to find the largest number among three given numbers.]</span></li>
+          <li>হডার ফাইল কী? া ােম &lt;iostream&gt; হডার ফাইলিটর কাজ কী? <span class="en">[What is a header-file? what does &lt;iostream&gt; do in a code?]</span></li>
+          <li>ডবল চলক এবং াট চলেকর মেধ পাথ ক লখ। <span class="en">[Write down the difference between double variable and float variable.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 06</span></span></h3>
+        <ol class="parts">
+          <li>একিট বে র ফল বর করার জন িস া াম তির কর। <span class="en">[Write a C program to find out the area of a circle.]</span></li>
+          <li>া ািমং-এ ফাংশন কী? ফাংশন কয় ধরেনর? উদাহরণসহ আেলাচনা কর। <span class="en">[What is function in Programming language? Discuss different types of functions with examples.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 07</span></span></h3>
+        <ol class="parts qlist">
+          <li><span class="qn">৭.</span> অ াের কী? িস++ ভাষায় একিট কাড িলখ যা দইিট ৩ × ৩ ম াি েক ণ করেত পাের। <span class="en">[What is an array? Write a code in C++ that can multiply two 3 × 3 matrixes.]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2021 ===== -->
+    <section class="exam" id="y2021" data-year="2021" aria-labelledby="h2021">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka — First Year B.S (Hons.)- 2021 (7 Affiliated College)</p>
+        <p class="dept">Subject: Physics</p>
+        <p class="subject">Course Title: Introduction to Computer and Programming | Course Code: PHA-104</p>
+        <h2 class="exam-name" id="h2021">পরীক্ষা-২০২১</h2>
+        <p class="meta"><span>Time: 3hr</span><span>Full marks: 80</span></p>
+        <p class="instruction">N.B: Attempt any five question</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 01</span></span></h3>
+        <ol class="parts">
+          <li>কি উটােরর কান জে অধ পিরবাহী ানিজ র-এর ব বহার হয়? ঐ জে র কি উটােরর পাচিট বিশ লখ। <span class="en">[Which generation of computer started using semiconductor transistor? Write five characteristics of that generation computer.]</span></li>
+          <li>একিট মাইে া কি উটােরর ক ডায়া াম এেক এর িবিভ অংেশর কায াবিল বণ না কর। <span class="en">[Draw the block diagram of a micro-computer and describe the working operation of the different parts of it.]</span></li>
+          <li>RAM এবং ROM কােক বেল? এেদর মেধ পাথ ক লখ। অপােরিটং িসে ম কী ব াখ া কর। <span class="en">[What are RAM and ROM? Differentiate between RAM and ROM. Explain the operating system.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 02</span></span></h3>
+        <ol class="parts">
+          <li>জাড় সমতা এবং িবেজাড় সমতা বলেত কী বঝ? িডিজটাল প িতর ভল সনা করেণ সমতা প িত উদাহরণ সহকাের ব াখ া কর। <span class="en">[What do you mean by even parity and odd parity? Explain the parity method of error detection in digital system with examples.]</span></li>
+          <li>দই ইনপটিবিশ NAND গট থেক কীভােব একিট দই ইনপটিবিশ NOR গট তির করা যায় দখাও। <span class="en">[Show how a two-input NOR gate can be constructed from a two-input NAND gate.]</span></li>
+          <li>বিলয়ান বীজগিণত ব বহার কের S = A + B . A.(B + A) রািশিটেক সরলীকরণ কর। <span class="en">[Simplify the expression S = A + B . A.(B + A) using Boolean algebra.]</span></li>
+          <li>একিট লিজক সািক ট িডজাইন কর যখােন আউটপট 1 হেব যখন ইহার িতনিট ইনপটই একই লিজক লেভেল থাকেব। <span class="en">[Design a circuit that produces output level 1 only when all three inputs are at the same level.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 03</span></span></h3>
+        <ol class="parts">
+          <li>মিশন ভাষা, অ ােস িল ভাষা এবং উ েরর ভাষা কী? এেদর সিবধা এবং অসিবধা আেলাচনা কর। <span class="en">[What is machine language, assembly language and high level language? Discuss their advantages and disadvantages.]</span></li>
+          <li>াচাট কী? াচাট তিরর প িত আেলাচনা কর। <span class="en">[What is a flow chart? Discuss the method of flowchart making.]</span></li>
+          <li>অ ালগিরদম কী? 1 + 2 + 3 + 4+.........+N এই ধারািটর যাগফল বর করার জন একিট অ ালগিরদম ও াচাট তির কর। <span class="en">[What is Algorithm? Write the algorithm and flowchart to find the sum of the series: 1 + 2 + 3 + 4+.........+N]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 04</span></span></h3>
+        <ol class="parts">
+          <li>দই এর পিরপরক প িত ব বহার কের িনে া কায াসমহ স াদন কর: (i) +8 এর সােথ +7 যাগ কর। (ii) +18 এর সােথ −26 যাগ কর। (iii)−38 থেক − 16 িবেয়াগ কর। <span class="en">[Perform the following operations in the 2's complement system. (i) Add +8 with +7, (ii) Add +18 with −26, (iii) Substruct −38 with −16]</span></li>
+          <li>িতনিট ি প- প ব বহার কের ০০০ হেত ১১০ পয গণনা করা যায় এমন একিট সমা রাল গণক িডজাইন কর। উপয ক িসগন ােলর মাধ েম এই গণেকর কায ণািল ব াখ া কর। <span class="en">[Design a parallel counter which can count only from 000 to 110 by using three flip-flops. Explain the operation of this flip-flop by using appropriate clock signal.]</span></li>
+          <li>একিট ৩-িবট রিজ ার থেক আেরকিট ৩-িবট রিজ ার J-K ি প- প ব বহার কের কীভােব িসনে ানাস সমা রাল ডাটা া ফার করা যায় তার সািক ট অ ন কর। <span class="en">[Draw a circuit diagram for the synchronous parallel transfer of data from one three-bit register to another using J-K flip-flops.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 05</span></span></h3>
+        <ol class="parts">
+          <li>িস ++ া ােম কয় ধরেনর ডাটা ব বহার করা যায় উদাহরণসহ আেলাচনা কর। <span class="en">[What are the different types of data used in C++? Describe with examples.]</span></li>
+          <li>অ াসাইনেম অপােরটর এবং সমতা অপােরটেরর মেধ পাথ ক কী? <span class="en">[What is the difference between assignment operator and equality operator?]</span></li>
+          <li>হডার ফাইল কী? &lt;iostream&gt;, &lt;cmath&gt;, &lt;fstream&gt; and &lt;cstdlib&gt; হডার ফাইল েলার ব বহার উে খ কর। <span class="en">[What is a header file? Write down the use of the following header files : &lt;iostream&gt;, &lt;cmath&gt;, &lt;fstream&gt; and &lt;cstdlib&gt;.]</span></li>
+          <li>িস++ া ােম আউটপট ডাটা কীভােব ফাইেল লখা হয় উদাহরণসহ আেলাচনা কর। একিট কাড িলেখ দখােত হেব। <span class="en">[Describe with example, how to write the output data in a file in C++ program. (You need to write a code for this)]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 06</span></span></h3>
+        <ol class="parts">
+          <li>ক. া ােম লপ কােক বেল? িস++ ভাষায় িবিভ কার লেপর গঠন ণািল বণ না কর। <span class="en">[What is loop in a program? Discuss the construction of different types of loop in C++ language.]</span></li>
+          <li>নে ড লপ কী? উদাহরণসহ ব াখ া কর। <span class="en">[What is nested loop? Describe with example.]</span></li>
+          <li>১ থেক ১০০০ পয পণ সংখ া েলার বেগ র যাগফল িনণ য় করার জন িস++ ভাষা ব বহার কের িতনিট লপ ব বহার কের িতনিট আলাদা আলাদা কাড লখ। <span class="en">[Write three codes by using three different loops in C++ language that can add the square of all the integers between 1 and 1000.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 07</span></span></h3>
+        <ol class="parts">
+          <li>টেম কী? কে াল টেম -এর িণিবভাগ আেলাচনা কর। <span class="en">[What is a statement? Discuss the classification of control statement.]</span></li>
+          <li>একিট ি ভেজর ফল ও পিরসীমা বর করার একিট অ ালগিরদম ও াচাট তির কর। <span class="en">[Write an algorithm and draw a flowchart to find the area and the perimeter of a triangle.]</span></li>
+          <li>ফাংশন ব বহার কের একিট ধনা ক পণ সংখ ার ফ াে ািরয়াল িনণ য় করার একিট িস-ে া াম লখ। <span class="en">[Write a C program to find the factorial of a positive integer.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 08</span></span></h3>
+        <ol class="parts">
+          <li>রকারিসভ ফাংশন কী? কান ধরেনর সমস া সমাধােন রকারিসভ ফাংশন ব বহার করা যায়? <span class="en">[What is recursive function? What type of problems can be solved by using recursive function?]</span></li>
+          <li>িস ++ ভাষায় একিট রকারিসভ ফাংশন লখ যা থম ১০িট িফেবানাি সংখ া িরটান করেব। <span class="en">[Write a recursive function in C++ that can return 1st 10 Fibonacci numbers.]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2022 ===== -->
+    <section class="exam" id="y2022" data-year="2022" aria-labelledby="h2022">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka — First Year B.S (Hons.)- 2022 (7 Affiliated College)</p>
+        <p class="dept">Subject: Physics</p>
+        <p class="subject">Course Title: Introduction to Computer and Programming | Course Code: PHA-104</p>
+        <h2 class="exam-name" id="h2022">পরীক্ষা-২০২২</h2>
+        <p class="meta"><span>Time: 3hr</span><span>Full marks: 80</span></p>
+        <p class="instruction">N.B: Attempt any five question</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 01</span></span></h3>
+        <ol class="parts">
+          <li>অ াে স টাইম কী? উ ায়ী মমিরর সং া দাও। <span class="en">[What is access time? Define volatile memory.]</span></li>
+          <li>আভ রীণ মমির অংেশর সােথ িসিপইউ িকভােব সংয থােক বণ না কর। <span class="en">[Describe how an internal memory is being connected to the CPU?]</span></li>
+          <li>িসিপইউ যখন মমির থেক কােনা তথ পেড় তার ধাপ েলা বণ না কর। <span class="en">[Describe the steps to read date from memory by the CPU.]</span></li>
+          <li>ক াশ মমির ব বহােরর ধান কারণ েলা কী কী? <span class="en">[What are the main reasons of using cache memory.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 02</span></span></h3>
+        <ol class="parts">
+          <li>ð = ð´ + ðµ + ð¶ + ð· . ðµ + ð¶ + ð´.ðµ ð¶ + ð· সমীকরণিট লিজক গইেটর মাধ েম কাশ কর। <span class="en">[Implement the following expression by logic gates ð = ð´ + ðµ + ð¶ + ð· . ðµ + ð¶ + ð´.ðµ ð¶ + ð· ]</span></li>
+          <li>দই-ইনপট িবিশ NAND গইট থেক িকভােব একিট দই-ইনপট িবিশ NOR গইট তির করা যায় দখাও। <span class="en">[Show how a two-input NOR gate can be constructed from a two-input NAND gate.]</span></li>
+          <li>দখাও য ধমা NOR গইট ব বহার কের যেকােনা বিলয়ান অপােরশন করা যায়। <span class="en">[Show that NOR gates can be arranged to implement any Boolean oprations.]</span></li>
+          <li>লিজক গইট ব বহার কের এ িসভ-নর অপােরশন করা যায় এমন একিট সািক ট িডজাইন কর। <span class="en">[Design a circuit using logic gates that can perform the Exclusive-NOR operation.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 03</span></span></h3>
+        <ol class="parts">
+          <li>সত ক সারণী সহ S-R ি প েপর কায নীিত বণ না কর। <span class="en">[Explain the working principle of a S-R flip flop with truth table.]</span></li>
+          <li>অপােরিটং িসে ম বলেত কী বঝ? বত মােন ব ব ত পাচিট অপােরিটং িসে েমর নাম লখ। িলনা অপােরিটং িসে েমর সিবধা ও অসিবধাসমহ লখ। <span class="en">[What is meant by an operating system? Name five operating systems that are used now-a-days. Write down the merits and demerits of LINUX operating system.]</span></li>
+          <li>লিজক গইেটর সাহােয পণ েযােগর বত নী তির কর এবং এর কায নীিত বণ না কর। <span class="en">[Construct a full adder circuit with logic gates and explain its operation as a full-adder circuit.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 04</span></span></h3>
+        <ol class="parts">
+          <li>িস ও িস++ ভাষার মেধ পাথ ক সমহ লখ। <span class="en">[Write down the differences between C and C++ language.]</span></li>
+          <li>রম কী? িবিভ কার রেমর নাম লখ এবং সংে েপ এেদর বণ না দাও। <span class="en">[What is ROM? Mention the different types of ROM and give its brief description.]</span></li>
+          <li>চলক কী? ডাবল ও াট টাইপ চলেকর মেধ পাথ ক সমহ লখ। <span class="en">[What is variable? What is the difference between a double and a float type of variable?]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 05</span></span></h3>
+        <ol class="parts">
+          <li>বক ও কীওয়াড স েক সংে েপ আেলাচনা কর। <span class="en">[Describe briefly about constants and keywords.]</span></li>
+          <li>ফাংশন ও ফাংশন ােটাটাইপ স েক সংে েপ আেলাচনা কর। <span class="en">[Describe briefly about function and function prototype.]</span></li>
+          <li>একিট ধনা ক সংখ ার ফ া িরয়াল িনণ েয়র জন C/C++ ভাষায় া াম লখ। <span class="en">[Write a C/C++ program to find the factorial of a positive interger.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 06</span></span></h3>
+        <ol class="parts">
+          <li>সং া লখ: (i) গািণিতক অপােরটর, (ii) ইউনাির অপােরটর, (iii) লিজক াল অপােরটর। <span class="en">[Define: (i) Arithmetic operator, (ii) Unary operator, (iii) Logical operator.]</span></li>
+          <li>িতনিট সংখ ার মেধ বহ ম সংখ ািট বর করার অ ালগিরদম ও াচাট লখ। <span class="en">[Write an algorithm and flowchart to find the largest of three numbers.]</span></li>
+          <li>বে র ফল িনণ য় করার জন C/C++ ভাষায় া াম লখ। <span class="en">[Write C/C++ program to find out the area of a circle.]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 07</span></span></h3>
+        <ol class="parts">
+          <li>া ােম লপ কােক বেল? িস++ ভাষায় িবিভ কার লেপর গঠন ণািল বণ না কর। <span class="en">[What is loop in a program? Discuss the construction of different types of loop in C++ language.]</span></li>
+          <li>নে ড লপ কী? উদাহরণ সহ ব াখ া কর। <span class="en">[What is nested loop? Describe with examples.]</span></li>
+          <li>হডার ফাইল কী? &lt;iostrean&gt;, &lt;cmath&gt;, &lt;stream&gt; and &lt;cstdlib&gt; হডার ফাইল েলার ব বহার উে খ কর। <span class="en">[ What is header file? Write down the use of the following header files: &lt;iostream&gt;, &lt;cmath&gt;, &lt;cstring&gt; and &lt;cstdlib&gt; ]</span></li>
+          <li>িস++ া ােম আউটপট ডাটা িকভােব ফাইেল লখা হয় উদাহরণসহ আেলাচনা কর। (একিট কাড িলেখ দখােত হেব)। <span class="en">[Describe with example, how to write the output data in a file in C++ program. (You need to write a code for this)]</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 08</span></span></h3>
+        <ol class="parts">
+          <li>সিট ং অ ালগিরদম কী? িবিভ কার সিট ং অ ালগিরদম স ে আেলাচনা কর। <span class="en">[What is sorting algotithm? Discuss about different types of sorting algorithm.]</span></li>
+          <li>িস++ ভাষায় একিট কাড িলখ যা বাবল সিট ং ব বহার কের (2, 3, 9, 5, 7, 11, 20, 15, 42, 45) না ার েলােক মােনর উ ম অনসাের সাজােত পারেব। <span class="en">[Write a code in C++ that can use bubble sort algorithm to write the numbers (2, 3, 9, 5, 7, 11, 20, 15, 42, 45) in ascending order.]</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2023 ===== -->
+    <section class="exam" id="y2023" data-year="2023" aria-labelledby="h2023">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka — First Year B.S (Hons.)- 2023 (7 Affiliated College)</p>
+        <p class="dept">Subject: Physics</p>
+        <p class="subject">Course Title: Introduction to Computer and Programming | Course Code: PHA-104</p>
+        <h2 class="exam-name" id="h2023">পরীক্ষা-২০২৩</h2>
+        <p class="meta"><span>Time: 3hr</span><span>Full marks: 80</span></p>
+        <p class="instruction">N.B: Attempt any five question</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 01</span></span></h3>
+        <ol class="parts">
+          <li>What is ALU? Explain its functionality in the Computer. <span class="en">(ALU কী? কি উটাের এর কায কািরতা ব াখ া ক ন।)</span></li>
+          <li>What is a processor? Write the difference between CISC and RISC processors. <span class="en">( েসসর কী? CISC এবং RISC েসসেরর মেধ পাথ ক িলখন।)</span></li>
+          <li>What is RAM? Describe in short of its classification. <span class="en">(RAM কী? এর িণিবভাগ সংে েপ বণ না ক ন।)</span></li>
+          <li>What if Linux? Why is Linux different from other network operating systems? <span class="en">(িলনা কী? কন িলনা অন ান নটওয়াক অপােরিটং িসে ম থেক আলাদা?)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 02</span></span></h3>
+        <ol class="parts">
+          <li>Convert the decimal number 362 to its 8-bit binary representation. Ensure that leading zeros are included if needed. <span class="en">(দশিমক সংখ া ৩৬২ ক এর ৮-িবট বাইনাির পা ের পা র ক ন। েয়াজন হেল শন িল সামেন রাখন।)</span></li>
+          <li>Add the hexadecimal numbers 1F and A5. Then, determine the parity bit for the resulting binary sum using Odd-parity. <span class="en">(েষাড়শ সংখ া িল 1F এবং A5 যাগ ক ন। তারপর, িবেজাড় প ািরিটর জন ফলাফেলর বাইনাির যাগফেলর প ািরিট িবট িনধ ারণ ক ন।)</span></li>
+          <li>Convert the octal number 672 to its ASCII code representation. Additionally, provide the 8-bit BCD code for the decimal equivalent of the octal number. <span class="en">(অ াল সংখ া ৬৭২ ক ASCII কােড পা র ক ন। অিতির ভােব, অ াল সংখ ার দশিমক েপর জন ৮-িবট BCD কাড সরবরাহ ক ন।)</span></li>
+          <li>Subtract 13 from 22 using 2's complement method. <span class="en">(১৩ থেক ২২ িবেয়াগ ক ন ২ এর কমি েম প িত ব বহার কের।)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 03</span></span></h3>
+        <ol class="parts">
+          <li>Simplify the circuit below. <span class="en">(িনেচর সািক টিট সরলীকরণ ক ন।)</span></li>
+          <li>Explain Half and full adder circuits with appropriate circuit diagrams and boolean expressions of their circuit. <span class="en">(হাফ এবং ফল অ াডার সািক ট ব াখ া ক ন উপয সািক ট িচ এবং তােদর সািক েটর বিলয়ান অিভব ি সহ।)</span></li>
+          <li>Explain why NAND and NOR gates are called universal gates. <span class="en">( কন NAND এবং NOR গট িল সাব জনীন গট বলা হয় তা ব াখ া ক ন।)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 04</span></span></h3>
+        <ol class="parts">
+          <li>Describe the difference between synchronous and Asynchronous counters. <span class="en">(িসনে ানাস এবং অ ািসনে ানাস কাউ ার িলর মেধ পাথ ক বণ না ক ন।)</span></li>
+          <li>Explain the working principle of a JK flip-flop with a truth table. <span class="en">(সত টিবল সহ JK ি প- েপর কােজর নীিত ব াখ া ক ন।)</span></li>
+          <li>Describes the operation of a four-mode ripple counter. <span class="en">(চার-েমাড িরপল কাউ ােরর কায ম বণ না ক ন।)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 05</span></span></h3>
+        <ol class="parts">
+          <li>Write down some features of a very high-level language. <span class="en">(খব উ েরর ভাষার িকছ বিশ িলখন।)</span></li>
+          <li>Distinguish between compiler and interpreter. <span class="en">(ক াইলার এবং ই ারে টােরর মেধ পাথ ক িনধ ারণ ক ন।)</span></li>
+          <li>Write a flow chart, Algorithm, and C/C++ program to find if the given year is a leap year or not. <span class="en">( া চাট , অ ালগিরদম এবং C/C++ া াম িলখন যা িনধ ারণ করেব দ বছরিট িলপ বছর িকনা।)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 06</span> <span class="en">(Consider a scenario where a ball is dropped from a certain height, and with each bounce, it rebounds to a fraction of its previous height. The rebound height is determined by multiplying the previous height by a constant factor, let's say 0.8. / একিট পিরি িত িবেবচনা ক ন যখােন একিট বল একিট িনিদ উ তা থেক পেড়, এবং িতিট বাউে র সােথ এিট আেগর উ তার একিট ভ াংেশ িফের আেস। িরবউ উ তা পব বত ী উ তােক একিট বক মান যমন ০.৮ িদেয় ণ কের িনধ ািরত হয়।)</span></span></h3>
+        <ol class="parts">
+          <li>What is recursion? How does a recursive calling function work? <span class="en">(পনরাবি কী? পনরাবি ডাকার ফাংশনিট কীভােব কাজ কের তা ব াখ া ক ন।)</span></li>
+          <li>Write a C++ program using a recursive function to calculate the total distance traveled by the ball after a specified number of bounces. The user should input the initial drop height and the number of bounces. Write the command to draw the total distance traveled (h) and number of drops (n). Save it to the terminal. <span class="en">(একিট পনরাবি ফাংশন ব বহার কের C++ া াম িলখন যা িনিদ সংখ ক বাউে র পের বেলর মাট অিত া দর গণনা করেব। ব বহারকারী াথিমক প উ তা এবং বাউে র সংখ া ইনপট দেব। মাট অিত া দর (h) এবং েপর সংখ া (n) টািম নােল সংর ণ করেত কমা িলখন।)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 07</span></span></h3>
+        <ol class="parts">
+          <li>Explain the bubble sort algorithm with flow chart in C++. <span class="en">(C++ এ ব দ বাছাই অ ালগিরদমিট াচাট সহ ব াখ া ক ন।)</span></li>
+          <li>Write a C++ code that can rearrange some numbers stored in an array using a bubble sort algorithm. <span class="en">(একিট C++ কাড িলখন যা ব দ বাছাই অ ালগিরদম ব বহার কের একিট অ ােরেত সংরি ত িকছ সংখ া পনিব ন াস করেত পাের।)</span></li>
+          <li>Write a code in C++ that can add all the off-diagonal elements of a 3 × 3 matrix. <span class="en">(একিট C++ কাড িলখন যা ৩×৩ ম াি ে র সম অফ-ডায়ােগানাল উপাদান যাগ করেত পাের।)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 08</span></span></h3>
+        <ol class="parts">
+          <li>What is a function prototype? How are function prototypes declared in a C++ program? <span class="en">(ফাংশন ােটাটাইপ কী? একিট C++ া ােম ফাংশন ােটাটাইপ কীভােব ঘাষণা করা হয়?)</span></li>
+          <li>Write differences between local and global variables. <span class="en">( ানীয় এবং বি ক ভিরেয়বেলর মেধ পাথ ক িলখন।)</span></li>
+          <li>Describe the different methods of declaring string variables. <span class="en">( ি ং ভিরেয়বল ঘাষণা করার িবিভ প িত বণ না ক ন।)</span></li>
+          <li>Explain the structure of "for", "while", and "do while" loops. <span class="en">("for", "while" এবং "do while" লেপর গঠন ব াখ া ক ন।)</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2024 ===== -->
+    <section class="exam" id="y2024" data-year="2024" aria-labelledby="h2024">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni uni-sm">University of Dhaka — First Year B.S (Hons.)- 2024 (7 Affiliated College)</p>
+        <p class="dept">Subject: Physics</p>
+        <p class="subject">Course Title: Introduction to Computer and Programming | Course Code: PHA-104</p>
+        <h2 class="exam-name" id="h2024">পরীক্ষা-২০২৪</h2>
+        <p class="meta"><span>Time: 3hr</span><span>Full marks: 80</span></p>
+        <p class="instruction">N.B: Attempt any five question</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 01</span></span></h3>
+        <ol class="parts">
+          <li>কি উটােরর জ বলেত িক বঝায়? ৪থ জে র কি উটােরর সিবধা এবং অসিবধা েলা িলখ। <span class="en">(What is meant by the generation of computers? Write down the advantages and disadvantages of fourth generation computers.)</span></li>
+          <li>এি েকশন সফটওয় ার ও িসে ম সফটওয় ােরর মেধ পাথ ক িনণ য় কর। মেমাির ইউিনট িক? <span class="en">(Find the differences between application software and system software. What is memory unit?)</span></li>
+          <li>ক াশ মেমাির িক? কি উটাের ক াশ মেমাির ব বহােরর েয়াজনীয়তা িক? <span class="en">(What is cache memory? What is the purpose of using cache memory in computer?)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 02</span></span></h3>
+        <ol class="parts">
+          <li>দশিমক সংখ া -75 ক এর 8-িবট 2-এর পিরপরক বাইনাির প, অ াল প এবং হ ােডিসেমল প-এ পা র কর। <span class="en">(Convert the decimal number -75 into its 8-bit 2's complement binary form, octal form, and hexadecimal form.)</span></li>
+          <li>বাইনাির অপােরশন (1011011) + (1110110) স াদন কর এবং ওভারে া পরী া কর। এছাড়াও 2-এর পিরপরক প িত ব বহার কের (1101100) − (1010110) স াদন কর। <span class="en">(Perform the binary operation (1011011) + (1110110) and check for overflow. Also perform (1101100) − (1010110) using the 2's complement method.)</span></li>
+          <li>একিট BCD অ াডােরর কায প িত উদাহরেণর সাহােয ব াখ া কর, এবং িকছ যাগফেল সংেশাধন কন েয়াজন তা যি সহ ব াখ া কর। <span class="en">(Explain the working principle of a BCD Adder with the help of an example, and justify why correction is required in certain additions.)</span></li>
+          <li>একিট ফল অ াডার বত নী িডজাইন কর এবং এর সত ক সারিণ, বিলয়ান কাশ এবং লিজক ডায়া াম উপ াপন কর। <span class="en">(Design a Full Adder circuit and present its truth table, Boolean expressions, and logic diagram.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 03</span></span></h3>
+        <ol class="parts">
+          <li>িড-মরগােনর দইিট উপপাদ িববত কর এবং সত ক সারিণর মাধ েম উপপাদ দইিট মাণ কর। <span class="en">(State the two De-Morgan's theorems and prove them using truth table.)</span></li>
+          <li>িনেচর রািশিটেক বিলয়ান বীজগিণত ব বহার কের সরলীকরণ কর। ð¹ = ð + ð ðð <span class="en">(Simplify the following expression using Boolean algebra.)</span></li>
+          <li>কি উটার িডজাইেন বাইনাির সংখ া প িত ব বহােরর কারণ ব াখ া কর। <span class="en">(Explain the reasons behind the use of binary numbers in computer design.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 04</span></span></h3>
+        <ol class="parts">
+          <li>লিজক গট ব বহার কের একিট S-R ল ােচর কায প িত ব াখ া কর এবং এর সত ক সারিণ অ ন কর। <span class="en">(Explain the working principle of an S-R latch using logic gates and draw its truth table.)</span></li>
+          <li>ইনপট শত এবং ব বহার অনসাের J-K, D, এবং T ি প- েপর মেধ পাথ ক বণ না কর। <span class="en">(Differentiate between J-K, D, and T flip-flops in terms of input conditions and applications.)</span></li>
+          <li>মা ার-ে ভ ি প- েপর ধারণা ব াখ া কর। ধারাবািহক বত নীেত এিট একিট সাধারণ ি প- েপর চেয় কন বিশ াধান পায়? <span class="en">(Describe the concept of a Master-Slave Flip-Flop. Why is it preferred over a simple flip-flop in sequential circuits?)</span></li>
+          <li>একিট 4-িবট িশফট রিজ ােরর কায প িত ব াখ া কর। ডায়া ােমর মাধ েম দখাও এেত িকভােব ডটা ধারাবািহকভােব ানা িরত হয়। <span class="en">(Explain the operation of a 4-bit shift register. Show with a neat diagram how data is transferred serially in it.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 05</span></span></h3>
+        <ol class="parts">
+          <li>(a) িস এবং িস++ ভাষার মেধ পাথ ক সমহ িলখ। <span class="en">(Find the differences between C and C++ language.)</span></li>
+          <li>চলক িক? ডাবল ও াট িণর চলেকর মেধ পাথ ক সমহ িক িক? <span class="en">(What is variable? What are the differences between a double and a float type of variable?)</span></li>
+          <li>িস++ এ নমে স ব বহােরর িবিভ প িতসমহ িলখ। <span class="en">(Discuss the different ways of using name space in C++.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 06</span></span></h3>
+        <ol class="parts">
+          <li>অ ােস লার, ক াইলার এবং ই ারে টােরর মেধ পাথ ক উদাহরণসহ ব াখ া কর। এেদর েত েক া াম চলাকালীন কীভােব িট মাকােবলা কের তা ব াখ া কর। <span class="en">(Differentiate between an Assembler, Compiler, and Interpreter with examples. Explain how each handles errors during program execution.)</span></li>
+          <li>একিট াচাট অ ন কর এবং একিট অ ালগিরদম িলখ যা একিট পণ সংখ া n পেড় এবং এিট একিট মৗিলক সংখ া িক না তা মি ত কের। <span class="en">(Draw a flowchart and write an algorithm for a program that reads an integer n and prints whether it is a prime number or not.)</span></li>
+          <li>িন িলিখত িস া ােম িতনিট লিজক াল/েসম াি ক িট রেয়েছ। িট েলা সনা কর এবং সংেশাধন কর। সংেশািধত কাডিট িলখ এবং িতিট সংেশাধেনর কারণ ব াখ া কর। <span class="en">(The following C program contains three logical/semantic errors. Identify and correct them. Write the corrected code and explain the reasons for each correction.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 07</span></span></h3>
+        <ol class="parts">
+          <li>একিট বে র ফল িনণ েয়র জন একিট িস া াম িলখ। <span class="en">(Write a C program to find out the area of a circle.)</span></li>
+          <li>সং ািয়ত কর: গািণিতক অপােরটর, ইউনাির অপােরটর, লিজক াল অপােরটর। <span class="en">(Define: Arithmetic operator, Unary operator, Logical operator.)</span></li>
+          <li>নে ড লপ িক? উদাহরণসহ ব াখ া কর। <span class="en">(What is nested loop? Describe with example.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">QUESTION NO 08</span></span></h3>
+        <ol class="parts">
+          <li>অ াের ব বহােরর সিবধা এবং অসিবধাসমহ িলখ। <span class="en">(Write down the advantages and disadvantages of the use of an array.)</span></li>
+          <li>উদাহরণসহ িস++ ফাংশেন পাস বাই ভ াল এবং পাস বাই রফাের এর মেধ পাথ ক ব াখ া কর। এমন একিট পিরি িত আেলাচনা কর যখােন িরকারশেনর চেয় ইটােরশন বিশ াধান পায়। <span class="en">(Explain with examples the difference between pass by value and pass by reference in C++ functions. Discuss one scenario where recursion is preferable over iteration.)</span></li>
+          <li>িন িলিখত া ামিট িরকারশন ব বহার কের একিট সংখ ার ফ াে ািরয়াল গণনা করার উে েশ তির, িক এেত িতনিট িট রেয়েছ (িসনট া , লিজক, এবং ফাংশন ােটাটাইেপর অসাম স )। িট <span class="en">(The following program is meant to calculate the factorial of a number using recursion, but it contains three errors: syntax, logic, and function prototype mismatch. Identify and fix them.)</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 2025 ===== -->
+    <section class="exam" id="y2025" data-year="2025" aria-labelledby="h2025">
+      <p class="compiled">Edited &amp; Compiled by DCU QB Archive Team</p>
+      <header class="paper-head">
+        <p class="uni">Dhaka Central University</p>
+        <p class="dept">Subject: Physics</p>
+        <p class="subject">Course Title: Introduction to Computer and Programming | Course Code: PHA104</p>
+        <h2 class="exam-name" id="h2025">First Year B.Sc (Hons.) Final Examination 2025</h2>
+        <p class="meta"><span>Time: 4 Hours</span><span>Total Marks: 80</span></p>
+        <p class="instruction">[সকল প্রশ্নের মান সমান। যে কোনো পাঁচটি প্রশ্নের উত্তর দাও। (5 × 16 = 80)]</p>
+      </header>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">১।</span></span></h3>
+        <ol class="parts">
+          <li>ক) একটি মাইক্রো কম্পিউটারের ব্লক ডায়াগ্রাম এঁকে এর বিভিন্ন অংশের কার্যাবলি বর্ণনা কর। <span class="en">(Draw the block diagram of a microcomputer and describe the working operation of the different parts of it.)</span></li>
+          <li>খ) RAM ও ROM এর মধ্যে পার্থক্য লেখ। অপারেটিং সিস্টেম কী ব্যাখ্যা কর। <span class="en">(Write down the difference between RAM and ROM. Explain the operating system.)</span></li>
+          <li>গ) সিপিইউ যখন মেমোরি থেকে কোনো তথ্য পড়ে তার ধাপগুলো বর্ণনা কর। <span class="en">(Describe the steps to read data from memory by the CPU.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">২।</span></span></h3>
+        <ol class="parts">
+          <li>ক) মৌলিক লজিক গেইট এর সাহায্যে X-NOR গেইটের বাস্তবায়ন বুলিয়ান বীজগণিতসহ দেখাও। <span class="en">(Demonstrate the implementation of the X-NOR gate using basic logic gates with the Boolean algebra.)</span></li>
+          <li>খ) দুই ইনপুটবিশিষ্ট NAND গেইট থেকে কীভাবে একটি দুই ইনপুটবিশিষ্ট NOR গেইট তৈরি করা যায় দেখাও। <span class="en">(Show how a two-input NOR gate can be constructed from two-input NAND gate.)</span></li>
+          <li>গ) হাফ অ্যাডার কী? সত্যকসারণি এবং বর্তনী চিত্রসহ হাফ অ্যাডার ব্যাখ্যা কর। <span class="en">(What is Half-Adder? Discuss Half-Adder with truth table and circuit diagram.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৩।</span></span></h3>
+        <ol class="parts">
+          <li>ক) নিচের রাশিমালাকে বুলিয়ান বীজগণিতের মাধ্যমে সহজীকরণ কর: X = (A + B + C) BC <span class="en">(Simplify the following expressions using Boolean algebra: X = (A + B + C) BC.)</span></li>
+          <li>খ) লজিক বর্তনী এবং সত্যক সারণিসহ X-OR এবং X-NOR গেইটের বর্ণনা দাও। <span class="en">(Describe X-OR and X-NOR gate with logic circuit and truth table.)</span></li>
+          <li>গ) NAND এবং NOR গেইটকে সার্বজনীন গেইট বলা হয় কেন? ব্যাখ্যা কর। <span class="en">(Explain why NAND and NOR gate are called universal gate.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৪।</span></span></h3>
+        <ol class="parts">
+          <li>ক) মেশিন ভাষা, অ্যাসেম্বলি ভাষা ও উচ্চ স্তরের ভাষা কী? এদের সুবিধা ও অসুবিধা আলোচনা কর। <span class="en">(What is machine language, assembly language and high level language? Discuss their advantages and disadvantages.)</span></li>
+          <li>খ) ফ্লোচার্ট কী? ফ্লোচার্ট তৈরীর পদ্ধতি আলোচনা কর। <span class="en">(What is a flowchart? Discuss the method of flowchart making.)</span></li>
+          <li>গ) 1 + 2 + 3 + 4 + ...... + N এই ধারাটি যোগফল বের করার জন্য একটি অ্যালগরিদম ও ফ্লোচার্ট তৈরী কর। <span class="en">(Write the algorithm and flowchart to find the sum of the series: 1 + 2 + 3 + 4 + ...... + N.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৫।</span></span></h3>
+        <ol class="parts">
+          <li>ক) সি++ প্রোগ্রামে কয় ধরনের ডাটা ব্যবহার করা যায় উদাহরণসহ আলোচনা কর। <span class="en">(What are the different types of data used in C++? Describe with example.)</span></li>
+          <li>খ) প্রোগ্রামে লুপ কাকে বলে? সি++ ভাষায় বিভিন্ন প্রকার লুপের গঠনপ্রণালী বর্ণনা কর। <span class="en">(What is the loop in a program? Describe the construction of different types of loop in C++ language.)</span></li>
+          <li>গ) সি++ প্রোগ্রামে আউটপুট ডাটা কীভাবে ফাইলে লেখা হয় উদাহরণসহ আলোচনা কর। <span class="en">(Describe with example, how to write the output data in a file in C++ program.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৬।</span></span></h3>
+        <ol class="parts">
+          <li>ক) সত্যক সারণীসহ ক্লকড J-K ফ্লিপ-ফ্লপের কার্যনীতি বর্ণনা কর। <span class="en">(Explain the working principle of a clocked J-K flip flop with truth table.)</span></li>
+          <li>খ) তিনটি ফ্লিপ-ফ্লপ ব্যবহার করে 000 হতে 110 পর্যন্ত গণনা করা যায় এমন একটি সমান্তরাল গণক ডিজাইন কর। উপযুক্ত ক্লক সিগন্যালের মাধ্যমে এই গণকের কার্যপ্রণালী ব্যাখ্যা কর। <span class="en">(Design a parallel counter which can count only from 000 to 110 by using three flip-flops. Explain the operation of this flip-flop by using appropriate clock signal.)</span></li>
+          <li>গ) সত্যক সারণীসহ D ফ্লিপ-ফ্লপের কার্যনীতি বর্ণনা কর। <span class="en">(Explain the working principle of a D flip-flop with truth table.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৭।</span></span></h3>
+        <ol class="parts">
+          <li>ক) আইডেন্টিফায়ার কী? সি ভাষায় আইডেন্টিফায়ার এর নামকরণের নিয়মাবলি লিখ। <span class="en">(What is identifier? Write down the rules for naming identifier in the C language.)</span></li>
+          <li>খ) লুপ কী? while ও do while লুপের পার্থক্য উদাহরণসহ ব্যাখ্যা কর। <span class="en">(What is loop? Explain the difference between while and do while loop with example.)</span></li>
+          <li>গ) 1 + 3 + 5 + 7 + ...... + 99 সিরিজের যোগফল নির্ণয় করার জন্য সি/সি++ ভাষায় কোড লেখ। <span class="en">(Write down the code in C/C++ language that can add the series 1 + 3 + 5 + 7 + ...... + 99.)</span></li>
+        </ol>
+      </div>
+
+      <div class="qgroup">
+        <h3 class="qtitle"><span><span class="qn">৮।</span></span></h3>
+        <ol class="parts">
+          <li>ক) টীকা লিখ: (i) অ্যাসাইনমেন্ট অপারেটর (ii) ইউনারি অপারেটর (iii) লাইব্রেরি ফাংশন। <span class="en">(Write a short note on: (i) Assignment Operator (ii) Unary Operator (iii) Library Functions.)</span></li>
+          <li>খ) সর্টিং অ্যালগরিদম কী? বিভিন্ন প্রকার সর্টিং অ্যালগরিদম সম্বন্ধে আলোচনা কর। <span class="en">(What is sorting algorithm? Discuss about different types of sorting algorithm.)</span></li>
+          <li>গ) ফাংশন ও ফাংশন প্রোটোটাইপ সম্পর্কে সংক্ষেপে আলোচনা কর। <span class="en">(Discuss briefly about function and function prototype.)</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="paper-foot">
+      <span>DCU QB · Question Bank Archive</span>
+      <span>Introduction to Computer and Programming · PHA 104</span>
     </div>
-  </div>
-
-  <main class="container" id="archiveContainer">
-
-    <!-- ==================== 2025 ==================== -->
-    <section class="year-section" data-year="2025">
-      <div class="year-header">
-        <div class="year-title">Dhaka Central University — Final Examination 2025 <span class="tag-new">NEW</span></div>
-        <div class="year-meta">Time: 4 Hours • Full Marks: 80 • যে কোনো ৫টি প্রশ্নের উত্তর দাও ($5 \times 16 = 80$)</div>
-      </div>
-
-      <article class="question-card" data-year="2025">
-        <div class="q-header"><span class="q-number">QUESTION NO. 01</span><span class="q-year-tag">DCU 2025</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">ক)</span> একটি মাইক্রো কম্পিউটারের ব্লক ডায়াগ্রাম এঁকে এর বিভিন্ন অংশের কার্যাবলি বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Draw the block diagram of a microcomputer and describe the working operation of the different parts of it.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">খ)</span> RAM ও ROM এর মধ্যে পার্থক্য লেখ। অপারেটিং সিস্টেম কী ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write down the difference between RAM and ROM. Explain the operating system.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">গ)</span> সিপিইউ যখন মেমোরি থেকে কোনো তথ্য পড়ে তার ধাপগুলো বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Describe the steps to read data from memory by the CPU.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2025">
-        <div class="q-header"><span class="q-number">QUESTION NO. 02</span><span class="q-year-tag">DCU 2025</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">ক)</span> মৌলিক লজিক গেইট এর সাহায্যে X-NOR গেইটের বাস্তবায়ন বুলিয়ান বীজগণিতসহ দেখাও।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Demonstrate the implementation of the X-NOR gate using basic logic gates with the Boolean algebra.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">খ)</span> দুই ইনপুটবিশিষ্ট NAND গেইট থেকে কীভাবে একটি দুই ইনপুটবিশিষ্ট NOR গেইট তৈরি করা যায় দেখাও।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Show how a two-input NOR gate can be constructed from two-input NAND gate.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">গ)</span> হাফ অ্যাডার কী? সত্যকসারণি এবং বর্তনী চিত্রসহ হাফ অ্যাডার ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is Half-Adder? Discuss Half-Adder with truth table and circuit diagram.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2025">
-        <div class="q-header"><span class="q-number">QUESTION NO. 03</span><span class="q-year-tag">DCU 2025</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">ক)</span> নিচের রাশিমালাকে বুলিয়ান বীজগণিতের মাধ্যমে সহজীকরণ কর: $X = (\overline{A + B + \overline{C}})\,BC$</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Simplify the following expressions using Boolean algebra: $X = (\overline{A + B + \overline{C}})\,BC$</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">খ)</span> লজিক বর্তনী এবং সত্যক সারণিসহ X-OR এবং X-NOR গেইটের বর্ণনা দাও।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Describe X-OR and X-NOR gate with logic circuit and truth table.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">গ)</span> NAND এবং NOR গেইটকে সর্বজনীন গেইট বলা হয় কেন? ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Explain why NAND and NOR gate are called universal gate.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2025">
-        <div class="q-header"><span class="q-number">QUESTION NO. 04</span><span class="q-year-tag">DCU 2025</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">ক)</span> মেশিন ভাষা, অ্যাসেম্বলি ভাষা ও উচ্চ স্তরের ভাষা কী? এদের সুবিধা ও অসুবিধা আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is machine language, assembly language and high level language? Discuss their advantages and disadvantages.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">খ)</span> ফ্লোচার্ট কী? ফ্লোচার্ট তৈরীর পদ্ধতি আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is a flowchart? Discuss the method of flowchart making.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">গ)</span> $1 + 2 + 3 + 4 + \dots + N$ এই ধারাটি যোগফল বের করার জন্য একটি অ্যালগরিদম ও ফ্লোচার্ট তৈরী কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write the algorithm and flowchart to find the sum of the series: $1 + 2 + 3 + 4 + \dots + N$</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2025">
-        <div class="q-header"><span class="q-number">QUESTION NO. 05</span><span class="q-year-tag">DCU 2025</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">ক)</span> সি++ প্রোগ্রামে কয় ধরনের ডাটা ব্যবহার করা যায় উদাহরণসহ আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What are the different types of data used in C++? Describe with example.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">খ)</span> প্রোগ্রামে লুপ কাকে বলে? সি++ ভাষায় বিভিন্ন প্রকার লুপের গঠনপ্রণালী বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is the loop in a program? Describe the construction of different types of loop in C++ language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">গ)</span> সি++ প্রোগ্রামে আউটপুট ডাটা কীভাবে ফাইলে লেখা হয় উদাহরণসহ আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Describe with example, how to write the output data in a file in C++ program.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2025">
-        <div class="q-header"><span class="q-number">QUESTION NO. 06</span><span class="q-year-tag">DCU 2025</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">ক)</span> সত্যক সারণীসহ ক্লকড J-K ফ্লিপ-ফ্লপের কার্যনীতি বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Explain the working principle of a clocked J-K flip flop with truth table.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">খ)</span> তিনটি ফ্লিপ-ফ্লপ ব্যবহার করে 000 হতে 110 পর্যন্ত গণনা করা যায় এমন একটি সমান্তরাল গণক ডিজাইন কর। উপযুক্ত ব্লক সিগন্যালের মাধ্যমে এই গণকের কার্যপ্রণালী ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Design a parallel counter which can count only from 000 to 110 by using three flip-flops. Explain the operation of this flip-flop by using appropriate clock signal.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">গ)</span> সত্যক সারণীসহ D ফ্লিপ-ফ্লপের কার্যনীতি বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Explain the working principle of a D flip-flop with truth table.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2025">
-        <div class="q-header"><span class="q-number">QUESTION NO. 07</span><span class="q-year-tag">DCU 2025</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">ক)</span> আইডেন্টিফায়ার কী? সি ভাষায় আইডেন্টিফায়ার এর নামকরণের নিয়মাবলি লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is identifier? Write down the rules for naming identifier in the C language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">খ)</span> লুপ কী? <code>while</code> ও <code>do while</code> লুপের পার্থক্য উদাহরণসহ ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is loop? Explain the difference between <code>while</code> and <code>do while</code> loop with example.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">গ)</span> $1 + 3 + 5 + 7 + \dots + 99$ সিরিজের যোগফল নির্ণয় করার জন্য সি/সি++ ভাষায় কোড লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write down the code in C/C++ language that can add the series $1 + 3 + 5 + 7 + \dots + 99$.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2025">
-        <div class="q-header"><span class="q-number">QUESTION NO. 08</span><span class="q-year-tag">DCU 2025</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">ক)</span> টীকা লিখ: (i) অ্যাসাইনমেন্ট অপারেটর (ii) ইউনারি অপারেটর (iii) লাইব্রেরি ফাংশন।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write a short note on: (i) Assignment Operator (ii) Unary Operator (iii) Library Functions.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">খ)</span> সর্টিং অ্যালগরিদম কী? বিভিন্ন প্রকার সর্টিং অ্যালগরিদম সম্বন্ধে আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is sorting algorithm? Discuss about different types of sorting algorithm.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">গ)</span> ফাংশন ও ফাংশন প্রোটোটাইপ সম্পর্কে সংক্ষেপে আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Discuss briefly about function and function prototype.</div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== 2024 ==================== -->
-    <section class="year-section" data-year="2024">
-      <div class="year-header">
-        <div class="year-title">University of Dhaka (7 Affiliated Colleges) — Examination 2024</div>
-        <div class="year-meta">Time: 3 Hours • Full Marks: 80 • যে কোনো ৫টি প্রশ্নের উত্তর দাও</div>
-      </div>
-
-      <article class="question-card" data-year="2024">
-        <div class="q-header"><span class="q-number">QUESTION NO. 01</span><span class="q-year-tag">2024</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> কম্পিউটারের প্রজন্ম বলতে কী বোঝায়? ৪র্থ প্রজন্মের কম্পিউটারের সুবিধা এবং অসুবিধাগুলো লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is meant by the generation of computers? Write down the advantages and disadvantages of fourth generation computers.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> অ্যাপ্লিকেশন সফটওয়্যার ও সিস্টেম সফটওয়্যারের মধ্যে পার্থক্য নির্ণয় কর। মেমোরি ইউনিট কী?</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Find the differences between application software and system software. What is memory unit?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> ক্যাশ মেমোরি কী? কম্পিউটারে ক্যাশ মেমোরি ব্যবহারের প্রয়োজনীয়তা কী?</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is cache memory? What is the purpose of using cache memory in computer?</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2024">
-        <div class="q-header"><span class="q-number">QUESTION NO. 02</span><span class="q-year-tag">2024</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> দশমিক সংখ্যা $-75$ কে এর 8-বিট 2-এর পরিপূরক বাইনারি রূপ, অক্টাল রূপ এবং হেক্সাডেসিমাল রূপে রূপান্তর কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Convert the decimal number $-75$ into its 8-bit 2's complement binary form, octal form, and hexadecimal form.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> বাইনারি অপারেশন $(1011011)_2 + (1110110)_2$ সম্পাদন কর এবং ওভারফ্লো পরীক্ষা কর। এছাড়াও 2-এর পরিপূরক পদ্ধতি ব্যবহার করে $(1101100)_2 - (1010110)_2$ সম্পাদন কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Perform the binary operation $(1011011)_2 + (1110110)_2$ and check for overflow. Also perform $(1101100)_2 - (1010110)_2$ using the 2's complement method.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> একটি BCD অ্যাডারের কার্যপদ্ধতি উদাহরণের সাহায্যে ব্যাখ্যা কর, এবং কিছু যোগফলে সংশোধন কেন প্রয়োজন তা যুক্তিসহ ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Explain the working principle of a BCD Adder with the help of an example, and justify why correction is required in certain additions.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> একটি ফুল অ্যাডার বর্তনী ডিজাইন কর এবং এর সত্যক সারণি, বুলিয়ান প্রকাশ এবং লজিক ডায়াগ্রাম উপস্থাপন কর।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Design a Full Adder circuit and present its truth table, Boolean expressions, and logic diagram.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2024">
-        <div class="q-header"><span class="q-number">QUESTION NO. 03</span><span class="q-year-tag">2024</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ডি-মরগ্যানের দুইটি উপপাদ্য বিবৃত কর এবং সত্যক সারণির মাধ্যমে উপপাদ্য দুইটি প্রমাণ কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> State the two De-Morgan's theorems and prove them using truth table.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> নিচের রাশিটিকে বুলিয়ান বীজগণিত ব্যবহার করে সরলীকরণ কর: $F = (X + Y)(\overline{X} + Z)(Y + Z)$ অথবা প্রদত্ত বুলিয়ান রাশিমালা সরল কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Simplify the given expression using Boolean algebra.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> কম্পিউটার ডিজাইনে বাইনারি সংখ্যা পদ্ধতি ব্যবহারের কারণ ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Explain the reasons behind the use of binary numbers in computer design.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2024">
-        <div class="q-header"><span class="q-number">QUESTION NO. 04</span><span class="q-year-tag">2024</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> লজিক গেট ব্যবহার করে একটি S-R ল্যাচের কার্যপদ্ধতি ব্যাখ্যা কর এবং এর সত্যক সারণি অঙ্কন কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Explain the working principle of an S-R latch using logic gates and draw its truth table.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> ইনপুট শর্ত এবং ব্যবহার অনুসারে J-K, D, এবং T ফ্লিপ-ফ্লপের মধ্যে পার্থক্য বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Differentiate between J-K, D, and T flip-flops in terms of input conditions and applications.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> মাস্টার-স্লেভ ফ্লিপ-ফ্লপের ধারণা ব্যাখ্যা কর। ধারাবাহিক বর্তনীতে এটি একটি সাধারণ ফ্লিপ-ফ্লপের চেয়ে কেন বেশি প্রাধান্য পায়?</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Describe the concept of a Master-Slave Flip-Flop. Why is it preferred over a simple flip-flop in sequential circuits?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> একটি 4-বিট শিফট রেজিস্টারের কার্যপদ্ধতি ব্যাখ্যা কর। ডায়াগ্রামের মাধ্যমে দেখাও এতে কীভাবে ডেটা ধারাবাহিকভাবে স্থানান্তরিত হয়।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Explain the operation of a 4-bit shift register. Show with a neat diagram how data is transferred serially in it.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2024">
-        <div class="q-header"><span class="q-number">QUESTION NO. 05</span><span class="q-year-tag">2024</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> সি এবং সি++ ভাষার মধ্যে পার্থক্যসমূহ লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Find the differences between C and C++ language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> চলক কী? ডাবল ও ফ্লোট শ্রেণির চলকের মধ্যে পার্থক্যসমূহ কী কী?</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is variable? What are the differences between a double and a float type of variable?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> সি++ এ নেমস্পেস ব্যবহারের বিভিন্ন পদ্ধতিসমূহ লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Discuss the different ways of using namespace in C++.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2024">
-        <div class="q-header"><span class="q-number">QUESTION NO. 06</span><span class="q-year-tag">2024</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> অ্যাসেম্বলার, কম্পাইলার এবং ইন্টারপ্রেটারের মধ্যে পার্থক্য উদাহরণসহ ব্যাখ্যা কর। এদের প্রত্যেকে প্রোগ্রাম চলাকালীন কীভাবে ত্রুটি মোকাবেলা করে তা ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Differentiate between an Assembler, Compiler, and Interpreter with examples. Explain how each handles errors during program execution.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি ফ্লোচার্ট অঙ্কন কর এবং একটি অ্যালগরিদম লিখ যা একটি পূর্ণ সংখ্যা $n$ পড়ে এবং এটি একটি মৌলিক সংখ্যা কি না তা মুদ্রিত করে।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Draw a flowchart and write an algorithm for a program that reads an integer $n$ and prints whether it is a prime number or not.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> নিম্নলিখিত সি প্রোগ্রামে তিনটি লজিক্যাল/সেমান্টিক ত্রুটি রয়েছে। ত্রুটিগুলো শনাক্ত কর এবং সংশোধন কর। সংশোধিত কোডটি লিখ এবং প্রতিটি সংশোধনের কারণ ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> The following C program contains three logical/semantic errors. Identify and correct them. Write the corrected code and explain the reasons for each correction.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2024">
-        <div class="q-header"><span class="q-number">QUESTION NO. 07</span><span class="q-year-tag">2024</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> একটি বৃত্তের ক্ষেত্রফল নির্ণয়ের জন্য একটি সি প্রোগ্রাম লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write a C program to find out the area of a circle.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> সংজ্ঞায়িত কর: গাণিতিক অপারেটর, ইউনারি অপারেটর, লজিক্যাল অপারেটর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Define: Arithmetic operator, Unary operator, Logical operator.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> নেস্টেড লুপ কী? উদাহরণসহ ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is nested loop? Describe with example.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2024">
-        <div class="q-header"><span class="q-number">QUESTION NO. 08</span><span class="q-year-tag">2024</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> অ্যারে ব্যবহারের সুবিধা এবং অসুবিধাসমূহ লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write down the advantages and disadvantages of the use of an array.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> উদাহরণসহ সি++ ফাংশনে পাস বাই ভ্যালু এবং পাস বাই রেফারেন্সের মধ্যে পার্থক্য ব্যাখ্যা কর। এমন একটি পরিস্থিতি আলোচনা কর যেখানে রিকারশনের চেয়ে ইটারেশন বেশি প্রাধান্য পায়।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Explain with examples the difference between pass by value and pass by reference in C++ functions. Discuss one scenario where recursion is preferable over iteration.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> রিকারশন ব্যবহার করে একটি সংখ্যার ফ্যাক্টোরিয়াল গণনা করার প্রদত্ত প্রোগ্রামের তিনটি ত্রুটি (সিনট্যাক্স, লজিক, এবং ফাংশন প্রোটোটাইপের অসামঞ্জস্য) শনাক্ত করে সংশোধন কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Identify and fix the three errors (syntax, logic, and function prototype mismatch) in the given recursive factorial program.</div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== 2023 ==================== -->
-    <section class="year-section" data-year="2023">
-      <div class="year-header">
-        <div class="year-title">University of Dhaka (7 Affiliated Colleges) — Examination 2023</div>
-        <div class="year-meta">Time: 3 Hours • Full Marks: 80 • যে কোনো ৫টি প্রশ্নের উত্তর দাও</div>
-      </div>
-
-      <article class="question-card" data-year="2023">
-        <div class="q-header"><span class="q-number">QUESTION NO. 01</span><span class="q-year-tag">2023</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ALU কী? কম্পিউটারে এর কার্যকারিতা ব্যাখ্যা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is ALU? Explain its functionality in the Computer.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> প্রসেসর কী? CISC এবং RISC প্রসেসরের মধ্যে পার্থক্য লিখুন।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is a processor? Write the difference between CISC and RISC processors.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> RAM কী? এর শ্রেণিবিভাগ সংক্ষেপে বর্ণনা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is RAM? Describe in short of its classification.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> লিনাক্স কী? কেন লিনাক্স অন্যান্য নেটওয়ার্ক অপারেটিং সিস্টেম থেকে আলাদা?</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> What is Linux? Why is Linux different from other network operating systems?</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2023">
-        <div class="q-header"><span class="q-number">QUESTION NO. 02</span><span class="q-year-tag">2023</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> দশমিক সংখ্যা $362$ কে এর ৮-বিট/প্রয়োজনীয় বাইনারি রূপান্তরে রূপান্তর করুন। প্রয়োজন হলে শূন্যগুলো সামনে রাখুন।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Convert the decimal number $362$ to its binary representation. Ensure that leading zeros are included if needed.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> হেক্সাডেসিমাল সংখ্যা $1F$ এবং $A5$ যোগ করুন। তারপর, বিজোড় প্যারিটির (Odd-parity) জন্য ফলাফলের বাইনারি যোগফলের প্যারিটি বিট নির্ধারণ করুন।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Add the hexadecimal numbers $1F$ and $A5$. Then, determine the parity bit for the resulting binary sum using Odd-parity.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> অক্টাল সংখ্যা $672$ কে ASCII কোডে রূপান্তর করুন। অতিরিক্তভাবে, অক্টাল সংখ্যার দশমিক রূপের জন্য ৮-বিট BCD কোড সরবরাহ করুন।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Convert the octal number $672$ to its ASCII code representation. Additionally, provide the 8-bit BCD code for the decimal equivalent of the octal number.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> ২-এর কমপ্লিমেন্ট পদ্ধতি ব্যবহার করে $22$ থেকে $13$ বিয়োগ করুন।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Subtract $13$ from $22$ using 2's complement method.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2023">
-        <div class="q-header"><span class="q-number">QUESTION NO. 03</span><span class="q-year-tag">2023</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> প্রদত্ত লজিক সার্কিটটি সরলীকরণ করুন।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Simplify the circuit below.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> উপযুক্ত সার্কিট চিত্র এবং বুলিয়ান অভিব্যক্তিসহ হাফ এবং ফুল অ্যাডার সার্কিট ব্যাখ্যা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Explain Half and full adder circuits with appropriate circuit diagrams and boolean expressions of their circuit.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> কেন NAND এবং NOR গেটগুলো সার্বজনীন গেট বলা হয় তা ব্যাখ্যা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Explain why NAND and NOR gates are called universal gates.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2023">
-        <div class="q-header"><span class="q-number">QUESTION NO. 04</span><span class="q-year-tag">2023</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> সিনক্রোনাস এবং অ্যাসিনক্রোনাস কাউন্টারগুলোর মধ্যে পার্থক্য বর্ণনা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Describe the difference between synchronous and Asynchronous counters.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> সত্যক টেবিলসহ JK ফ্লিপ-ফ্লপের কাজের নীতি ব্যাখ্যা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Explain the working principle of a JK flip-flop with a truth table.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> চার-মোড রিপল কাউন্টারের কার্যক্রম বর্ণনা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Describe the operation of a four-mode ripple counter.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2023">
-        <div class="q-header"><span class="q-number">QUESTION NO. 05</span><span class="q-year-tag">2023</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> খুব উচ্চ স্তরের ভাষার কিছু বৈশিষ্ট্য লিখুন।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write down some features of a very high-level language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> কম্পাইলার এবং ইন্টারপ্রেটারের মধ্যে পার্থক্য নির্ধারণ করুন।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Distinguish between compiler and interpreter.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> প্রদত্ত বছরটি লিপ ইয়ার (Leap Year) কি না তা নির্ধারণের জন্য ফ্লোচার্ট, অ্যালগরিদম এবং C/C++ প্রোগ্রাম লিখুন।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write a flow chart, Algorithm, and C/C++ program to find if the given year is a leap year or not.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2023">
-        <div class="q-header"><span class="q-number">QUESTION NO. 06</span><span class="q-year-tag">2023</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> রিকারশন কী? রিকার্সিভ কলিং ফাংশনটি কীভাবে কাজ করে তা ব্যাখ্যা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is recursion? How does a recursive calling function work?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি নির্দিষ্ট উচ্চতা থেকে পড়া বল প্রতিটি বাউন্সে পূর্ববর্তী উচ্চতার $0.8$ গুণ উচ্চতায় ফিরে আসে। রিকার্সিভ ফাংশন ব্যবহার করে $n$ সংখ্যক বাউন্সের পর বলটির মোট অতিক্রান্ত দূরত্ব গণনার C++ প্রোগ্রাম লিখুন।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> A ball rebounds to $0.8$ of its previous height on each bounce. Write a C++ program using a recursive function to calculate the total distance traveled after $n$ bounces given initial drop height $h$.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2023">
-        <div class="q-header"><span class="q-number">QUESTION NO. 07</span><span class="q-year-tag">2023</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ফ্লোচার্টসহ বাবল সর্ট (Bubble Sort) অ্যালগরিদমটি ব্যাখ্যা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Explain the bubble sort algorithm with flow chart in C++.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি C++ কোড লিখুন যা বাবল সর্ট অ্যালগরিদম ব্যবহার করে একটি অ্যারেতে সংরক্ষিত সংখ্যাগুলো পুনর্বিন্যাস করতে পারে।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write a C++ code that can rearrange some numbers stored in an array using a bubble sort algorithm.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> একটি C++ কোড লিখুন যা একটি $3 \times 3$ ম্যাট্রিক্সের সমস্ত অফ-ডায়াগোনাল (off-diagonal) উপাদান যোগ করতে পারে।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write a code in C++ that can add all the off-diagonal elements of a $3 \times 3$ matrix.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2023">
-        <div class="q-header"><span class="q-number">QUESTION NO. 08</span><span class="q-year-tag">2023</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ফাংশন প্রোটোটাইপ কী? একটি C++ প্রোগ্রামে ফাংশন প্রোটোটাইপ কীভাবে ঘোষণা করা হয়?</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is a function prototype? How are function prototypes declared in a C++ program?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> লোকাল এবং গ্লোবাল ভেরিয়েবলের মধ্যে পার্থক্য লিখুন।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write differences between local and global variables.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> স্ট্রিং ভেরিয়েবল ঘোষণা করার বিভিন্ন পদ্ধতি বর্ণনা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Describe the different methods of declaring string variables.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> <code>for</code>, <code>while</code> এবং <code>do while</code> লুপের গঠন ব্যাখ্যা করুন।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Explain the structure of "for", "while", and "do while" loops.</div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== 2022 ==================== -->
-    <section class="year-section" data-year="2022">
-      <div class="year-header">
-        <div class="year-title">University of Dhaka (7 Affiliated Colleges) — Examination 2022</div>
-        <div class="year-meta">Time: 3 Hours • Full Marks: 80 • যে কোনো ৫টি প্রশ্নের উত্তর দাও</div>
-      </div>
-
-      <article class="question-card" data-year="2022">
-        <div class="q-header"><span class="q-number">QUESTION NO. 01</span><span class="q-year-tag">2022</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> অ্যাক্সেস টাইম কী? উদ্বায়ী (Volatile) মেমোরির সংজ্ঞা দাও।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is access time? Define volatile memory.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> অভ্যন্তরীণ মেমোরি অংশের সাথে সিপিইউ কীভাবে সংযুক্ত থাকে বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Describe how an internal memory is being connected to the CPU.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> সিপিইউ যখন মেমোরি থেকে কোনো তথ্য পড়ে তার ধাপগুলো বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Describe the steps to read data from memory by the CPU.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> ক্যাশ মেমোরি ব্যবহারের প্রধান কারণগুলো কী কী?</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> What are the main reasons of using cache memory?</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2022">
-        <div class="q-header"><span class="q-number">QUESTION NO. 02</span><span class="q-year-tag">2022</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> $X = (A + B + C + D)\cdot(B + C + A\cdot B)\cdot(C + D)$ সমীকরণটি লজিক গেইটের মাধ্যমে প্রকাশ কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Implement the expression $X = (A + B + C + D)\cdot(B + C + A\cdot B)\cdot(C + D)$ by logic gates.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> দুই-ইনপুটবিশিষ্ট NAND গেইট থেকে কীভাবে একটি দুই-ইনপুটবিশিষ্ট NOR গেইট তৈরি করা যায় দেখাও।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Show how a two-input NOR gate can be constructed from a two-input NAND gate.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> দেখাও যে শুধুমাত্র NOR গেইট ব্যবহার করে যেকোনো বুলিয়ান অপারেশন করা যায়।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Show that NOR gates can be arranged to implement any Boolean operations.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> লজিক গেইট ব্যবহার করে এক্সক্লুসিভ-নর (Exclusive-NOR) অপারেশন করা যায় এমন একটি সার্কিট ডিজাইন কর।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Design a circuit using logic gates that can perform the Exclusive-NOR operation.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2022">
-        <div class="q-header"><span class="q-number">QUESTION NO. 03</span><span class="q-year-tag">2022</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> সত্যক সারণিসহ S-R ফ্লিপ-ফ্লপের কার্যনীতি বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Explain the working principle of a S-R flip flop with truth table.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> অপারেটিং সিস্টেম বলতে কী বোঝ? বর্তমানে ব্যবহৃত পাঁচটি অপারেটিং সিস্টেমের নাম লেখ। লিনাক্স অপারেটিং সিস্টেমের সুবিধা ও অসুবিধাসমূহ লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is meant by an operating system? Name five operating systems that are used now-a-days. Write down the merits and demerits of LINUX operating system.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> লজিক গেইটের সাহায্যে পূর্ণ-যোগের (Full Adder) বর্তনী তৈরি কর এবং এর কার্যনীতি বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Construct a full adder circuit with logic gates and explain its operation as a full-adder circuit.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2022">
-        <div class="q-header"><span class="q-number">QUESTION NO. 04</span><span class="q-year-tag">2022</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> সি এবং সি++ ভাষার মধ্যে পার্থক্যসমূহ লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write down the differences between C and C++ language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> রম (ROM) কী? বিভিন্ন প্রকার রমের নাম লেখ এবং সংক্ষেপে এদের বর্ণনা দাও।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is ROM? Mention the different types of ROM and give its brief description.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> চলক কী? ডাবল ও ফ্লোট টাইপ চলকের মধ্যে পার্থক্যসমূহ লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is variable? What is the difference between a double and a float type of variable?</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2022">
-        <div class="q-header"><span class="q-number">QUESTION NO. 05</span><span class="q-year-tag">2022</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ধ্রুবক ও কী-ওয়ার্ড সম্পর্কে সংক্ষেপে আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Describe briefly about constants and keywords.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> ফাংশন ও ফাংশন প্রোটোটাইপ সম্পর্কে সংক্ষেপে আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Describe briefly about function and function prototype.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> একটি ধনাত্মক সংখ্যার ফ্যাক্টোরিয়াল নির্ণয়ের জন্য C/C++ ভাষায় প্রোগ্রাম লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write a C/C++ program to find the factorial of a positive integer.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2022">
-        <div class="q-header"><span class="q-number">QUESTION NO. 06</span><span class="q-year-tag">2022</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> সংজ্ঞা লেখ: (i) গাণিতিক অপারেটর, (ii) ইউনারি অপারেটর, (iii) লজিক্যাল অপারেটর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Define: (i) Arithmetic operator, (ii) Unary operator, (iii) Logical operator.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> তিনটি সংখ্যার মধ্যে বৃহত্তম সংখ্যাটি বের করার অ্যালগরিদম ও ফ্লোচার্ট লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write an algorithm and flowchart to find the largest of three numbers.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> বৃত্তের ক্ষেত্রফল নির্ণয় করার জন্য C/C++ ভাষায় প্রোগ্রাম লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write C/C++ program to find out the area of a circle.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2022">
-        <div class="q-header"><span class="q-number">QUESTION NO. 07</span><span class="q-year-tag">2022</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> প্রোগ্রামে লুপ কাকে বলে? সি++ ভাষায় বিভিন্ন প্রকার লুপের গঠনপ্রণালী বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is loop in a program? Discuss the construction of different types of loop in C++ language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> নেস্টেড লুপ কী? উদাহরণসহ ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is nested loop? Describe with examples.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> হেডার ফাইল কী? <code>&lt;iostream&gt;</code>, <code>&lt;cmath&gt;</code>, <code>&lt;cstring&gt;</code> এবং <code>&lt;cstdlib&gt;</code> হেডার ফাইলগুলোর ব্যবহার উল্লেখ কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is header file? Write down the use of the following header files: <code>&lt;iostream&gt;</code>, <code>&lt;cmath&gt;</code>, <code>&lt;cstring&gt;</code> and <code>&lt;cstdlib&gt;</code>.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> সি++ প্রোগ্রামে আউটপুট ডাটা কীভাবে ফাইলে লেখা হয় উদাহরণসহ আলোচনা কর (কোড লিখতে হবে)।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Describe with example, how to write the output data in a file in C++ program. (You need to write a code for this)</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2022">
-        <div class="q-header"><span class="q-number">QUESTION NO. 08</span><span class="q-year-tag">2022</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> সর্টিং অ্যালগরিদম কী? বিভিন্ন প্রকার সর্টিং অ্যালগরিদম সম্পর্কে আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is sorting algorithm? Discuss about different types of sorting algorithm.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> সি++ ভাষায় একটি কোড লিখ যা বাবল সর্টিং ব্যবহার করে $(2, 3, 9, 5, 7, 11, 20, 15, 42, 45)$ নাম্বারগুলোকে মানের ঊর্ধ্বক্রম অনুসারে সাজাতে পারবে।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write a code in C++ that can use bubble sort algorithm to sort the numbers $(2, 3, 9, 5, 7, 11, 20, 15, 42, 45)$ in ascending order.</div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== 2021 ==================== -->
-    <section class="year-section" data-year="2021">
-      <div class="year-header">
-        <div class="year-title">University of Dhaka (7 Affiliated Colleges) — Examination 2021</div>
-        <div class="year-meta">Time: 3 Hours • Full Marks: 80 • যে কোনো ৫টি প্রশ্নের উত্তর দাও</div>
-      </div>
-
-      <article class="question-card" data-year="2021">
-        <div class="q-header"><span class="q-number">QUESTION NO. 01</span><span class="q-year-tag">2021</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> কম্পিউটারের কোন প্রজন্মে অর্ধপরিবাহী ট্রানজিস্টরের ব্যবহার হয়? ঐ প্রজন্মের কম্পিউটারের পাঁচটি বৈশিষ্ট্য লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Which generation of computer started using semiconductor transistor? Write five characteristics of that generation computer.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি মাইক্রো কম্পিউটারের ব্লক ডায়াগ্রাম এঁকে এর বিভিন্ন অংশের কার্যাবলি বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Draw the block diagram of a micro-computer and describe the working operation of the different parts of it.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> RAM এবং ROM কাকে বলে? এদের মধ্যে পার্থক্য লেখ। অপারেটিং সিস্টেম কী ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What are RAM and ROM? Differentiate between RAM and ROM. Explain the operating system.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2021">
-        <div class="q-header"><span class="q-number">QUESTION NO. 02</span><span class="q-year-tag">2021</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> জোড় সমতা এবং বিজোড় সমতা বলতে কী বোঝ? ডিজিটাল পদ্ধতির ভুল শনাক্তকরণে সমতা পদ্ধতি উদাহরণসহ ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What do you mean by even parity and odd parity? Explain the parity method of error detection in digital system with examples.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> দুই ইনপুটবিশিষ্ট NAND গেট থেকে কীভাবে একটি দুই ইনপুটবিশিষ্ট NOR গেট তৈরি করা যায় দেখাও।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Show how a two-input NOR gate can be constructed from a two-input NAND gate.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> বুলিয়ান বীজগণিত ব্যবহার করে $S = (A + B)\cdot(\overline{A} + B)\cdot(B + A)$ রাশিটিকে সরলীকরণ কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Simplify the expression $S = (A + B)\cdot(\overline{A} + B)\cdot(B + A)$ using Boolean algebra.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> একটি লজিক সার্কিট ডিজাইন কর যেখানে আউটপুট $1$ হবে যখন এর তিনটি ইনপুটই একই লজিক লেভেলে থাকবে।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Design a circuit that produces output level $1$ only when all three inputs are at the same level.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2021">
-        <div class="q-header"><span class="q-number">QUESTION NO. 03</span><span class="q-year-tag">2021</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> মেশিন ভাষা, অ্যাসেম্বলি ভাষা এবং উচ্চস্তরের ভাষা কী? এদের সুবিধা এবং অসুবিধা আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is machine language, assembly language and high level language? Discuss their advantages and disadvantages.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> ফ্লোচার্ট কী? ফ্লোচার্ট তৈরির পদ্ধতি আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is a flow chart? Discuss the method of flowchart making.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> অ্যালগরিদম কী? $1 + 2 + 3 + 4 + \dots + N$ এই ধারাটির যোগফল বের করার জন্য একটি অ্যালগরিদম ও ফ্লোচার্ট তৈরি কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is Algorithm? Write the algorithm and flowchart to find the sum of the series: $1 + 2 + 3 + 4 + \dots + N$</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2021">
-        <div class="q-header"><span class="q-number">QUESTION NO. 04</span><span class="q-year-tag">2021</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> দুই এর পরিপূরক পদ্ধতি ব্যবহার করে নিম্নোক্ত কার্যাসমূহ সম্পাদন কর: (i) $+8$ এর সাথে $+7$ যোগ কর, (ii) $+18$ এর সাথে $-26$ যোগ কর, (iii) $-38$ থেকে $-16$ বিয়োগ কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Perform the following operations in the 2's complement system: (i) Add $+8$ with $+7$, (ii) Add $+18$ with $-26$, (iii) Subtract $-16$ from $-38$.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> তিনটি ফ্লিপ-ফ্লপ ব্যবহার করে 000 হতে 110 পর্যন্ত গণনা করা যায় এমন একটি সমান্তরাল গণক ডিজাইন কর। উপযুক্ত সিগন্যালের মাধ্যমে এই গণকের কার্যপ্রণালী ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Design a parallel counter which can count only from 000 to 110 by using three flip-flops. Explain the operation of this flip-flop by using appropriate clock signal.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> একটি ৩-বিট রেজিস্টার থেকে আরেকটি ৩-বিট রেজিস্টারে J-K ফ্লিপ-ফ্লপ ব্যবহার করে কীভাবে সিনক্রোনাস সমান্তরাল ডাটা ট্রান্সফার করা যায় তার সার্কিট অঙ্কন কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Draw a circuit diagram for the synchronous parallel transfer of data from one three-bit register to another using J-K flip-flops.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2021">
-        <div class="q-header"><span class="q-number">QUESTION NO. 05</span><span class="q-year-tag">2021</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> সি++ প্রোগ্রামে কয় ধরনের ডাটা ব্যবহার করা যায় উদাহরণসহ আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What are the different types of data used in C++? Describe with examples.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> অ্যাসাইনমেন্ট অপারেটর এবং সমতা অপারেটরের মধ্যে পার্থক্য কী?</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is the difference between assignment operator and equality operator?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> হেডার ফাইল কী? <code>&lt;iostream&gt;</code>, <code>&lt;cmath&gt;</code>, <code>&lt;fstream&gt;</code> এবং <code>&lt;cstdlib&gt;</code> হেডার ফাইলগুলোর ব্যবহার উল্লেখ কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is a header file? Write down the use of the following header files: <code>&lt;iostream&gt;</code>, <code>&lt;cmath&gt;</code>, <code>&lt;fstream&gt;</code> and <code>&lt;cstdlib&gt;</code>.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> সি++ প্রোগ্রামে আউটপুট ডাটা কীভাবে ফাইলে লেখা হয় উদাহরণসহ আলোচনা কর। একটি কোড লিখে দেখাতে হবে।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Describe with example, how to write the output data in a file in C++ program. (You need to write a code for this)</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2021">
-        <div class="q-header"><span class="q-number">QUESTION NO. 06</span><span class="q-year-tag">2021</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> প্রোগ্রামে লুপ কাকে বলে? সি++ ভাষায় বিভিন্ন প্রকার লুপের গঠনপ্রণালী বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is loop in a program? Discuss the construction of different types of loop in C++ language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> নেস্টেড লুপ কী? উদাহরণসহ ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is nested loop? Describe with example.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> ১ থেকে ১০০০ পর্যন্ত পূর্ণ সংখ্যাগুলোর বর্গের যোগফল নির্ণয় করার জন্য সি++ ভাষা ব্যবহার করে তিনটি লুপ ব্যবহার করে তিনটি আলাদা আলাদা কোড লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write three codes by using three different loops in C++ language that can add the square of all the integers between 1 and 1000.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2021">
-        <div class="q-header"><span class="q-number">QUESTION NO. 07</span><span class="q-year-tag">2021</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> স্টেটমেন্ট কী? কন্ট্রোল স্টেটমেন্ট-এর শ্রেণিবিভাগ আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is a statement? Discuss the classification of control statement.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি ত্রিভুজের ক্ষেত্রফল ও পরিসীমা বের করার একটি অ্যালগরিদম ও ফ্লোচার্ট তৈরি কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write an algorithm and draw a flowchart to find the area and the perimeter of a triangle.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> ফাংশন ব্যবহার করে একটি ধনাত্মক পূর্ণ সংখ্যার ফ্যাক্টোরিয়াল নির্ণয় করার একটি সি-প্রোগ্রাম লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write a C program to find the factorial of a positive integer.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2021">
-        <div class="q-header"><span class="q-number">QUESTION NO. 08</span><span class="q-year-tag">2021</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> রিকার্সিভ ফাংশন কী? কোন ধরনের সমস্যা সমাধানে রিকার্সিভ ফাংশন ব্যবহার করা যায়?</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is recursive function? What type of problems can be solved by using recursive function?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> সি++ ভাষায় একটি রিকার্সিভ ফাংশন লেখ যা প্রথম ১০টি ফিবোনাচ্চি সংখ্যা রিটার্ন করবে।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write a recursive function in C++ that can return 1st 10 Fibonacci numbers.</div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== 2020 ==================== -->
-    <section class="year-section" data-year="2020">
-      <div class="year-header">
-        <div class="year-title">University of Dhaka (7 Affiliated Colleges) — Examination 2020</div>
-        <div class="year-meta">Time: 3 Hours • Full Marks: 80 • যে কোনো ৪টি প্রশ্নের উত্তর দাও</div>
-      </div>
-
-      <article class="question-card" data-year="2020">
-        <div class="q-header"><span class="q-number">QUESTION NO. 01</span><span class="q-year-tag">2020</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ALU কী? ইহার কার্যপ্রণালি বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is ALU? Explain the working principle of an ALU.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> ক্যাশ মেমোরি কী? কম্পিউটারে ক্যাশ মেমোরি ব্যবহারের প্রয়োজনীয়তা কী?</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is cache memory? What is the purpose of using cache memory in a computer?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> অ্যাপ্লিকেশন সফটওয়্যার ও সিস্টেম সফটওয়্যারের মধ্যে পার্থক্য লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is the difference between application software and system software?</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2020">
-        <div class="q-header"><span class="q-number">QUESTION NO. 02</span><span class="q-year-tag">2020</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ২ এর পরিপূরক পদ্ধতিতে $(10101)_2$ থেকে $(1101)_2$ বিয়োগ কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Subtract $(1101)_2$ from $(10101)_2$ using 2's complement method.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> লজিক গেইটসমূহ ব্যবহার করে একটি ফুল অ্যাডার গঠন কর এবং এর কার্যপ্রণালি ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Construct a full-adder circuit using logic gates and explain its working principles.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2020">
-        <div class="q-header"><span class="q-number">QUESTION NO. 03</span><span class="q-year-tag">2020</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> SR ফ্লিপ-ফ্লপের সীমাবদ্ধতা কী? কীভাবে এটি অতিক্রম করা যায়?</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is the drawback of SR flip-flop? How to overcome it?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> তিনটি ফ্লিপ-ফ্লপ ব্যবহার করে 000 হতে 110 পর্যন্ত গণনা করা যায় এমন একটি গণক ডিজাইন কর। উপযুক্ত সিগন্যালের মাধ্যমে এই গণকের কার্যপ্রণালি ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Design a parallel counter which can count only from 000 to 110 by using three flip-flops. Explain the operation of this flip-flop by using appropriate clock signal.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2020">
-        <div class="q-header"><span class="q-number">QUESTION NO. 04</span><span class="q-year-tag">2020</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> NAND এবং NOR গেইটকে সার্বজনীন গেইট বলা হয় কেন? ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Explain why NAND and NOR gates are called universal gate.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> $F = (A + C)\cdot(B + \overline{C})\cdot(D + E)$ সমীকরণটিকে শুধুমাত্র NOR গেটের মাধ্যমে বাস্তবায়ন কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Implement the given Boolean expression by using NOR gate only.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2020">
-        <div class="q-header"><span class="q-number">QUESTION NO. 05</span><span class="q-year-tag">2020</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> তিনটি সংখ্যা থেকে বড় সংখ্যাটি বের করার একটি অ্যালগরিদম ও ফ্লোচার্ট তৈরি কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write an algorithm and construct a flow-chart to find the largest number among three given numbers.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> হেডার ফাইল কী? প্রোগ্রামে <code>&lt;iostream&gt;</code> হেডার ফাইলটির কাজ কী?</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is a header-file? What does <code>&lt;iostream&gt;</code> do in a code?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> ডাবল চলক এবং ফ্লোট চলকের মধ্যে পার্থক্য লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write down the difference between double variable and float variable.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2020">
-        <div class="q-header"><span class="q-number">QUESTION NO. 06</span><span class="q-year-tag">2020</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> একটি বৃত্তের ক্ষেত্রফল বের করার জন্য সি প্রোগ্রাম তৈরি কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write a C program to find out the area of a circle.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> প্রোগ্রামিং-এ ফাংশন কী? ফাংশন কয় ধরনের? উদাহরণসহ আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is function in Programming language? Discuss different types of functions with examples.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2020">
-        <div class="q-header"><span class="q-number">QUESTION NO. 07</span><span class="q-year-tag">2020</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> অ্যারে কী? সি++ ভাষায় একটি কোড লিখ যা দুইটি $3 \times 3$ ম্যাট্রিক্সকে গুণ করতে পারে।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is an array? Write a code in C++ that can multiply two $3 \times 3$ matrices.</div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== 2019 ==================== -->
-    <section class="year-section" data-year="2019">
-      <div class="year-header">
-        <div class="year-title">University of Dhaka (7 Affiliated Colleges) — Examination 2019</div>
-        <div class="year-meta">Time: 3 Hours • Full Marks: 80 • যে কোনো ৫টি প্রশ্নের উত্তর দাও</div>
-      </div>
-
-      <article class="question-card" data-year="2019">
-        <div class="q-header"><span class="q-number">QUESTION NO. 01</span><span class="q-year-tag">2019</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> অ্যানালগ এবং ডিজিটাল রাশির মধ্যে উদাহরণসহ পার্থক্য লিখ। অ্যানালগ ইনপুট এবং আউটপুট ব্যবহারের সময় ডিজিটাল পদ্ধতির সুবিধা পেতে প্রয়োজনীয় ধাপগুলো লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write the differences between analog and digital quantities with examples. Write the necessary steps to take advantage of digital techniques when dealing with analog inputs and outputs.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি দশমিক সংখ্যাকে বাইনারীতে রূপান্তর করতে পৌনঃপুনিক ভাগ পদ্ধতির জন্য একটি ফ্লোচার্ট তৈরি কর। $275$ কে বাইনারীতে রূপান্তর কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Design a flowchart to convert a decimal number to binary number by repeated division method. Convert $275$ to binary.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> নিচের ASCII কোড তথ্যটি একটি কম্পিউটারের ধারাবাহিক মেমোরীতে সংরক্ষিত আছে: <code>01000001 01010011 01000011 01001001 01001001</code>। তথ্যটি কী?</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> The following ASCII code message is stored in successive memory locations in a computer: <code>01000001 01010011 01000011 01001001 01001001</code>. What is the message?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> সরাসরি বাইনারী কোডিং এবং বাইনারী কোডেড ডেসিমাল (BCD)-এর মধ্যে পার্থক্য কী? $851$ কে BCD-তে রূপান্তর কর।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> What is the difference between straight binary coding and Binary Coded Decimal (BCD)? Convert $851$ to BCD.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2019">
-        <div class="q-header"><span class="q-number">QUESTION NO. 02</span><span class="q-year-tag">2019</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> একটি বাইনারী সংখ্যার 2's কমপ্লিমেন্ট রূপের বর্ণনা দাও। ৮-বিট ব্যবহার করে সমাধান কর: (i) $(-25) - (+26)$, (ii) $(+17) + (-32)$ এবং (iii) $(+122) + (+22)$। ত্রুটি থাকলে চিহ্নিত কর ও সমাধান লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Describe 2's complement form of a binary number. Perform in 8-bits: (i) $(-25) - (+26)$, (ii) $(+17) + (-32)$ and (iii) $(+122) + (+22)$. Identify any error and how it can be corrected.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> নিম্নোক্ত দশমিক সংখ্যাগুলোকে BCD-তে রূপান্তর করে যোগ কর: (i) $998 + 118$ এবং (ii) $623 + 599$।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Add the following decimal numbers after converting each to its BCD: (i) $998 + 118$ and (ii) $623 + 599$.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> $A, B,$ এবং $C$ ইনপুটসহ একটি লজিক বর্তনী গঠন কর যার আউটপুট লজিক্যাল হাই হবে যখন তার সংখ্যাগরিষ্ঠ ইনপুট হাই হয়।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Design a logic circuit with inputs $A, B$ and $C$ whose output is high only when a majority of the inputs are high.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> নিম্নোক্ত চিত্রের আউটপুটকে ডি-মরগ্যানের উপপাদ্যগুলি ব্যবহার করে সরলীকরণ কর।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Use DeMorgan's theorems to simplify the expression for the output of the following figure.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2019">
-        <div class="q-header"><span class="q-number">QUESTION NO. 03</span><span class="q-year-tag">2019</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> হাফ অ্যাডার কী? সত্যক সারণী এবং বর্তনীচিত্রসহ হাফ অ্যাডার ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is Half-Adder? Discuss Half-Adder with truth table and circuit diagram.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> নিচের রাশিমালাকে বুলিয়ান বীজগণিতের মাধ্যমে সহজীকরণ কর: $X = \overline{A} + \overline{A}BC + \overline{A}B\overline{C} + A\overline{C} + \overline{B}C$</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Simplify the given expression using Boolean algebra.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> সঠিক বর্তনী এবং সত্যক সারণীসহ XOR এবং X-NOR গেইটের বর্ণনা দাও।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Describe X-OR and X-NOR gate with logic circuit and truth table.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2019">
-        <div class="q-header"><span class="q-number">QUESTION NO. 04</span><span class="q-year-tag">2019</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> NAND এবং NOR গেইটকে সার্বজনীন গেইট বলা হয় কেন? ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Explain why NAND and NOR gate are called universal gate.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি JK ফ্লিপ-ফ্লপকে কীভাবে T ফ্লিপ-ফ্লপ এবং D ফ্লিপ-ফ্লপ এ রূপান্তরিত করা যায় বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Describe how to convert a JK flip-flop into T and D flip-flop.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> সিনক্রোনাস এবং অ্যাসিনক্রোনাস কাউন্টারের মধ্যে পার্থক্য লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Distinguish between synchronous and asynchronous counter.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2019">
-        <div class="q-header"><span class="q-number">QUESTION NO. 05</span><span class="q-year-tag">2019</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> একটি স্টেটমেন্ট ব্লক বলতে কী বোঝায়? প্রদত্ত প্রোগ্রামে <code>for</code> লুপের স্টেটমেন্ট ব্লক সহ এবং স্টেটমেন্ট ব্লক ছাড়া আউটপুট কী হবে?</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is meant by a statement block? Write the output of the program for both with and without a statement block after the <code>for</code> loop.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি C++ প্রোগ্রাম লিখ যা প্রথম 20 টি ফিবোনাচ্চি সংখ্যা তৈরি করতে পারে।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write a C++ program to generate first 20 Fibonacci numbers.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> রিটার্ন টাইপ ফাংশন ও ভয়েড টাইপ ফাংশনের মধ্যে পার্থক্য লিখ। প্রোগ্রামে ফাংশন ব্যবহারের সুবিধাসমূহ কী কী? একটি ফাংশন ডিক্লারেশন কোডের কোথায় থাকবে?</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write the difference between return type function and void function. What are the advantages of using functions in C++ programs? Where can the declaration of a function be placed?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> C++ এ <code>rand()</code> এবং <code>srand()</code> এর ব্যবহারগুলি লিখ। $0$ এবং $1$ এর মধ্যে 20 টি random সংখ্যা তৈরির জন্য একটি কোড লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Write the uses of <code>rand()</code> and <code>srand()</code> in C++. Write a C++ program to generate 20 random numbers between $0$ and $1$.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2019">
-        <div class="q-header"><span class="q-number">QUESTION NO. 06</span><span class="q-year-tag">2019</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> এক্সপ্রেশন ও স্টেটমেন্ট সম্পর্কে সংক্ষেপে আলোচনা কর। অ্যারে ব্যবহারের সুবিধা ও অসুবিধাগুলো লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Discuss in short about expression and statement. Write down the advantages and disadvantages of the use of array.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> সি-প্রোগ্রামিং ভাষার বৈশিষ্ট্য এবং ব্যবহার আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Discuss the characteristics and use of C-programming language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> অ্যারিথমেটিক অপারেটর কী? বিভিন্ন প্রকার অ্যারিথমেটিক অপারেটরের ব্যবহার লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is arithmetic operator? Write down the use of different types of arithmetic operators.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2019">
-        <div class="q-header"><span class="q-number">QUESTION NO. 07</span><span class="q-year-tag">2019</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> <code>for</code>, <code>while</code>, এবং <code>do-while</code> লুপ স্টেটমেন্টের গঠন ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Explain the structure of a <code>for</code>, <code>while</code>, and <code>do-while</code> loop.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> লাইব্রেরী ফাংশন এবং ইউজার ডিফাইনড ফাংশন ব্যাখ্যা কর। ফাংশনের বিভিন্ন অংশগুলি কী কী?</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Explain the library function and user defined function. What are the different parts of a function?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> ডিফল্ট আর্গুমেন্ট ব্যবহারের নিয়মাবলী উল্লেখ কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Mention the rules of using a default argument.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2019">
-        <div class="q-header"><span class="q-number">QUESTION NO. 08</span><span class="q-year-tag">2019</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> অ্যারে কী? C++ এ অ্যারে ব্যবহারের সুবিধা কী? C++ এ অ্যারে ডিক্লারেশন সিনট্যাক্স লিখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is an array and what are advantages of using arrays in C++? Write the array declaration syntax in C++.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি C++ প্রোগ্রাম লিখ যা $n$ পূর্ণ সংখ্যা পড়বে এবং বিপরীত ক্রমে প্রিন্ট করবে।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write a C++ program that reads $n$ integer numbers and then prints them in reverse order.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> বাবলসর্ট অ্যালগরিদম কী? একটি C++ ফাংশন <code>void sort(int a[], int n)</code> লিখ যা একটি অ্যারের $n$ উপাদানকে বাবলসর্ট করতে পারে।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is bubble sort algorithm? Write a C++ function <code>void sort(int a[], int n)</code> that sorts the $n$ elements of an array <code>a[]</code> by using the bubble sort algorithm.</div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== 2018 ==================== -->
-    <section class="year-section" data-year="2018">
-      <div class="year-header">
-        <div class="year-title">University of Dhaka (7 Affiliated Colleges) — Examination 2018</div>
-        <div class="year-meta">Time: 3 Hours • Full Marks: 80 • যে কোনো ৫টি প্রশ্নের উত্তর দাও</div>
-      </div>
-
-      <article class="question-card" data-year="2018">
-        <div class="q-header"><span class="q-number">QUESTION NO. 01</span><span class="q-year-tag">2018</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ALU কী? কম্পিউটারে এর কার্যপ্রণালী বর্ণনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is ALU? Explain its functionality in a computer.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> অপারেটিং সিস্টেম বলতে কী বোঝায়? বর্তমানে প্রচলিত পাঁচটি অপারেটিং সিস্টেমের নাম লেখ। ইউনিক্স অপারেটিং সিস্টেমের সুবিধা ও অসুবিধাসমূহ লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is meant by an operating system? Name five operating systems that are used now-a-days. Write down the merits and demerits of UNIX operating system.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> ক্যাশ মেমোরি কী? কম্পিউটারে ক্যাশ মেমোরি ব্যবহারের প্রয়োজনীয়তা কী?</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is cache memory? What is the purpose of using cache memory in a computer?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> অ্যাপ্লিকেশন সফটওয়্যার সংজ্ঞায়িত কর। অ্যাপ্লিকেশন সফটওয়্যার এবং সিস্টেম সফটওয়্যারের মধ্যে পার্থক্য লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Define application software. Write down the differences between application software and system software.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2018">
-        <div class="q-header"><span class="q-number">QUESTION NO. 02</span><span class="q-year-tag">2018</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> একটি ডিজিটাল সিস্টেমের ভুল শনাক্তকরণের সমতা পদ্ধতি ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Explain the parity method of error detection in digital system.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> মনে কর একটি গ্রাহক যন্ত্র একটি প্রেরক যন্ত্র থেকে নিচের উপাত্তগুলো গ্রহণ করলো: <code>01001000 11000101 11001100 11001000 11001100</code>। গ্রাহক যন্ত্র এই উপাত্তে কী ধরনের ভুল নির্ণয় করতে পারবে? সমতা পদ্ধতি কেন একই সাথে দুইটা ভুল নির্ধারণ করতে পারে না?</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Suppose that the receiver received the following data from the transmitter: <code>01001000 11000101 11001100 11001000 11001100</code>. What errors can the receiver determine in these received data? Why can't the parity method detect a double error in transmitted data?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> নিচের রাশিমালাকে বুলিয়ান বীজগণিতের মাধ্যমে সহজীকরণ কর: $X = (A + \overline{B}C)(B + A\cdot B)$</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Simplify the expression using Boolean algebra: $X = (A + \overline{B}C)(B + A\cdot B)$</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> নিচের রাশিমালাকে লজিক গেটে বাস্তবায়ন কর: $Y = (A + B + C + D)\cdot(B + C + A)\cdot(B\cdot C + D)$</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> Implement the expression in logic gates: $Y = (A + B + C + D)\cdot(B + C + A)\cdot(B\cdot C + D)$</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2018">
-        <div class="q-header"><span class="q-number">QUESTION NO. 03</span><span class="q-year-tag">2018</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> লজিক গেইট কী? ইহা কত প্রকার ও কী কী? আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> What is a logic gate? How many types of logic gates are there and what are they? Discuss those.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> কম্পিউটার ডিজাইনে বাইনারি সংখ্যা পদ্ধতি ব্যবহারের কারণ কী? ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What are the reasons behind the use of binary numbers in computer design? Explain.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> ডি-মরগ্যানের উপপাদ্য দুইটি লেখ। সত্যক সারণির মাধ্যমে উপপাদ্য দুইটি প্রমাণ কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> State the two De-Morgan's theorems and prove them using truth tables.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2018">
-        <div class="q-header"><span class="q-number">QUESTION NO. 04</span><span class="q-year-tag">2018</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> তিনটি ফ্লিপ-ফ্লপ ব্যবহার করে শুধুমাত্র 000 হতে 110 গণনা করা যায়, এমন একটি সমান্তরাল গণক ডিজাইন কর। উপযুক্ত সিগন্যাল ব্যবহার করে এই গণকের কার্যপ্রণালী ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Design a parallel counter with three flip-flops which can count from 000 to 110 only. Explain the operation of this counter with appropriate clock signal.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> একটি ৮ মোডের সমলয় আপ/ডাউন গণকের চিত্র অঙ্কন কর। গণকটির কার্যপ্রণালী বর্ণনা কর যেন এক অর্ধেক সময় এটি আপ গণক হিসেবে কাজ করে এবং বাকি এক অর্ধেক সময় এটি ডাউন গণক হিসেবে কাজ করে।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Draw a mod-8 synchronous up/down counter. Explain the operation of the counter in which for half of the clock pulse the counter counts up and for the other half of the pulse, the counter counts down.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> লজিক গেইটের মাধ্যমে একটি ফুল অ্যাডার গঠন কর এবং ফুল অ্যাডার হিসেবে এর কার্যপ্রণালী ব্যাখ্যা কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Construct a full-adder circuit with logic gate and explain its operation as a full-adder circuit.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2018">
-        <div class="q-header"><span class="q-number">QUESTION NO. 05</span><span class="q-year-tag">2018</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> উচ্চস্তরের ভাষা এবং নিম্নস্তরের ভাষার মধ্যে পার্থক্য লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write down the differences between a high-level language and a low-level language.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> হেডার ফাইল কী? <code>#include</code> এর কাজ কী?</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> What is a header file? What does <code>#include</code> do?</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> নেমস্পেস কী? C++ এ নেমস্পেস ব্যবহারের বিভিন্ন পদ্ধতিসমূহ লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> What is a namespace? Discuss the different ways to use namespace in C++.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">d)</span> চলক কী? <code>double</code> চলক এবং <code>float</code> চলকের মধ্যে পার্থক্য কী?</div>
-            <div class="lang-en"><span class="sub-label">(d)</span> What is a variable? What is the difference between a double type of variable and a float type of variable?</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2018">
-        <div class="q-header"><span class="q-number">QUESTION NO. 06</span><span class="q-year-tag">2018</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> ধ্রুবক, চলক এবং কী-ওয়ার্ড সম্পর্কে সংক্ষেপে আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Describe briefly about constants, variables and keywords.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> ফাংশন এবং ফাংশন প্রোটোটাইপ সম্পর্কে সংক্ষেপে আলোচনা কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Describe briefly about function and function prototype.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> ফাংশন ব্যবহার করে একটি ধনাত্মক পূর্ণ সংখ্যার ফ্যাক্টোরিয়াল নির্ণয় করার একটি সি প্রোগ্রাম লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write a C program to find the factorial of a positive integer.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2018">
-        <div class="q-header"><span class="q-number">QUESTION NO. 07</span><span class="q-year-tag">2018</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> সংজ্ঞা লেখ: অ্যারিথমেটিক অপারেটর; ইউনারি অপারেটর; লজিক্যাল অপারেটর।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Define: Arithmetic operator; Unary operator; Logical operator.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> তিনটি সংখ্যা থেকে বড় সংখ্যাটি বের করার একটি অ্যালগরিদম ও ফ্লোচার্ট তৈরি কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write an algorithm and flowchart to find the largest of three numbers.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> একটি বৃত্তের ক্ষেত্রফল বের করার জন্য সি প্রোগ্রাম তৈরি কর।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write a C program to find out the area of a circle.</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="question-card" data-year="2018">
-        <div class="q-header"><span class="q-number">QUESTION NO. 08</span><span class="q-year-tag">2018</span></div>
-        <div class="sub-q-list">
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">a)</span> অ্যারে ব্যবহারের সুবিধা ও অসুবিধাগুলো লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(a)</span> Write down the advantages and disadvantages of the use of an array.</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">b)</span> $1 + 2 + 3 + 4 + \dots + N$ এই ধারাটির যোগফল বের করার জন্য একটি অ্যালগরিদম ও ফ্লোচার্ট তৈরি কর।</div>
-            <div class="lang-en"><span class="sub-label">(b)</span> Write the algorithm and flowchart to find the sum of the following series: $1 + 2 + 3 + 4 + \dots + N$</div>
-          </div>
-          <div class="sub-q-item">
-            <div class="lang-bn"><span class="sub-label">c)</span> একটি দ্বিঘাত সমীকরণের বাস্তব মূল নির্ণয় করার জন্য সি প্রোগ্রাম লেখ।</div>
-            <div class="lang-en"><span class="sub-label">(c)</span> Write a C program to find out the real roots of a quadratic equation.</div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <div class="empty-state" id="emptyState">
-      <h3>কোনো প্রশ্ন পাওয়া যায়নি</h3>
-      <p>সার্চ কীওয়ার্ড পরিবর্তন করে অথবা "All (2018–2025)" ফিল্টার নির্বাচন করে আবার চেষ্টা করুন।</p>
-    </div>
-
   </main>
 
-  <footer>
-    <div class="container">
-      <strong>DCU QB Archive</strong> • Department of Physics, Dhaka Central University • Made by students, for students
-    </div>
+  <footer class="site-footer" role="contentinfo">
+    <p>Not operated by Dhaka Central University. Made by students.</p>
   </footer>
+</div>
 
-  <script>
-    const searchInput = document.getElementById('searchInput');
-    const yearButtons = document.querySelectorAll('.year-btn');
-    const yearSections = document.querySelectorAll('.year-section');
-    const questionCards = document.querySelectorAll('.question-card');
-    const visibleCountEl = document.getElementById('visibleCount');
-    const emptyState = document.getElementById('emptyState');
+<button type="button" class="to-top" id="toTop" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 12.5L10 7l5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
 
-    let selectedYear = 'all';
+<noscript>
+  <p style="padding:1rem;text-align:center;color:#a7adb5">JavaScript must be enabled for the menu, year bar and search. The questions are still readable below.</p>
+</noscript>
 
-    function filterQuestions() {
-      const query = searchInput.value.trim().toLowerCase();
-      let totalVisible = 0;
+<script>
+(function () {
+  'use strict';
 
-      yearSections.forEach(section => {
-        const sectionYear = section.getAttribute('data-year');
-        const yearMatches = selectedYear === 'all' || sectionYear === selectedYear;
+  /* ---------- Logo fallback (if ../logo.png is missing) ---------- */
+  var FALLBACK_LOGO = '<svg class="hero-svg-fallback" viewBox="0 0 240 240" role="img" aria-label="DCU QB, Unofficial Question Bank Archive">' +
+    '<rect width="240" height="240" rx="14" fill="#16191c"/>' +
+    '<path d="M120 34L74 54l46 20 46-20-46-20z" fill="none" stroke="#f2f2f4" stroke-width="3.5" stroke-linejoin="round"/>' +
+    '<path d="M93 62v15c0 6 12 12 27 12s27-6 27-12V62" fill="none" stroke="#f2f2f4" stroke-width="3.5" stroke-linecap="round"/>' +
+    '<path d="M120 53l32 13v16" fill="none" stroke="#c9a85f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<path d="M82 68v52l38 17 38-17V98" fill="none" stroke="#f2f2f4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<circle cx="152" cy="104" r="12" fill="none" stroke="#f2f2f4" stroke-width="3.5"/>' +
+    '<text x="120" y="172" text-anchor="middle" fill="#f2f2f4" font-size="26" font-weight="700" letter-spacing="2">DCU QB</text>' +
+    '<text x="120" y="193" text-anchor="middle" fill="#f2f2f4" font-size="9.5" font-weight="600" letter-spacing="1.4">QUESTION BANK ARCHIVE</text>' +
+    '<text x="120" y="210" text-anchor="middle" fill="#a7adb5" font-size="8.5" letter-spacing="2.5">UNOFFICIAL</text></svg>';
 
-        if (!yearMatches) {
-          section.style.display = 'none';
-          return;
-        }
+  var logoWrap = document.getElementById('logoWrap');
+  var logoImg = document.getElementById('logoImg');
+  var logoDone = false;
+  function useFallbackLogo() {
+    if (logoDone) return;
+    logoDone = true;
+    logoWrap.innerHTML = FALLBACK_LOGO;
+  }
+  logoImg.addEventListener('error', useFallbackLogo);
+  if (logoImg.complete && logoImg.naturalWidth === 0) useFallbackLogo();
 
-        const cards = section.querySelectorAll('.question-card');
-        let sectionVisibleCards = 0;
+  /* ---------- Menu ---------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var menuPanel = document.getElementById('site-menu');
+  function setMenu(open) {
+    menuPanel.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  menuBtn.addEventListener('click', function () { setMenu(menuPanel.hidden); });
+  document.addEventListener('click', function (e) {
+    if (menuPanel.hidden) return;
+    if (e.target.closest('.menu-wrap')) return;
+    setMenu(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menuPanel.hidden) { setMenu(false); menuBtn.focus(); }
+  });
 
-        cards.forEach(card => {
-          const text = card.textContent.toLowerCase();
-          const matchesQuery = !query || text.includes(query);
-          if (matchesQuery) {
-            card.style.display = '';
-            sectionVisibleCards++;
-            totalVisible++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
+  /* ---------- Year bar: highlight the year you are reading ---------- */
+  var exams = Array.prototype.slice.call(document.querySelectorAll('.exam'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.year-chip'));
+  var yearScroll = document.getElementById('yearScroll');
+  var activeYear = null;
 
-        section.style.display = sectionVisibleCards > 0 ? '' : 'none';
+  function setActive(year) {
+    if (year === activeYear) return;
+    activeYear = year;
+    chips.forEach(function (chip) {
+      var on = chip.getAttribute('data-year') === year;
+      chip.classList.toggle('is-active', on);
+      if (on) {
+        chip.setAttribute('aria-current', 'true');
+        var left = chip.offsetLeft - (yearScroll.clientWidth - chip.clientWidth) / 2;
+        yearScroll.scrollTo({ left: left, behavior: 'smooth' });
+      } else {
+        chip.removeAttribute('aria-current');
       }
+    });
+  }
 
-      visibleCountEl.textContent = totalVisible;
-      emptyState.style.display = totalVisible === 0 ? 'block' : 'none';
+  function updateActive() {
+    var current = null;
+    exams.forEach(function (ex) {
+      if (ex.hidden) return;
+      if (ex.getBoundingClientRect().top <= 130) current = ex;
+    });
+    if (!current) {
+      current = exams.filter(function (ex) { return !ex.hidden; })[0] || null;
     }
+    if (current) setActive(current.getAttribute('data-year'));
+  }
 
-    yearButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        yearButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        selectedYear = btn.getAttribute('data-year');
-        filterQuestions();
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      setActive(chip.getAttribute('data-year'));
+    });
+  });
+
+  /* ---------- Back to top ---------- */
+  var toTop = document.getElementById('toTop');
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0 }); });
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () {
+      updateActive();
+      toTop.hidden = window.scrollY < 600;
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('hashchange', onScroll);
+  updateActive();
+
+  /* ---------- Print / Save as PDF ---------- */
+  document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
+
+  /* ---------- Search inside the questions ---------- */
+  var input = document.getElementById('qSearch');
+  var clearBtn = document.getElementById('qClear');
+  var statusEl = document.getElementById('qStatus');
+  var noMatch = document.getElementById('noMatch');
+
+  function norm(s) { return String(s).toLowerCase().replace(/\s+/g, ' ').trim(); }
+
+  function applyFilter() {
+    var q = norm(input.value);
+    var total = 0;
+    clearBtn.hidden = input.value.length === 0;
+
+    exams.forEach(function (exam) {
+      var groups = Array.prototype.slice.call(exam.querySelectorAll('.qgroup'));
+      var examHits = 0;
+
+      groups.forEach(function (group) {
+        var titleEl = group.querySelector('.qtitle');
+        var titleHit = q !== '' && titleEl && norm(titleEl.textContent).indexOf(q) !== -1;
+        var shown = 0;
+        Array.prototype.forEach.call(group.querySelectorAll('.parts > li'), function (li) {
+          var hit = q === '' || titleHit || norm(li.textContent).indexOf(q) !== -1;
+          li.hidden = !hit;
+          if (hit) shown += 1;
+        });
+        group.hidden = shown === 0;
+        examHits += shown;
       });
+
+      exam.hidden = q !== '' && examHits === 0;
+      if (q !== '') total += examHits;
+
+      var chip = document.querySelector('.year-chip[data-year="' + exam.getAttribute('data-year') + '"]');
+      if (chip) chip.classList.toggle('is-dim', exam.hidden);
     });
 
-    searchInput.addEventListener('input', filterQuestions);
+    if (q === '') {
+      statusEl.textContent = '';
+      noMatch.hidden = true;
+    } else if (total === 0) {
+      statusEl.textContent = 'No question found.';
+      noMatch.hidden = false;
+    } else {
+      statusEl.textContent = total + (total === 1 ? ' question found.' : ' questions found.');
+      noMatch.hidden = true;
+    }
+    updateActive();
+  }
 
-    filterQuestions();
-  </script>
+  input.addEventListener('input', applyFilter);
+  clearBtn.addEventListener('click', function () {
+    input.value = '';
+    applyFilter();
+    input.focus();
+  });
+})();
+</script>
 </body>
-  </html> 
+</html>
